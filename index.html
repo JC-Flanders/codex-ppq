@@ -8,7 +8,7 @@
       name="description"
       content="Use PayPerQ's ChatGPT Images 2.0 endpoint from Codex with a payment skill. Generate images on demand from a prompt, starting at $0.07 per image."
     />
-    <meta name="theme-color" content="#0b1519" />
+    <meta name="theme-color" content="#101113" />
     <meta property="og:title" content="Launch-ready images. Pay only when you create." />
     <meta
       property="og:description"
@@ -59,44 +59,44 @@
         </div>
 
         <div class="hero__content">
-          <div class="integration-pill" aria-label="Integration">
-            <span>Codex</span>
-            <span>PayPerQ</span>
+          <div class="integration-pill reveal reveal--1" aria-label="Integration">
+            <span><img src="assets/codex-logo.svg" alt="" /> Codex</span>
+            <span><img src="assets/payperq-logo.svg" alt="" /> PayPerQ</span>
             <span>ChatGPT Images 2.0</span>
           </div>
 
-          <h1 id="hero-title">Launch-ready images. Pay only when you create.</h1>
-          <p class="hero__lead">
-            Give Codex access to paid image generation services, then create visuals on demand
-            from one prompt. No image subscription required.
+          <h1 class="reveal reveal--2" id="hero-title">
+            Launch-ready visuals, <span>paid per image.</span>
+          </h1>
+          <p class="hero__lead reveal reveal--3">
+            Use Codex with PayPerQ to generate polished campaign images from a prompt.
+            No monthly tool, no prepaid credit pack, just a paid endpoint when the workflow needs a visual.
           </p>
 
-          <div class="hero__actions" aria-label="Primary actions">
+          <div class="hero__actions reveal reveal--4" aria-label="Primary actions">
             <a class="action-card action-card--primary" href="#prompt">
-              <span class="action-card__label">USDC services</span>
+              <span class="action-card__label">Pay with credit card</span>
               <span class="action-card__text">Install Skill</span>
             </a>
             <a class="action-card" href="#bitcoin">
-              <span class="action-card__label">Bitcoin services</span>
+              <span class="action-card__label">Pay with bitcoin</span>
               <span class="action-card__text">Start with Alby Hub</span>
             </a>
           </div>
 
-          <ul class="trust-row" aria-label="Service highlights">
-            <li>From $0.07/image</li>
-            <li>Prompt to result</li>
-            <li>Wallet budgets</li>
-            <li>No subscription</li>
+          <ul class="trust-row reveal reveal--5" aria-label="Service highlights">
+            <li>From $0.07 per image</li>
+            <li>Price shown before call</li>
+            <li>Budget-limited access</li>
+            <li>No image subscription</li>
           </ul>
 
-          <div class="hero-preview" aria-label="Prompt to generated image preview">
+          <div class="hero-preview reveal reveal--6" aria-label="Prompt to generated image preview">
             <div class="prompt-card">
               <span class="mini-label">Prompt</span>
               <p>Create a premium launch poster with warm light, clear product focus, and room for a headline.</p>
             </div>
-            <div class="flow-line" aria-hidden="true">
-              <span></span>
-            </div>
+            <div class="flow-line" aria-hidden="true"><span></span></div>
             <figure class="image-card">
               <img
                 src="assets/example-launch.png"
@@ -115,11 +115,11 @@
         <div class="section__eyebrow">What it does</div>
         <div class="split">
           <div>
-            <h2 id="what-title">One prompt in, one finished image out.</h2>
+            <h2 id="what-title">A paid image endpoint Codex can actually use.</h2>
             <p>
-              PayPerQ turns a written creative brief into an image Codex can use inside a
-              larger workflow. It is useful when you need one or a few polished visuals, not
-              another monthly image tool.
+              PayPerQ gives Codex a paid image-generation endpoint it can call inside a broader
+              task. The page should make the tradeoff obvious: this is for focused visual output,
+              not for signing up to another creative suite.
             </p>
           </div>
           <div class="feature-list" aria-label="Endpoint input and output details">
@@ -142,7 +142,7 @@
       <section class="section section--gallery" aria-labelledby="examples-title">
         <div class="section__header">
           <span class="section__eyebrow">Example results</span>
-          <h2 id="examples-title">What Codex can ask PayPerQ to create.</h2>
+          <h2 id="examples-title">Not a promise of magic, a visible result.</h2>
           <p>
             Use the endpoint when a workflow needs a finished visual instead of another text-only handoff.
           </p>
@@ -184,7 +184,7 @@
       <section class="section section--dark" aria-labelledby="payment-title">
         <div class="section__header">
           <span class="section__eyebrow">Payment flow</span>
-          <h2 id="payment-title">How Codex pays for a PayPerQ image.</h2>
+          <h2 id="payment-title">Give the agent access without giving it a blank check.</h2>
           <p>
             The skill gives Codex a way to call paid services when you allow it. Keep the
             budget small, confirm the request, and revoke access when the task is done.
@@ -219,7 +219,7 @@
         <div class="endpoint-layout">
           <div>
             <span class="section__eyebrow">Endpoint details</span>
-            <h2 id="endpoint-title">Enough detail to evaluate before you call.</h2>
+            <h2 id="endpoint-title">Check the request before spending.</h2>
             <p>
               These facts should stay visible on the page and in structured metadata. Unknown
               provider facts are marked for confirmation instead of being overstated.
@@ -260,12 +260,15 @@
         <div class="prompt-layout">
           <div>
             <span class="section__eyebrow">Copy prompt</span>
-            <h2 id="prompt-title">Prompt Codex to use PayPerQ.</h2>
+            <h2 id="prompt-title">Give Codex a budget, format, and stop condition.</h2>
             <p>
               After installing the skill, paste this into Codex and adjust the creative brief.
               Keep the budget explicit before calling a paid endpoint.
             </p>
-            <button class="copy-button" type="button" data-copy-target="codex-prompt">Copy prompt</button>
+            <button class="copy-button" type="button" data-copy-target="codex-prompt">
+              Copy prompt
+              <span aria-hidden="true">&rarr;</span>
+            </button>
           </div>
           <pre class="code-block" id="codex-prompt"><code>Use the PayPerQ ChatGPT Images 2.0 endpoint to generate one image for this task.
 
@@ -283,7 +286,7 @@ Before calling the paid endpoint, confirm the price and image count.</code></pre
       <section class="section section--use" aria-labelledby="use-title">
         <div class="section__header">
           <span class="section__eyebrow">Use cases</span>
-          <h2 id="use-title">Where this endpoint fits.</h2>
+          <h2 id="use-title">When this is better than another subscription.</h2>
         </div>
         <div class="use-grid">
           <article>
@@ -309,7 +312,7 @@ Before calling the paid endpoint, confirm the price and image count.</code></pre
         <div class="pricing-card">
           <div>
             <span class="section__eyebrow">Pricing and control</span>
-            <h2 id="pricing-title">Pay per image, keep permissions limited.</h2>
+            <h2 id="pricing-title">Small spend, clear permission, visible result.</h2>
             <p>
               The current page lists $0.07 per medium-quality image. Confirm the current
               price, quality tier, and retry behavior before using the endpoint in production.
@@ -327,7 +330,7 @@ Before calling the paid endpoint, confirm the price and image count.</code></pre
       <section class="section section--faq" id="faq" aria-labelledby="faq-title">
         <div class="section__header">
           <span class="section__eyebrow">FAQ</span>
-          <h2 id="faq-title">What to know before trying this.</h2>
+          <h2 id="faq-title">Questions that should be answered before the first call.</h2>
         </div>
         <div class="faq-list">
           <details open>
