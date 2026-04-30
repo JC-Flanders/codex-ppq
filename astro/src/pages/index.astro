@@ -1,0 +1,52 @@
+---
+const pageModules = import.meta.glob<string>("./*.md", {
+  query: "?raw",
+  import: "default",
+  eager: true
+});
+
+function frontmatterField(markdown: string, field: string) {
+  const match = markdown.match(new RegExp(`^${field}:\\s*["']?([^"'\n]+)["']?`, "m"));
+  return match?.[1] ?? "";
+}
+
+const pages = Object.entries(pageModules)
+  .map(([path, markdown]) => {
+    const fileName = path.split("/").pop() ?? "";
+    const slug = fileName.replace(/\.md$/, "");
+
+    return {
+      slug,
+      href: `${slug}.html`,
+      title: frontmatterField(markdown, "title") || slug,
+      description: frontmatterField(markdown, "description")
+    };
+  })
+  .filter((page) => page.slug && !page.slug.startsWith("_"))
+  .sort((a, b) => a.title.localeCompare(b.title));
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Astro pages | 402box</title>
+    <meta name="description" content="Index of Astro-rendered 402box pages." />
+  </head>
+  <body>
+    <main>
+      <h1>Astro pages</h1>
+      <ul>
+        {
+          pages.map((page) => (
+            <li>
+              <a href={page.href}>{page.title}</a>
+              {page.description && <p>{page.description}</p>}
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </body>
+</html>

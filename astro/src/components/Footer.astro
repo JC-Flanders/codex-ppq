@@ -1,0 +1,16 @@
+---
+import type { UseCaseFrontmatter } from "../types";
+
+interface Props {
+  data: UseCaseFrontmatter["footer"];
+}
+
+const { data } = Astro.props;
+---
+
+<footer class="footer" id="updates">
+  <p>{data.brand}</p>
+  <nav aria-label="Footer links">
+    {data.links.map((link) => <a href={link.href}>{link.label}</a>)}
+  </nav>
+</footer>

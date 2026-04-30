@@ -1,0 +1,34 @@
+---
+import type { NamedText } from "../types";
+
+interface Props {
+  data: {
+    eyebrow: string;
+    title: string;
+    items: NamedText[];
+  };
+  id?: string;
+  className?: string;
+  labelledBy: string;
+}
+
+const { data, id, className = "", labelledBy } = Astro.props;
+const sectionClass = ["section", className].filter(Boolean).join(" ");
+---
+
+<section class={sectionClass} id={id} aria-labelledby={labelledBy}>
+  <div class="section__header">
+    <span class="section__eyebrow">{data.eyebrow}</span>
+    <h2 id={labelledBy}>{data.title}</h2>
+  </div>
+  <div class="use-grid">
+    {
+      data.items.map((item) => (
+        <article>
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+        </article>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,43 @@
+---
+import "../styles/site.css";
+
+interface Props {
+  title: string;
+  description: string;
+  bodyClass: string;
+  themeColor: string;
+  ogTitle: string;
+  ogDescription: string;
+  jsonLd: Record<string, unknown>;
+}
+
+const { title, description, bodyClass, themeColor, ogTitle, ogDescription, jsonLd } = Astro.props;
+const favicon =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23202020'/%3E%3Ccircle cx='32' cy='32' r='18' fill='%23ffda4d'/%3E%3Cpath d='M35 10 22 34h10l-4 20 15-28H32z' fill='%23202020'/%3E%3C/svg%3E";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content={themeColor} />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href={favicon} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd, null, 2)}></script>
+  </head>
+  <body class={bodyClass}>
+    <slot />
+    <script src="../scripts/copy.ts"></script>
+  </body>
+</html>

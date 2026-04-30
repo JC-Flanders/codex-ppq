@@ -1,0 +1,70 @@
+---
+import type { UseCaseFrontmatter } from "../types";
+
+interface Props {
+  data: UseCaseFrontmatter["hero"];
+}
+
+const { data } = Astro.props;
+const backdropStyle = data.backdrop
+  ? [
+      `--hero-backdrop-label: "${data.backdrop.label}"`,
+      data.backdrop.right ? `--hero-backdrop-right: ${data.backdrop.right}` : "",
+      data.backdrop.color ? `--hero-backdrop-color: ${data.backdrop.color}` : "",
+      data.backdrop.letterSpacing ? `--hero-backdrop-letter-spacing: ${data.backdrop.letterSpacing}` : ""
+    ]
+      .filter(Boolean)
+      .join(";")
+  : undefined;
+---
+
+<section class="hero" aria-labelledby="hero-title" style={backdropStyle}>
+  <div class="hero__topbar" aria-label="Page identity">
+    <a class="brand" href="#hero-title" aria-label={`${data.brandKicker} ${data.brandName}`}>
+      <span>{data.brandKicker}</span>
+      <span>{data.brandName}</span>
+    </a>
+    <a class="top-link" href={data.topLinkHref}>{data.topLinkText}</a>
+  </div>
+
+  <div class="hero__content">
+    <div class="integration-pill reveal reveal--1" aria-label="Integration">
+      {data.integration.map((item) => <span>{item}</span>)}
+    </div>
+
+    <h1 class="reveal reveal--2" id="hero-title">
+      {data.title.text}<span>{data.title.highlight}</span>
+    </h1>
+    <p class="hero__lead reveal reveal--3">{data.lead}</p>
+
+    <div class="hero__actions reveal reveal--4" aria-label="Primary actions">
+      {
+        data.actions.map((action) => (
+          <a class:list={["action-card", { "action-card--primary": action.primary }]} href={action.href}>
+            <span class="action-card__label">{action.label}</span>
+            <span class="action-card__text">{action.text}</span>
+          </a>
+        ))
+      }
+    </div>
+
+    <ul class="trust-row reveal reveal--5" aria-label="Service highlights">
+      {data.trust.map((item) => <li>{item}</li>)}
+    </ul>
+
+    <div class="hero-preview hero-preview--data reveal reveal--6" aria-label={data.preview.ariaLabel}>
+      <div class="prompt-card">
+        <span class="mini-label">Request</span>
+        <p>{data.preview.request}</p>
+      </div>
+      <div class="flow-line" aria-hidden="true"><span></span></div>
+      <div class="response-card" aria-label={data.preview.responseAriaLabel}>
+        <div class="response-card__topline">
+          <span>{data.preview.resultLabel}</span>
+          <strong>{data.preview.resultTitle}</strong>
+        </div>
+        <pre><code>{data.preview.code}</code></pre>
+      </div>
+    </div>
+  </div>
+</section>

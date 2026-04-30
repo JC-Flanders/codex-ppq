@@ -1,0 +1,22 @@
+---
+import type { UseCaseFrontmatter } from "../types";
+
+interface Props {
+  data: UseCaseFrontmatter["closing"];
+}
+
+const { data } = Astro.props;
+---
+
+<section class="section section--pricing" aria-labelledby="closing-title">
+  <div class="pricing-card">
+    <div>
+      <span class="section__eyebrow">{data.eyebrow}</span>
+      <h2 id="closing-title">{data.title}</h2>
+      <p>{data.text}</p>
+    </div>
+    <ul class="pricing-list">
+      {data.items.map((item) => <li>{item}</li>)}
+    </ul>
+  </div>
+</section>
