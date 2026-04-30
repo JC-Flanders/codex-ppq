@@ -414,6 +414,10 @@ h1 span {
   letter-spacing: -0.11em;
 }
 
+.page-flight .hero::after {
+  content: "AIR";
+}
+
 .hero-preview--data {
   width: min(100%, 600px);
 }
