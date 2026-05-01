@@ -1,222 +1,219 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Travel rebooking brief on demand | 402box
-description: Use pay-as-you-go travel tools to check a disruption, compare replacement options, and return a source-backed rebooking brief for human approval.
+title: Travel disruption brief on demand | 402box
+description: Use pay-as-you-go travel tools to turn a disrupted flight into a go, wait, rebook, or overnight brief with source timestamps and approval limits.
 bodyClass: page-bumi page-usecase page-04-travel-disruption-and-rebooking-assistant page-alt
 themeColor: "#101113"
-ogTitle: Travel rebooking briefs, paid per focused check.
-ogDescription: Give your agent a disrupted flight, constraints, budget cap, and stop conditions. Get flight evidence, replacement options, costs, and next checks for human review.
+ogTitle: Disrupted-trip briefs, paid per focused check.
+ogDescription: Give your agent a flight, traveler constraints, budget cap, and stop conditions. Get flight proof, replacement options, local deadlines, and review gates.
 schema:
   name: Travel Disruption And Rebooking Assistant
-  description: A pay-as-you-go travel rebooking workflow for agents that return a source-backed rebooking brief.
+  description: A pay-as-you-go travel disruption workflow for agents that return review-ready trip recovery briefs.
   mainEntityName: Travel Disruption And Rebooking Assistant
-  mainEntityDescription: Combines flight status, airport context, replacement fares, hotels, transfers, weather, maps, currency, and review controls into a focused rebooking brief.
+  mainEntityDescription: Combines flight status, airport disruption data, replacement fares, hotels, transfers, weather, maps, currency, and approval controls into one trip recovery brief.
   providerName: 402box
 hero:
   backdrop:
     label: "04"
   brandKicker: 402box
-  brandName: Travel Rebooking
+  brandName: Disruption Desk
   topLinkText: Use cases
   topLinkHref: "#use-cases"
   integration:
-    - Source APIs
+    - StableTravel
     - Evidence
     - Rebook brief
   title:
-    text: Recover the trip,
-    highlight: not every portal.
-  lead: Give your agent a disrupted flight, constraints, airport context, and budget cap. Get a rebooking brief with flight state, alternatives, local-time deadlines, costs, and approval boundaries.
+    text: Rescue the trip,
+    highlight: not the dashboard.
+  lead: Give your agent a disrupted flight, airport context, constraints, and spend cap. Get a source-backed brief for go, wait, rebook, or overnight review.
   actions:
     - label: Budget first
-      text: Plan Focused Run
+      text: Plan Travel Brief
       href: "#prompt"
       primary: true
     - label: See output
       text: Inspect Output
       href: "#example"
   trust:
-    - Source checks
-    - Evidence trail
+    - Route checks
+    - Source timestamps
     - Budget caps
-    - Human approval
+    - No auto-booking
   preview:
-    ariaLabel: Travel Rebooking request to output preview
-    request: My flight was disrupted. Check replacement flights, hotel and ground options, weather or airport context, price ranges, source timestamps, refund or policy caveats, and return options for review without booking anything.
-    responseAriaLabel: Example travel rebooking brief
+    ariaLabel: Travel disruption request to output preview
+    request: My flight is delayed and I may miss my connection. Check flight status, airport delays, weather, replacement fares, overnight options, timestamps, and review steps without booking.
+    responseAriaLabel: Example disruption decision brief
     resultLabel: Result
-    resultTitle: Rebook brief
+    resultTitle: Trip brief
     code: |-
       {
-        "job": "Travel Rebooking",
-        "input": "trip disruption and constraints",
-        "planned_calls": 12,
-        "call_budget": "$0.09-$0.11 to $0.16-$0.18",
-        "status": "review_required",
+        "trip": "delayed flight and connection risk",
+        "planned_calls": 13,
+        "call_budget": "$0.09-$0.18",
+        "status": "review first",
         "brief": [
-          "disruption triage: flight state, airport delay context, and local-time deadlines.",
-          "replacement options: sourced fares, transfer timing, and hotel candidates when needed.",
-          "next step: approve bookings, messages, or more calls only after review."
+          "leave now unless airline status changes in 30 minutes.",
+          "two replacement fares need confirmation before purchase.",
+          "hotel and transfer candidates remain unbooked."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One rebooking brief. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when a flight disruption needs a focused answer now, not a permanent travel data stack. The agent returns a rebooking brief with proof, costs, and next checks.
-  ariaLabel: Travel Rebooking input and output details
+  title: One disruption. Deadlines, options, and approval lines.
+  text: Pay-as-you-go travel data fits the moment when one trip starts failing and the user needs a decision brief, not another standing flight, fare, map, weather, and email stack.
+  ariaLabel: Travel disruption input and output details
   features:
     - title: Input
-      text: Booked flight, airport, traveler location, destination constraints, preferred currency, and budget cap.
+      text: Booked flight, travel date, airports, traveler location, destination constraints, currency, and call budget.
     - title: Output
-      text: A rebooking brief with a triage card, replacement-flight shortlist, overnight plan, timestamps, and cost notes.
+      text: A disruption brief with triage, replacement fares, overnight candidates, timestamps, and unresolved gaps.
     - title: Best fit
-      text: Flight disruption triage, replacement fare checks, overnight plans, and handoffs before action.
+      text: Delays, missed connections, alternate airports, overnight stays, and coordinator handoffs.
 results:
   eyebrow: Real tools, bounded spend
-  title: A rebooking brief shaped for human decisions.
-  text: Use rough source ranges such as $0.09-$0.11, $0.16-$0.18, $0.22-$0.23 as planning inputs, not live verified prices. Keep dynamic costs, provider freshness, and booking gaps visible.
+  title: A travel-desk brief built from priced checks.
+  text: Treat ranges as planning estimates from source artifacts. Keep provider timestamps, quote currencies, dynamic fanout, and no-booking limits beside the decision.
   metrics:
     - label: Disruption triage
       value: $0.09-$0.11
-      text: Checks the booked flight, airport delays, weather, route timing, and local deadlines before deciding whether to wait or rebook.
+      text: Checks the booked flight, airport delays, weather, ground route, and local deadlines before widening search.
       large: true
     - label: Replacement shortlist
       value: $0.16-$0.18
-      text: Compares replacement fares, schedules, airport-transfer timing, quote currencies, and gaps before a travel desk call.
+      text: Compares replacement fares, schedules, quote currencies, transfer timing, and source conflicts.
     - label: Overnight recovery plan
       value: $0.22+
-      text: Builds hotel, transfer, next-flight, weather, map, and local-currency options if the traveler may be stranded.
+      text: Adds hotels, transfers, next-flight context, weather, map proof, and local-currency estimates.
     - label: Expanded rebooking check
       value: $0.002+ cap
-      text: Add alternate-airport matrix elements, repeated polling, extra hotel details, or notification paths only after approval.
+      text: Cap Mapbox Matrix elements, extra hotel details, repeated polling, and sends before expansion.
 steps:
   titleId: workflow-title
   eyebrow: How it works
-  title: Start narrow. Expand only after review.
-  text: Run cheap source checks first, add richer tools only for promising signals, and keep mutations, outreach, payments, and expanded budgets under human approval.
+  title: Triage first. Rebook only after proof.
+  text: Start with the disruption signals, expand into fares or hotels only when the first checks justify it, and leave booking actions behind an approval gate.
   items:
     - number: "01"
       title: Normalize the trip
-      text: Turn flight number, date, airports, location, destination constraints, and currency into clean paid-call inputs.
+      text: Clean carrier, flight number, date, airports, traveler location, hotel area, currency, and hard constraints.
     - number: "02"
-      title: Estimate the budget
-      text: Show selected travel tools, expected call counts, rough ranges, dynamic fanout, and stop conditions before the run begins.
+      title: Price the next checks
+      text: Show planned services, call counts, estimated cents, dynamic matrix fanout, and stop conditions.
     - number: "03"
-      title: Gather travel proof
-      text: Check flight status, airport disruption, weather, route timing, replacement fares, hotel or transfer options, and source timestamps.
+      title: Gather source proof
+      text: Check flight status, airport delay context, weather, route timing, fares, hotels, transfers, and timestamps.
     - number: "04"
-      title: Return the brief
-      text: Deliver the triage recommendation, ranked options, cost notes, open questions, and actions that still need explicit human approval.
+      title: Hand off the decision
+      text: Return go, wait, rebook, or overnight guidance with conflicts, open questions, and approval-only actions.
 benefits:
   eyebrow: Benefits
-  title: Keep the decision small before the stack grows.
+  title: Decide the next travel move without opening every system.
   items:
-    - title: Specialized data without permanent seats
-      text: Use travel rebooking sources for one important request instead of keeping every provider, dashboard, and credit bundle active.
-    - title: Cheaper checks before deeper evidence
-      text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
-    - title: Budget-first instructions
-      text: The agent states tools, call counts, ranges, and stop conditions before spending or widening the rebooking brief.
-    - title: Human approval for real actions
-      text: The brief can inform decisions, but bookings, cancellations, passenger data, message sends, wallet signatures, and spend need approval.
+    - title: Decision context without another console
+      text: Pull flight, airport, fare, hotel, weather, map, currency, and email context into one incident brief.
+    - title: Cheap triage before rebooking search
+      text: Start with status, delay, weather, and route checks before paying for replacement fares or hotel detail.
+    - title: Budget-first incidents
+      text: The agent names providers, call counts, ranges, dynamic risks, and stop rules before the run starts.
+    - title: Bookings stay human-approved
+      text: Candidate flights, hotels, transfers, and messages remain review items until a human approves action.
 facts:
   eyebrow: Tool details
-  title: Use tool facts to control the next call.
-  text: Travel Rebooking works best when the agent separates source facts, generated synthesis, and unresolved questions. Start with focused APIs, add support rails only when they explain the decision, and keep the run review-only by default.
-  ariaLabel: Travel Rebooking tool facts
+  title: Keep every travel claim tied to a source row.
+  text: The brief works because it separates airline or airport facts, corroborating signals, generated recommendations, and unresolved booking gaps instead of flattening them into one guess.
+  ariaLabel: Travel disruption tool facts
   items:
     - label: Core tools
-      value: StableTravel, SerpApi Google Flights, FlightAPI, GoFlightLabs
+      value: StableTravel, FlightAPI, GoFlightLabs, AviationStack
     - label: Support rails
-      value: FlightAPI, GoFlightLabs, AviationStack, OpenWeather, Exchange Rates, SerpApi
+      value: SerpApi, Google Maps, Mapbox, OpenWeather, Timezone, Exchange Rates
     - label: Primary input
-      value: booked flight, airports, traveler constraints, currency, and budget cap
+      value: Flight, airports, traveler location, constraints, currency, and call cap
     - label: Primary output
-      value: rebooking brief with triage card, shortlist, overnight plan, costs
+      value: Go/wait/rebook brief with fares, overnight options, costs, and gaps
     - label: Dynamic costs
-      value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
+      value: Mapbox Matrix fanout, repeated polling, extra hotels, and notifications
     - label: Execution status
       value: Scenario plan only, no endpoint calls performed
 prompt:
   eyebrow: Example prompt
-  title: Give your agent a rebooking brief request.
-  text: Keep the disrupted flight, constraints, output format, call budget, and approval boundaries explicit before paid or repeated checks begin.
+  title: Give your agent a disruption brief.
+  text: State the disrupted trip, hard constraints, usable tools, expected brief, call budget, and approval gates before paid checks begin.
   copyTarget: 04-travel-disruption-and-rebooking-assistant-2-prompt
   buttonLabel: Copy prompt
   code: |-
-    My flight was disrupted. Check replacement flights, hotel and ground options, weather or airport context, price ranges, source timestamps, refund or policy caveats, and return options for review without booking anything.
+    Flight delayed and I may miss my connection. I am at the airport, need the hotel tonight, and want costs in my currency.
 
-    Use StableTravel for flight status, flight search, price confirmation, hotels, transfers, and airport context when needed. Use FlightAPI, GoFlightLabs, AviationStack, SerpApi Google Flights, OpenWeather, maps, Timezone, and Exchange Rates only where they improve the rebooking decision.
+    Use StableTravel for status, search, prices, hotels, transfers, and airport context. Use FlightAPI, GoFlightLabs, AviationStack, SerpApi, weather, maps, Timezone, and Exchange Rates only when useful.
 
-    Before doing the work, estimate the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning. I will approve the call budget before the run starts.
+    Before work starts, estimate the call budget: providers, planned calls, dynamic risks, expected total, and stop conditions. I will approve it first.
 
-    Return a concise rebooking brief with:
-    - the cleaned flight, airport, traveler, hotel-area, currency, and timing assumptions
-    - current flight state, airport disruption context, weather risk, and local-time deadlines
-    - ranked replacement flights with fare, timing, transfer notes, quote currency, and source timestamp
-    - hotel, transfer, and morning recovery candidates if an overnight stay is likely
-    - conflicts, stale sources, missing fare or hotel fields, cost notes, and open questions
-    - the next checks worth running only after approval
+    Return a brief with:
+    - cleaned trip assumptions and local-time deadlines
+    - go, wait, rebook, or overnight recommendation with source timestamps
+    - replacement flights, transfer timing, hotel candidates, quote currencies, and gaps
+    - conflicts, stale sources, cost notes, and next checks
 
-    Do not book flights, cancel travel, reserve hotels or transfers, submit passenger details, send notifications, sign wallet messages, pay invoices, buy inboxes, or expand spend without explicit approval.
+    Do not book, cancel, reserve, submit passenger details, send messages, sign, pay, buy inboxes, or expand spend without approval.
 comparison:
   eyebrow: Comparison
-  title: When a rebooking brief beats another workflow.
-  ariaLabel: Traditional tools compared with this travel rebooking workflow
+  title: When a travel brief beats portal hopping.
+  ariaLabel: Traditional tools compared with this travel disruption workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
   rows:
     - category: Signup
-      left: Provider accounts, dashboards, API keys, credits, and billing setup
-      right: One bounded agent run with an approved call budget
+      left: Travel portals, provider accounts, API keys, credit bundles, and billing
+      right: One bounded incident run with a call budget approved up front
     - category: Tools
-      left: Separate data, search, extraction, proof, synthesis, and delivery tools
-      right: Pay-as-you-go endpoint mix selected for the request
+      left: Separate flight, fare, hotel, map, weather, currency, and email searches
+      right: A pay-as-you-go endpoint mix selected for the disruption
     - category: Output
-      left: Manual exports and screenshots to reconcile
-      right: One rebooking brief with timestamps, costs, and candidates
+      left: Tabs, screenshots, quotes, and messages reconciled by hand
+      right: One decision brief with timestamps, costs, conflicts, and candidates
     - category: Cadence
-      left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first rebooking brief supports them
+      left: Manual refreshes during a moving disruption
+      right: Budgeted polling only when the first brief shows it is worth it
     - category: Action
-      left: Research and operational action mixed together
-      right: Options stay review-only until a human approves action
+      left: Research, booking, cancellation, and messaging blur
+      right: Options stay review-only until a human approves the next action
 useCases:
   eyebrow: Use cases
-  title: Use the brief when timing matters.
+  title: Use the brief when the next move has a clock.
   items:
     - title: Flight Disruption Triage
-      text: Decide whether the traveler should go now, wait, call the airline, or start a replacement search.
+      text: Decide whether the traveler should leave now, wait, call the airline, or start replacement search.
     - title: Replacement shortlist
-      text: Compare replacement flights, fares, local-time windows, and airport-transfer implications before a travel desk call.
+      text: Compare replacement flights, fares, local-time windows, and airport-transfer implications before a call.
     - title: Overnight Stranding Plan
-      text: Build hotel, transfer, weather, next-flight, and local-currency options when an overnight stay may be needed.
+      text: Build hotel, transfer, morning-flight, weather, and local-currency options before reserving anything.
     - title: Reviewer handoff with proof
-      text: Package evidence, caveats, costs, and next actions so a traveler, assistant, or coordinator can approve the next move.
+      text: Give a traveler, assistant, or coordinator the evidence, caveats, costs, and approval choices.
 closing:
   eyebrow: Focused run
-  title: Start with the smallest useful brief.
-  text: No broad subscription stack. No silent expansion. Your agent pays only for the relevant checks needed to decide whether the next travel move is worth review.
+  title: Start with one disrupted trip and a call cap.
+  text: No permanent travel-data stack. No silent booking flow. Your agent pays for the checks needed to choose the next move and stops before real-world action.
   items:
-    - Start with the cheapest useful source checks.
-    - Cap providers, fanout, screenshots, and model calls.
-    - Keep source timestamps and uncertainty visible.
-    - Require approval before mutations, sends, or spend.
+    - Start with flight, airport, weather, route checks.
+    - Cap alternate airports, hotel details, and polling rounds.
+    - Keep provider names, timestamps, and currencies visible.
+    - Require approval before bookings, cancellations, or sends.
 faq:
   eyebrow: FAQ
-  title: Before the first rebooking brief.
+  title: Before the first disruption brief.
   items:
-    - question: What does the rebooking brief return?
-      answer: It can return trip inputs, flight state, airport delays, weather risk, replacement options, hotel or transfer candidates, timestamps, confidence labels, rough costs, conflicts, and next checks for review.
+    - question: What does the disruption brief return?
+      answer: It can return cleaned trip inputs, flight state, airport delays, weather risk, local deadlines, replacement fares, hotel or transfer candidates, conflicts, rough costs, and next checks.
       open: true
     - question: Which tools matter most?
-      answer: StableTravel, SerpApi Google Flights, FlightAPI, GoFlightLabs, AviationStack, OpenWeather, maps, Timezone, Exchange Rates, AgentMail, and StableEmail are the main tools surfaced by the source bundle. Add each one only when it improves the rebooking decision.
+      answer: StableTravel anchors status, search, prices, hotels, transfers, and airport context. FlightAPI, GoFlightLabs, AviationStack, SerpApi, maps, weather, Timezone, and Exchange Rates corroborate.
     - question: How much does a focused run cost?
-      answer: The local source bundle gives rough ranges such as $0.09-$0.11, $0.16-$0.18, $0.22-$0.23, $0.002. Dynamic endpoints should be capped before execution, and repeated checks should be approved separately.
+      answer: The source bundle estimates about $0.09-$0.11 for triage, $0.16-$0.18 for a replacement shortlist with a small matrix, and $0.22-$0.23 for overnight recovery.
     - question: What needs human approval?
-      answer: The default workflow returns candidates and tradeoffs. Flight or hotel bookings, cancellations, transfer reservations, passenger-data submission, notifications, wallet signatures, invoice payments, and expanded budgets require approval.
+      answer: The default flow returns candidates. Bookings, cancellations, transfers, passenger-data submission, notifications, wallet signatures, invoice payments, and expanded budgets need approval.
     - question: What should I watch for?
-      answer: Keep source freshness, timestamps, provider limits, dynamic prices, retry behavior, source links, approval boundaries, and generated recommendations separate from observed facts.
+      answer: Flight and fare data moves quickly. Keep provider names, timestamps, quote currencies, local-time assumptions, matrix costs, and generated recommendations separate from observed facts.
 footer:
   brand: 402box
   links:

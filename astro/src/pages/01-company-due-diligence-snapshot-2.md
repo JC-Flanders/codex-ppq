@@ -1,227 +1,228 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Company Diligence memo for review | 402box
-description: Use pay-as-you-go tools to check one bounded company request and return a source-backed diligence memo with costs, timestamps, and human approval.
+title: "Company diligence memo on demand | 402box"
+description: "Give an agent one company name or domain and get a bounded identity, web, filing, contact, cost, and proof memo for review."
 bodyClass: page-bumi page-usecase page-01-company-due-diligence-snapshot page-alt
 themeColor: "#101113"
-ogTitle: Company Diligence memos, paid per focused check.
-ogDescription: Give your agent a company domain or name, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
+ogTitle: "One target memo, paid per evidence lane."
+ogDescription: "Price a focused company check before it runs, then return identity, stack, filing, contact, screenshot, source, and caveat notes."
 schema:
-  name: Company Due Diligence Snapshot
-  description: A pay-as-you-go company diligence workflow for agents that return a source-backed diligence memo.
-  mainEntityName: Company Due Diligence Snapshot
-  mainEntityDescription: Combines company domain or name, public source checks, priced endpoint calls, and review controls into a focused diligence memo.
-  providerName: 402box
+  name: "Company Due Diligence Snapshot"
+  description: "A pay-as-you-go company diligence workflow for agents that assemble a source-backed company snapshot."
+  mainEntityName: "Company Due Diligence Snapshot"
+  mainEntityDescription: "Combines company enrichment, technology checks, public web evidence, contact signals, SEC checks, screenshots, and cost controls into one reviewable snapshot."
+  providerName: "402box"
 hero:
   backdrop:
     label: "01"
-  brandKicker: 402box
-  brandName: Company Diligence
-  topLinkText: Use cases
+  brandKicker: "402box"
+  brandName: "Diligence Memo"
+  topLinkText: "Use cases"
   topLinkHref: "#use-cases"
   integration:
-    - Source APIs
-    - Evidence
-    - Diligence memo
+    - "Company data"
+    - "SEC checks"
+    - "Source proof"
   title:
-    text: Check a company,
-    highlight: not every database.
-  lead: Give your agent a company domain or name, source limits, and budget cap. Get a diligence memo with timestamps, costs, caveats, and approval boundaries before action.
+    text: "Triage one company, "
+    highlight: "then buy depth."
+  lead: "Start with a domain or name. Get a reviewer-ready memo that separates identity, web proof, filing exposure, contact candidates, cost, and caveats."
   actions:
-    - label: Budget first
-      text: Plan Focused Run
+    - label: "Budget first"
+      text: "Plan Target Memo"
       href: "#prompt"
       primary: true
-    - label: See output
-      text: Inspect Output
+    - label: "See memo"
+      text: "Inspect Output"
       href: "#example"
   trust:
-    - Source checks
-    - Source evidence
-    - Budget caps
-    - Human approval
+    - "Identity first"
+    - "Source conflicts"
+    - "Rough costs"
+    - "Human approval"
   preview:
-    ariaLabel: Company Diligence request to output preview
-    request: Check Acme Robotics before our vendor call. Confirm the company identity, technology stack, public mentions, contact surfaces, SEC exposure if any, screenshots, rough run cost, and open questions before I spend more.
-    responseAriaLabel: Example company diligence memo
-    resultLabel: Result
-    resultTitle: Diligence memo
+    ariaLabel: "Company diligence request to output preview"
+    request: "Check acme-robotics.example before procurement call. Confirm identity, stack, public mentions, contacts, SEC exposure, screenshot proof, and whether deeper diligence is worth approval."
+    responseAriaLabel: "Example company diligence packet"
+    resultLabel: "Result"
+    resultTitle: "Target memo"
     code: |-
       {
-        "job": "Company Diligence",
-        "input": "company domain or name",
-        "planned_calls": 12,
-        "call_budget": "$0.205-$0.220 to $0.226-$0.331",
-        "status": "review_required",
+        "target": "acme-robotics.example",
+        "run_type": "private-company triage",
+        "call_budget": "$0.205-$0.220",
         "memo": [
-          "diligence memo: source-backed summary with timestamps.",
-          "Tools: Company Enrichment, BuiltWith, Apollo.",
-          "Next step: approve more calls only if the first memo is useful."
+          "Identity: canonical domain needs review.",
+          "Proof: stack, links, and screenshot attached.",
+          "Contacts: candidates only.",
+          "Next: approve SEC, KG, or people enrichment."
         ]
       }
 intro:
-  eyebrow: What it does
-  title: One diligence memo. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when company domain or name needs a focused answer now, not a permanent provider stack. The agent returns a diligence memo with proof, costs, and next checks.
-  ariaLabel: Company Diligence input and output details
+  eyebrow: "What it does"
+  title: "One target. Identity, evidence, and a next-step call."
+  text: "Use it when a lead, vendor, partner, investor target, or acquisition candidate needs a fast answer before a meeting, screen, or deeper spend."
+  ariaLabel: "Company diligence input and output details"
   features:
-    - title: Input
-      text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
-    - title: Output
-      text: A diligence memo with source links, timestamps, cost notes, confidence labels, and next checks for human review.
-    - title: Best fit
-      text: Vendor calls, lead screens, deal reviews, and company checks before action.
+    - title: "Input"
+      text: "A domain or company name, review context, source limits, optional SEC check, and first-run call budget."
+    - title: "Output"
+      text: "A diligence memo with identity, stack, contact, filing, screenshot, source, conflict, cost, and open-question notes."
+    - title: "Best fit"
+      text: "Vendor screens, lead qualification, investor research, partner review, and deal-desk triage."
 results:
-  eyebrow: Real tools, bounded spend
-  title: A diligence memo shaped for human decisions.
-  text: Use rough source ranges such as $0.205-$0.220, $0.226-$0.331, $0.706 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  eyebrow: "Real tools, bounded spend"
+  title: "A diligence memo priced before the first call."
+  text: "The source model uses rough MPP wrapper prices. Cap dynamic tools first, then preserve same-name matches, stale contacts, and SEC ambiguity."
   metrics:
-    - label: Fast Private-Company
-      value: $0.205-$0.220
-      text: Fast Private-Company Check starts with cheap source checks and returns a narrow diligence memo before expansion.
+    - label: "Private-company triage"
+      value: "$0.205-$0.220"
+      text: "Lean identity, stack, page proof, web context, contact hints, and synthesis for one private-company target."
       large: true
-    - label: Public-Company Filing
-      value: $0.226-$0.331
-      text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
-    - label: Deal-Desk Deep Snapshot
-      value: $0.706+
-      text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
-    - label: Expanded review run
-      value: $5.416+ cap
-      text: Use only when the first diligence memo justifies more providers, deeper evidence, or repeated monitoring.
+    - label: "Public-company risk memo"
+      value: "$0.226-$0.331"
+      text: "Adds SEC submissions, facts, concepts, filing search, web and news context, Diffbot KG, and screenshot proof."
+    - label: "Deal-desk deep snapshot"
+      value: "$0.706+"
+      text: "Starts near seventy cents, then can rise to $5.416 when graph, people, contact, extraction, and proof expand."
+    - label: "Dynamic cost driver"
+      value: "Diffbot KG"
+      text: "Graph result volume is the biggest swing factor, so cap entities before approving a broader diligence pass."
 steps:
   titleId: workflow-title
-  eyebrow: How it works
-  title: Start narrow. Expand only after review.
-  text: Run cheap source checks first, add richer tools only for promising signals, and keep mutations, outreach, payments, and expanded budgets under human approval.
+  eyebrow: "How it works"
+  title: "Resolve identity before expensive questions."
+  text: "Begin with identity and source fit, price the evidence plan, then add contact, filing, graph, screenshot, or extraction calls only when they can change the review."
   items:
     - number: "01"
-      title: Normalize the input
-      text: Turn the company domain or name into clean entities, constraints, and source limits before paid calls.
+      title: "Resolve the target"
+      text: "Use the domain or name to find the likely company, website, category, location hints, and same-name matches."
     - number: "02"
-      title: Estimate the budget
-      text: Show selected tools, expected call counts, rough ranges, dynamic endpoints, and stop conditions before the run begins.
+      title: "Price the evidence plan"
+      text: "Show selected providers, call counts, rough wrapper prices, dynamic ranges, and stop rules before paid calls begin."
     - number: "03"
-      title: Gather source proof
-      text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
+      title: "Separate proof lanes"
+      text: "Keep enrichment, stack, public web, SEC, contact, extraction, screenshot, and synthesis evidence in distinct lanes."
     - number: "04"
-      title: Return the memo
-      text: Deliver the diligence memo, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: "Return the handoff"
+      text: "Return findings, source links, timestamps, confidence labels, unresolved conflicts, cost notes, and next approvals."
 benefits:
-  eyebrow: Benefits
-  title: Keep the decision small before the stack grows.
+  eyebrow: "Benefits"
+  title: "Turn scattered diligence tools into one review decision."
   items:
-    - title: Specialized data without permanent seats
-      text: Use company diligence sources for one important request instead of keeping every provider, dashboard, and credit bundle active.
-    - title: Cheaper checks before deeper evidence
-      text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
-    - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the diligence memo.
-    - title: Human approval for real actions
-      text: The memo can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
+    - title: "Premium data without monthly seats"
+      text: "Buy the company, contact, technology, filing, graph, search, scrape, and screenshot calls needed for one target."
+    - title: "Buy deeper data only after signal"
+      text: "Use a lean pass to decide whether people enrichment, domain search, SEC review, or graph fanout deserves budget."
+    - title: "Conflict shown to reviewers"
+      text: "Same-name companies, stale enrichment, mismatched SEC identities, and uncertain contact channels stay visible."
+    - title: "Action stays out of scope"
+      text: "The memo can inform a call, but outreach, account actions, wallet signatures, payments, and extra spend need approval."
 facts:
-  eyebrow: Tool details
-  title: Use tool facts to control the next call.
-  text: Company Diligence works best when the agent separates source facts, generated synthesis, and unresolved questions. Start with focused APIs, add support rails only when they explain the decision, and keep the run review-only by default.
-  ariaLabel: Company Diligence tool facts
+  eyebrow: "Tool details"
+  title: "Use each provider for one diligence question."
+  text: "The workflow works best when every paid call has a job: confirm identity, inspect the stack, find context, check filings, suggest contacts, or capture proof."
+  ariaLabel: "Company diligence tool facts"
   items:
-    - label: Core tools
-      value: Company Enrichment, BuiltWith, Apollo, Hunter, Diffbot KG
-    - label: Support rails
-      value: Apollo, Hunter, Diffbot KG, EDGAR and EDGAR Full-Text Search, EDGAR (SEC), EDGAR Full-Text Search
-    - label: Primary input
-      value: company domain or name, source limits, and budget cap
-    - label: Primary output
-      value: diligence memo, timestamps, costs, caveats, and next checks
-    - label: Dynamic costs
-      value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
-    - label: Execution status
-      value: Scenario plan only, no endpoint calls performed
+    - label: "Core tools"
+      value: "Company Enrichment, BuiltWith, Apollo, Hunter, Diffbot KG"
+    - label: "Support rails"
+      value: "EDGAR, Brave, Exa, Perplexity, ScreenshotOne, Firecrawl"
+    - label: "Primary input"
+      value: "Company domain or name, review context, source limits, and call budget"
+    - label: "Primary output"
+      value: "Company memo, filing risk note, or deal-desk packet with evidence"
+    - label: "Dynamic costs"
+      value: "Diffbot KG, Apollo people, Hunter search, Perplexity, screenshots"
+    - label: "Execution status"
+      value: "Scenario plan only, no endpoint calls performed"
 prompt:
-  eyebrow: Example prompt
-  title: Give your agent a company diligence job.
-  text: Keep the company domain or name, source limits, output format, call budget, and approval boundaries explicit before paid or repeated checks begin.
+  eyebrow: "Example prompt"
+  title: "Give your agent a target-review brief."
+  text: "Name the company, the decision, the evidence lanes to price, the memo shape, and the approval rule before any paid work begins."
   copyTarget: 01-company-due-diligence-snapshot-2-prompt
-  buttonLabel: Copy prompt
+  buttonLabel: "Copy prompt"
   code: |-
-    Check Acme Robotics before our vendor call. Confirm the company identity, technology stack, public mentions, contact surfaces, SEC exposure if any, screenshots, rough run cost, and open questions before I spend more.
+    Check acme-robotics.example before procurement.
 
-    Use the local Company Diligence workflow to return a diligence memo. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Decide whether it is real and worth review. Use Company Enrichment for identity; BuiltWith for stack; Firecrawl and ScreenshotOne for proof; Exa and Brave for mentions; Apollo and Hunter for org/contact signals; Perplexity for synthesis. If public, price EDGAR and filing search first.
 
-    Return a concise diligence memo with:
-    - the cleaned input and assumptions
-    - the source names, timestamps, and links used
-    - the key findings separated from generated recommendations
-    - rough cost notes and any dynamic pricing caveats
-    - conflicts, stale sources, missing fields, and open questions
-    - the next checks worth running only after approval
+    Before work, estimate budget: providers, call count, dynamic risks, total, and stop conditions. I will approve before you begin.
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this diligence memo.
+    Return a memo with:
+    - company name, domain, and assumptions
+    - stack, mentions, page links, and screenshot time
+    - contact candidates marked unverified unless checked
+    - SEC status or why no SEC check ran
+    - conflicts, stale data, costs, and open questions
+    - next checks worth approving
+
+    Do not contact, create accounts, buy credits, sign wallet messages, pay invoices, submit forms, upload files, or exceed budget without approval.
 comparison:
-  eyebrow: Comparison
-  title: When a diligence memo beats another workflow.
-  ariaLabel: Traditional tools compared with this company diligence workflow
-  leftHeader: Traditional stack
-  rightHeader: This workflow
+  eyebrow: "Comparison"
+  title: "When one memo beats the subscription stack."
+  ariaLabel: "Traditional tools compared with this company diligence workflow"
+  leftHeader: "Traditional stack"
+  rightHeader: "This workflow"
   rows:
-    - category: Signup
-      left: Provider accounts, dashboards, API keys, credits, and billing setup
-      right: One bounded agent run with an approved call budget
-    - category: Tools
-      left: Separate data, search, extraction, proof, synthesis, and delivery tools
-      right: Pay-as-you-go endpoint mix selected for the request
-    - category: Output
-      left: Manual exports and screenshots to reconcile
-      right: One diligence memo with timestamps, costs, and candidates
-    - category: Cadence
-      left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first memo earns them
-    - category: Action
-      left: Research and operational action mixed together
-      right: Options stay review-only until a human approves action
+    - category: "Signup"
+      left: "Provider accounts, dashboards, API keys, credits, and billing setup"
+      right: "One bounded agent run with an approved call budget"
+    - category: "Tools"
+      left: "Separate enrichment, search, filing, extraction, proof, and synthesis tools"
+      right: "Pay-as-you-go endpoint mix chosen for the target"
+    - category: "Output"
+      left: "Exports, notes, screenshots, and filings checked by hand"
+      right: "One diligence memo with timestamps, costs, and source conflicts"
+    - category: "Cadence"
+      left: "Manual reminders or always-on subscriptions"
+      right: "Repeat checks only when the first memo earns another budget"
+    - category: "Action"
+      left: "Research, outreach, account work, and spend bundled"
+      right: "Findings stay review-only until a human approves action"
 useCases:
-  eyebrow: Use cases
-  title: Use the memo when timing matters.
+  eyebrow: "Use cases"
+  title: "Use the memo before deeper spend."
   items:
-    - title: Fast Private-Company
-      text: Start with one bounded request when a source-backed answer is needed before more budget or action.
-    - title: Public-Company Filing
-      text: Compare source families, show conflicts, and decide whether richer checks are worth the next run.
-    - title: Deal-Desk Deep Snapshot
-      text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
-    - title: Reviewer handoff with proof
-      text: Summarize findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+    - title: "Private-company triage"
+      text: "Check a startup, vendor, lead, or partner before a call and decide whether more enrichment is justified."
+    - title: "Public-company risk memo"
+      text: "Add EDGAR and filing search when the target may be an issuer, subsidiary, or investor-risk concern."
+    - title: "Deal-desk deep packet"
+      text: "Use broader graph, contact, screenshot, extraction, and search work when the target is worth dollars, not cents."
+    - title: "Reviewer handoff packet"
+      text: "Summarize evidence, caveats, costs, conflicts, and next approvals so a human owner can choose the next step."
 closing:
-  eyebrow: Focused run
-  title: Start with the smallest useful check.
-  text: No broad subscription stack. No silent expansion. Your agent pays only for the relevant checks needed to decide whether the next step is worth review.
+  eyebrow: "Focused run"
+  title: "Start with identity, then buy depth."
+  text: "No broad subscription stack. No silent fanout. Your agent prices the evidence lane before buying the next company check."
   items:
-    - Start with the cheapest useful source checks.
-    - Cap providers, fanout, screenshots, and model calls.
-    - Keep source timestamps and uncertainty visible.
-    - Require approval before mutations, sends, or spend.
+    - "Resolve identity before buying depth."
+    - "Cap people, graph, screenshots, and model calls."
+    - "Keep source links, timestamps, and conflicts visible."
+    - "Require approval before outreach, mutations, or extra spend."
 faq:
-  eyebrow: FAQ
-  title: Before the first diligence memo.
+  eyebrow: "FAQ"
+  title: "Before the first diligence memo."
   items:
-    - question: What does the diligence memo return?
-      answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+    - question: "What does the diligence memo return?"
+      answer: "It can return cleaned identity, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks for review."
       open: true
-    - question: Which tools matter most?
-      answer: Company Enrichment, BuiltWith, Apollo, Hunter, Diffbot KG are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.
-    - question: How much does a focused run cost?
-      answer: The local source bundle gives rough ranges such as $0.205-$0.220, $0.226-$0.331, $0.706, $5.416. Dynamic endpoints should be capped before execution, and repeated checks should be approved separately.
-    - question: What needs human approval?
-      answer: The default workflow returns reviewable candidates and tradeoffs. Purchases, bookings, filings, account actions, outreach, uploads, sends, wallet signatures, payments, and expanded budgets require explicit approval.
-    - question: What should I watch for?
-      answer: Keep source freshness, timestamps, provider limits, dynamic prices, retry behavior, source links, approval boundaries, and generated recommendations separate from observed facts.
+    - question: "Which tools matter most?"
+      answer: "Company Enrichment, BuiltWith, Apollo, Hunter, and Diffbot KG are the core tools. Search, extraction, proof, filing, and synthesis tools support the decision."
+    - question: "How much does a focused run cost?"
+      answer: "The local model estimates $0.205-$0.220 for private triage, $0.226-$0.331 for a filing memo, and $0.706-$5.416 for deeper work."
+    - question: "What needs human approval?"
+      answer: "Outreach, sends, account actions, purchases, uploads, wallet signatures, invoice payments, broader fanout, and any expanded budget need approval."
+    - question: "What should I watch for?"
+      answer: "Same-name companies, stale enrichment, candidate contacts, SEC mismatch, dynamic prices, source freshness, screenshots, and generated synthesis all need labels."
 footer:
-  brand: 402box
+  brand: "402box"
   links:
-    - label: Tool Details
+    - label: "Tool Details"
       href: "#endpoint"
-    - label: How It Works
+    - label: "How It Works"
       href: "#workflow-title"
-    - label: All Services
-      href: index.html
+    - label: "All Services"
+      href: "index.html"
 ---

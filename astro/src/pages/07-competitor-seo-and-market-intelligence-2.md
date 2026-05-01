@@ -1,32 +1,32 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Competitor SEO Intel competitor brief | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed competitor brief with costs, timestamps, and human approval.
+title: Competitor evidence briefs on demand | 402box
+description: Use pay-as-you-go SEO, ad, technology, and enrichment tools to turn competitor domains into a source-backed brief with costs and review steps.
 bodyClass: page-bumi page-usecase page-07-competitor-seo-and-market-intelligence page-alt
 themeColor: "#101113"
-ogTitle: Competitor SEO Intel briefs, paid per focused check.
-ogDescription: Give your agent a competitor domain or market, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
+ogTitle: Competitor proof, paid per focused run.
+ogDescription: Give your agent domains, market theme, and budget cap. Get keyword gaps, ad patterns, page proof, costs, and next checks for review.
 schema:
   name: Competitor SEO And Market Intelligence
-  description: A pay-as-you-go competitor seo intel workflow for agents that return a source-backed competitor brief.
+  description: A pay-as-you-go market-intelligence workflow for agents that return source-backed competitor briefs.
   mainEntityName: Competitor SEO And Market Intelligence
-  mainEntityDescription: Combines competitor domain or market, public source checks, priced endpoint calls, and review controls into a focused competitor brief.
+  mainEntityDescription: Combines competitor domains, SEO and ad signals, page proof, technology context, and review controls into a focused brief.
   providerName: 402box
 hero:
   backdrop:
     label: "07"
   brandKicker: 402box
-  brandName: Competitor SEO Intel
+  brandName: Competitor Intel
   topLinkText: Use cases
   topLinkHref: "#use-cases"
   integration:
-    - Source APIs
-    - Evidence
-    - Brief run
+    - SpyFu data
+    - Page proof
+    - SEO signals
   title:
-    text: Read the market,
-    highlight: not every platform.
-  lead: Give your agent a competitor domain or market, source limits, and budget cap. Get a competitor brief with timestamps, costs, caveats, and approval boundaries before action.
+    text: Buy the proof,
+    highlight: skip SEO seats.
+  lead: Give your agent domains, a market theme, and a cap. Get keyword gaps, ad patterns, page proof, costs, and next checks before buying another platform.
   actions:
     - label: Budget first
       text: Plan Focused Run
@@ -42,179 +42,177 @@ hero:
     - Human approval
   preview:
     ariaLabel: Competitor SEO Intel request to output preview
-    request: Compare these competitor domains before we plan content. Pull SEO, technology, market, page, and screenshot evidence, separate observed signals from recommendations, cap expansion, and return the strongest opportunities.
+    request: Compare anthropic.com with chatgpt.com and gemini.google.com before we plan content. Use SEO, ad, page, stack, and screenshot proof.
     responseAriaLabel: Example competitor seo intel competitor brief
     resultLabel: Result
-    resultTitle: Intel brief
+    resultTitle: Gap brief
     code: |-
       {
-        "job": "Competitor SEO Intel",
-        "input": "competitor domain or market",
-        "planned_calls": 12,
-        "call_budget": "$0.52-$0.54 to $0.12-$0.20",
-        "status": "review_required",
-        "competitor_brief": [
-          "keyword gaps, page proof, and next pages to build.",
-          "Tools: SpyFu, BuiltWith, Apollo.",
-          "Next step: approve more calls only if the first brief is useful."
+        "website": "anthropic.com",
+        "compare": ["chatgpt.com", "gemini.google.com"],
+        "status": "sample_not_live",
+        "call_budget": "$0.52-$0.54",
+        "intel": [
+          "Show keyword gaps with ranking source and page proof.",
+          "Approve extra screenshots, enrichment, or synthesis first."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One competitor brief. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when competitor domain or market needs a focused answer now, not a permanent provider stack. The agent returns a competitor brief with proof, costs, and next checks.
+  title: One domain set. Keyword gaps, ad proof, next moves.
+  text: "Pay-as-you-go access fits a focused question: which competitors rank, advertise, change pages, or deserve sales follow-up, and what proof supports the next move."
   ariaLabel: Competitor SEO Intel input and output details
   features:
     - title: Input
-      text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
+      text: A target domain, competitors or theme, source limits, evidence needs, and call budget.
     - title: Output
-      text: A competitor brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: A competitor brief with keyword gaps, ad patterns, stack signals, screenshots, costs, and review steps.
     - title: Best fit
-      text: Keyword gaps, paid-search audits, launch monitoring, and proof-backed jobs needing approval.
+      text: SEO gap checks, paid-search audits, launch monitoring, and sales-intel handoffs.
 results:
   eyebrow: Real tools, bounded spend
-  title: A competitor brief shaped for human decisions.
-  text: Use rough source ranges such as $0.52-$0.54, $0.12-$0.20, $0.57-$0.58 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  title: A competitor brief built from paid evidence.
+  text: The output should name sources, separate historic SpyFu data from current page checks, and show which proof is worth buying next.
   metrics:
-    - label: SEO Keyword Gap check
+    - label: Keyword gap brief
       value: $0.52-$0.54
-      text: SEO Keyword Gap Snapshot starts with cheap source checks and returns a narrow competitor brief before expansion.
+      text: One target plus two competitors with SpyFu, BuiltWith, page text, screenshots, and synthesis.
       large: true
-    - label: Paid Search And check
+    - label: Paid-search audit
+      value: $0.57-$0.58
+      text: One campaign pass with SpyFu PPC data, four page captures, Diffbot analysis, and search context.
+    - label: Launch sales-intel brief
+      value: $1.39+
+      text: One target plus five competitors with capped Apollo people enrichment and proof collection.
+    - label: Extra competitor check
       value: $0.12-$0.20
-      text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
-    - label: Launch Monitoring And
-      value: $0.57+
-      text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
-    - label: Expanded review run
-      value: $0.055+ cap
-      text: Use only when the first competitor brief justifies more providers, deeper evidence, or repeated monitoring.
+      text: Add SpyFu, BuiltWith, page text, and a screenshot when another domain matters.
 steps:
   titleId: workflow-title
   eyebrow: How it works
-  title: Start narrow. Expand only after review.
-  text: Run cheap source checks first, add richer tools only for promising signals, and keep mutations, outreach, payments, and expanded budgets under human approval.
+  title: Start with domains. Pay for proof.
+  text: Normalize domains, buy the low-cost signal first, then add screenshots, extraction, enrichment, or synthesis only when they change the decision.
   items:
     - number: "01"
-      title: Normalize the input
-      text: Turn the competitor domain or market into clean entities, constraints, and source limits before paid calls.
+      title: Normalize domains
+      text: Resolve companies, product domains, subsidiaries, and same-name brands before buying competitor data.
     - number: "02"
-      title: Estimate the budget
-      text: Show selected tools, expected call counts, rough ranges, dynamic endpoints, and stop conditions before the run begins.
+      title: Estimate proof cost
+      text: Show planned SpyFu, BuiltWith, search, scrape, screenshot, Diffbot, Apollo, and synthesis calls before spend.
     - number: "03"
-      title: Gather source proof
-      text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
+      title: Collect signals
+      text: Separate historical SEO or ad data from current search, page text, screenshots, and extraction evidence.
     - number: "04"
-      title: Return the brief
-      text: Deliver the competitor brief, source links, cost notes, open questions, and actions needing explicit human approval.
+      title: Return decisions
+      text: Deliver gaps, page examples, cost notes, confidence, conflicts, and next checks for human review.
 benefits:
   eyebrow: Benefits
-  title: Keep the decision small before the stack grows.
+  title: Market proof without another subscription.
   items:
-    - title: Specialized data without permanent seats
-      text: Use competitor seo intel sources for one important request instead of keeping every provider, dashboard, and credit bundle active.
-    - title: Cheaper checks before deeper evidence
-      text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
-    - title: Budget-first instructions
-      text: The agent states tools, call counts, ranges, and stop conditions before spending or widening the competitor brief.
-    - title: Human approval for real actions
-      text: The competitor brief informs the decision, but outreach, account actions, wallet signatures, and expanded spend require approval.
+    - title: Subscription-grade data for one job
+      text: Use SpyFu, BuiltWith, Apollo, Diffbot, and proof rails without keeping every dashboard active.
+    - title: Cheaper evidence before deep dives
+      text: Start with domain and keyword signals, then buy screenshots, page extraction, or synthesis only for useful gaps.
+    - title: Budget-first review
+      text: The agent states tools, call counts, dynamic prices, and stop conditions before the first paid run.
+    - title: Sales handoffs stay gated
+      text: Apollo people records remain candidates; outreach, account actions, and expanded spend need approval.
 facts:
   eyebrow: Tool details
-  title: Use tool facts to control the next call.
-  text: Competitor SEO Intel works best when the agent separates source facts, generated synthesis, and unresolved questions. Start with focused APIs, add support rails when they explain the decision, and keep the run review-only by default.
+  title: Use each tool for the evidence it proves.
+  text: The workflow is strongest when SpyFu supplies SEO and ad history, BuiltWith explains the stack, and live page tools prove what is visible now.
   ariaLabel: Competitor SEO Intel tool facts
   items:
     - label: Core tools
       value: SpyFu, BuiltWith, Apollo, Company Enrichment, Diffbot
     - label: Support rails
-      value: Apollo, Company Enrichment, Diffbot, Brave Search, Exa, Firecrawl
+      value: Brave Search, Exa, Firecrawl, ScreenshotOne, Perplexity
     - label: Primary input
-      value: competitor domain or market, source limits, and budget cap
+      value: Target domain, competitor list or campaign theme, budget cap
     - label: Primary output
-      value: competitor brief, timestamps, costs, caveats, and next checks
+      value: Keyword-gap, paid-search, or launch-intel competitor brief
     - label: Dynamic costs
-      value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
+      value: Apollo people enrichment and Perplexity synthesis
     - label: Execution status
       value: Scenario plan only, no endpoint calls performed
 prompt:
   eyebrow: Example prompt
-  title: Give your agent a focused review job.
-  text: Keep the competitor domain or market, source limits, output format, call budget, and approval boundaries explicit before paid or repeated checks begin.
+  title: Give your agent a competitor brief.
+  text: Make the domains, tools, evidence count, budget, and approval boundary explicit before buying ad history, screenshots, enrichment, or synthesis.
   copyTarget: 07-competitor-seo-and-market-intelligence-2-prompt
   buttonLabel: Copy prompt
   code: |-
-    Compare these competitor domains before we plan content. Pull SEO, technology, market, page, and screenshot evidence, separate observed signals from recommendations, cap expansion, and return the strongest opportunities.
+    Compare anthropic.com with chatgpt.com and gemini.google.com before we plan content.
 
-    Use the local Competitor SEO Intel workflow to return a competitor brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Normalize domains with Company Enrichment. Use SpyFu for SEO, keyword overlap, PPC, and ad-history signals. Use BuiltWith for stack context. Use Brave, Exa, Firecrawl, Diffbot, and ScreenshotOne for current page proof. Use Perplexity only after cheaper evidence is collected.
+
+    Before paid work, estimate the call budget. Show tools, call count, screenshots, dynamic risks, and total cost. I will approve the budget first.
 
     Return a concise competitor brief with:
-    - the cleaned input and assumptions
-    - the source names, timestamps, and links used
-    - the key findings separated from generated recommendations
-    - rough cost notes and any dynamic pricing caveats
-    - conflicts, stale sources, missing fields, and open questions
-    - the next checks worth running only after approval
+    - keyword gaps, competitor pages, and ad themes
+    - stack signals and screenshots tied to claims
+    - source names, timestamps, confidence, conflicts, and open questions
+    - next checks that need approval
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this competitor brief's scope.
+    Do not contact people, create accounts, publish copy, submit forms, sign wallet messages, pay invoices, or exceed the budget without approval.
 comparison:
   eyebrow: Comparison
-  title: When a competitor brief beats another workflow.
+  title: When one brief beats another dashboard.
   ariaLabel: Traditional tools compared with this competitor seo intel workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
   rows:
     - category: Signup
-      left: Provider accounts, dashboards, API keys, credits, and billing setup
-      right: One bounded agent run with an approved call budget
+      left: SEO, ad, sales, and tech data accounts with billing setup
+      right: One bounded run with approved call budget and source limits
     - category: Tools
-      left: Separate data, search, extraction, proof, synthesis, and delivery tools
-      right: Pay-as-you-go endpoint mix selected for the request
+      left: Separate dashboards for SpyFu, BuiltWith, search, screenshots, and enrichment
+      right: Pay-as-you-go tools selected for the proof the brief needs
     - category: Output
-      left: Manual exports and screenshots to reconcile
-      right: One competitor brief with timestamps, costs, and candidates
+      left: Exports, screenshots, and notes to reconcile
+      right: One brief with claims, evidence, costs, and open questions
     - category: Cadence
-      left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first brief earns them
+      left: Manual checks or subscription alerts
+      right: Repeat checks only when the first brief earns them
     - category: Action
-      left: Research and operational action mixed together
-      right: Options stay review-only until a human approves action
+      left: Research mixed with outreach or page changes
+      right: Findings stay review-only until a human approves action
 useCases:
   eyebrow: Use cases
-  title: Use the brief when timing matters.
+  title: Use the brief before spend grows.
   items:
-    - title: SEO Keyword Gap Snapshot
-      text: Start with one bounded request when a source-backed answer is needed before more budget or action.
-    - title: Paid Search And check
-      text: Compare source families, show conflicts, and decide whether richer checks are worth the next run.
-    - title: Launch Monitoring And
-      text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
-    - title: Reviewer handoff with proof
-      text: Hand off findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+    - title: Keyword gap brief
+      text: Find the competitor pages, terms, and ranking evidence that should shape the next content plan.
+    - title: Paid-search audit
+      text: Check ad history, offer angles, landing pages, and proof before copying or funding a campaign.
+    - title: Launch intel packet
+      text: Track positioning, search movement, stack signals, public mentions, and account follow-up candidates.
+    - title: Sales-review handoff
+      text: Give a reviewer sources, screenshots, costs, conflicts, and questions before approving deeper work.
 closing:
-  eyebrow: Focused run
-  title: Start with the smallest useful check.
-  text: No broad subscription stack. No silent expansion. Your agent pays only for the relevant checks needed to decide whether the next step is worth review.
+  eyebrow: Intel brief
+  title: Start with domains, not dashboards.
+  text: No permanent SEO stack. No silent crawl. Your agent buys only the competitor evidence needed to decide the next page, test, or review.
   items:
-    - Start with the cheapest useful source checks.
-    - Cap providers, fanout, screenshots, and model calls.
-    - Keep source timestamps and uncertainty visible.
-    - Require approval before mutations, sends, or spend.
+    - Normalize domains before buying signals.
+    - Cap competitors, history pulls, screenshots, and synthesis.
+    - Keep timestamps beside page and ad claims.
+    - Require approval before outreach, accounts, or expanded spend.
 faq:
   eyebrow: FAQ
-  title: Before the first competitor brief.
+  title: Before the first intel brief.
   items:
     - question: What does the competitor brief return?
-      answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+      answer: It can return keyword gaps, ad themes, page examples, stack signals, screenshots, source timestamps, rough costs, confidence labels, conflicts, and next checks.
       open: true
     - question: Which tools matter most?
-      answer: SpyFu, BuiltWith, Apollo, Company Enrichment, Diffbot are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.
+      answer: SpyFu is the main SEO and PPC source. BuiltWith adds stack context, Company Enrichment cleans domains, and page tools add current proof.
     - question: How much does a focused run cost?
-      answer: The local source bundle gives rough ranges such as $0.52-$0.54, $0.12-$0.20, $0.57-$0.58, $0.055. Dynamic endpoints should be capped before execution, and repeated checks should be approved separately.
+      answer: The local model estimates $0.52-$0.54 for a keyword-gap snapshot, $0.57-$0.58 for a paid-search audit, and $1.39-$1.51 for a larger launch brief.
     - question: What needs human approval?
-      answer: The default workflow returns reviewable candidates and tradeoffs. Purchases, bookings, filings, account actions, outreach, uploads, sends, wallet signatures, payments, and expanded budgets require explicit approval.
+      answer: Outreach, account actions, publishing, uploads, wallet signatures, invoice payments, expanded budgets, and broad Apollo people enrichment require approval.
     - question: What should I watch for?
-      answer: Keep source freshness, timestamps, provider limits, dynamic prices, retry behavior, source links, approval boundaries, and generated recommendations separate from observed facts.
+      answer: Competitor data ages quickly. Separate historical SpyFu signals from current page evidence, dedupe domains, cap dynamic costs, and mark Apollo records as candidates.
 footer:
   brand: 402box
   links:

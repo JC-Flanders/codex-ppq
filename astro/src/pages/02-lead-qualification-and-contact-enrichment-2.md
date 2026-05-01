@@ -1,220 +1,215 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Lead brief for sales review | 402box
-description: Use pay-as-you-go tools to check one bounded lead request and return a source-backed lead brief with costs, timestamps, and human approval.
+title: Lead fit cards before sales follow-up | 402box
+description: Use pay-as-you-go enrichment, email, phone, IP, and company checks to decide which leads deserve human follow-up.
 bodyClass: page-bumi page-usecase page-02-lead-qualification-and-contact-enrichment page-alt
 themeColor: "#101113"
-ogTitle: Lead Enrichment briefs, paid per focused check.
-ogDescription: Give your agent a lead, company, or domain, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
+ogTitle: Lead fit cards, paid per bounded check.
+ogDescription: Give your agent a domain, email, phone, profile, or form-fill record. Get a decision-ready lead card with source evidence, mismatch flags, costs, and review gates.
 schema:
   name: Lead Qualification And Contact Enrichment
-  description: A pay-as-you-go lead enrichment workflow for agents that return a source-backed lead brief.
+  description: A pay-as-you-go lead qualification workflow for agents that turn raw lead inputs into reviewable fit cards and outreach packets.
   mainEntityName: Lead Qualification And Contact Enrichment
-  mainEntityDescription: Combines lead, company, or domain, public source checks, priced endpoint calls, and review controls into a focused lead brief.
+  mainEntityDescription: Combines company enrichment, sales intelligence, email verification, phone and IP risk checks, and model synthesis into a bounded lead decision packet.
   providerName: 402box
 hero:
   backdrop:
     label: "02"
   brandKicker: 402box
-  brandName: Lead Enrichment
+  brandName: Lead Qualification
   topLinkText: Use cases
   topLinkHref: "#use-cases"
   integration:
-    - Source APIs
+    - Company fit
     - Evidence
-    - Lead brief
+    - Review queue
   title:
-    text: Qualify the lead,
-    highlight: not every seat. with proof
-  lead: Give your agent a lead, company, or domain, source limits, and budget cap. Get a lead brief with timestamps, costs, caveats, and approval boundaries before action.
+    text: Check the lead,
+    highlight: before sales time.
+  lead: Give your agent a domain, email, phone, profile, IP, or form fill. Get a lead card with company match, confidence, risk flags, cost, and review lane.
   actions:
     - label: Budget first
-      text: Plan Focused Run
+      text: Plan Lead Check
       href: "#prompt"
       primary: true
-    - label: See output
+    - label: See card
       text: Inspect Output
       href: "#example"
   trust:
-    - Source checks
-    - Reviewable proof
-    - Budget caps
-    - Human approval
+    - Identity match
+    - Source evidence
+    - Cost caps
+    - No auto-send
   preview:
-    ariaLabel: Lead Enrichment request to output preview
-    request: Qualify this inbound lead before sales follows up. Resolve the company, enrich likely contacts, check email confidence, inspect public context, show source conflicts, estimate the call budget, and keep outreach unapproved.
-    responseAriaLabel: Example lead enrichment lead brief
+    ariaLabel: Lead qualification request to output preview
+    request: Check this inbound lead before follow-up. Use the domain, work email, phone, LinkedIn profile, and source IP to verify fit, confidence, mismatch risk, and the right review lane.
+    responseAriaLabel: Example lead qualification fit card
     resultLabel: Result
-    resultTitle: Lead brief
+    resultTitle: Lead fit card
     code: |-
       {
-        "job": "Lead Enrichment",
-        "input": "lead, company, or domain",
-        "planned_calls": 12,
-        "call_budget": "$0.061-$0.151 to $0.338-$0.743",
-        "status": "review_required",
-        "lead_brief": [
-          "lead brief: fit, contact confidence, conflicts, and timestamps.",
-          "Tools: Apollo, Hunter, Clado.",
-          "Next step: approve more calls only if the first brief is useful."
+        "lead": "inbound form-fill",
+        "decision_lane": "manual_review",
+        "planned_calls": 8,
+        "call_budget": "$0.061-$0.151 plus model cost",
+        "card": [
+          "Company and email domains match; IP needs review.",
+          "Email is deliverable, with reputation caution flags.",
+          "Next step: approve deeper buyer research only if useful."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One lead brief. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when a lead, company, or domain needs a focused answer now, not a permanent provider stack. The agent returns a lead brief with proof, costs, and next checks.
-  ariaLabel: Lead Enrichment input and output details
+  title: One lead. Company fit, contact confidence, and risk flags.
+  text: Pay-as-you-go qualification helps when one signup, intro, form fill, or scraped lead might be worth attention, but not another seat-based data stack.
+  ariaLabel: Lead qualification input and output details
   features:
     - title: Input
-      text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
+      text: A domain, email, phone, LinkedIn profile, IP address, raw lead row, source limits, and a call budget.
     - title: Output
-      text: A lead brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: A lead fit card, contact shortlist, or outreach packet with source labels, timestamps, costs, and conflicts.
     - title: Best fit
-      text: Lead fit checks, buyer shortlists, and outreach review before action.
+      text: Inbound triage, account research, buying-committee discovery, and outreach readiness before sends.
 results:
   eyebrow: Real tools, bounded spend
-  title: A lead brief shaped for human decisions.
-  text: Use rough source ranges such as $0.061-$0.151, $0.338-$0.743, $0.098 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  title: A lead decision built from priced checks.
+  text: The source bundle estimates cents-to-low-dollar runs when search is capped. Treat these as planning ranges, not live invoices.
   metrics:
-    - label: Single Lead Fit Check
+    - label: Single lead fit card
       value: $0.061-$0.151
-      text: Single Lead Fit Check starts with cheap source checks and returns a narrow lead brief before expansion.
+      text: Resolves the company, checks email, phone, and IP, then returns a qualify, nurture, reject, or review lane.
       large: true
-    - label: Buying Committee
+    - label: Buyer short list
       value: $0.338-$0.743
-      text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
-    - label: Outreach Readiness check
+      text: Searches cheaply, enriches top people, verifies emails, and ranks stakeholders with source evidence.
+    - label: Outreach review packet
       value: $0.098+
-      text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
-    - label: Expanded review run
+      text: Verifies five contacts, adds risk checks, drafts review copy, and keeps sending behind approval.
+    - label: Approved send add-on
       value: $0.025-$0.100
-      text: Use only when the first lead brief justifies more providers, deeper evidence, or repeated monitoring.
+      text: Optional five-email send cost after approval, before setup such as subdomains or inboxes.
 steps:
   titleId: workflow-title
   eyebrow: How it works
-  title: Start narrow. Expand only after review.
-  text: Run cheap source checks first, add richer tools only for promising signals, and keep mutations, outreach, payments, and expanded budgets under human approval.
+  title: Match identity first. Enrich survivors.
+  text: Start with the fields the lead submitted, make mismatches visible, use richer people data only after fit is plausible, and hold outreach or extra spend for human approval.
   items:
     - number: "01"
-      title: Normalize the input
-      text: Turn the lead, company, or domain into clean entities, constraints, and source limits before paid calls.
+      title: Clean the lead
+      text: Preserve the raw row, then normalize domain, email, phone, profile, company, IP, source, and constraints.
     - number: "02"
-      title: Estimate the budget
-      text: Show selected tools, expected call counts, rough ranges, dynamic endpoints, and stop conditions before the run begins.
+      title: Price the first pass
+      text: List planned Company Enrichment, Apollo, Hunter, Clado, StableEnrich, model calls, ranges, and stop rules.
     - number: "03"
-      title: Gather source proof
-      text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
+      title: Compare the signals
+      text: Check company identity, email match, verifier results, reputation flags, phone validity, IP risk, and profile.
     - number: "04"
-      title: Return the brief
-      text: Deliver the lead brief, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Return a lane
+      text: Return qualify, nurture, reject, or review with evidence, confidence, rough cost, conflicts, and next checks.
 benefits:
   eyebrow: Benefits
-  title: Keep the decision small before the stack grows.
+  title: Spend data budget only where a lead deserves it.
   items:
-    - title: Specialized data without permanent seats
-      text: Use lead enrichment sources for one important request instead of keeping every provider, dashboard, and credit bundle active.
-    - title: Cheaper checks before deeper evidence
-      text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
-    - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the lead brief.
-    - title: Human approval for real actions
-      text: The lead brief can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and added spend require approval.
+    - title: Triage without permanent provider seats
+      text: Use Apollo, Hunter, Clado, AbstractAPI checks, and StableEnrich routes for one lead instead of every dashboard.
+    - title: Mismatch visibility before scoring
+      text: Keep company, email, employer, IP, phone, and profile evidence separate before any model summarizes the lead.
+    - title: Cheap checks, then enrich
+      text: Run low-cost identity checks first, then enrich only top people or accounts after the signal earns more spend.
+    - title: Drafts are not permission to send
+      text: The workflow can draft outreach, but emails, account actions, signatures, purchases, and budget increases need approval.
 facts:
   eyebrow: Tool details
-  title: Use tool facts to control the next call.
-  text: Lead Enrichment works best when the agent separates source facts, generated synthesis, and unresolved questions. Start with focused APIs, add support rails only when they explain the decision, and keep the run review-only by default.
-  ariaLabel: Lead Enrichment tool facts
+  title: Use the right check for the uncertainty.
+  text: Lead qualification works when observed facts stay separate from generated judgment. Company data shows fit, contact tools show reachability, and risk APIs surface caution flags.
+  ariaLabel: Lead qualification tool facts
   items:
     - label: Core tools
       value: Apollo, Hunter, Clado, Company Enrichment, Email Reputation
     - label: Support rails
-      value: Clado, Company Enrichment, Email Reputation, Phone Intelligence, IP Intelligence, StableEnrich
+      value: Phone Intelligence, IP Intelligence, StableEnrich, AgentMail, StableEmail
     - label: Primary input
-      value: lead, company, or domain, source limits, and budget cap
+      value: Domain, email, phone, LinkedIn profile, IP, raw lead row, and budget cap
     - label: Primary output
-      value: lead brief, timestamps, costs, caveats, and next checks
+      value: Lead fit card, buying-committee shortlist, or outreach readiness packet
     - label: Dynamic costs
-      value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
+      value: Apollo people enrichment, Hunter domain search, Clado results, models
     - label: Execution status
       value: Scenario plan only, no endpoint calls performed
 prompt:
   eyebrow: Example prompt
-  title: Give your agent a lead enrichment job.
-  text: Keep the lead, company, or domain, source limits, output format, call budget, and approval boundaries explicit before paid or repeated checks begin.
+  title: Give your agent one lead to qualify.
+  text: Include the lead fields, decision lanes, tools, call budget, source limits, and approval rules before any paid enrichment or send-channel work begins.
   copyTarget: 02-lead-qualification-and-contact-enrichment-2-prompt
   buttonLabel: Copy prompt
   code: |-
-    Qualify this inbound lead before sales follows up. Resolve the company, enrich likely contacts, check email confidence, inspect public context, show source conflicts, estimate the call budget, and keep outreach unapproved.
+    Qualify this inbound lead before sales follows up.
 
-    Use the local Lead Enrichment workflow to return a lead brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Inputs: company domain, work email, name, phone, LinkedIn profile, source IP, source notes, and call budget.
 
-    Return a concise lead brief with:
-    - the cleaned input and assumptions
-    - the source names, timestamps, and links used
-    - the key findings separated from generated recommendations
-    - rough cost notes and any dynamic pricing caveats
-    - conflicts, stale sources, missing fields, and open questions
-    - the next checks worth running only after approval
+    Use Company Enrichment for company identity, Apollo for organization context, and Hunter for company, domain-search, finder, and verifier signals. Use Email Reputation, Phone Intelligence, and IP Intelligence only when fields exist. Use Clado or StableEnrich only if the first pass deserves deeper research. Summarize the lane with OpenAI or Anthropic.
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this lead brief.
+    Return cleaned input, raw fields, fit clues, source labels, confidence, mismatch flags, review lane, costs, timestamps, conflicts, and open questions.
+
+    Do not contact the lead, send email, create inboxes, buy domains, submit forms, sign messages, pay invoices, move funds, or expand spend without approval.
 comparison:
   eyebrow: Comparison
-  title: When a lead brief beats another workflow.
-  ariaLabel: Traditional tools compared with this lead enrichment workflow
+  title: When one lead card beats another data stack.
+  ariaLabel: Traditional tools compared with this lead qualification workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
   rows:
     - category: Signup
-      left: Provider accounts, dashboards, API keys, credits, and billing setup
-      right: One bounded agent run with an approved call budget
+      left: Sales-intelligence seats, enrichment credits, API keys, and setup
+      right: One bounded lead check with an approved call budget
     - category: Tools
-      left: Separate data, search, extraction, proof, synthesis, and delivery tools
-      right: Pay-as-you-go endpoint mix selected for the request
+      left: Separate company, contact, email, phone, IP, profile, drafting, and send systems
+      right: Pay-as-you-go endpoint mix selected for the fields this lead actually has
     - category: Output
-      left: Manual exports and screenshots to reconcile
-      right: One lead brief with timestamps, costs, and candidates
+      left: Raw exports, verifier statuses, and CRM notes to reconcile
+      right: One fit card with evidence, mismatch flags, costs, and a review lane
     - category: Cadence
-      left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first brief earns them
+      left: Bulk enrichment jobs and recurring credit spend
+      right: Cheap first pass, then deeper people research only after the lead earns it
     - category: Action
-      left: Research and operational action mixed together
-      right: Options stay review-only until a human approves action
+      left: Research, drafting, lists, and sending blur together
+      right: Drafts, sends, inbox setup, and added budget remain blocked until a human approves
 useCases:
   eyebrow: Use cases
-  title: Use the lead brief when timing matters.
+  title: Use lead checks before attention.
   items:
-    - title: Single Lead Fit Check
-      text: Start with one bounded request when a source-backed answer is needed before more budget or action.
-    - title: Buying Committee Finder
-      text: Compare source families, show conflicts, and decide whether richer checks are worth the next run.
-    - title: Outreach Readiness
-      text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
-    - title: Reviewer handoff with proof
-      text: Package findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+    - title: Inbound lead fit card
+      text: Decide whether a signup, form fill, intro, or scraped lead is real, relevant, risky, or ready for a human review.
+    - title: Buyer short list
+      text: Turn a promising account into a stakeholder table with roles, profile links, emails, verification, and relevance reasons.
+    - title: Outreach readiness queue
+      text: Separate approved, hold, and reject lanes for a few contacts, with source-grounded draft copy waiting for review.
+    - title: Mismatch and fraud review
+      text: Surface conflicts between company, email, phone, IP, and public identity before scoring high.
 closing:
-  eyebrow: Focused run
-  title: Start with the smallest useful check.
-  text: No broad subscription stack. No silent expansion. Your agent pays only for the relevant checks needed to decide whether the next step is worth review.
+  eyebrow: Lead check
+  title: Start with the lead in front of you.
+  text: No broad enrichment purchase. No automatic campaign. Your agent pays for the checks needed to decide whether this lead deserves the next human minute.
   items:
-    - Start with the cheapest useful source checks.
-    - Cap providers, fanout, screenshots, and model calls.
-    - Keep source timestamps and uncertainty visible.
-    - Require approval before mutations, sends, or spend.
+    - Preserve raw fields before normalization.
+    - Cap search results, people enrichment, contacts, and model calls.
+    - Keep timestamps, provider labels, prices, and conflicts visible
+    - Require approval before sends, setup costs, or expanded spend.
 faq:
   eyebrow: FAQ
-  title: Before the first lead brief.
+  title: Before the first lead check.
   items:
-    - question: What does the lead brief return?
-      answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+    - question: What does the lead fit card return?
+      answer: It can return cleaned input, company fit clues, email verification, reputation flags, phone and IP risk, profile context, source labels, timestamps, costs, conflicts, and a review lane.
       open: true
     - question: Which tools matter most?
-      answer: Apollo, Hunter, Clado, Company Enrichment, Email Reputation are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.
+      answer: Company Enrichment, Apollo, Hunter, Email Reputation, Phone Intelligence, IP Intelligence, Clado, and StableEnrich cover identity, contact, risk, and profile checks. Models summarize.
     - question: How much does a focused run cost?
-      answer: The local source bundle gives rough ranges such as $0.061-$0.151, $0.338-$0.743, $0.098, $0.025-$0.100. Dynamic endpoints should be capped before execution, and repeated checks should be approved.
-    - question: What needs human approval?
-      answer: The default workflow returns reviewable candidates and tradeoffs. Purchases, bookings, filings, account actions, outreach, uploads, sends, wallet signatures, payments, and expanded budgets require explicit approval.
+      answer: The local model estimates about $0.061-$0.151 for a lead fit card, $0.338-$0.743 for a three-contact buyer pass, and $0.098+ for a five-contact outreach packet before sends.
+    - question: Does the agent contact leads?
+      answer: No. The default returns a reviewable fit card, shortlist, or draft packet. Email sends, inbox creation, domain setup, purchases, wallet signatures, and expanded budgets require approval.
     - question: What should I watch for?
-      answer: Keep source freshness, timestamps, provider limits, dynamic prices, retry behavior, source links, approval boundaries, and generated recommendations separate from observed facts.
+      answer: Email verification and reputation can disagree, phone and IP signals are risk indicators, LinkedIn-style data can be stale, and found contact details are not permission to contact someone.
 footer:
   brand: 402box
   links:

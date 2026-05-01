@@ -1,220 +1,220 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Regulatory Check citation brief | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed citation brief with costs, timestamps, and human approval.
+title: Legal answer checks on demand | 402box
+description: Use pay-as-you-go legal data, SEC filings, search, and calculation tools to produce one reviewer-ready citation brief.
 bodyClass: page-bumi page-usecase page-03-legal-and-regulatory-answer-check page-alt
 themeColor: "#101113"
-ogTitle: Regulatory Check briefs, paid per focused check.
-ogDescription: Give your agent a legal or compliance question, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
+ogTitle: Citation-backed legal checks, paid per run.
+ogDescription: Ask a narrow compliance question, approve a call budget, and get rule text, SEC evidence, calculation notes, source limits, and reviewer questions.
 schema:
   name: Legal And Regulatory Answer Check
-  description: A pay-as-you-go regulatory check workflow for agents that return a source-backed citation-first answer.
+  description: A pay-as-you-go workflow for turning one legal or compliance question into a reviewer-ready citation brief.
   mainEntityName: Legal And Regulatory Answer Check
-  mainEntityDescription: Combines legal or compliance question, public source checks, priced endpoint calls, and review controls into a focused citation-first answer.
+  mainEntityDescription: Combines rule lookup, SEC evidence, public context, calculation checks, and review controls into one bounded answer packet.
   providerName: 402box
 hero:
   backdrop:
     label: "03"
   brandKicker: 402box
-  brandName: Regulatory Check
+  brandName: Compliance Check
   topLinkText: Use cases
   topLinkHref: "#use-cases"
   integration:
-    - Source APIs
-    - Evidence
-    - Citation brief
+    - GovLaws CFR
+    - SEC data
+    - Review brief
   title:
-    text: Check the rule, with proof
-    highlight: not legal advice.
-  lead: Give your agent a legal or compliance question, source limits, and budget cap. Get a citation-first answer with timestamps, costs, caveats, and approval boundaries before action.
+    text: "Check one rule, "
+    highlight: not a legal call.
+  lead: Give your agent one compliance question and a cap. Get current rule text, SEC evidence when relevant, calculation notes, and reviewer questions.
   actions:
     - label: Budget first
-      text: Plan Focused Run
+      text: Plan Check Run
       href: "#prompt"
       primary: true
     - label: See output
-      text: Inspect Output
+      text: Inspect Brief
       href: "#example"
   trust:
-    - Source checks
-    - Citation brief
-    - Budget caps
-    - Human approval
+    - Current rules
+    - Filing evidence
+    - Cost caps
+    - Review required
   preview:
     ariaLabel: Regulatory Check request to output preview
-    request: Answer this narrow compliance question with current rule text, source citations, recent change signals, calculation notes if needed, SEC filing evidence when relevant, and a reviewer-ready handoff with human judgment clearly required.
+    request: Does this cybersecurity disclosure question match current SEC rules? Check the source rule, recent changes, EDGAR filings, and date math before review.
     responseAriaLabel: Example regulatory check citation-first answer
     resultLabel: Result
-    resultTitle: Citation brief
+    resultTitle: Issue brief
     code: |-
       {
-        "job": "Regulatory Check",
-        "input": "legal or compliance question",
-        "planned_calls": 12,
-        "call_budget": "$0.179-$0.194 to $0.229-$0.244",
-        "status": "review_required",
-        "citation_brief": [
-          "citation-first answer: source-backed summary with timestamps.",
-          "Tools: GovLaws, EDGAR, EDGAR Full-Text Search.",
-          "Next step: approve more calls only if the first brief is useful."
+        "question": "cybersecurity disclosure rule",
+        "planned_calls": 11,
+        "call_budget": "$0.229-$0.244+",
+        "review": "required",
+        "brief": [
+          "Rule source: GovLaws citation and change check.",
+          "Company evidence: EDGAR filing excerpts.",
+          "Open issue: legal interpretation still needs counsel."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One citation-first answer. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when a legal or compliance question needs a focused answer now, not a permanent provider stack. The agent returns a citation-first answer with proof, costs, and next checks.
+  title: One question. Rule text, filings, and review notes.
+  text: Use it for compliance questions that deserve citations but not another subscription stack. The brief keeps binding rules, SEC evidence, web context, and AI synthesis separate.
   ariaLabel: Regulatory Check input and output details
   features:
     - title: Input
-      text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
+      text: A narrow legal or compliance question, jurisdiction clues, source limits, and a first-run call budget.
     - title: Output
-      text: A citation brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: A citation brief with rule text, source links, filing snippets, math notes, caveats, and reviewer questions.
     - title: Best fit
-      text: Workflow options, citation brief, source proof, and narrow jobs that need approval before action.
+      text: Sporadic rule checks, issuer disclosure reviews, and deadline or threshold questions.
 results:
   eyebrow: Real tools, bounded spend
-  title: A citation brief shaped for human decisions.
-  text: Use rough source ranges such as $0.179-$0.194+, $0.229-$0.244+, $0.258-$0.273+ as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  title: Cents-level checks before legal review.
+  text: The source bundle models bounded runs, not live prices. Fixed MPP calls are cheap; Perplexity and Diffbot NL need caps.
   metrics:
-    - label: Current Rule Answer
+    - label: Current rule brief
       value: $0.179-$0.194
-      text: Current-rule citation brief starts with cheap source checks and returns a narrow citation-first answer before expansion.
+      text: GovLaws search, resolve, changes, web context, synthesis, extraction, and one reviewer handoff.
       large: true
-    - label: Public-Company check
+    - label: Disclosure review
       value: $0.229-$0.244
-      text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
-    - label: Deadline, Threshold, And
+      text: Adds EDGAR submissions, facts, and filing search before separating company text from rule text.
+    - label: Deadline formula check
       value: $0.258+
-      text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
-    - label: Expanded review run
-      value: $0.004+ cap
-      text: Use only when the first citation-first answer justifies more providers, deeper evidence, or repeated monitoring.
+      text: Adds Wolfram|Alpha for dates, thresholds, units, or percentages with variables shown.
+    - label: Dynamic text pass
+      value: $0.004+ /10k
+      text: Diffbot NL and model calls should run only on selected excerpts with approved limits.
 steps:
   titleId: workflow-title
   eyebrow: How it works
-  title: Start narrow. Expand only after review.
-  text: Run cheap source checks first, add richer tools only for promising signals, and keep mutations, outreach, payments, and expanded budgets under human approval.
+  title: Start with authority. Then add context.
+  text: "Build the answer in layers: rule source first, company evidence when needed, calculation trace for math, then a human review handoff."
   items:
     - number: "01"
-      title: Normalize the input
-      text: Turn the legal or compliance question into clean entities, constraints, and source limits before paid calls.
+      title: Frame the question
+      text: Capture jurisdiction, agency, company, date, threshold, and what decision the answer will inform.
     - number: "02"
-      title: Estimate the budget
-      text: Show selected tools, expected call counts, rough ranges, dynamic endpoints, and stop conditions before the run begins.
+      title: Price the source set
+      text: Show GovLaws, EDGAR, search, extraction, synthesis, and calculation calls before spending.
     - number: "03"
-      title: Gather source proof
-      text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
+      title: Collect evidence
+      text: Resolve the rule, check changes, pull filings or public context, and keep each source family separate.
     - number: "04"
-      title: Return the brief
-      text: Deliver the citation-first answer, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Hand off review
+      text: Return the brief, assumptions, conflicts, costs, and any action that still needs counsel or owner approval.
 benefits:
   eyebrow: Benefits
-  title: Keep the decision small before the stack grows.
+  title: Replace a standing stack with one check.
   items:
-    - title: Specialized data without permanent seats
-      text: Use regulatory check sources for one important request instead of keeping every provider, dashboard, and credit bundle active.
-    - title: Cheaper checks before deeper evidence
-      text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
-    - title: Budget-first instructions
-      text: The agent states tools, call counts, ranges, and stop conditions before spending or widening the citation brief.
-    - title: Human approval for real actions
-      text: The citation brief informs decisions, but sends, filings, account actions, wallet signatures, and added spend require approval.
+    - title: Legal-source access for one question
+      text: Buy GovLaws, SEC wrapper, search, extraction, and synthesis calls only when a real question appears.
+    - title: Binding rule text stays separate
+      text: Keep CFR text, filing excerpts, public commentary, and generated summaries in different lanes.
+    - title: Math stays audit-ready
+      text: Wolfram|Alpha checks dates, units, percentages, or formulas while the variables remain visible.
+    - title: Approval before consequences
+      text: Drafts, sends, filings, legal positions, extra spend, and wallet actions stay blocked until approved.
 facts:
   eyebrow: Tool details
-  title: Use tool facts to control the next call.
-  text: Regulatory Check works best when the agent separates source facts, generated synthesis, and unresolved questions. Start with focused APIs, add support rails only when they explain the decision, and keep the run review-only by default.
+  title: Keep authority, context, and math visible.
+  text: This page sells the review packet, not legal autopilot. GovLaws anchors the rule, EDGAR adds issuer evidence, and support tools add context or calculations.
   ariaLabel: Regulatory Check tool facts
   items:
     - label: Core tools
-      value: GovLaws, EDGAR, EDGAR Full-Text Search, Wolfram\, Diffbot NL
+      value: GovLaws, EDGAR, EDGAR Full-Text Search, Wolfram|Alpha, Diffbot NL
     - label: Support rails
-      value: EDGAR Full-Text Search, Wolfram\, Diffbot NL, Perplexity, Brave Search, Exa
+      value: Perplexity, Brave Search, Exa, AgentMail reviewer handoff
     - label: Primary input
-      value: legal or compliance question, source limits, and budget cap
+      value: Compliance question, jurisdiction clues, source limits, call budget
     - label: Primary output
-      value: citation-first answer, timestamps, costs, caveats, and next checks
+      value: Rule citation, filing evidence, calculation trace, reviewer questions
     - label: Dynamic costs
-      value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
+      value: Perplexity models, Diffbot text length, source fanout, repeated checks
     - label: Execution status
       value: Scenario plan only, no endpoint calls performed
 prompt:
   eyebrow: Example prompt
-  title: Give your agent a regulatory check job.
-  text: Keep the legal or compliance question, source limits, output format, call budget, and approval boundaries explicit before paid or repeated checks begin.
+  title: Give your agent one legal check.
+  text: Name the question, source families, desired brief, budget cap, and review boundary before legal-data calls or handoff actions.
   copyTarget: 03-legal-and-regulatory-answer-check-2-prompt
   buttonLabel: Copy prompt
   code: |-
-    Answer this narrow compliance question with current rule text, source citations, recent change signals, calculation notes if needed, SEC filing evidence when relevant, and a reviewer-ready handoff with human judgment clearly required.
+    Check whether our cybersecurity disclosure question is covered by current SEC or federal rule text.
 
-    Use the local Regulatory Check workflow to return a citation-first answer. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Use GovLaws to search, resolve the rule, and check changes. If a public company is named, use EDGAR submissions and EDGAR Full-Text Search for filing language. Use Brave Search and Exa for official context. Use Wolfram|Alpha for dates or thresholds. Use Diffbot NL on selected excerpts. Use Perplexity to draft from cited sources.
 
-    Return a concise citation brief with:
-    - the cleaned input and assumptions
-    - the source names, timestamps, and links used
-    - the key findings separated from generated recommendations
-    - rough cost notes and any dynamic pricing caveats
-    - conflicts, stale sources, missing fields, and open questions
-    - the next checks worth running only after approval
+    Before paid work, estimate call_budget, planned calls, dynamic risks, and stop conditions. I will approve before you begin.
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this citation brief.
+    Return:
+    - cleaned question and assumptions
+    - rule text, citation, links, and freshness notes
+    - SEC evidence separated from rule requirements
+    - calculation trace if needed
+    - conflicts, gaps, and reviewer questions
+
+    Do not call this legal advice. Do not create drafts, send messages, file, pay, sign, or expand budget without approval.
 comparison:
   eyebrow: Comparison
-  title: When a citation brief beats another workflow.
+  title: When one legal check beats a stack.
   ariaLabel: Traditional tools compared with this regulatory check workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
   rows:
     - category: Signup
-      left: Provider accounts, dashboards, API keys, credits, and billing setup
-      right: One bounded agent run with an approved call budget
+      left: Legal research accounts, SEC tools, search APIs, and billing setup
+      right: One bounded check with an approved call budget
     - category: Tools
-      left: Separate data, search, extraction, proof, synthesis, and delivery tools
-      right: Pay-as-you-go endpoint mix selected for the request
+      left: Separate legal-data, filing, search, extraction, calculation, and email tools
+      right: Pay-as-you-go sources selected for the question
     - category: Output
-      left: Manual exports and screenshots to reconcile
-      right: One citation-first answer with timestamps, costs, and candidates
+      left: Manual notes, copied links, and loose summaries
+      right: One citation brief with costs, caveats, and reviewer questions
     - category: Cadence
-      left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first brief earns them
+      left: Manual reminders to re-check sources
+      right: Budgeted repeat checks only after the first answer proves useful
     - category: Action
-      left: Research and operational action mixed together
-      right: Options stay review-only until a human approves action
+      left: Research, legal advice, and operations mixed together
+      right: Review-only output until a human approves consequences
 useCases:
   eyebrow: Use cases
-  title: Use a citation brief when timing matters.
+  title: Use it before the answer becomes a risk.
   items:
-    - title: Current Rule Answer
-      text: Start with one bounded request when a source-backed answer is needed before more budget or action.
-    - title: Public-Company check
-      text: Compare source families, show conflicts, and decide whether richer checks are worth the next run.
-    - title: Deadline, Threshold, And
-      text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
-    - title: Reviewer handoff with proof
-      text: Package findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+    - title: Current rule brief
+      text: Answer a narrow CFR or agency-rule question with citation, provenance, and change signals.
+    - title: Issuer disclosure
+      text: Compare EDGAR filing language with a current rule while keeping source families separate.
+    - title: Deadline math check
+      text: Show dates, variables, thresholds, and assumptions before a filing or fee decision moves forward.
+    - title: Counsel handoff packet
+      text: Package rule text, excerpts, costs, caveats, and open questions for a licensed reviewer.
 closing:
-  eyebrow: Focused run
-  title: Start with the smallest useful check.
-  text: No broad subscription stack. No silent expansion. Your agent pays only for the relevant checks needed to decide whether the next step is worth review.
+  eyebrow: Review run
+  title: Start with one answerable question.
+  text: No permanent legal-data stack. No implied legal signoff. Buy the source checks needed to decide what deserves human review.
   items:
-    - Start with the cheapest useful source checks.
-    - Cap providers, fanout, screenshots, and model calls.
-    - Keep source timestamps and uncertainty visible.
-    - Require approval before mutations, sends, or spend.
+    - Resolve one citation before widening.
+    - Cap source fanout, text length, and model use.
+    - Keep rule text and commentary in separate lanes.
+    - Require approval before drafts, sends, filings, or spend.
 faq:
   eyebrow: FAQ
-  title: Before the first citation brief.
+  title: Before the first legal check.
   items:
     - question: What does the citation brief return?
-      answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+      answer: It can return the cleaned question, cited rule text, source links, freshness notes, SEC excerpts, calculation trace, cost notes, and reviewer questions.
       open: true
     - question: Which tools matter most?
-      answer: GovLaws, EDGAR, EDGAR Full-Text Search, Wolfram\, Diffbot NL are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.
-    - question: How much does a focused run cost?
-      answer: The local source bundle gives rough ranges such as $0.179-$0.194+, $0.229-$0.244+, $0.258-$0.273+, $0.004+. Dynamic endpoints should be capped before execution, and repeated checks should be approved.
+      answer: GovLaws anchors rule search, resolution, provenance, and changes. EDGAR adds issuer evidence; Wolfram|Alpha, Diffbot NL, search, and synthesis help only when needed.
+    - question: How much does one check cost?
+      answer: The source model estimates about $0.179-$0.194+ for a rule brief, $0.229-$0.244+ for a disclosure check, and $0.258-$0.273+ for math-backed checks.
     - question: What needs human approval?
-      answer: The default workflow returns reviewable candidates and tradeoffs. Purchases, bookings, filings, account actions, outreach, uploads, sends, wallet signatures, payments, and expanded budgets require explicit approval.
+      answer: Drafts, sends, filings, legal positions, payments, wallet signatures, extra sources, dynamic text runs, and bigger budgets require approval.
     - question: What should I watch for?
-      answer: Keep source freshness, timestamps, provider limits, dynamic prices, retry behavior, source links, approval boundaries, and generated recommendations separate from observed facts.
+      answer: Verify jurisdiction, citation version, effective date, CIK, filing date, assumptions, source freshness, and whether the result is only context rather than authority.
 footer:
   brand: 402box
   links:

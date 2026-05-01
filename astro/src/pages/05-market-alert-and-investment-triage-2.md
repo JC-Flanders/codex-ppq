@@ -1,221 +1,217 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Market Alert Triage brief | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed triage brief with costs, timestamps, and human approval.
+title: Market alert triage on demand | 402box
+description: Turn a watchlist, token, wallet, filing, or macro alert into a review-only triage card with source proof, rough cost, and approval gates.
 bodyClass: page-bumi page-usecase page-05-market-alert-and-investment-triage page-alt
 themeColor: "#101113"
-ogTitle: Market Alert Triage briefs, paid per focused check.
-ogDescription: Give your agent a ticker, market event, or watchlist, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
+ogTitle: Market alerts triaged per focused check.
+ogDescription: Give your agent one market, onchain, filing, or macro trigger. Get a sourced ignore, watch, or look-deeper brief with known costs and open questions.
 schema:
   name: Market Alert And Investment Triage
-  description: A pay-as-you-go market alert triage workflow for agents that return a source-backed triage brief.
+  description: A pay-as-you-go workflow for reviewing market alerts with source evidence, cost ranges, and human approval boundaries.
   mainEntityName: Market Alert And Investment Triage
-  mainEntityDescription: Combines ticker, market event, or watchlist, public source checks, priced endpoint calls, and review controls into a focused triage brief.
+  mainEntityDescription: Combines market data, SEC evidence, onchain checks, cited context, and synthesis into a bounded review brief.
   providerName: 402box
 hero:
   backdrop:
     label: "05"
   brandKicker: 402box
-  brandName: Market Alert Triage
+  brandName: Market Alert Desk
   topLinkText: Use cases
   topLinkHref: "#use-cases"
   integration:
-    - Source APIs
-    - Evidence
-    - Triage brief
+    - Market data
+    - SEC proof
+    - Onchain triage
   title:
-    text: Triage the signal,
-    highlight: not every terminal.
-  lead: Give your agent a ticker, market event, or watchlist, source limits, and budget cap. Get a triage brief with timestamps, costs, caveats, and approval boundaries before action.
+    text: Check one alert,
+    highlight: before deep dives.
+  lead: Send one market, filing, wallet, or token trigger. The agent prices the checks, gathers source proof, and returns an ignore, watch, or look-deeper brief.
   actions:
     - label: Budget first
-      text: Plan Focused Run
+      text: Price The Alert
       href: "#prompt"
       primary: true
     - label: See output
-      text: Inspect Output
+      text: Inspect Brief
       href: "#example"
   trust:
-    - Source checks
-    - Source evidence
-    - Budget caps
-    - Human approval
+    - Timestamps
+    - Known cost ranges
+    - Clean IDs
+    - No auto-trading
   preview:
-    ariaLabel: Market Alert Triage request to output preview
-    request: Review this market alert before I act. Check price movement, company context, filings or news, public web evidence, source timestamps, rough call cost, and return a triage brief with no trading or account action.
-    responseAriaLabel: Example market alert triage brief
+    ariaLabel: Market alert request to review brief preview
+    request: A watchlist alert fired on a stock and related token narrative. Check for filing, news, market, or onchain support. Show cost first, keep the run cheap, and do not trade.
+    responseAriaLabel: Example market alert review brief
     resultLabel: Result
-    resultTitle: Triage brief
+    resultTitle: Alert review
     code: |-
       {
-        "job": "Market Alert Triage",
-        "input": "ticker, market event, or watchlist",
-        "planned_calls": 12,
-        "call_budget": "$0.171-$0.186 to $0.403-$0.418",
-        "status": "review_required",
-        "triage_brief": [
-          "Trigger: price move needs filing, news, and market context before action.",
-          "Decision: watch, not trade, until a human approves deeper checks.",
-          "Proof: timestamps, source links, cost notes, and open questions included."
+        "alert": "watchlist move with token context",
+        "budget": "$0.171-$0.186 before OpenAI",
+        "decision": "watch",
+        "evidence": [
+          "Price move confirmed; timestamp needs review.",
+          "No filing or onchain driver is strong enough for action.",
+          "Approve deeper checks only if the alert persists."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One triage brief. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when ticker, market event, or watchlist needs a focused answer now, not a permanent provider stack. The agent returns a triage brief with proof, costs, and next checks.
+  title: One market trigger. Enough proof to decide the next check.
+  text: Use this after an alert fires and before anyone opens a terminal, analyst model, or chain dashboard. The agent buys the smallest useful checks and separates source facts from synthesis.
   ariaLabel: Market Alert Triage input and output details
   features:
     - title: Input
-      text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
+      text: A ticker, token, wallet, contract, filing keyword, macro signal, source limits, and call-budget cap.
     - title: Output
-      text: A triage brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: A review brief with trigger summary, source table, timestamps, cost notes, confidence, and next checks.
     - title: Best fit
-      text: Alert cards, token or wallet memos, catalyst briefs, and narrow jobs that need approval.
+      text: Watchlist moves, token spikes, wallet activity, filings, earnings events, and macro first looks.
 results:
   eyebrow: Real tools, bounded spend
-  title: A triage brief shaped for human decisions.
-  text: Use rough source ranges such as $0.171-$0.186, $0.403-$0.418, $0.50-$14.42 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  title: Price the first look before the deep dive.
+  text: The source bundle models costs from local MPP metadata. Treat ranges as planning inputs, not live bills. OpenAI synthesis stays dynamic and unknown.
   metrics:
-    - label: Watchlist Move check
+    - label: Watchlist move
       value: $0.171-$0.186
-      text: Watchlist Move Explainer starts with cheap source checks and returns a narrow triage brief before expansion.
+      text: Alpha Vantage, CoinGecko, EDGAR, and Perplexity explain whether the move deserves attention.
       large: true
-    - label: Token, Wallet, And
+    - label: Token or wallet base
       value: $0.403-$0.418
-      text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
-    - label: Public-Company Catalyst
-      value: $0.50+
-      text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
-    - label: Expanded review run
-      value: $0.117-$0.132
-      text: Use only when the first triage brief justifies more providers, deeper evidence, or repeated monitoring.
+      text: CoinGecko, Allium, Nansen, Codex, RPC, and context checks produce an onchain memo before SQL.
+    - label: Public-company catalyst
+      value: $0.12+
+      text: Known subtotal is $0.117-$0.132 before OpenAI for filings, financials, and context.
+    - label: Dune-expanded token run
+      value: $0.50-$14.42
+      text: Dune execution plus results can dominate spend, so SQL waits until cheaper checks show signal.
 steps:
   titleId: workflow-title
   eyebrow: How it works
-  title: Start narrow. Expand only after review.
-  text: Run cheap source checks first, add richer tools only for promising signals, and keep mutations, outreach, payments, and expanded budgets under human approval.
+  title: Verify identity first, then buy evidence.
+  text: The workflow cleans identifiers, prices the route, and expands only when cheap checks show the alert deserves a richer market, filing, or onchain pass.
   items:
     - number: "01"
-      title: Normalize the input
-      text: Turn the ticker, market event, or watchlist into clean entities, constraints, and source limits before paid calls.
+      title: Clean the alert
+      text: Resolve ticker, CIK, token, contract, chain, wallet, filing term, and time window before sources join.
     - number: "02"
-      title: Estimate the budget
-      text: Show selected tools, expected call counts, rough ranges, dynamic endpoints, and stop conditions before the run begins.
+      title: Price the call route
+      text: Show providers, call counts, fixed subtotals, dynamic endpoints, OpenAI unknowns, and stop conditions.
     - number: "03"
       title: Gather source proof
-      text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
+      text: Pull market, SEC, token, wallet, RPC, and cited context with source references and timestamps attached.
     - number: "04"
-      title: Return triage brief
-      text: Deliver the triage brief, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Return decision card
+      text: Return the recommendation, confidence, costs, source gaps, conflicts, and approvals needed for next steps.
 benefits:
   eyebrow: Benefits
-  title: Keep the decision small before the stack grows.
+  title: Treat alerts as decisions, not dashboard chores.
   items:
-    - title: Specialized data without permanent seats
-      text: Use market alert triage sources for one important request instead of keeping every provider, dashboard, and credit bundle active.
-    - title: Cheaper checks before deeper evidence
-      text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
-    - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the triage brief.
-    - title: Human approval for real actions
-      text: The triage brief informs the decision, but trades, account changes, wallet signatures, dynamic queries, and extra spend require approval.
+    - title: Use market tools without subscriptions
+      text: Pull the right data source only when a specific alert needs evidence, not a permanent dashboard.
+    - title: Spend on the cheapest useful proof
+      text: Start with identity, price, filing, token, wallet, and cited context before dynamic SQL or broad result fetches.
+    - title: Keep source facts separate
+      text: Market data, SEC filings, onchain rows, wallet labels, public context, and synthesis stay clearly labeled.
+    - title: Keep real action outside the run
+      text: The brief informs priority. Trades, wallet signatures, account actions, outreach, and extra spend wait for approval.
 facts:
   eyebrow: Tool details
-  title: Use tool facts to control the next call.
-  text: Market Alert Triage works best when the agent separates source facts, generated synthesis, and unresolved questions. Start with focused APIs, add support rails only when they explain the decision, and keep the run review-only by default.
+  title: Use the right source for the alert type.
+  text: The page is built from local scenario artifacts, not live execution. It shows which tools make an alert review credible and where dynamic pricing can create risk.
   ariaLabel: Market Alert Triage tool facts
   items:
     - label: Core tools
-      value: Alpha Vantage, CoinGecko, EDGAR and EDGAR Full-Text Search, Allium, Nansen
+      value: Alpha Vantage, CoinGecko, EDGAR, Allium, Nansen, Dune, Codex
     - label: Support rails
-      value: EDGAR and EDGAR Full-Text Search, Allium, Nansen, Dune, Codex, Alchemy
+      value: Alchemy, Quicknode, Perplexity, OpenAI
     - label: Primary input
-      value: ticker, market event, or watchlist, source limits, and budget cap
+      value: Ticker, token, wallet, filing alert, macro signal, limits, and budget cap
     - label: Primary output
-      value: triage brief, timestamps, costs, caveats, and next checks
+      value: Ignore, watch, or look-deeper brief with source proof and cost notes
     - label: Dynamic costs
-      value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
+      value: Dune, Allium results, Perplexity, OpenAI, fanout, and repeated checks
     - label: Execution status
       value: Scenario plan only, no endpoint calls performed
 prompt:
   eyebrow: Example prompt
-  title: Give your agent a focused review job.
-  text: Keep the ticker, market event, or watchlist, source limits, output format, call budget, and approval boundaries explicit before paid or repeated checks begin.
+  title: Give your agent one alert to review.
+  text: Keep the alert, identifiers, source order, budget cap, output shape, and approval boundaries explicit before any paid or dynamic checks begin.
   copyTarget: 05-market-alert-and-investment-triage-2-prompt
   buttonLabel: Copy prompt
   code: |-
-    Review this market alert before I act. Check price movement, company context, filings or news, public web evidence, source timestamps, rough call cost, and return a triage brief with no trading or account action.
+    A market alert just fired. Review one signal before I decide whether to ignore it, watch it, or approve a deeper pass.
 
-    Use the local Market Alert Triage workflow to return a triage brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Input:
+    - alert: [ticker, token, wallet, filing keyword, or macro signal]
+    - window: [today or last 24 hours]
+    - call budget: [amount]
 
-    Return a concise triage brief with:
-    - the cleaned input and assumptions
-    - the source names, timestamps, and links used
-    - the key findings separated from generated recommendations
-    - the look deeper, watch, or ignore recommendation
-    - rough cost notes and any dynamic pricing caveats
-    - conflicts, stale sources, missing fields, and open questions
-    - the next checks worth running only after approval
+    Clean identifiers: ticker, issuer, CIK, token, contract, chain, wallet, and filing terms. Estimate budget before paid work. Show tools, count, fixed subtotal, dynamic risks, OpenAI unknowns, and stops. Wait for approval.
 
-    Do not trade, sign wallet messages, pay invoices, create accounts, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this triage brief.
+    Use Alpha Vantage for market data; CoinGecko for crypto; EDGAR for filings; Allium, Nansen, Codex, or Alchemy for onchain facts; Dune or Allium Explorer only after cheap checks justify SQL; Perplexity/OpenAI for context and synthesis.
+
+    Return IDs, timestamps, facts, interpretation, recommendation, confidence, costs, conflicts, open questions, and next checks. Do not trade, sign, contact anyone, or spend beyond approval.
 comparison:
   eyebrow: Comparison
-  title: When a triage brief beats another workflow.
-  ariaLabel: Traditional tools compared with this market alert triage workflow
+  title: When an alert desk beats another subscription.
+  ariaLabel: Traditional market research stack compared with this alert triage workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
   rows:
     - category: Signup
-      left: Provider accounts, dashboards, API keys, credits, and billing setup
-      right: One bounded agent run with an approved call budget
+      left: Market terminals, chain dashboards, API keys, and billing setup
+      right: One bounded review run with a visible call plan and approved budget
     - category: Tools
-      left: Separate data, search, extraction, proof, synthesis, and delivery tools
-      right: Pay-as-you-go endpoint mix selected for the request
+      left: Equity, crypto, SEC, RPC, SQL, search, and synthesis tools opened by hand
+      right: Endpoint mix chosen from the alert type and capped before execution
     - category: Output
-      left: Manual exports and screenshots to reconcile
-      right: One triage brief with timestamps, costs, and candidate next checks
+      left: Screenshots, exports, notes, and dashboards
+      right: One decision card with proof, timestamps, cost notes, gaps, and next checks
     - category: Cadence
-      left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first triage brief earns them
+      left: Always-on subscriptions or alerts
+      right: Repeated checks only after the first brief proves the signal is worth watching
     - category: Action
-      left: Research and operational action mixed together
-      right: Options stay review-only until a human approves action
+      left: Research, trading, wallet, and outreach choices
+      right: The result stays review-only until a human approves spend or action
 useCases:
   eyebrow: Use cases
-  title: Use the triage brief when timing matters.
+  title: Use the first pass to choose depth.
   items:
     - title: Watchlist Move Explainer
-      text: Start with one bounded request when a source-backed answer is needed before more budget or action.
-    - title: Token, Wallet, And
-      text: Compare source families, show conflicts, and decide whether richer checks are worth the next run.
+      text: Turn an equity, ETF, token, or sector move into a card with trigger, likely drivers, source table, and next step.
+    - title: Token-wallet triage
+      text: Check contract identity, price context, wallet movement, smart-money signals, RPC state, and next query.
     - title: Public-Company Catalyst
-      text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
-    - title: Reviewer handoff with proof
-      text: Summarize findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+      text: Start from SEC evidence, financials, earnings context, macro or technical signals, and cited context.
+    - title: Reviewer proof handoff
+      text: Give a portfolio lead, analyst, founder, or operator the facts, uncertainty, and budgeted next steps.
 closing:
-  eyebrow: Focused run
-  title: Start with the smallest useful check.
-  text: No broad subscription stack. No silent expansion. Your agent pays only for the relevant checks needed to decide whether the next step is worth review.
+  eyebrow: Alert desk
+  title: Start with one signal and a hard budget.
+  text: No monthly research bundle. No silent SQL fanout. The agent buys only the checks needed to decide whether this alert deserves the next pass.
   items:
-    - Start with the cheapest useful source checks.
-    - Cap providers, fanout, screenshots, and model calls.
-    - Keep source timestamps and uncertainty visible.
-    - Require approval before mutations, sends, or spend.
+    - Resolve identifiers before joining sources.
+    - Cap Dune, Allium results, synthesis, and repeated checks.
+    - Keep timestamps, accessions, chain IDs, and caveats visible.
+    - Require approval before trades, wallet actions, outreach, or more spend.
 faq:
   eyebrow: FAQ
-  title: Before the first triage brief.
+  title: Before the first alert review.
   items:
-    - question: What does the triage brief return?
-      answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+    - question: What does the review brief return?
+      answer: It can return the cleaned alert, source-backed findings, timestamps, filing or chain identifiers, confidence, cost notes, conflicts, and an ignore, watch, or look-deeper recommendation.
       open: true
     - question: Which tools matter most?
-      answer: Alpha Vantage, CoinGecko, EDGAR and EDGAR Full-Text Search, Allium, Nansen are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.
+      answer: Alpha Vantage, CoinGecko, EDGAR, Allium, Nansen, Dune, and Codex provide the core evidence. Alchemy, Quicknode, Perplexity, and OpenAI help verify and synthesize.
     - question: How much does a focused run cost?
-      answer: The local source bundle gives rough ranges such as $0.171-$0.186, $0.403-$0.418, $0.50-$14.42, $0.117-$0.132. Dynamic endpoints should be capped before execution, and repeated checks should be.
+      answer: Before OpenAI, local estimates are $0.171-$0.186 for watchlist moves, $0.403-$0.418 for token or wallet triage, $0.50-$14.42 with Dune, and $0.117-$0.132 for catalyst memos.
     - question: What needs human approval?
-      answer: The default workflow returns reviewable findings and tradeoffs. Trades, account changes, wallet signatures, broad dynamic queries, contacting people, and expanded budgets require explicit approval.
+      answer: The default output is a review brief. Trades, wallet signatures, account changes, outreach, broad dynamic SQL, repeated monitoring, and extra spend need approval.
     - question: What should I watch for?
-      answer: Keep source freshness, timestamps, provider limits, dynamic prices, retry behavior, source links, approval boundaries, and generated recommendations separate from observed facts.
+      answer: Clean tickers, CIKs, symbols, contracts, chains, and wallets before joining. Keep timestamps, accessions, wallet-label uncertainty, dynamic prices, and commentary separate from facts.
 footer:
   brand: 402box
   links:
