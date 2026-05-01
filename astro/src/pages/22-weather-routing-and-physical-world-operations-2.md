@@ -1,220 +1,221 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Weather Routing brief on demand | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed routing brief with costs, timestamps, and human approval.
+title: Weather operations routing on demand | 402box
+description: Use pay-as-you-go weather, map, routing, timezone, and flight tools to decide whether to go, delay, reroute, or notify a human.
 bodyClass: page-bumi page-usecase page-22-weather-routing-and-physical-world-operations page-alt
 themeColor: "#101113"
-ogTitle: Weather Routing briefs, paid per focused check.
-ogDescription: Give your agent a route, location, schedule, or operation, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
+ogTitle: Go, delay, or reroute with paid checks.
+ogDescription: Give your agent an address, route, job window, or flight and get a source-backed operations brief with ETAs, weather risks, local time, and approval boundaries.
 schema:
   name: Weather, Routing, And Physical-World Operations
-  description: A pay-as-you-go weather routing workflow for agents that return a source-backed routing brief.
+  description: A pay-as-you-go physical-operations workflow for agents that combine route, weather, time, and flight signals before action.
   mainEntityName: Weather, Routing, And Physical-World Operations
-  mainEntityDescription: Combines route, location, schedule, or operation, public source checks, priced endpoint calls, and review controls into a focused routing brief.
+  mainEntityDescription: Combines address checks, route timing, weather risk, air quality, timezone conversion, flight status, and review controls into one operations decision.
   providerName: 402box
 hero:
   backdrop:
     label: "22"
   brandKicker: 402box
-  brandName: Weather Routing
+  brandName: Weather Operations
   topLinkText: Use cases
   topLinkHref: "#use-cases"
   integration:
-    - Source APIs
-    - Evidence
-    - Brief run
+    - OpenWeather
+    - Google Maps
+    - Ops check
   title:
-    text: Route the operation,
-    highlight: not every dashboard.
-  lead: Give your agent a route, location, schedule, or operation, source limits, and budget cap. Get a routing brief with timestamps, costs, caveats, and approval boundaries before action.
+    text: Choose go, delay,
+    highlight: or reroute.
+  lead: Give your agent an address, route, crew window, or flight. Get an operations brief with ETAs, weather risks, local time, and approval-safe updates.
   actions:
     - label: Budget first
-      text: Plan Focused Run
+      text: Plan Ops Check
       href: "#prompt"
       primary: true
-    - label: See output
+    - label: See brief
       text: Inspect Output
       href: "#example"
   trust:
-    - Source checks
-    - Route evidence
+    - Route checks
+    - Weather evidence
     - Budget caps
-    - Human approval
+    - No auto-dispatch
   preview:
     ariaLabel: Weather Routing request to output preview
-    request: Check this physical-world operation against weather, map, time, route, and risk signals. Return timing, route tradeoffs, source timestamps, and escalation notes without dispatching anyone.
+    request: Should we send a repair crew now, delay two hours, or reroute? Check address, ETA, weather, air quality, local time, and customer update copy.
     responseAriaLabel: Example weather routing brief
     resultLabel: Result
-    resultTitle: Routing brief
+    resultTitle: Ops decision
     code: |-
       {
-        "job": "Weather Routing",
-        "input": "route, location, schedule, or operation",
-        "planned_calls": 12,
-        "call_budget": "$0.07-$0.08 to $0.10-$0.12",
+        "job": "repair crew route",
+        "decision": "delay",
+        "planned_calls": 14,
+        "call_budget": "$0.07-$0.12",
         "status": "review_required",
-        "routing_brief": [
-          "routing brief: ETA band, weather risk, and route decision.",
-          "Tools: OpenWeather, Google Maps, Mapbox.",
-          "Next step: approve more calls only if the first brief is useful."
+        "ops_brief": [
+          "ETA: 42-55 min after delay window.",
+          "Risk: heavy rain and air-quality alert near site.",
+          "Next: review customer email before sending."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One routing brief. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when route, location, schedule, or operation needs a focused answer now, not a permanent provider stack. The agent returns a routing brief with proof, costs, and next checks.
+  title: One operation. Routes, weather, timing, and next steps.
+  text: Pay-as-you-go access is useful when a dispatcher needs one bounded answer now, whether to proceed, delay, reroute, reschedule, hold, or release.
   ariaLabel: Weather Routing input and output details
   features:
     - title: Input
-      text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
+      text: An address, route, job window, airport handoff, customer constraint, cadence, and call budget.
     - title: Output
-      text: A routing brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: An operations card with ETA bands, weather risks, local deadlines, source timestamps, and update copy.
     - title: Best fit
-      text: Route choices, schedule windows, source proof, and narrow jobs that need approval before action.
+      text: Dispatch checks, mobile crews, deliveries, inspections, pickups, shuttles, and airport handoffs.
 results:
   eyebrow: Real tools, bounded spend
-  title: A routing brief shaped for dispatch decisions.
-  text: Use rough source ranges such as $0.07-$0.08, $0.10-$0.12, $0.10-$0.11 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  title: An operations brief built from priced checks.
+  text: The source model estimates cents-level data runs, with dynamic Mapbox Matrix fanout and any notification or phone escalation capped before work starts.
   metrics:
-    - label: Delivery Delay Route
+    - label: Delivery go/no-go
       value: $0.07-$0.08
-      text: Delivery Delay Or Route returns ETA bands, weather risk, and proceed, delay, or reroute guidance before expansion.
+      text: Address checks, route timing, weather, air quality, map proof, and an email-ready update.
       large: true
-    - label: Field Crew Scheduling
+    - label: Crew window pick
       value: $0.10-$0.12
-      text: Ranks viable work windows with route, daylight, local-time, and weather evidence for review.
-    - label: Aviation-To-Ground check
+      text: Viable windows, backup timing, route reachability, weather exposure, and customer explanation.
+    - label: Aviation handoff alert
       value: $0.10+
-      text: Checks flight status, airport weather, ground ETA, and hold, release, or reschedule risk under caps.
-    - label: Expanded review run
-      value: $0.06890-$0.0
-      text: Use only when the first routing brief justifies more providers, deeper evidence, or repeated monitoring.
+      text: Flight consensus, airport weather, ground ETA, delay risk, and hold or release guidance.
+    - label: Approved escalation
+      value: $0.54-$0.59
+      text: Optional StablePhone lookup or voice call is a separate human-approved real-world action.
 steps:
   titleId: workflow-title
   eyebrow: How it works
-  title: Start narrow. Expand only after review.
-  text: Run cheap source checks first, add richer tools only for promising signals, and keep mutations, outreach, payments, and expanded budgets under human approval.
+  title: Start with the job. Pay for proof.
+  text: Run cheap geocode, route, weather, and flight checks first. Add matrix fanout, notifications, or calls only when the result shows a real operational tradeoff.
   items:
     - number: "01"
-      title: Normalize the input
-      text: Turn the route, location, schedule, or operation into clean entities, constraints, and source limits before paid calls.
+      title: Normalize the job
+      text: Confirm the address, route, job window, flight number, site constraint, and local-time deadline.
     - number: "02"
-      title: Estimate the budget
-      text: Show selected tools, expected call counts, rough ranges, dynamic endpoints, and stop conditions before the run begins.
+      title: Check route and weather
+      text: Compare Google Maps, Mapbox, OpenWeather, Google Weather, air quality, and timezone signals.
     - number: "03"
-      title: Gather source proof
-      text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
+      title: Add ops proof
+      text: Use flight providers, map images, matrix checks, or isochrones only when they support the decision.
     - number: "04"
-      title: Return route brief
-      text: Deliver the recommendation, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Return decision
+      text: Show proceed, delay, reroute, reschedule, hold, or release guidance with source timestamps.
 benefits:
   eyebrow: Benefits
-  title: Keep the decision small before the stack grows.
+  title: Decide the dispatch change before buying the stack.
   items:
-    - title: Specialized data without permanent seats
-      text: Use weather routing sources for one important request instead of keeping every provider, dashboard, and credit bundle active.
-    - title: Cheaper checks before deeper evidence
-      text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
-    - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the routing brief.
-    - title: Human approval for real actions
-      text: The routing brief informs decisions, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
+    - title: Dispatch memory without more dashboards
+      text: The agent keeps the job, customer constraint, route, and prior observations separate from paid calls.
+    - title: Cheaper checks before route fanout
+      text: Start with geocode, route, and weather checks before adding larger matrices or extra providers.
+    - title: Budget-first operations
+      text: Planned tools, call counts, dynamic-price risks, and stop conditions appear before the first run.
+    - title: Dispatch stays human-approved
+      text: Updates, calls, bookings, cancellations, account actions, and expanded budgets wait for approval.
 facts:
   eyebrow: Tool details
-  title: Use tool facts to control the next call.
-  text: Weather Routing works best when the agent separates source facts, generated synthesis, and unresolved questions. Start with focused APIs, add support rails only when they explain the decision, and keep the run review-only by default.
+  title: Use route, weather, and flight data only when needed.
+  text: The operations brief works because the agent preserves raw signals, shows provider disagreement, and labels forecasts and dynamic costs before recommending action.
   ariaLabel: Weather Routing tool facts
   items:
     - label: Core tools
       value: OpenWeather, Google Maps, Mapbox, AviationStack, FlightAPI
     - label: Support rails
-      value: Mapbox, AviationStack, FlightAPI, GoFlightLabs, Timezone, StableEmail
+      value: GoFlightLabs, Timezone, AgentMail, StableEmail, StablePhone
     - label: Primary input
-      value: route, location, schedule, or operation, source limits, and budget cap
+      value: Address, route, job window, airport handoff, constraint, and budget cap
     - label: Primary output
-      value: routing brief, timestamps, costs, caveats, and next checks
+      value: Operations decision card, evidence, ETA band, risk flags, and update draft
     - label: Dynamic costs
-      value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
+      value: Mapbox Matrix fanout, repeated polling, notification sends, and voice calls
     - label: Execution status
       value: Scenario plan only, no endpoint calls performed
 prompt:
   eyebrow: Example prompt
-  title: Give your agent a weather routing job.
-  text: Keep the route, location, schedule, or operation, source limits, output format, call budget, and approval boundaries explicit before paid or repeated checks.
+  title: Give your agent an ops decision job.
+  text: Keep the address, route, job window, source set, output format, call budget, and approval boundaries explicit before paid calls or repeated checks.
   copyTarget: 22-weather-routing-and-physical-world-operations-2-prompt
   buttonLabel: Copy prompt
   code: |-
-    Check this physical-world operation against weather, map, time, route, and risk signals. Return timing, route tradeoffs, source timestamps, and escalation notes without dispatching anyone.
+    Decide whether to send a repair crew from Queens to Hoboken now, delay two hours, or reroute around weather.
 
-    Use the local Weather Routing workflow to return a routing brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Use Google Maps and Mapbox for address, route timing, map proof, and capped Matrix. Use OpenWeather and Google Weather for conditions, forecast, and air quality. Use Timezone for local deadline. Use AgentMail or StableEmail only to draft an update.
 
-    Return a concise routing brief with:
-    - the canonical address, ETA band, and local-time deadline
-    - the source names, timestamps, and links used
-    - the proceed, delay, reroute, reschedule, hold, or release recommendation
-    - rough cost notes and any dynamic pricing caveats
-    - conflicts, stale sources, missing fields, and open questions
-    - the next checks worth running only after approval
+    Before work, estimate call budget, tools, Matrix cap, and stop conditions. I will approve before the run.
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this routing brief.
+    Return an operations brief with:
+    - canonical address, route choice, ETA band, and local-time deadline
+    - weather, air-quality, and routing risks
+    - proceed, delay, reroute, reschedule, hold, or release recommendation
+    - sources, timestamps, disagreements, and costs
+    - a customer update draft, not sent
+
+    Do not dispatch, send, call, book, cancel, pay invoices, sign wallet messages, submit forms, or mutate systems without approval.
 comparison:
   eyebrow: Comparison
-  title: When one routing brief beats another workflow.
+  title: When one ops check beats a tool stack.
   ariaLabel: Traditional tools compared with this weather routing workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
   rows:
     - category: Signup
-      left: Provider accounts, dashboards, API keys, credits, and billing setup
-      right: One bounded agent run with an approved call budget
+      left: Weather, map, aviation, email, and phone accounts with keys and billing
+      right: One bounded operations check with an approved call budget
     - category: Tools
-      left: Separate data, search, extraction, proof, synthesis, and delivery tools
-      right: Pay-as-you-go endpoint mix selected for the request
+      left: Separate route, forecast, air-quality, schedule, and messaging tools
+      right: Pay-as-you-go endpoint mix selected for the job
     - category: Output
-      left: Manual exports and screenshots to reconcile
-      right: One routing brief with timestamps, costs, and candidates
+      left: Screenshots and tabs a dispatcher must reconcile by hand
+      right: One operations brief with timestamps, costs, and recommendation
     - category: Cadence
-      left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first brief earns them
+      left: Manual refreshes across several dashboards
+      right: Budgeted rechecks only when weather, traffic, or flight timing warrants them
     - category: Action
-      left: Research and operational action mixed together
-      right: Options stay review-only until a human approves action
+      left: Research, notification, and dispatch blur together
+      right: Decision stays review-only until a human approves action
 useCases:
   eyebrow: Use cases
-  title: Use routing briefs when timing matters.
+  title: Use weather checks to choose when to move.
   items:
-    - title: Delivery Delay Or Route
-      text: Choose proceed, delay, or reroute with address, ETA, weather, air-quality, and alternate-route proof.
-    - title: Field Crew Scheduling
-      text: Rank viable windows and backups using drive-time bands, daylight limits, and weather exposure.
-    - title: Aviation-To-Ground
-      text: Compare flight consensus, airport weather, ground ETA, and hold, release, or reschedule timing.
-    - title: Reviewer handoff with proof
-      text: Package timestamps, conflicts, cost notes, and update drafts so a human can approve the next action.
+    - title: Delivery go/no-go
+      text: Decide whether a pickup, repair visit, inspection, or errand should proceed, delay, or reroute.
+    - title: Field crew window
+      text: Rank arrival windows and backups using drive-time bands, daylight, local time, and exposure.
+    - title: Aviation-ground alert
+      text: Compare flight feeds, airport weather, ground ETA, and the hold, release, or reschedule call.
+    - title: Reviewer handoff packet
+      text: Package timestamps, conflicts, cost notes, map proof, and update drafts for approval.
 closing:
   eyebrow: Focused run
-  title: Start with the smallest useful check.
-  text: No broad subscription stack. No silent expansion. Your agent pays only for the relevant checks needed to decide whether the next step is worth review.
+  title: Start with one job and one decision.
+  text: No route dashboard rollout. No silent dispatch. Your agent pays for the checks needed to decide whether this operation should move, wait, or get reviewed.
   items:
-    - Start with the cheapest useful source checks.
-    - Cap providers, fanout, screenshots, and model calls.
-    - Keep source timestamps and uncertainty visible.
-    - Require approval before mutations, sends, or spend.
+    - Start with geocode, route, weather, and time checks.
+    - Cap Matrix elements, provider fanout, and polling cadence.
+    - Keep timestamps, forecasts, and source disagreement visible.
+    - Require approval before dispatch, messages, calls, or extra spend.
 faq:
   eyebrow: FAQ
-  title: Before the first routing brief.
+  title: Before the first ops check.
   items:
-    - question: What does the routing brief return?
-      answer: It can return canonical addresses, ETA bands, route options, weather and air-quality risk, source timestamps, rough costs, unresolved conflicts, and the next checks a human should review.
+    - question: What does this operations brief return?
+      answer: It can return canonical addresses, ETA bands, route options, weather and air-quality risk, local-time deadlines, source timestamps, rough costs, and update copy.
       open: true
     - question: Which tools matter most?
-      answer: OpenWeather, Google Maps, Mapbox, AviationStack, FlightAPI are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.
+      answer: OpenWeather, Google Maps, and Mapbox cover most route and weather checks. AviationStack, FlightAPI, and GoFlightLabs matter when a flight affects the ground decision.
     - question: How much does a focused run cost?
-      answer: The local source bundle gives rough ranges such as $0.07-$0.08, $0.10-$0.12, $0.10-$0.11, $0.06890-$0.08390. Dynamic endpoints should be capped before execution, and repeated checks should be approved.
-    - question: What needs human approval?
-      answer: The default workflow returns reviewable candidates and tradeoffs. Purchases, bookings, filings, account actions, outreach, uploads, sends, wallet signatures, payments, and expanded budgets require explicit approval.
+      answer: The local model estimates about $0.07-$0.08 for delivery checks, $0.10-$0.12 for crew scheduling, and $0.10+ for aviation-ground alerts.
+    - question: Does the agent dispatch crews?
+      answer: No. The default workflow returns a reviewable decision and update draft. Dispatch, sends, phone calls, bookings, cancellations, and extra spend need approval.
     - question: What should I watch for?
-      answer: Keep source freshness, timestamps, provider limits, dynamic prices, retry behavior, source links, approval boundaries, and generated recommendations separate from observed facts.
+      answer: Addresses, traffic, forecasts, and flight feeds can drift. Keep timestamps, source disagreement, Matrix caps, dynamic costs, and approval boundaries visible.
 footer:
   brand: 402box
   links:

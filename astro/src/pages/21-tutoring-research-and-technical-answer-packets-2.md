@@ -1,220 +1,221 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Tutoring answer brief on demand | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed answer brief with costs, timestamps, and human approval.
+title: Checked tutoring answer packets on demand | 402box
+description: Use pay-as-you-go OCR, computation, search, translation, and synthesis tools to turn one hard question into a reviewable answer packet.
 bodyClass: page-bumi page-usecase page-21-tutoring-research-and-technical-answer-packets page-alt
 themeColor: "#101113"
-ogTitle: Tutoring answer briefs, paid per focused check.
-ogDescription: Give your agent a student question or technical topic, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
+ogTitle: Checked tutoring packets, paid per focused run.
+ogDescription: Give your agent a math photo, research question, or source bundle. Get OCR, verification, cited evidence, cost notes, and practice material for review.
 schema:
-  name: Tutoring, Research, And Technical Answer Briefs
-  description: A pay-as-you-go tutoring answers workflow for agents that return a source-backed answer brief.
-  mainEntityName: Tutoring, Research, And Technical Answer Briefs
-  mainEntityDescription: Combines student question or technical topic, public source checks, priced endpoint calls, and review controls into a focused answer brief.
+  name: Tutoring, Research, And Technical Answer Packets
+  description: A pay-as-you-go answer-packet workflow for tutoring, research, and technical questions that need visible checks.
+  mainEntityName: Tutoring, Research, And Technical Answer Packets
+  mainEntityDescription: Combines math OCR, computation checks, search, translation, text analysis, and final writing into a reviewable answer packet.
   providerName: 402box
 hero:
   backdrop:
     label: "21"
   brandKicker: 402box
-  brandName: Tutoring Answers
+  brandName: Answer Packets
   topLinkText: Use cases
   topLinkHref: "#use-cases"
   integration:
-    - Source APIs
-    - Evidence
-    - Answer brief
+    - Mathpix OCR
+    - Calc check
+    - Cited answer
   title:
-    text: Answer the topic,
-    highlight: not every tutor app.
-  lead: Give your agent a student question or technical topic, source limits, and budget cap. Get an answer brief with timestamps, costs, caveats, and approval boundaries before action.
+    text: Check the answer,
+    highlight: not chatbot output.
+  lead: Give your agent a math photo, technical question, or source bundle. Get OCR, calculation checks, cited evidence, and practice material for review.
   actions:
     - label: Budget first
-      text: Plan Focused Run
+      text: Plan Answer Packet
       href: "#prompt"
       primary: true
     - label: See output
-      text: Inspect Output
+      text: Inspect Packet
       href: "#example"
   trust:
-    - Source checks
-    - Evidence brief
-    - Budget caps
-    - Human approval
+    - Raw OCR kept
+    - Computation checks
+    - Cited proof
+    - Review-only output
   preview:
-    ariaLabel: Tutoring Answers request to output preview
-    request: Create a tutoring answer brief for this technical question. Gather sources, explain the concept, include examples, check calculations or code where needed, show citations, and return a reviewer-ready answer.
-    responseAriaLabel: Example tutoring answers answer brief
+    ariaLabel: Tutoring answer packet request to output preview
+    request: Turn this handwritten physics problem into a student-facing answer packet. Read the image, verify the calculation, add one supporting source, and include a practice question.
+    responseAriaLabel: Example tutoring answer packet
     resultLabel: Result
-    resultTitle: Answer brief
+    resultTitle: Answer packet
     code: |-
       {
-        "job": "Tutoring Answers",
-        "input": "student question or technical topic",
-        "planned_calls": 12,
-        "call_budget": "$0.126-$0.141 to $0.145-$0.160",
-        "status": "review_required",
-        "answer_brief": [
-          "answer brief: source-backed summary with timestamps.",
-          "Tools: Mathpix, Wolfram\\, Perplexity.",
-          "Next step: approve more calls only if the first brief is useful."
+        "question": "handwritten physics problem",
+        "planned_calls": 7,
+        "call_budget": "$0.126-$0.141 before final writer",
+        "packet": [
+          "OCR kept beside the normalized problem.",
+          "Wolfram check confirms the symbolic result and units.",
+          "Student explanation includes one common mistake and one practice question."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One answer brief. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when student question or technical topic needs a focused answer now, not a permanent provider stack. The agent returns an answer brief with proof, costs, and next checks.
-  ariaLabel: Tutoring Answers input and output details
+  title: One hard question. OCR, checks, sources, and a teachable answer.
+  text: Pay-as-you-go access is useful when a student, tutor, or researcher needs one checked answer without setting up Mathpix, Wolfram|Alpha, search, translation, and model accounts.
+  ariaLabel: Tutoring answer packet input and output details
   features:
     - title: Input
-      text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
+      text: A photographed problem, technical question, source links, output constraints, and call budget for the first run.
     - title: Output
-      text: An answer brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: Raw extraction, normalized question, verification notes, source evidence, explanation, and next checks.
     - title: Best fit
-      text: Answer briefs, source proof, and narrow jobs that need approval before action.
+      text: Tutoring help, technical research, support answers, docs examples, and training packets.
 results:
   eyebrow: Real tools, bounded spend
-  title: An answer brief shaped for human decisions.
-  text: Use rough source ranges such as $0.126-$0.141, $0.145-$0.160+, $0.227-$0.242+ as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  title: A packet built from checks the reviewer can inspect.
+  text: The local model gives rough planning ranges, not live prices. Keep model writing, translation volume, Diffbot length, and source freshness visible.
   metrics:
-    - label: Photo-To-Step-By-Step
+    - label: Photo tutoring packet
       value: $0.126-$0.141
-      text: Photo-To-Step-By-Step Tutoring starts with cheap source checks and returns a narrow answer brief before expansion.
+      text: Two Mathpix image reads, one Wolfram check, Exa and Brave source checks, plus Perplexity before writing.
       large: true
-    - label: Source-Backed Research
+    - label: Research answer packet
       value: $0.145-$0.160
-      text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
-    - label: Technical Answer Brief
+      text: Search breadth, source retrieval, synthesis, optional DeepL translation, Diffbot analysis, and source dedupe.
+    - label: Practice answer packet
       value: $0.227+
-      text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
-    - label: Expanded review run
-      value: $0.055+ cap
-      text: Use only when the first answer brief justifies more providers, deeper evidence, or repeated monitoring.
+      text: Adds stroke parsing, two computation checks, Brave context, Exa Answer, translation, and practice material.
+    - label: Extra computation check
+      value: $0.055 each
+      text: Add another Wolfram|Alpha request when the method, unit conversion, or alternate form needs a second check.
 steps:
   titleId: workflow-title
   eyebrow: How it works
-  title: Start narrow. Expand only after review.
-  text: Run cheap source checks first, add richer tools only for promising signals, and keep mutations, outreach, payments, and expanded budgets under human approval.
+  title: Extract the question, verify, then teach.
+  text: Run the minimum calls that make the answer reviewable, keep raw source material beside normalized text, and expand only when the first packet earns more budget.
   items:
     - number: "01"
-      title: Normalize the input
-      text: Turn the student question or technical topic into clean entities, constraints, and source limits before paid calls.
+      title: Capture question
+      text: Use Mathpix image or stroke input to preserve the problem, then normalize symbols, units, and assumptions.
     - number: "02"
-      title: Estimate the budget
-      text: Show selected tools, expected call counts, rough ranges, dynamic endpoints, and stop conditions before the run begins.
+      title: Check the answer path
+      text: Use Wolfram|Alpha for calculations, symbols, units, or science checks, and show the result as verification.
     - number: "03"
-      title: Gather source proof
-      text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
+      title: Add source evidence
+      text: Use Exa, Brave, Perplexity, DeepL, or Diffbot NL when background, translation, or conflicts change the packet.
     - number: "04"
-      title: Deliver answer brief
-      text: Deliver the answer brief, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Return packet
+      text: Deliver the worked answer, cited evidence, practice question, answer key, cost notes, and review flags.
 benefits:
   eyebrow: Benefits
-  title: Keep the decision small before the stack grows.
+  title: Make the answer trusted before polishing.
   items:
-    - title: Specialized data without permanent seats
-      text: Use tutoring answers sources for one important request instead of keeping every provider, dashboard, and credit bundle active.
-    - title: Cheaper checks before deeper evidence
-      text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
-    - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the answer brief.
-    - title: Human approval for real actions
-      text: The answer brief can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and spend require approval.
+    - title: Raw OCR stays visible for review
+      text: The packet keeps raw Mathpix output beside the normalized question so missed notation or units can be caught.
+    - title: Computation is checked, not hidden
+      text: Wolfram|Alpha verifies calculations or forms while the explanation still teaches assumptions, steps, and mistakes.
+    - title: Sources support the lesson
+      text: Search, translation, and extraction tools add evidence only when they improve the answer, not as a broad research crawl.
+    - title: Spend expands by approval
+      text: Model writing, text analysis, translation length, and repeated checks are capped before the agent widens the run.
 facts:
   eyebrow: Tool details
-  title: Use tool facts to control the next call.
-  text: Tutoring Answers works best when the agent separates source facts, generated synthesis, and unresolved questions. Start with focused APIs, add support rails only when they explain the decision, and keep the run review-only by default.
-  ariaLabel: Tutoring Answers tool facts
+  title: Use the specialist tool for the part it can actually prove.
+  text: Answer Packets works best when extraction, verification, source retrieval, translation, text analysis, and final writing stay separate. That separation makes the result easier to audit.
+  ariaLabel: Tutoring answer packet tool facts
   items:
     - label: Core tools
-      value: Mathpix, Wolfram\, Perplexity, DeepL, Diffbot NL
+      value: Mathpix, Wolfram|Alpha, Perplexity, DeepL, Diffbot NL
     - label: Support rails
-      value: Perplexity, DeepL, Diffbot NL, OpenAI, Anthropic, or Gemini, Exa, Brave Search
+      value: Exa, Brave Search, OpenAI, Anthropic, Gemini, and OpenAI embeddings
     - label: Primary input
-      value: student question or technical topic, source limits, and budget cap
+      value: Handwritten problem, technical question, source bundle, and budget
     - label: Primary output
-      value: answer brief, timestamps, costs, caveats, and next checks
+      value: Checked answer packet with explanation, evidence, practice, and notes
     - label: Dynamic costs
-      value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
+      value: Model writing, DeepL volume, Diffbot characters, Perplexity choice
     - label: Execution status
       value: Scenario plan only, no endpoint calls performed
 prompt:
   eyebrow: Example prompt
-  title: Give your agent a tutoring answers job.
-  text: Keep the student question or technical topic, source limits, output format, call budget, and approval boundaries explicit before paid or repeated checks begin.
+  title: Give your agent a checked answer job.
+  text: Name the question, the learner or reviewer, the tools to use, the packet shape, and the budget that must be approved before paid calls begin.
   copyTarget: 21-tutoring-research-and-technical-answer-packets-2-prompt
   buttonLabel: Copy prompt
   code: |-
-    Create a tutoring answer brief for this technical question. Gather sources, explain the concept, include examples, check calculations or code where needed, show citations, and return a reviewer-ready answer.
+    Turn this photographed physics problem into a checked answer packet for a high-school student.
 
-    Use the local Tutoring Answers workflow to return an answer brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Use Mathpix for OCR and keep raw output beside the normalized problem. Use Wolfram|Alpha to verify calculation and units. Use Exa or Brave only if one supporting source helps. Use one OpenAI, Anthropic, or Gemini call for the student-facing explanation.
 
-    Return a concise answer brief with:
-    - the cleaned input and assumptions
-    - the source names, timestamps, and links used
-    - the key findings separated from generated recommendations
-    - rough cost notes and any dynamic pricing caveats
-    - conflicts, stale sources, missing fields, and open questions
-    - the next checks worth running only after approval
+    Return:
+    - OCR uncertainties
+    - normalized problem and assumptions
+    - Wolfram|Alpha check
+    - student-language steps
+    - one common mistake
+    - one practice question with answer key
+    - source notes, cost notes, and open questions
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this answer brief.
+    Before work, estimate the call budget: providers, call count, expected subtotal, model-dependent costs, and stop conditions. I will approve the budget before the run.
+
+    Do not submit homework, impersonate a student, upload private records, create accounts, pay invoices, sign wallet messages, or exceed budget. Return for review.
 comparison:
   eyebrow: Comparison
-  title: When an answer brief beats another workflow.
-  ariaLabel: Traditional tools compared with this tutoring answers workflow
+  title: When a checked packet beats another tutor app.
+  ariaLabel: Traditional tools compared with this tutoring answer packet workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
   rows:
     - category: Signup
-      left: Provider accounts, dashboards, API keys, credits, and billing setup
-      right: One bounded agent run with an approved call budget
+      left: OCR, computation, search, translation, analysis, and model accounts
+      right: One bounded agent run with the endpoint mix chosen for the question
     - category: Tools
-      left: Separate data, search, extraction, proof, synthesis, and delivery tools
-      right: Pay-as-you-go endpoint mix selected for the request
+      left: A chatbot answer, a calculator result, and separate source tabs to reconcile
+      right: OCR, verification, evidence, and teaching copy assembled into one packet
     - category: Output
-      left: Manual exports and screenshots to reconcile
-      right: One answer brief with timestamps, costs, and candidates
+      left: Final answers can hide notation errors or weak sources
+      right: Raw extraction, normalized question, checks, citations, caveats, and practice material
     - category: Cadence
-      left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first brief earns them
+      left: More tabs before the answer is trusted
+      right: Budgeted follow-up checks only when the first packet exposes a real gap
     - category: Action
-      left: Research and operational action mixed together
-      right: Options stay review-only until a human approves action
+      left: Tutoring and operational actions can blur together
+      right: The packet stays review-only, with integrity and safety flags called out
 useCases:
   eyebrow: Use cases
-  title: Use the answer brief when timing matters.
+  title: Use packets when answers need proof.
   items:
-    - title: Photo-To-Step-By-Step
-      text: Start with one bounded request when a source-backed answer is needed before more budget or action.
-    - title: Source-Backed Research
-      text: Compare source families, show conflicts, and decide whether richer checks are worth the next run.
-    - title: Technical Answer Brief
-      text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
-    - title: Reviewer handoff with proof
-      text: Bundle findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+    - title: Photo-to-step tutoring
+      text: Turn a handwritten math, physics, chemistry, or statistics problem into a checked explanation with practice material.
+    - title: Research answer pack
+      text: Build a concise technical, scientific, policy, or product answer with evidence tables and source disagreements.
+    - title: Training or support packet
+      text: Package assumptions, worked answer, simplified version, answer key, and verification checklist for reuse.
+    - title: Reviewer evidence handoff
+      text: Give a tutor, teacher, support lead, or subject expert the evidence trail needed to approve or correct the result.
 closing:
-  eyebrow: Focused run
-  title: Start with the smallest useful check.
-  text: No broad subscription stack. No silent expansion. Your agent pays only for the relevant checks needed to decide whether the next step is worth review.
+  eyebrow: Checked packet
+  title: Start with one checked question.
+  text: No broad tutor subscription. No hidden model-only answer. Your agent pays for the OCR, verification, source, and writing calls needed to make one answer reviewable.
   items:
-    - Start with the cheapest useful source checks.
-    - Cap providers, fanout, screenshots, and model calls.
-    - Keep source timestamps and uncertainty visible.
-    - Require approval before mutations, sends, or spend.
+    - Keep raw OCR beside normalized text.
+    - Cap model, translation, analysis, and retry costs.
+    - Separate verified evidence from generated teaching text.
+    - Require review for high-stakes, private, or exam-sensitive uses.
 faq:
   eyebrow: FAQ
-  title: Before the first answer brief.
+  title: Before the first answer packet.
   items:
-    - question: What does the answer brief return?
-      answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+    - question: What does the packet return?
+      answer: It can return the extracted problem, normalized statement, assumptions, computation checks, cited evidence, explanation, practice material, answer key, cost notes, and review flags.
       open: true
     - question: Which tools matter most?
-      answer: Mathpix, Wolfram\, Perplexity, DeepL, Diffbot NL are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.
+      answer: Mathpix handles OCR, Wolfram|Alpha checks calculations, Exa and Brave find sources, Perplexity synthesizes context, DeepL translates, Diffbot NL extracts facts, and a final model writes.
     - question: How much does a focused run cost?
-      answer: The local source bundle gives rough ranges such as $0.126-$0.141, $0.145-$0.160+, $0.227-$0.242+, $0.055. Dynamic endpoints should be capped before execution, and repeated checks should be approved.
+      answer: The local model estimates about $0.126-$0.141 for photo tutoring, $0.145-$0.160+ for research, and $0.227-$0.242+ for a richer practice packet before final writing.
     - question: What needs human approval?
-      answer: The default workflow returns reviewable candidates and tradeoffs. Purchases, bookings, filings, account actions, outreach, uploads, sends, wallet signatures, payments, and expanded budgets require explicit approval.
+      answer: The default workflow returns a reviewable packet. Extra spend, private uploads, account actions, signatures, payments, high-stakes advice, or exam-sensitive use need approval.
     - question: What should I watch for?
-      answer: Keep source freshness, timestamps, provider limits, dynamic prices, retry behavior, source links, approval boundaries, and generated recommendations separate from observed facts.
+      answer: OCR can misread notation, sources can be stale or conflicting, translation can drift, Diffbot output is extracted signal, and final model writing should be checked against evidence.
 footer:
   brand: 402box
   links:

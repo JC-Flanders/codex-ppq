@@ -1,16 +1,16 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Concierge Checkout buyer brief | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed buyer brief with costs, timestamps, and human approval.
+title: Concierge checkout approval packets | 402box
+description: Use pay-as-you-go tools to prepare lunch, gift, mailing, and follow-up checkout packets that stop for human approval before action.
 bodyClass: page-bumi page-usecase page-13-autonomous-buyer-or-concierge-checkout page-alt
 themeColor: "#101113"
-ogTitle: Concierge Checkout briefs, paid per focused check.
-ogDescription: Give your agent a purchase request and constraints, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
+ogTitle: Concierge checkout packets, paid per focused plan.
+ogDescription: Give your agent an errand, budget caps, and approval rules. Get item choices, quotes, drafts, blockers, and clear action gates for review.
 schema:
   name: Autonomous Buyer Or Concierge Checkout
-  description: A pay-as-you-go concierge checkout workflow for agents that return a source-backed buyer brief.
+  description: A pay-as-you-go concierge checkout workflow for agents that prepare approval packets before buying, mailing, emailing, or calling.
   mainEntityName: Autonomous Buyer Or Concierge Checkout
-  mainEntityDescription: Combines purchase request and constraints, public source checks, priced endpoint calls, and review controls into a focused buyer brief.
+  mainEntityDescription: Combines purchase constraints, address or route checks, quotes, drafts, cost ranges, and explicit human approval gates.
   providerName: 402box
 hero:
   backdrop:
@@ -20,202 +20,205 @@ hero:
   topLinkText: Use cases
   topLinkHref: "#use-cases"
   integration:
-    - Source APIs
-    - Evidence
-    - Brief run
+    - Food checkout
+    - PostalForm
+    - Approval gates
   title:
-    text: Plan the purchase,
-    highlight: not auto-checkout.
-  lead: Give your agent a purchase request and constraints, source limits, and budget cap. Get a buyer brief with options, timestamps, costs, caveats, and approval boundaries before action.
+    text: Plan the checkout,
+    highlight: keep yes human.
+  lead: Give your agent a lunch, gift, or follow-up errand with spend caps. Get options, quotes, drafts, blockers, and approval gates before anything is bought.
   actions:
     - label: Budget first
-      text: Plan Focused Run
+      text: Plan The Packet
       href: "#prompt"
       primary: true
     - label: See output
       text: Inspect Output
       href: "#example"
   trust:
-    - Source checks
-    - Source proof trail
-    - Budget caps
-    - Human approval
+    - Quote first
+    - Address checks
+    - Cost caps
+    - Approval gates
   preview:
     ariaLabel: Concierge Checkout request to output preview
-    request: Find purchase options for this item under my constraints. Compare merchants, availability, price, shipping, policy caveats, proof links, and return a shortlist. Do not buy, submit forms, or use payment details.
+    request: Plan a lunch pickup near my office for one sandwich under $18. Check place and route, draft the confirmation email, and show taxes or fees as unknown until checkout. Do not buy or send.
     responseAriaLabel: Example concierge checkout buyer brief
     resultLabel: Result
-    resultTitle: Buyer brief
+    resultTitle: Approval plan
     code: |-
       {
-        "job": "Concierge Checkout",
-        "input": "purchase request and constraints",
-        "planned_calls": 12,
-        "call_budget": "$12-$16+ cap to $0.058-$0.068",
+        "errand": "lunch pickup near office",
+        "planned_calls": 5,
+        "call_budget": "$0.058-$0.068 before food",
+        "purchase_budget": "$18",
         "status": "review_required",
-        "brief": [
-          "buyer brief: source-backed shortlist with timestamps.",
-          "Tools: Prospect Butcher, Martin Estate Winery, PostalForm.",
-          "Next step: approve purchase or deeper checks only after review."
+        "packet": [
+          "Sandwich candidate with item slug and pickup notes.",
+          "Place and route checks for review.",
+          "Email draft ready; no buy or send without approval."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One buyer brief. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when a purchase request and constraints need a focused answer now, not a permanent provider stack. The agent returns a buyer brief with proof, costs, and next checks.
+  title: One errand. Quotes, drafts, and clear stop points.
+  text: Pay-as-you-go checkout tools help an assistant prepare a real purchase or fulfillment step without authority to complete it. The agent builds a packet a person can approve.
   ariaLabel: Concierge Checkout input and output details
   features:
     - title: Input
-      text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
+      text: A concrete errand, recipient or pickup details, constraints, purchase or mailing budget, and allowed channels.
     - title: Output
-      text: A buyer brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: An approval packet with item or SKU, address or route checks, quote status, drafts, cost ranges, and blockers.
     - title: Best fit
-      text: Workflow options, buyer brief, source proof, and narrow jobs that need approval before action.
+      text: Lunch pickup, regulated gifts, mailed notes, postcards, emails, and follow-up packets.
 results:
   eyebrow: Real tools, bounded spend
-  title: A buyer brief shaped for human decisions.
-  text: Use rough source ranges such as $12-$16, $0.058-$0.068, $48-$185 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  title: A checkout packet shaped for approval.
+  text: Treat source ranges as planning inputs, not live prices. Separate fixed support calls from goods, mailing quotes, tax, shipping, KYC, and fulfillment actions.
   metrics:
     - label: Lunch Pickup Concierge
-      value: $12-$16+ cap
-      text: Lunch Pickup Concierge starts with cheap source checks and returns a narrow buyer brief before expansion.
+      value: $12.06-$16
+      text: Dynamic Prospect Butcher pricing plus about six cents for maps, route, currency, and email support.
       large: true
-    - label: Wine Gift With Mailed
-      value: $0.058-$0.068
-      text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
-    - label: Concierge Follow-Up check
-      value: $48+
-      text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
-    - label: Expanded review run
-      value: $3.40-$200.00
-      text: Use only when the first buyer brief justifies more providers, deeper evidence, or repeated monitoring.
+    - label: Wine Gift With Note
+      value: $51.45+ min
+      text: Martin Estate browsing is free; purchase, tax, shipping, compliance, and PostalForm mailing stay quote-first.
+    - label: Concierge Follow-Up Packet
+      value: $4.50+
+      text: Papercut and PostalForm enable one-off postcard or document fulfillment after address and channel checks.
+    - label: Phone Contact Control
+      value: $0.050/$0.540
+      text: StablePhone lookup and an actual AI call stay separate so contact status never implies permission to call.
 steps:
   titleId: workflow-title
   eyebrow: How it works
-  title: Start narrow. Expand only after review.
-  text: Run cheap source checks first, add richer tools only for promising signals, and keep mutations, outreach, payments, and expanded budgets under human approval.
+  title: Build the packet before any side effect.
+  text: Run free or low-cost checks first, quote dynamic steps before payment, and keep purchases, mailings, emails, calls, and extra spend under human approval.
   items:
     - number: "01"
-      title: Normalize the input
-      text: Turn the purchase request and constraints into clean entities, constraints, and source limits before paid calls.
+      title: Translate the errand
+      text: Turn a lunch, wine gift, or follow-up request into items, recipients, timing, constraints, and budget caps.
     - number: "02"
-      title: Estimate the budget
-      text: Show selected tools, expected call counts, rough ranges, dynamic endpoints, and stop conditions before the run begins.
+      title: Price the support rails
+      text: Show maps, address validation, tax, currency, email, phone lookup, and quote calls before spending.
     - number: "03"
-      title: Gather source proof
-      text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
+      title: Prepare quotes
+      text: Use Prospect Butcher, Martin Estate, PostalForm, Papercut, AgentMail, or StableEmail to prepare reviewable choices.
     - number: "04"
-      title: Return the brief
-      text: Deliver the buyer brief, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Pause for approval
+      text: Return unresolved fees, blockers, drafts, and a separate approval boundary for each real-world action.
 benefits:
   eyebrow: Benefits
-  title: Keep the decision small before the stack grows.
+  title: Let the assistant prepare, not presume.
   items:
-    - title: Specialized data without permanent seats
-      text: Use concierge checkout sources for one important request instead of keeping every provider, dashboard, and credit bundle active.
-    - title: Cheaper checks before deeper evidence
-      text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
+    - title: Real errands without a blank check
+      text: The agent can assemble a food order, wine gift, mailing, or follow-up plan while the purchase button stays off limits.
+    - title: Quote dynamic orders before paying
+      text: Carry goods, shipping, tax, mailing, postcard, and checkout amounts as ranges until a quote or challenge confirms them.
     - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the buyer brief.
-    - title: Human approval for real actions
-      text: The buyer brief can inform a decision, but sends, purchases, filings, account actions, signatures, and extra spend require approval.
+      text: The packet states tools, fixed support costs, dynamic price risks, stop conditions, and separate purchase budgets.
+    - title: Approval stays granular
+      text: Buying wine, mailing a note, sending email, calling a number, or adding channels each needs its own human go-ahead.
 facts:
   eyebrow: Tool details
-  title: Use tool facts to control the next call.
-  text: Concierge Checkout works best when the agent separates source facts, generated synthesis, and unresolved questions. Start with focused APIs, add support rails only when they explain the decision, and keep the run review-only by default.
+  title: Use checkout facts to control the next action.
+  text: Concierge Checkout works best when the agent keeps quotes, catalog facts, drafts, and approvals in different lanes. Support rails explain the decision; they do not authorize the side effect.
   ariaLabel: Concierge Checkout tool facts
   items:
     - label: Core tools
-      value: Prospect Butcher, Martin Estate Winery, PostalForm, Papercut, StableEmail
+      value: Prospect Butcher, Martin Estate Winery, PostalForm, Papercut
     - label: Support rails
-      value: PostalForm, Papercut, StableEmail, AgentMail, StablePhone, Google Maps
+      value: Google Maps, Exchange Rates, VAT, StableEmail, AgentMail, StablePhone
     - label: Primary input
-      value: purchase request and constraints, source limits, and budget cap
+      value: Errand, recipient details, constraints, budgets, and allowed channels
     - label: Primary output
-      value: buyer brief, shortlisted options, costs, caveats, and next checks
+      value: Approval packet with options, quotes, drafts, blockers, and gates
     - label: Dynamic costs
-      value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
+      value: Food, wine, shipping, tax, PostalForm, Papercut, and optional calls
     - label: Execution status
       value: Scenario plan only, no endpoint calls performed
 prompt:
   eyebrow: Example prompt
-  title: Give your agent a concierge checkout job.
-  text: Keep the purchase request and constraints, source limits, output format, call budget, and approval boundaries explicit before paid or repeated checks begin.
+  title: Give your agent a quote-first checkout job.
+  text: Keep the errand, tools, purchase budget, mailing budget, call budget, and approval boundaries explicit before paid or repeated checks begin.
   copyTarget: 13-autonomous-buyer-or-concierge-checkout-2-prompt
   buttonLabel: Copy prompt
   code: |-
-    Find purchase options for this item under my constraints. Compare merchants, availability, price, shipping, policy caveats, proof links, and return a shortlist. Do not buy, submit forms, or use payment details.
+    Prepare an approval packet for a wine gift and mailed note.
 
-    Use the local Concierge Checkout workflow to return a buyer brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Austin. Keep wine under $120 before tax/shipping and the note under $15 if PostalForm can quote it. Note tone: warm, short, birthday.
 
-    Return a concise buyer brief with:
-    - the cleaned input and assumptions
-    - the source names, timestamps, and links used
-    - the key findings separated from generated recommendations
-    - rough cost notes and any dynamic pricing caveats
-    - conflicts, stale sources, missing fields, and open questions
-    - the recommended option and approval boundary for each action
-    - the next checks worth running only after approval
+    Use Martin Estate for bottle options, Google Maps for address validation, PostalForm validate for note quote, VAT/Exchange Rates for cost context, and StableEmail for a confirmation draft.
 
-    Do not buy, book, send, submit forms, sign, pay, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this buyer brief.
+    Estimate call budget, providers, call count, support costs, dynamic-price risks, purchase and mailing budgets, and stop conditions before work. I approve that before the run.
+
+    Return:
+    - wine SKU or catalog candidate
+    - address status and shipping blockers
+    - age, KYC, sanctions, tax, and shipping notes
+    - PostalForm quote and note preview
+    - email draft
+    - gates for purchase, mailing, and email
+
+    Do not purchase, submit KYC, create a postal order, send email, pay, sign, call, or mutate systems without approval.
 comparison:
   eyebrow: Comparison
-  title: When a buyer brief beats another workflow.
+  title: When an approval packet beats manual checkout.
   ariaLabel: Traditional tools compared with this concierge checkout workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
   rows:
     - category: Signup
-      left: Provider accounts, dashboards, API keys, credits, and billing setup
-      right: One bounded agent run with an approved call budget
+      left: Restaurant, winery, mailing, email, and phone accounts managed apart
+      right: One bounded packet with a visible call budget before the run
     - category: Tools
-      left: Separate data, search, extraction, proof, synthesis, and delivery tools
-      right: Pay-as-you-go endpoint mix selected for the request
+      left: Checkout pages, postal forms, route checks, and drafts in separate places
+      right: Pay-as-you-go endpoint mix selected for the errand
     - category: Output
-      left: Manual exports and screenshots to reconcile
-      right: One buyer brief with timestamps, costs, and candidates
+      left: Carts, quotes, drafts, and policy notes to reconcile
+      right: One approval packet with options, blockers, drafts, and costs
     - category: Cadence
-      left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first brief earns them
+      left: Recheck pickup, shipping, and status by hand
+      right: Budgeted status checks only after the first packet earns them
     - category: Action
-      left: Research and operational action mixed together
-      right: Options stay review-only until a human approves action
+      left: Research, checkout, messages, and fulfillment blur
+      right: Every purchase, mail, email, and call waits for approval
 useCases:
   eyebrow: Use cases
-  title: Use the brief when timing matters.
+  title: Use the packet before the side effect.
   items:
     - title: Lunch Pickup Concierge
-      text: Start with one bounded request when a source-backed answer is needed before more budget or action.
-    - title: Wine Gift With Mailed
-      text: Compare source families, show conflicts, and decide whether richer checks are worth the next run.
+      text: Prepare a sandwich order with pickup location, route notes, item slug, visible price range, and an approval boundary.
+    - title: Wine Gift Mailed Note
+      text: Shortlist a bottle, surface compliance and shipping blockers, quote the note, and hold purchase and mailing apart.
     - title: Concierge Follow-Up
-      text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
+      text: Prepare receipt email, postcard, formal letter, address validation, tax or currency note, and channel status in one view.
     - title: Reviewer handoff with proof
-      text: Package findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+      text: Package costs, unknowns, drafts, and approval gates so an owner can approve, reject, or narrow the next action.
 closing:
-  eyebrow: Focused run
-  title: Start with the smallest useful check.
-  text: No broad subscription stack. No silent expansion. Your agent pays only for the relevant checks needed to decide whether the next step is worth review.
+  eyebrow: Approval first
+  title: Start with the packet, then approve the action.
+  text: No hidden checkout. No bundled side effects. Your agent pays for the checks needed to prepare a decision, then waits for the human to choose what happens next.
   items:
-    - Start with the cheapest useful source checks.
-    - Cap providers, fanout, screenshots, and model calls.
-    - Keep source timestamps and uncertainty visible.
-    - Require approval before mutations, sends, or spend.
+    - Run catalog and quote checks before orders.
+    - Keep purchase, mailing, email, phone, and call budgets separate.
+    - Show taxes, shipping, KYC, and quote gaps before approval.
+    - Require approval before buying, mailing, emailing, calling, or paying.
 faq:
   eyebrow: FAQ
-  title: Before the first buyer brief.
+  title: Before the first approval packet.
   items:
-    - question: What does the buyer brief return?
-      answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+    - question: What does the approval packet return?
+      answer: It can return item or SKU candidates, pickup or recipient details, address and route checks, quote status, drafts, blockers, cost ranges, and the actions a human must approve.
       open: true
     - question: Which tools matter most?
-      answer: Prospect Butcher, Martin Estate Winery, PostalForm, Papercut, StableEmail are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.
+      answer: Prospect Butcher handles sandwich flow, Martin Estate handles wine, PostalForm handles mail, and Papercut handles postcards. Maps, email, phone, tax, and currency are support rails.
     - question: How much does a focused run cost?
-      answer: The local source bundle gives rough ranges such as $12-$16, $0.058-$0.068, $48-$185, $3.40-$200.00. Dynamic endpoints should be capped before execution, and repeated checks should be approved.
+      answer: Lunch is sandwich amount plus $0.058-$0.068. Wine gifts add wine and PostalForm quotes plus about $0.049. Follow-up adds postcard or postal costs after about $0.104 in support calls.
     - question: What needs human approval?
-      answer: The default workflow returns reviewable candidates and tradeoffs. Purchases, bookings, filings, account actions, outreach, uploads, sends, wallet signatures, payments, and expanded budgets require explicit approval.
+      answer: Purchases, KYC, postal orders, postcards, email sends, phone calls, payments, wallet signatures, and budget expansion need approval. Drafts, lookups, and quotes are not authorization.
     - question: What should I watch for?
-      answer: Keep source freshness, timestamps, provider limits, dynamic prices, retry behavior, source links, approval boundaries, and generated recommendations separate from observed facts.
+      answer: Keep dynamic prices, tax, fees, shipping, availability, pickup windows, state eligibility, age checks, sanctions checks, freshness, and refund or retry limits visible before approval.
 footer:
   brand: 402box
   links:

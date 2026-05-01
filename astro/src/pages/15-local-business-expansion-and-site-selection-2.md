@@ -1,220 +1,214 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Site Selection location brief | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed location brief with costs, timestamps, and human approval.
+title: "Local site selection on demand | 402box"
+description: "Use pay-as-you-go location, property, map, weather, and company data to compare expansion areas and return a reviewable site brief."
 bodyClass: page-bumi page-usecase page-15-local-business-expansion-and-site-selection page-alt
 themeColor: "#101113"
-ogTitle: Site Selection location briefs, paid per focused check.
-ogDescription: Give your agent a city, business type, or expansion brief, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
+ogTitle: "Location evidence, paid per focused check."
+ogDescription: "Give your agent candidate areas, an address, or territory centers. Get a ranked site brief with rough costs, source timestamps, caveats, and approval boundaries."
 schema:
-  name: Local Business Expansion And Site Selection
-  description: A pay-as-you-go site selection workflow for agents that return a source-backed location shortlist.
-  mainEntityName: Local Business Expansion And Site Selection
-  mainEntityDescription: Combines city, business type, or expansion brief, public source checks, priced endpoint calls, and review controls into a focused location shortlist.
+  name: "Local Business Expansion And Site Selection"
+  description: "A pay-as-you-go site selection workflow for agents that compare local expansion options before subscriptions, outreach, or lease steps."
+  mainEntityName: "Local Business Expansion And Site Selection"
+  mainEntityDescription: "Combines property data, maps, routing, weather, search, company enrichment, technology signals, and contact candidates into a focused local expansion brief."
   providerName: 402box
 hero:
   backdrop:
     label: "15"
   brandKicker: 402box
-  brandName: Site Selection
+  brandName: "Site Selection"
   topLinkText: Use cases
   topLinkHref: "#use-cases"
   integration:
-    - Source APIs
-    - Evidence
-    - Brief run
+    - RentCast API
+    - Maps data
+    - Site brief
   title:
-    text: Compare locations,
-    highlight: not every map tab.
-  lead: Give your agent a city, business type, or expansion brief, source limits, and budget cap. Get a location shortlist with timestamps, costs, caveats, and approval boundaries before action.
+    text: "Pick local sites,"
+    highlight: "with proof."
+  lead: "Give your agent candidate areas, one address, or territory centers. Get property pressure, reach maps, local flags, company signals, and review steps."
   actions:
     - label: Budget first
-      text: Plan Focused Run
+      text: "Plan Site Check"
       href: "#prompt"
       primary: true
     - label: See output
-      text: Inspect Output
+      text: "Inspect Brief"
       href: "#example"
   trust:
-    - Source checks
-    - Location brief
-    - Budget caps
-    - Human approval
+    - Rent signals
+    - Map reach proof
+    - Cost caps
+    - Human review
   preview:
-    ariaLabel: Site Selection request to output preview
-    request: Find expansion areas for this local business. Check maps, nearby competitors, demographics, reviews, search evidence, travel constraints, source timestamps, and return a shortlist without contacting landlords.
-    responseAriaLabel: Example site selection location shortlist
+    ariaLabel: "Site selection request to output preview"
+    request: "Compare East Austin, Mueller, and South Lamar for a neighborhood cafe. Check rent pressure, anchors, competitors, 15-minute reach, weather flags, and notes before outreach."
+    responseAriaLabel: "Example local expansion site brief"
     resultLabel: Result
-    resultTitle: Location brief
+    resultTitle: "Site brief"
     code: |-
       {
-        "job": "Site Selection",
-        "input": "city, business type, or expansion brief",
-        "planned_calls": 12,
-        "call_budget": "$0.68+ cap to $0.002+ cap",
-        "status": "review_required",
-        "location_brief": [
-          "location shortlist: source-backed ranking with timestamps.",
-          "Tools: RentCast, Google Maps, Mapbox.",
-          "Next step: approve deeper checks only if the location brief is useful."
+        "business": "neighborhood cafe",
+        "candidates": ["East Austin", "Mueller", "South Lamar"],
+        "call_budget": "about $0.68",
+        "shortlist": [
+          "Mueller: strong anchors; verify rent.",
+          "South Lamar: high reach; check competitors.",
+          "East Austin: promising demand; confirm listings."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One location shortlist. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when city, business type, or expansion brief needs a focused answer now, not a permanent provider stack. The agent returns a location shortlist with proof, costs, and next checks.
-  ariaLabel: Site Selection input and output details
+  title: "One expansion question. Property, access, and local proof."
+  text: "Pay-as-you-go access is useful when a business needs to compare a few local options before buying subscriptions, hiring research help, or starting lease and outreach conversations."
+  ariaLabel: "Site selection input and output details"
   features:
     - title: Input
-      text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
+      text: "Candidate areas, one address, or territory centers with business type, reach, source limits, and call budget."
     - title: Output
-      text: A location brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: "A ranked expansion brief, storefront memo, or territory plan with maps, cost notes, source links, and open questions."
     - title: Best fit
-      text: Workflow options, location brief, source proof, and narrow jobs that need approval before action.
+      text: "City shortlists, storefront preflights, territory checks, and account buildout before outreach."
 results:
   eyebrow: Real tools, bounded spend
-  title: A location brief shaped for expansion decisions.
-  text: Use rough source ranges such as $0.68, $0.002, $0.69 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  title: "A site brief built from priced location checks."
+  text: "The estimates are scenario math from local MPP artifacts, not live billing guarantees. Cap dynamic matrix, Hunter, and Apollo calls before execution."
   metrics:
-    - label: City Or Neighborhood
-      value: $0.68+ cap
-      text: City Or Neighborhood Shortlist starts with cheap source checks and returns a narrow location shortlist before expansion.
+    - label: "Three-area shortlist"
+      value: "$0.68/run"
+      text: "Three areas with RentCast markets, Google Maps places, Mapbox reach, weather, search, and timezone context."
       large: true
-    - label: Storefront check
-      value: $0.002+ cap
-      text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
-    - label: Sales Territory Review
-      value: $0.69+
-      text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
-    - label: Expanded review run
-      value: $0.88-$1.51
-      text: Use only when the first location shortlist justifies more providers, deeper evidence, or repeated monitoring.
+    - label: "Storefront check"
+      value: "$0.69/run"
+      text: "One address plus three organizations with property records, maps, conditions, company profiles, and context."
+    - label: "Territory account plan"
+      value: "$0.88+"
+      text: "Two centers and five profiled accounts, with dynamic Mapbox matrix, Apollo people, and Hunter domain search."
+    - label: "Contact expansion"
+      value: "$0.013-$0.103+"
+      text: "Hunter domain search and Apollo people enrichment are dynamic or range-priced, so they need separate approval."
 steps:
   titleId: workflow-title
   eyebrow: How it works
-  title: Start narrow. Expand only after review.
-  text: Run cheap source checks first, add richer tools only for promising signals, and keep mutations, outreach, payments, and expanded budgets under human approval.
+  title: "Start with the place. Pay for the proof."
+  text: "Clean location inputs first, price the call plan, add richer evidence only where it changes the decision, and keep real-world action under human approval."
   items:
     - number: "01"
-      title: Normalize the input
-      text: Turn the city, business type, or expansion brief into clean entities, constraints, and source limits before paid calls.
+      title: "Clean the area list"
+      text: "Confirm geocodes, business assumptions, travel modes, candidate counts, and source limits before paid calls."
     - number: "02"
-      title: Estimate the budget
-      text: Show selected tools, expected call counts, rough ranges, dynamic endpoints, and stop conditions before the run begins.
+      title: "Price the call plan"
+      text: "Show tools, call counts, matrix elements, dynamic risks, expected cost, and stop conditions before spending."
     - number: "03"
-      title: Gather source proof
-      text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
+      title: "Collect proof"
+      text: "Collect markets, anchors, competitors, reachability, local flags, company signals, and source-linked notes."
     - number: "04"
-      title: Return the brief
-      text: Deliver the location brief, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: "Return the brief"
+      text: "Rank options with reasons, timestamps, costs, conflicts, sparse-data warnings, and next checks."
 benefits:
   eyebrow: Benefits
-  title: Keep the decision small before the stack grows.
+  title: "Make the next local move before buying the whole stack."
   items:
-    - title: Specialized data without permanent seats
-      text: Use site selection sources for one important request instead of keeping every provider, dashboard, and credit bundle active.
-    - title: Cheaper checks before deeper evidence
-      text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
-    - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the location brief.
-    - title: Human approval for real actions
-      text: The location brief can inform a decision, but sends, purchases, account actions, wallet signatures, and expanded spend require approval.
+    - title: "One-off market evidence, no seats"
+      text: "Use property, map, weather, and search sources for the locations in front of you without opening several accounts first."
+    - title: "Property, reach, and account signals together"
+      text: "The brief connects rent pressure, coverage, local anchors, technology signals, and account candidates in one view."
+    - title: "Dynamic costs stay capped"
+      text: "Mapbox matrix elements, Hunter domain search, and Apollo people enrichment are estimated before fanout expands."
+    - title: "Real actions stay out of the run"
+      text: "Landlord outreach, prospect contact, bookings, account changes, wallet signatures, and added spend need approval."
 facts:
   eyebrow: Tool details
-  title: Use tool facts to control the next call.
-  text: Site Selection works best when the agent separates source facts, generated synthesis, and unresolved questions. Start with focused APIs, add support rails only when they explain the decision, and keep the run review-only by default.
-  ariaLabel: Site Selection tool facts
+  title: "Use each source for the question it can answer."
+  text: "The expansion brief works because property, map, routing, weather, search, and enrichment calls stay separated until the agent shows how each one changes the decision."
+  ariaLabel: "Site selection tool facts"
   items:
     - label: Core tools
-      value: RentCast, Google Maps, Mapbox, BuiltWith, Apollo
+      value: "RentCast, Google Maps, Mapbox, OpenWeather, Brave Search, Exa"
     - label: Support rails
-      value: Mapbox, BuiltWith, Apollo, Hunter, Company Enrichment, OpenWeather
+      value: "Company Enrichment, BuiltWith, Apollo, Hunter, Timezone"
     - label: Primary input
-      value: city, business type, or expansion brief, source limits, and budget cap
+      value: "Areas, address, or centers with business type, reach, source limits, budget"
     - label: Primary output
-      value: location shortlist, timestamps, costs, caveats, and next checks
+      value: "Ranked expansion brief, storefront go/no-go memo, or territory account plan"
     - label: Dynamic costs
-      value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
+      value: "Mapbox matrix, Hunter domain search, Apollo people, repeated checks"
     - label: Execution status
       value: Scenario plan only, no endpoint calls performed
 prompt:
   eyebrow: Example prompt
-  title: Give your agent a site selection job.
-  text: Keep the city, business type, or expansion brief, source limits, output format, call budget, and approval boundaries explicit before paid or repeated checks.
+  title: "Give your agent a bounded site check."
+  text: "Name the candidate places, business type, decision criteria, tools, cost cap, and approval boundaries before paying for location or enrichment calls."
   copyTarget: 15-local-business-expansion-and-site-selection-2-prompt
   buttonLabel: Copy prompt
   code: |-
-    Find expansion areas for this local business. Check maps, nearby competitors, demographics, reviews, search evidence, travel constraints, source timestamps, and return a shortlist without contacting landlords.
+    Compare East Austin, Mueller, and South Lamar for a neighborhood cafe.
 
-    Use the local Site Selection workflow to return a location shortlist. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Use RentCast for market/rental context; Google Maps for geocodes, places, details, and maps; Mapbox for isochrones/matrix; OpenWeather for weather/air quality; Brave and Exa for public context.
 
-    Return a concise location brief with:
-    - the cleaned input and assumptions
-    - the source names, timestamps, and links used
-    - the key findings separated from generated recommendations
-    - rough cost notes and any dynamic pricing caveats
-    - conflicts, stale sources, missing fields, and open questions
-    - the next checks worth running only after approval
+    Before work, estimate the call budget. Show providers, calls, matrix elements, dynamic-price risks, expected cost, and stop conditions. Keep first pass under $0.80 unless I approve more.
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this location brief.
+    Return a ranked brief with reasons, map/property/reach evidence, source names, timestamps, links, cost notes, conflicts, sparse data, open questions, and next checks needing approval.
+
+    Do not contact landlords, brokers, competitors, prospects, or owners. Do not book, buy, sign wallet messages, pay invoices, register accounts, submit forms, send messages, or expand budget without approval.
 comparison:
   eyebrow: Comparison
-  title: When a location brief beats another workflow.
-  ariaLabel: Traditional tools compared with this site selection workflow
+  title: "When one site brief beats a location-data stack."
+  ariaLabel: "Traditional tools compared with this site selection workflow"
   leftHeader: Traditional stack
   rightHeader: This workflow
   rows:
     - category: Signup
-      left: Provider accounts, dashboards, API keys, credits, and billing setup
-      right: One bounded agent run with an approved call budget
+      left: "Provider accounts, API keys, credit packs, and seats"
+      right: "One bounded agent run with the approved tools and call budget shown first"
     - category: Tools
-      left: Separate data, search, extraction, proof, synthesis, and delivery tools
-      right: Pay-as-you-go endpoint mix selected for the request
+      left: "Separate listing, map, commute, company, technology, and contact tools"
+      right: "A pay-as-you-go endpoint mix selected for the candidate areas, address, or territory"
     - category: Output
-      left: Manual exports and screenshots to reconcile
-      right: One location shortlist with timestamps, costs, and candidates
-    - category: Cadence
-      left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first location brief earns them
+      left: "Screenshots and exports to reconcile manually"
+      right: "One ranked brief with map evidence, cost context, source timestamps, and open questions"
+    - category: Pricing
+      left: "Monthly plans and uncapped fanout"
+      right: "Scenario-cost estimates with dynamic Mapbox, Hunter, and Apollo calls capped before execution"
     - category: Action
-      left: Research and operational action mixed together
-      right: Options stay review-only until a human approves action
+      left: "Research and outreach mixed in one workflow"
+      right: "The brief stays review-only until a human approves contact, spending, or operational action"
 useCases:
   eyebrow: Use cases
-  title: Use the location brief when timing matters.
+  title: "Use local evidence before bigger spend."
   items:
-    - title: City Or Neighborhood
-      text: Start with one bounded request when a source-backed answer is needed before more budget or action.
-    - title: Storefront Micro-Market
-      text: Compare source families, show conflicts, and decide whether richer checks are worth the next run.
-    - title: Sales Territory Review
-      text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
-    - title: Reviewer handoff with proof
-      text: Package findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+    - title: "Neighborhood shortlist"
+      text: "Rank a few candidate areas by property pressure, customer or staff reach, local anchors, risk flags, and next checks."
+    - title: "Storefront go/no-go memo"
+      text: "Evaluate one address with property context, nearby business evidence, route assumptions, and unresolved lease questions."
+    - title: "Territory account plan"
+      text: "Map reachable clusters, profile local accounts, separate company data from contact candidates, and suggest a first visit sequence."
+    - title: "Owner or board handoff"
+      text: "Package evidence, caveats, costs, and approval gates so the decision owner can narrow, reject, or fund the next pass."
 closing:
-  eyebrow: Focused run
-  title: Start with the smallest useful check.
-  text: No broad subscription stack. No silent expansion. Your agent pays only for the relevant checks needed to decide whether the next step is worth review.
+  eyebrow: Site check
+  title: "Start with three areas or one address."
+  text: "No full provider stack. No silent contact expansion. Your agent pays for the local evidence needed to decide whether deeper research is worth review."
   items:
-    - Start with the cheapest useful source checks.
-    - Cap providers, fanout, screenshots, and model calls.
-    - Keep source timestamps and uncertainty visible.
-    - Require approval before mutations, sends, or spend.
+    - "Confirm addresses and place IDs before enrichment."
+    - "Cap candidate count, matrix elements, domains, and people."
+    - "Keep timestamps, source links, and sparse-data warnings visible"
+    - "Require approval before outreach, lease steps, accounts, or spend."
 faq:
   eyebrow: FAQ
-  title: Before the first location brief.
+  title: "Before the first site check."
   items:
-    - question: What does the location brief return?
-      answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+    - question: "What does the site brief return?"
+      answer: "It returns a ranked area shortlist, storefront memo, or territory plan with map evidence, property indicators, reach assumptions, company signals, timestamps, costs, conflicts, and checks."
       open: true
-    - question: Which tools matter most?
-      answer: RentCast, Google Maps, Mapbox, BuiltWith, Apollo are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.
-    - question: How much does a focused run cost?
-      answer: The local source bundle gives rough ranges such as $0.68, $0.002, $0.69, $0.88-$1.51. Dynamic endpoints should be capped before execution, and repeated checks should be approved separately.
-    - question: What needs human approval?
-      answer: The default workflow returns reviewable candidates and tradeoffs. Purchases, bookings, filings, account actions, outreach, uploads, sends, wallet signatures, payments, and expanded budgets require explicit approval.
-    - question: What should I watch for?
-      answer: Keep source freshness, timestamps, provider limits, dynamic prices, retry behavior, source links, approval boundaries, and generated recommendations separate from observed facts.
+    - question: "Which tools matter most?"
+      answer: "RentCast covers property and market indicators. Google Maps and Mapbox ground places, routes, and maps. OpenWeather, Brave, Exa, BuiltWith, Apollo, Hunter, Company Enrichment add context."
+    - question: "How much does a focused run cost?"
+      answer: "Local estimates are about $0.68 for three areas, $0.69 for one storefront with three nearby organizations, and $0.88-$1.51 for a territory buildout. Cap dynamic calls first."
+    - question: "What needs human approval?"
+      answer: "Evidence is review-only. Landlord outreach, prospect contact, bookings, purchases, account actions, wallet signatures, payments, forms, messages, and expanded budgets require approval."
+    - question: "What should I watch for?"
+      answer: "Address ambiguity, sparse RentCast coverage, route assumptions, time-sensitive weather, source disagreement, unverified contacts, and dynamic pricing can change the recommendation."
 footer:
   brand: 402box
   links:

@@ -1,16 +1,16 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Human Follow-Up brief on demand | 402box
-description: Use pay-as-you-go delivery tools to check one bounded follow-up and return a source-backed follow-up brief with costs, timestamps, and approval gates.
+title: Human follow-up delivery packet on demand | 402box
+description: Turn a finished agent result into an approval-ready email thread, callback note, mailed letter, postcard, or proof packet with rough costs and review gates.
 bodyClass: page-bumi page-usecase page-24-human-follow-up-and-offline-delivery page-alt
 themeColor: "#101113"
-ogTitle: Human Follow-Up briefs, paid per focused check.
-ogDescription: Give your agent a recipient, message, or delivery task, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
+ogTitle: Human follow-up packets, paid per delivery step.
+ogDescription: Give your agent the recipient, channel, message goal, proof rules, and budget cap. Get an email, callback, mail, or postcard packet ready for human approval.
 schema:
   name: Human Follow-Up And Offline Delivery
-  description: A pay-as-you-go human follow-up workflow for agents that return a source-backed follow-up brief.
+  description: A pay-as-you-go workflow for turning completed agent analysis into reviewable email, phone, mail, postcard, or proof delivery packets.
   mainEntityName: Human Follow-Up And Offline Delivery
-  mainEntityDescription: Combines recipient, message, or delivery task, public source checks, priced endpoint calls, and review controls into a focused follow-up brief.
+  mainEntityDescription: Combines message drafting, delivery-channel tools, proof links, transcripts, fulfillment status, rough cost ranges, and explicit human approval before real-world actions.
   providerName: 402box
 hero:
   backdrop:
@@ -20,203 +20,199 @@ hero:
   topLinkText: Use cases
   topLinkHref: "#use-cases"
   integration:
-    - Source APIs
-    - Evidence
-    - Delivery run
+    - AgentMail
+    - StablePhone
+    - Postal mail
   title:
-    text: Prepare follow-up,
-    highlight: not auto-send yet.
-  lead: Give your agent a recipient, message, or delivery task, source limits, and budget cap. Get a follow-up brief with channel, timestamps, costs, caveats, and approval boundaries before action.
+    text: Finish follow-up,
+    highlight: with proof gates.
+  lead: Give your agent a result, recipient, channel, evidence rules, and cost cap. Get an approval-ready email, callback, letter, postcard, or proof packet.
   actions:
     - label: Budget first
-      text: Plan Focused Run
+      text: Plan Delivery Packet
       href: "#prompt"
       primary: true
     - label: See output
-      text: Inspect Output
+      text: Inspect Packet
       href: "#example"
   trust:
-    - Source checks
-    - Delivery proof
-    - Budget caps
+    - Review draft
+    - Channel evidence
+    - Cost caps
     - Human approval
   preview:
-    ariaLabel: Human Follow-Up request to output preview
-    request: Prepare a follow-up brief. Draft the message, validate recipient or delivery details where possible, show cost and proof, and require approval before email, calls, SMS, mail, or delivery.
-    responseAriaLabel: Example human follow-up brief
+    ariaLabel: Human follow-up delivery request to output preview
+    request: Turn this vendor decision into a customer email. Prepare the thread, keep evidence links separate from private files, show delivery cost, and do not send until I approve.
+    responseAriaLabel: Example human follow-up delivery packet
     resultLabel: Result
-    resultTitle: Brief log
+    resultTitle: Packet log
     code: |-
       {
-        "job": "Human Follow-Up",
-        "input": "recipient, message, or delivery task",
-        "planned_calls": 12,
-        "call_budget": "$0.04+ cap to $2.00+ cap",
-        "status": "review_required",
-        "follow_up_brief": [
-          "Decision: approval-ready email thread, callback note, or mail/postcard handoff.",
-          "Proof: source links, timestamps, provider labels, and cost notes.",
-          "Next step: approve send, call, mail, or delivery action only if the brief is useful."
+        "packet": "Vendor email",
+        "channel": "AgentMail + StableEmail",
+        "calls": 4,
+        "call_budget": "$0.04 + dynamic model cost",
+        "status": "approval_required",
+        "review": [
+          "Draft, recipient, and evidence links are ready.",
+          "Log thread ID, message ID, send time, and owner.",
+          "No send, call, order, or upload before approval."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One follow-up brief. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when recipient, message, or delivery task needs a focused answer now, not a permanent provider stack. The agent returns a follow-up brief with proof, costs, and next checks.
+  title: A finished result becomes a reviewable delivery packet.
+  text: Analysis often stops one step too early. This workflow turns a decision, answer, or recommendation into the channel-ready follow-up a person can inspect, approve, and trace later.
   ariaLabel: Human Follow-Up input and output details
   features:
     - title: Input
-      text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
+      text: A completed result, recipient or address, channel choice, message goal, evidence rules, deadline, and spend cap.
     - title: Output
-      text: A follow-up brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: An approval-ready email, callback note, letter, or postcard with labels, timestamps, rough costs, and log fields.
     - title: Best fit
-      text: Email threads, callback notes, mail/postcard handoffs, and jobs needing approval before action.
+      text: Customer updates, vendor decisions, appointment checks, callbacks, mail notices, and proof logs.
 results:
   eyebrow: Real tools, bounded spend
-  title: A follow-up brief shaped for human decisions.
-  text: Use rough source ranges such as $0.04, $2.00, $1.00 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  title: Delivery choices with the cost and risk shown up front.
+  text: The source bundle models email, phone, and offline delivery separately. Fixed MPP prices are rough inputs; mail orders, uploads, media, and models stay dynamic.
   metrics:
-    - label: Decision Email Reply
-      value: $0.04+ cap
-      text: Decision Email With A Reply starts with cheap source checks and returns a narrow follow-up brief before expansion.
+    - label: Decision email thread
+      value: $0.04+ run
+      text: Existing AgentMail draft/send plus StableEmail relay, before dynamic OpenAI or Anthropic wording cost.
       large: true
-    - label: Phone Callback Review
-      value: $2.00+ cap
-      text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
-    - label: Offline Letter Review
-      value: $1.00+
-      text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
-    - label: Expanded review run
-      value: $0.626+ cap
-      text: Use only when the first follow-up brief justifies more providers, deeper evidence, or repeated monitoring.
+    - label: Fresh inbox setup
+      value: +$2.00 run
+      text: Optional AgentMail inbox creation when the workflow needs a fresh owned inbox and durable thread history.
+    - label: Callback outcome note
+      value: $0.626+
+      text: One StablePhone call, Deepgram transcription and analysis, and a StableEmail recap before dynamic model cost.
+    - label: Postcard media packet
+      value: $1.069+ run
+      text: Digital Papercut postcard, StableStudio image, Pinata upload hint, and confirmation email before model cost.
 steps:
   titleId: workflow-title
   eyebrow: How it works
-  title: Start narrow. Expand only after review.
-  text: Run cheap source checks first, add richer tools only for promising signals, and keep mutations, outreach, payments, and expanded budgets under human approval.
+  title: Package the message before real-world action.
+  text: The workflow separates drafting, validation, proof, approval, and fulfillment so the agent can prepare the next step without silently contacting people or placing orders.
   items:
     - number: "01"
-      title: Normalize the input
-      text: Turn the recipient, message, or delivery task into clean entities, constraints, and source limits before paid calls.
+      title: Choose the channel
+      text: Decide whether the follow-up belongs in an email thread, phone callback, postal letter, postcard, or proof packet.
     - number: "02"
-      title: Estimate the budget
-      text: Show selected tools, expected call counts, rough ranges, dynamic endpoints, and stop conditions before the run begins.
+      title: Build the full packet
+      text: Draft the message, script, or mail copy with recipient fields, evidence links, cost estimate, and stop conditions.
     - number: "03"
-      title: Gather source proof
-      text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
+      title: Validate first
+      text: Check recipient details, address fields, phone policy, public-file safety, mail quote, and dynamic-price risks.
     - number: "04"
-      title: Return the brief
-      text: Deliver the follow-up brief, delivery log fields, source links, cost notes, open questions, and actions needing explicit human approval.
+      title: Log the outcome
+      text: After approval, record thread IDs, message IDs, transcript links, quote status, proof CIDs, and next-action owner.
 benefits:
   eyebrow: Benefits
-  title: Keep the decision small before the stack grows.
+  title: Close the loop without buying a communications stack.
   items:
-    - title: Specialized data without permanent seats
-      text: Use human follow-up sources for one important request instead of keeping every provider, dashboard, and credit bundle active.
-    - title: Cheaper checks before deeper evidence
-      text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
-    - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the follow-up brief.
-    - title: Human approval for real actions
-      text: The follow-up brief informs a decision, but sends, calls, mail orders, uploads, inbox purchases, and expanded spend need approval.
+    - title: The deliverable is the approval handoff
+      text: "The agent returns what a person can approve: thread, script, mail packet, postcard, transcript note, or proof log."
+    - title: Pay only for the channel action
+      text: Use AgentMail, StableEmail, StablePhone, PostalForm, Papercut, Deepgram, StableStudio, or Pinata only as needed.
+    - title: Evidence stays attached
+      text: Keep summaries separate from evidence links, transcripts, CIDs, timestamps, quote status, and provider labels.
+    - title: Real-world steps stay gated
+      text: Email sends, calls, mail orders, uploads, media generation, inbox buys, and phone-number buys require approval.
 facts:
   eyebrow: Tool details
-  title: Use tool facts to control the next call.
-  text: Human Follow-Up works best when the agent separates source facts, generated synthesis, and unresolved questions. Start with focused APIs, add support rails only when they explain the decision, and keep the run review-only by default.
+  title: Match each delivery channel to the follow-up job.
+  text: Treat communication as an outward-facing action. Draft and validate first, then ask for approval before any send, call, order, upload, or fulfillment step.
   ariaLabel: Human Follow-Up tool facts
   items:
     - label: Core tools
       value: AgentMail, StableEmail, StablePhone, PostalForm, Papercut
     - label: Support rails
-      value: StablePhone, PostalForm, Papercut, Deepgram, StableStudio, Pinata IPFS
+      value: OpenAI, Anthropic, Deepgram, StableStudio, Pinata IPFS
     - label: Primary input
-      value: recipient, message, or delivery task, source limits, and budget cap
+      value: Completed result, recipient, channel, goal, evidence rules, and budget cap
     - label: Primary output
-      value: follow-up brief, delivery log, timestamps, costs, and next checks
+      value: Delivery packet with draft, proof, status fields, costs, and approval gate
     - label: Dynamic costs
-      value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
+      value: Model wording, mail orders, postcard variants, file size, and media routes
     - label: Execution status
       value: Scenario plan only, no endpoint calls performed
 prompt:
   eyebrow: Example prompt
-  title: Give your agent a human follow-up job.
-  text: Keep the recipient, message, or delivery task, source limits, output format, call budget, and approval boundaries explicit before paid or repeated checks begin.
+  title: Give your agent a bounded delivery job.
+  text: Name the recipient, channel, evidence rules, output fields, cost cap, and actions that require approval before a message leaves the workflow.
   copyTarget: 24-human-follow-up-and-offline-delivery-2-prompt
   buttonLabel: Copy prompt
   code: |-
-    Prepare a follow-up brief. Draft the message, validate recipient or delivery details where possible, show cost and proof, and require approval before sending email, calls, SMS, mail, or delivery.
+    Turn this vendor decision into a follow-up packet.
 
-    Use the local Human Follow-Up workflow to return a follow-up brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Recipient: customer success lead. Channel: email first; callback only after approval. Goal: explain the decision, link evidence, ask for one confirmation, and show next step. Do not put private files on IPFS.
 
-    Return a concise follow-up brief with:
-    - the cleaned recipient, channel, message goal, and assumptions
-    - the draft message, call script, or mail/postcard copy needing approval
-    - the source names, timestamps, and links used
-    - the key findings separated from generated recommendations
-    - delivery log fields to record after approval, such as thread IDs, transcript links, quote status, or proof links
-    - rough cost notes and any dynamic pricing caveats
-    - conflicts, stale sources, missing fields, and open questions
-    - the next checks worth running only after approval
+    Use OpenAI/Anthropic for wording; AgentMail for draft/thread IDs; StableEmail for relay; StablePhone+Deepgram after call approval; PostalForm/Papercut after mail/postcard approval.
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this follow-up brief.
+    Before paid calls, estimate providers, call count, fixed prices, dynamic risks, total cost, and stops. I approve the budget first.
+
+    Return recipient, channel, goal, assumptions, draft email/script/letter/postcard, evidence links, provider names, timestamps, costs, log IDs, and exact action needing approval.
+
+    Do not send, call, order, upload, buy inboxes or numbers, generate media, submit forms, sign wallet messages, or pay invoices without approval.
 comparison:
   eyebrow: Comparison
-  title: When a follow-up brief beats another workflow.
+  title: When a delivery packet beats another tool setup.
   ariaLabel: Traditional tools compared with this human follow-up workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
   rows:
     - category: Signup
-      left: Provider accounts, dashboards, API keys, credits, and billing setup
-      right: One bounded agent run with an approved call budget
+      left: Email, phone, mail, media, storage, API-key, and billing setup
+      right: One bounded delivery packet with the channel tools selected for this follow-up
     - category: Tools
-      left: Separate data, search, extraction, proof, synthesis, and delivery tools
-      right: Pay-as-you-go endpoint mix selected for the request
+      left: Drafts, transcripts, proof files, mail quotes, and records in separate systems
+      right: AgentMail, StableEmail, StablePhone, PostalForm, Papercut, Deepgram, StableStudio, and Pinata used only as needed
     - category: Output
-      left: Manual exports and screenshots to reconcile
-      right: One follow-up brief with delivery fields, timestamps, costs, and candidates
+      left: Drafts still need routing, proof cleanup, and tracking
+      right: One packet with draft copy, evidence rules, cost notes, log fields, and approval status
     - category: Cadence
-      left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first brief earns them
+      left: Reminders to send, call, quote, and record
+      right: Follow-up deadline, next-action owner, and post-approval delivery fields captured in the packet
     - category: Action
-      left: Research and operational action mixed together
-      right: Options stay review-only until a human approves action
+      left: Drafting and outreach can blur together
+      right: Preparation stays separate from paid or outward-facing action until a human approves it
 useCases:
   eyebrow: Use cases
-  title: Use the brief when timing matters.
+  title: Use the packet when someone needs it.
   items:
-    - title: Decision Email Reply
-      text: Start with one bounded request when a source-backed answer is needed before more budget or action.
-    - title: Phone Callback Review
-      text: Compare source families, show conflicts, and decide whether richer checks are worth the next run.
-    - title: Offline Letter Review
-      text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
-    - title: Reviewer handoff with proof
-      text: Hand off findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+    - title: Decision email thread
+      text: Turn an approved analysis into a subject line, message body, recipient record, evidence links, and thread fields.
+    - title: Callback transcript
+      text: Prepare a bounded call goal and script, then convert the transcript into reached status, commitments, and dates.
+    - title: Letter or postcard handoff
+      text: Validate address fields, draft the copy, capture quote or fulfillment status, and separate paid ordering from review.
+    - title: Public-safe proof packet
+      text: Package non-sensitive evidence links, Pinata CIDs, media prompts, timestamps, and confirmation fields for audit.
 closing:
-  eyebrow: Focused run
-  title: Start with the smallest useful check.
-  text: No broad subscription stack. No silent expansion. Your agent pays only for the relevant checks needed to decide whether the next step is worth review.
+  eyebrow: Follow-up
+  title: Start with the message, not the send button.
+  text: No communication suite to buy. No hidden outreach. Your agent prepares the follow-up packet, shows rough spend, and waits for approval before delivery.
   items:
-    - Start with the cheapest useful source checks.
-    - Cap providers, fanout, screenshots, and model calls.
-    - Keep source timestamps and uncertainty visible.
-    - Require approval before mutations, sends, or spend.
+    - Draft the email, script, letter, or postcard first.
+    - Cap fixed calls, model use, file uploads, and fulfillment steps.
+    - Keep proof, transcripts, quotes, CIDs, and timestamps visible.
+    - Require approval before sends, calls, orders, uploads, or purchases.
 faq:
   eyebrow: FAQ
-  title: Before the first follow-up brief.
+  title: Before the first delivery packet.
   items:
-    - question: What does the follow-up brief return?
-      answer: It can return the cleaned input, draft or outcome fields, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+    - question: What does the delivery packet return?
+      answer: It can return the recipient, channel, draft, script, letter, postcard, evidence links, timestamps, provider labels, rough costs, approval status, and log fields.
       open: true
     - question: Which tools matter most?
-      answer: AgentMail, StableEmail, StablePhone, PostalForm, Papercut are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.
+      answer: AgentMail handles inboxes, drafts, sends, and threads. StableEmail handles relay or inbox sends. StablePhone, PostalForm, Papercut, Deepgram, StableStudio, and Pinata add channels and proof.
     - question: How much does a focused run cost?
-      answer: The local source bundle gives rough ranges such as $0.04, $2.00, $1.00, $0.626. Dynamic endpoints should be capped before execution, and repeated checks should be approved separately.
+      answer: The local model estimates about $0.04 plus dynamic model cost for an existing-inbox email, $0.626+ for callback analysis, and $1.069+ for a digital postcard/media packet.
     - question: What needs human approval?
-      answer: The default workflow returns reviewable candidates and tradeoffs. Purchases, bookings, filings, account actions, outreach, uploads, sends, wallet signatures, payments, and expanded budgets require explicit approval.
+      answer: Email sends, phone calls, mail orders, postcards, public uploads, media generation, inbox or number buys, wallet signatures, payments, forms, and expanded budgets need approval.
     - question: What should I watch for?
-      answer: Keep source freshness, timestamps, provider limits, dynamic prices, retry behavior, source links, approval boundaries, and generated recommendations separate from observed facts.
+      answer: Verify recipient identity, address accuracy, consent, public-file safety, media quality, dynamic prices, irreversible fulfillment, source freshness, and proof-link suitability.
 footer:
   brand: 402box
   links:

@@ -1,11 +1,11 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: OCR Knowledge extraction brief | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed extraction brief with costs, timestamps, and human approval.
+title: "Document extraction brief on demand | 402box"
+description: "Use pay-as-you-go OCR, translation, extraction, and computation tools to turn a bounded document set into a cited review packet."
 bodyClass: page-bumi page-usecase page-11-document-ocr-and-knowledge-extraction page-alt
 themeColor: "#101113"
-ogTitle: OCR Knowledge briefs, paid per focused check.
-ogDescription: Give your agent a document, image, or file, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
+ogTitle: "Cited document extraction, paid per focused pass."
+ogDescription: "Give your agent a scan, paper, packet, or multilingual bundle. Get OCR text, tables, translations, source anchors, caveats, and cost caps."
 schema:
   name: Document, OCR, And Knowledge Extraction
   description: A pay-as-you-go ocr knowledge workflow for agents that return a source-backed extraction brief.
@@ -16,205 +16,205 @@ hero:
   backdrop:
     label: "11"
   brandKicker: 402box
-  brandName: OCR Knowledge
+  brandName: Document Extraction
   topLinkText: Use cases
   topLinkHref: "#use-cases"
   integration:
-    - Source APIs
-    - Evidence
-    - Brief run
+    - Mathpix OCR
+    - Diffbot NL
+    - Formula checks
   title:
-    text: Read the document,
-    highlight: not every pipeline.
-  lead: Give your agent a document, image, or file, source limits, and budget cap. Get an extraction brief with source-page references, costs, caveats, and approval boundaries before action.
+    text: Read messy sources,
+    highlight: not OCR stacks.
+  lead: Give your agent a scan, paper, packet, or multilingual bundle. Get OCR text, tables, translations, citations, confidence notes, and a capped cost plan.
   actions:
     - label: Budget first
-      text: Plan Focused Run
+      text: Plan Doc Pass
       href: "#prompt"
       primary: true
     - label: See output
       text: Inspect Output
       href: "#example"
   trust:
-    - Source checks
-    - Source proof links
+    - OCR checks
+    - Formula checks
     - Budget caps
-    - Human approval
+    - No auto-publish
   preview:
-    ariaLabel: OCR Knowledge request to output preview
-    request: Extract this document into a reviewable extraction brief. Use OCR, structure extraction, entity or fact extraction, proof snippets, confidence labels, and cost caps before any larger batch is processed.
-    responseAriaLabel: Example ocr knowledge extraction brief
+    ariaLabel: Document extraction request to output preview
+    request: Turn this scanned research packet into a cited extraction brief. OCR formulas and tables, translate selected passages, extract entities, and keep page references and cost caps visible.
+    responseAriaLabel: Example document extraction brief
     resultLabel: Result
-    resultTitle: OCR brief
+    resultTitle: Review brief
     code: |-
       {
-        "job": "OCR Knowledge",
-        "input": "document, image, or file",
-        "planned_calls": 12,
-        "call_budget": "$0.086-$0.181 to $0.059-$0.154",
-        "status": "review_required",
-        "extraction_brief": [
-          "Source-backed summary with page references and timestamps.",
-          "Tools: Mathpix, DeepL, Diffbot.",
-          "Next step: approve more calls only if the first brief is useful."
+        "file": "scanned research packet",
+        "planned_calls": 14,
+        "call_budget": "$0.059-$0.154+",
+        "outputs": [
+          "5 OCR pages with raw text kept beside cleaned fields.",
+          "Entities, dates, tables, and totals mapped to page refs.",
+          "Next step: approve translation or storage only if needed."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One extraction brief. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when a document, image, or file needs a focused answer now, not a permanent provider stack. The agent returns an extraction brief with OCR text, proof, costs, and next checks.
-  ariaLabel: OCR Knowledge input and output details
+  title: One source set. OCR, records, and proof anchors.
+  text: "Pay-as-you-go access is useful when a document set needs one reliable pass: extract text, preserve page context, check the hard claims, and return a reviewable artifact."
+  ariaLabel: Document extraction input and output details
   features:
     - title: Input
-      text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
+      text: A paper, scan, screenshot packet, form batch, or multilingual bundle with page limits, scope, and call budget.
     - title: Output
-      text: An extraction brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: An extraction brief with raw OCR, cleaned fields, translations, source links, cost notes, and confidence labels.
     - title: Best fit
-      text: Workflow options, extraction brief, source proof, and narrow jobs needing approval before action.
+      text: Technical papers, scanned records, multilingual packs, and audit-friendly extraction batches.
 results:
   eyebrow: Real tools, bounded spend
-  title: An extraction brief shaped for human decisions.
-  text: Use rough source ranges such as $0.086-$0.181, $0.059-$0.154+, $0.243-$0.338+ as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  title: A document brief built from priced extraction calls.
+  text: Treat these as planning ranges from local source artifacts. Dynamic translation, model tokens, file size, and storage choice still need caps.
   metrics:
-    - label: Technical Paper To
+    - label: Paper study brief
       value: $0.086-$0.181
-      text: Technical Paper To Study Brief starts with cheap source checks and returns a narrow study brief before expansion.
+      text: Three OCR images, source checks, one Wolfram|Alpha check, embeddings, and one Mistral synthesis pass.
       large: true
-    - label: Scanned record set
-      value: $0.059-$0.154
-      text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
-    - label: Multilingual Research
+    - label: Scanned packet base
+      value: $0.059-$0.154+
+      text: Five OCR images, Diffbot extraction, Diffbot NL analysis, evidence capture, embeddings, and cleanup.
+    - label: Multilingual bundle run
       value: $0.243+
-      text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
-    - label: Expanded review run
-      value: $0.08-$0.18
-      text: Use only when the first extraction brief justifies more providers, deeper evidence, or repeated monitoring.
+      text: Ten OCR images, translation, source gathering, Diffbot extraction, two formula checks, synthesis, and upload.
+    - label: Formula check add-on
+      value: $0.055 each
+      text: Use Wolfram|Alpha only for numeric, unit, formula, or scientific claims that affect the final answer.
 steps:
   titleId: workflow-title
   eyebrow: How it works
-  title: Start narrow. Expand only after review.
-  text: Run cheap source checks first, add richer tools only for promising signals, and keep mutations, outreach, payments, and expanded budgets under human approval.
+  title: Start with pages. Pay for the evidence.
+  text: OCR the selected source first, add translation or computation only where it changes the answer, and keep storage or publication under review.
   items:
     - number: "01"
-      title: Normalize the input
-      text: Turn the document, image, or file into clean entities, constraints, and source limits before paid calls.
+      title: Scope the source set
+      text: Choose pages, files, languages, formulas, tables, and fields before the agent spends on OCR or extraction.
     - number: "02"
-      title: Estimate the budget
-      text: Show selected tools, expected call counts, rough ranges, dynamic endpoints, and stop conditions before the run begins.
+      title: Estimate the call budget
+      text: Show OCR count, extraction count, translation risk, model path, storage choice, and stop conditions up front.
     - number: "03"
-      title: Gather source proof
-      text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
+      title: Check key claims
+      text: Use Mathpix, Diffbot, DeepL, Firecrawl, Wolfram|Alpha, and one synthesis model only where each tool adds proof.
     - number: "04"
-      title: Return the brief
-      text: Deliver the extraction brief, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Return the artifact
+      text: Deliver raw OCR, records, translations, calculation notes, source anchors, caveats, and next approvals.
 benefits:
   eyebrow: Benefits
-  title: Keep the decision small before the stack grows.
+  title: Get the useful knowledge without buying the stack.
   items:
-    - title: Specialized data without permanent seats
-      text: Use ocr knowledge sources for one important request instead of keeping every provider, dashboard, and credit bundle active.
-    - title: Cheaper checks before deeper evidence
-      text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
-    - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the extraction brief.
-    - title: Human approval for real actions
-      text: The brief can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
+    - title: Specialist tools for one source set
+      text: Use OCR, translation, extraction, computation, and synthesis for one bounded review instead of maintaining accounts.
+    - title: Raw evidence stays beside cleanup
+      text: Keep page images, OCR text, normalized fields, and parse failures visible so formulas and tables can be checked.
+    - title: Cost grows only with scope
+      text: Page count, translation length, model tokens, file size, crawl depth, and storage choice stay explicit before spend.
+    - title: Publishing remains a decision
+      text: IPFS, object storage, larger batches, account actions, and sensitive document handling require human approval.
 facts:
   eyebrow: Tool details
-  title: Use tool facts to control the next call.
-  text: OCR Knowledge works best when the agent separates source facts, generated synthesis, and unresolved questions. Start with focused APIs, add support rails only when they explain the decision, and keep the run review-only by default.
-  ariaLabel: OCR Knowledge tool facts
+  title: Use each provider for the document job it proves.
+  text: The extraction brief works because raw source material, tool output, and model interpretation stay separate. Unknown prices and low-confidence fields remain visible.
+  ariaLabel: Document extraction tool facts
   items:
     - label: Core tools
-      value: Mathpix, DeepL, Diffbot, Diffbot NL, Wolfram\ with review notes
+      value: Mathpix, DeepL, Diffbot, Diffbot NL, Wolfram|Alpha
     - label: Support rails
-      value: Diffbot, Diffbot NL, Wolfram\, Mistral AI, OpenAI, or Anthropic, Firecrawl, OpenAI
+      value: Firecrawl, Mistral AI, OpenAI, Anthropic, Pinata IPFS, Object Storage
     - label: Primary input
-      value: document, image, or file, source limits, and budget cap
+      value: Documents, images, page limits, languages, fields, and budget cap
     - label: Primary output
-      value: Extraction brief, timestamps, costs, caveats, and next checks
+      value: Cited extraction brief, records, translations, checks, and caveats
     - label: Dynamic costs
-      value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
+      value: Translation length, model tokens, file size, storage, crawl depth
     - label: Execution status
       value: Scenario plan only, no endpoint calls performed
 prompt:
   eyebrow: Example prompt
-  title: Give your agent a ocr knowledge job.
-  text: Keep the document, image, or file, source limits, output format, call budget, and approval boundaries explicit before paid or repeated checks begin.
+  title: Give your agent a document extraction brief.
+  text: Keep the source set, page count, tool roles, output fields, call budget, and publication boundaries explicit before paid calls begin.
   copyTarget: 11-document-ocr-and-knowledge-extraction-2-prompt
   buttonLabel: Copy prompt
   code: |-
-    Extract this document into a reviewable extraction brief. Use OCR, structure extraction, entity or fact extraction, proof snippets, confidence labels, and cost caps before any larger batch is processed.
+    Turn this scanned research packet into a cited extraction brief.
 
-    Use the local OCR Knowledge workflow to return an extraction brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Use Mathpix for OCR, Diffbot or Diffbot NL for fields and entities, DeepL for translations, Wolfram|Alpha for formulas or numeric claims, and one synthesis model for explanation.
 
-    Return a concise extraction brief with:
-    - the cleaned input and assumptions
-    - the source names, timestamps, and links used
-    - the key findings separated from generated recommendations
-    - rough cost notes and any dynamic pricing caveats
-    - conflicts, stale sources, missing fields, and open questions
-    - the next checks worth running only after approval
+    Before paid calls, estimate the budget. Show planned tools, page count, extraction count, dynamic-price risks, expected total cost, and stop conditions. I will approve the call budget, then you can begin.
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this extraction brief.
+    Return:
+    - raw OCR kept beside cleaned fields
+    - page references for tables, formulas, dates, names, and totals
+    - translated excerpts paired with original passages
+    - calculation checks separated from document claims
+    - parse failures, caveats, and open questions
+    - storage or publication only as recommendations
+
+    Do not upload private files, publish to IPFS, create accounts, pay invoices, sign wallet messages, or expand the batch without approval.
 comparison:
   eyebrow: Comparison
-  title: When an extraction brief beats another workflow.
-  ariaLabel: Traditional tools compared with this ocr knowledge workflow
+  title: When one extraction pass beats a document stack.
+  ariaLabel: Traditional tools compared with this document extraction workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
   rows:
     - category: Signup
-      left: Provider accounts, dashboards, API keys, credits, and billing setup
-      right: One bounded agent run with an approved call budget
+      left: OCR, translation, extraction, model, and storage accounts to set up
+      right: One bounded document run with an approved call budget
     - category: Tools
-      left: Separate data, search, extraction, proof, synthesis, and delivery tools
-      right: Pay-as-you-go endpoint mix selected for the request
+      left: Separate OCR, translation, extraction, computation, storage, and LLM tools
+      right: Pay-as-you-go endpoint mix selected for the source set
     - category: Output
-      left: Manual exports and screenshots to reconcile
-      right: One extraction brief with timestamps, costs, and candidates
+      left: Raw OCR files, exports, and notes to reconcile manually
+      right: One extraction brief with pages, costs, caveats, and records
     - category: Cadence
-      left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first brief earns them
+      left: Manual one-off reviews or subscription queues
+      right: Budgeted follow-up batches only when the first pass earns them
     - category: Action
-      left: Research and operational action mixed together
+      left: Publishing and storage decisions mixed with review work
       right: Options stay review-only until a human approves action
 useCases:
   eyebrow: Use cases
-  title: Use the brief when timing matters.
+  title: Use extraction when sources need checking.
   items:
-    - title: Technical Paper To Study
-      text: Start with one bounded request when a source-backed answer is needed before more budget or action.
-    - title: Scanned record set
-      text: Compare source families, show conflicts, and decide whether richer checks are worth the next run.
-    - title: Multilingual Research
-      text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
+    - title: Technical paper brief
+      text: Extract formulas, tables, source links, and calculation checks before asking a reader to trust the synthesis.
+    - title: Scanned packet records
+      text: Turn receipts, forms, screenshots, reports, or slides into records with page refs and low-confidence fields.
+    - title: Multilingual evidence pack
+      text: Pair original passages with translations, extracted entities, source URLs, and claims that need verification.
     - title: Reviewer handoff with proof
-      text: Package findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+      text: Package raw OCR, normalized data, caveats, costs, and next approvals so a human can decide what expands.
 closing:
-  eyebrow: Focused run
-  title: Start with the smallest useful check.
-  text: No broad subscription stack. No silent expansion. Your agent pays only for the relevant checks needed to decide whether the next step is worth review.
+  eyebrow: Document pass
+  title: Start with the pages that matter.
+  text: No OCR subscription hunt. No silent file publication. Your agent pays for the extraction calls needed to decide whether the source set deserves more work.
   items:
-    - Start with the cheapest useful source checks.
-    - Cap providers, fanout, screenshots, and model calls.
-    - Keep source timestamps and uncertainty visible.
-    - Require approval before mutations, sends, or spend.
+    - Start with selected pages, not a broad batch.
+    - Cap OCR, translation, extraction, model, and storage calls.
+    - Keep raw source, cleaned fields, and uncertainty visible.
+    - Require approval before uploads, publication, or expansion.
 faq:
   eyebrow: FAQ
-  title: Before the first extraction brief.
+  title: Before the first document pass.
   items:
     - question: What does the extraction brief return?
-      answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+      answer: It can return raw OCR, cleaned fields, tables, formulas, translated excerpts, entities, calculation notes, source links, page references, confidence labels, costs, and open questions.
       open: true
     - question: Which tools matter most?
-      answer: Mathpix, DeepL, Diffbot, Diffbot NL, Wolfram\ are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.
+      answer: Mathpix handles OCR. DeepL translates selected passages. Diffbot and Diffbot NL structure text. Wolfram|Alpha checks formulas or numeric claims. LLMs synthesize.
     - question: How much does a focused run cost?
-      answer: The local source bundle gives rough ranges such as $0.086-$0.181, $0.059-$0.154+, $0.243-$0.338+, $0.08-$0.18. Dynamic endpoints should be capped before execution, and repeated checks should be.
-    - question: What needs human approval?
-      answer: The default workflow returns reviewable candidates and tradeoffs. Purchases, bookings, filings, account actions, outreach, uploads, sends, wallet signatures, payments, and expanded budgets require explicit approval.
+      answer: The local model estimates about $0.086-$0.181 for a paper brief, $0.059-$0.154+ for scanned records, and $0.243-$0.338+ for a multilingual bundle.
+    - question: Does the agent publish files?
+      answer: No. The default workflow returns a review packet. IPFS upload, object storage, account actions, wallet signatures, paid expansion, and sensitive-file handling require approval.
     - question: What should I watch for?
-      answer: Keep source freshness, timestamps, provider limits, dynamic prices, retry behavior, source links, approval boundaries, and generated recommendations separate from observed facts.
+      answer: OCR can miss formulas, handwriting, tables, and columns. Keep originals, page refs, translations, parse failures, dynamic prices, and model interpretation separate.
 footer:
   brand: 402box
   links:

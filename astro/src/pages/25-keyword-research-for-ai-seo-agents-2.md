@@ -1,11 +1,11 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Keyword research brief run | 402box
-description: Use pay-as-you-go tools to check a keyword, market, or client domain and return a source-backed keyword brief with costs, timestamps, and next-page recommendations.
+title: Keyword opportunity briefs on demand | 402box
+description: Use pay-as-you-go SEO data calls to judge a keyword, brief a content sprint, or scope a client audit with costs, source links, proof, and review controls.
 bodyClass: page-bumi page-usecase page-25-keyword-research-for-ai-seo-agents page-alt
 themeColor: "#101113"
-ogTitle: Keyword briefs, paid per focused check.
-ogDescription: Give your agent a keyword, market, or client domain, budget cap, and stop conditions. Get keyword metrics, ranking-page evidence, rough costs, and next checks for human review.
+ogTitle: Keyword decisions, paid per focused run.
+ogDescription: Give your agent a keyword, market, or client domain. Get search-demand signals, ranking-page proof, rough costs, and a next action before writing.
 schema:
   name: Keyword Research For AI SEO Agents
   description: A pay-as-you-go keyword research workflow for agents that return a source-backed keyword brief.
@@ -16,205 +16,200 @@ hero:
   backdrop:
     label: "25"
   brandKicker: 402box
-  brandName: Keyword Research
+  brandName: Keyword Briefs
   topLinkText: Use cases
   topLinkHref: "#use-cases"
   integration:
-    - Source APIs
-    - Evidence
-    - Keyword brief
+    - SpyFu data
+    - Page proof
+    - SEO brief
   title:
-    text: Check the keyword,
-    highlight: not every SEO suite.
-  lead: Give your agent a keyword, market, or client domain, source limits, and budget cap. Get a keyword brief with metrics, ranking-page proof, costs, caveats, and approvals before action.
+    text: Buy keyword proof,
+    highlight: not a suite.
+  lead: Give your agent a keyword, market, or client domain. Get a source-backed SEO brief with demand, difficulty, ranking pages, costs, and review boundaries.
   actions:
     - label: Budget first
-      text: Plan Focused Run
+      text: Plan Brief Run
       href: "#prompt"
       primary: true
     - label: See output
-      text: Inspect Output
+      text: Inspect Brief
       href: "#example"
   trust:
-    - Source checks
+    - SpyFu signals
     - Ranking-page proof
     - Budget caps
     - Human approval
   preview:
     ariaLabel: Keyword Research request to output preview
-    request: Check this keyword opportunity before we write. Pull keyword, competitor, ranking-page, social-language, proof, and cost signals, then return a recommendation with no publishing or ad spend.
+    request: Check "best project management tools" for US B2B software. Show demand, difficulty, related terms, competing pages, proof links, and whether we should write.
     responseAriaLabel: Example keyword research keyword brief
     resultLabel: Result
     resultTitle: Keyword brief
     code: |-
       {
-        "job": "Keyword Research",
-        "input": "keyword, market, or client domain",
-        "planned_calls": 12,
-        "call_budget": "$0.11-$0.12 to $0.16-$0.18",
-        "status": "review_required",
-        "keyword_brief": [
-          "Verdict: write a comparison page if authority and intent fit.",
-          "Proof: SpyFu signals plus current ranking-page examples.",
-          "Next step: approve screenshots only for shortlisted pages."
-        ]
+        "keyword": "best project management tools",
+        "planned_calls": 7,
+        "call_budget": "$0.16-$0.18",
+        "verdict": "write a comparison page if authority fits",
+        "proof": [
+          "SpyFu: demand, difficulty, intent, and related terms.",
+          "Exa/Brave: current pages to review."
+        ],
+        "next_step": "Approve screenshots for shortlisted pages."
       }
 intro:
   eyebrow: What it does
-  title: One keyword brief. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when a keyword, market, or client domain needs a focused answer now, not a permanent SEO platform. The agent returns a keyword brief with metrics, page proof, costs, and next checks.
+  title: One keyword input. One brief for the writing decision.
+  text: The workflow turns a seed term, short list, or client domain into a reviewable keyword brief, so teams can choose what to write before buying a monthly SEO stack.
   ariaLabel: Keyword Research input and output details
   features:
     - title: Input
-      text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
+      text: A seed keyword, market, client domain, audience, proof need, source limits, and call budget.
     - title: Output
-      text: A keyword brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: A keyword card, content brief, or audit memo with source links, timestamps, confidence, and next checks.
     - title: Best fit
-      text: Keyword checks, content briefs, client audits, and SEO decisions that need approval.
+      text: Content teams, SEO consultants, agencies, and founders validating topics before work starts.
 results:
-  eyebrow: Real tools, bounded spend
-  title: A keyword brief shaped for human decisions.
-  text: Use rough source ranges such as $0.11-$0.18, $0.85-$0.86, and $1.68-$1.70 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  eyebrow: Real costs, real limits
+  title: Decision briefs from priced keyword calls.
+  text: These are rough catalog estimates, not live bills. The page keeps SpyFu data, page evidence, screenshots, and dynamic model costs separate.
   metrics:
     - label: Single keyword card
       value: $0.11-$0.18
-      text: Checks one seed term, related ideas, ranking-page examples, and a write-now or avoid recommendation before expansion.
+      text: One seed term, related ideas, competing pages, and a recommendation before a writer starts.
       large: true
-    - label: Content brief sprint
+    - label: Content brief pack
       value: $0.85-$0.86
-      text: Turns a short keyword list into clusters, page types, proof links, screenshots, and title angles for a content sprint.
+      text: Ten candidates become clusters, page types, proof links, screenshots, and title angles.
     - label: Client keyword audit
       value: $1.70
-      text: Adds competitor domains, history, paid-search pressure, audience language, and a first-sprint recommendation.
+      text: Adds domains, competitor movement, paid-search pressure, social language, and a first sprint.
     - label: Added keyword check
       value: $0.030+ cap
-      text: Expand only when the first keyword brief justifies more candidates, deeper proof, or repeated checks.
+      text: Expand only after the first brief shows a term, page, or cluster deserves more evidence.
 steps:
   titleId: workflow-title
   eyebrow: How it works
-  title: Start narrow. Expand only after review.
-  text: Run cheap source checks first, add richer tools only for promising signals, and keep mutations, outreach, payments, and expanded budgets under human approval.
+  title: Start with the cheapest useful signal.
+  text: Use SpyFu for primary keyword data, validate a few pages, add screenshots or social checks only when they change the decision, and keep actions review-only.
   items:
     - number: "01"
       title: Normalize the input
-      text: Turn the keyword, market, or client domain into clean entities, constraints, and source limits before paid calls.
+      text: Set keyword, market, audience, domain context, proof need, and source limits before any paid call.
     - number: "02"
-      title: Estimate the budget
-      text: Show selected tools, expected call counts, rough ranges, dynamic endpoints, and stop conditions before the run begins.
+      title: Price the run first
+      text: List SpyFu, search, scrape, screenshot, social, and model calls with rough totals and dynamic caps.
     - number: "03"
-      title: Gather source proof
-      text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
+      title: Gather evidence
+      text: Collect keyword metrics first, then current pages, selected page text, screenshots, and source timestamps.
     - number: "04"
-      title: Return the brief
-      text: Deliver the keyword brief, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Return a decision
+      text: Separate observed data from recommendations, show caveats, and name the next check that needs approval.
 benefits:
   eyebrow: Benefits
-  title: Keep the decision small before the stack grows.
+  title: Research the idea before paying for the stack.
   items:
-    - title: Specialized data without permanent seats
-      text: Use keyword research sources for one important request instead of keeping every provider, dashboard, and credit bundle active.
-    - title: Cheaper checks before deeper evidence
-      text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
-    - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the keyword brief.
-    - title: Human approval for real actions
-      text: The keyword brief can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and more spend require approval.
+    - title: Specialized SEO data without seats
+      text: Use SpyFu-style keyword signals for a focused request instead of keeping every dashboard and credit bundle active.
+    - title: Proof before content production
+      text: Ranking pages, scraped text, and screenshots stay attached to the claim they support.
+    - title: Costs before calls
+      text: The agent estimates tools, call counts, ranges, and stop conditions before paid keyword work begins.
+    - title: Actions stay review-only
+      text: Briefs can guide writing or audits; publishing, outreach, ads, accounts, and added spend need approval.
 facts:
   eyebrow: Tool details
-  title: Use tool facts to control the next call.
-  text: Keyword Research works best when the agent separates source facts, generated synthesis, and unresolved questions. Start with focused APIs, add support rails only when they explain the decision, and keep the run review-only by default.
+  title: Use keyword data where it actually helps.
+  text: SpyFu is the primary keyword source. Search, scrape, screenshot, social, enrichment, and model tools are support rails for proof, context, and synthesis.
   ariaLabel: Keyword Research tool facts
   items:
     - label: Core tools
       value: SpyFu, BuiltWith, StableSocial, Diffbot, Company Enrichment
     - label: Support rails
-      value: StableSocial, Diffbot, Company Enrichment, Brave Search, Exa, Parallel
+      value: Brave Search, Exa, Parallel, Tavily, Firecrawl, ScreenshotOne
     - label: Primary input
-      value: keyword, market, or client domain, source limits, and budget cap
+      value: Keyword, market, domain, audience, proof need, and call budget
     - label: Primary output
-      value: keyword brief, timestamps, costs, caveats, and next checks
+      value: Keyword card, content brief, audit memo, or first-sprint plan
     - label: Dynamic costs
-      value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
+      value: Models, Tavily, Browserbase, Oxylabs, screenshots, repeated checks
     - label: Execution status
       value: Scenario plan only, no endpoint calls performed
 prompt:
   eyebrow: Example prompt
-  title: Give your agent a keyword research job.
-  text: Keep the keyword, market, or client domain, source limits, output format, call budget, and approval boundaries explicit before paid or repeated checks begin.
+  title: Give your agent a keyword brief.
+  text: Set the keyword, market, proof need, tools, output shape, call budget, and approval boundary before paid SEO checks begin.
   copyTarget: 25-keyword-research-for-ai-seo-agents-2-prompt
   buttonLabel: Copy prompt
   code: |-
-    Check this keyword opportunity before we write. Pull keyword, competitor, ranking-page, social-language, proof, and cost signals, then return a recommendation with no publishing or ad spend.
+    Check "best project management tools" for US B2B software before we write.
 
-    Use the local Keyword Research workflow to return a keyword brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and clear stop conditions before beginning.
+    Use SpyFu for SEO metrics, difficulty, intent, and related terms. Use Exa and Brave Search for competing pages. Use Firecrawl or Diffbot only for selected page text. Use ScreenshotOne only if proof captures will change the decision. Use BuiltWith, Company Enrichment, or StableSocial only if domain context or audience language matters.
 
-    Return a concise keyword brief with:
-    - the cleaned input and assumptions
-    - the source names, timestamps, and links used
-    - the key findings separated from generated recommendations
-    - rough cost notes and any dynamic pricing caveats
-    - conflicts, stale sources, missing fields, and open questions
-    - the next checks worth running only after approval
+    Before paid work, estimate the call budget, planned tools, proof count, dynamic-price risks, and stop conditions. I will approve the call budget before it begins.
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this focused run.
+    Return a concise keyword brief with the verdict, keyword signals, competing pages, proof links, source timestamps, rough costs, confidence, conflicts, and the next check worth approving.
+
+    Do not publish, buy ads, contact people, create accounts, upload files, sign wallet messages, or expand the budget without approval.
 comparison:
   eyebrow: Comparison
-  title: When one keyword brief beats another workflow.
+  title: When one brief beats an SEO subscription.
   ariaLabel: Traditional tools compared with this keyword research workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
   rows:
     - category: Signup
-      left: Provider accounts, dashboards, API keys, credits, and billing setup
+      left: SEO platforms with accounts, seats, API keys, and billing setup
       right: One bounded agent run with an approved call budget
     - category: Tools
-      left: Separate data, search, extraction, proof, synthesis, and delivery tools
-      right: Pay-as-you-go endpoint mix selected for the request
+      left: Keyword, SERP, scraping, screenshot, and synthesis tools split across dashboards
+      right: Pay-as-you-go endpoint mix selected for the keyword decision
     - category: Output
-      left: Manual exports and screenshots to reconcile
-      right: One keyword brief with timestamps, costs, and page candidates
+      left: Exports, screenshots, and notes to reconcile
+      right: One keyword brief with timestamps, costs, proof, and next action
     - category: Cadence
-      left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first brief earns them
+      left: Manual reminders or always-on seats
+      right: Expand only when the first brief earns more evidence
     - category: Action
-      left: Research and operational action mixed together
+      left: Research mixed with publishing or ad action
       right: Options stay review-only until a human approves action
 useCases:
   eyebrow: Use cases
-  title: Use the brief when timing matters.
+  title: Use keyword proof before content spend.
   items:
-    - title: Single Keyword Check
-      text: Start with one bounded request when a source-backed answer is needed before more budget or action.
-    - title: Content Brief And SERP
-      text: Compare source families, show conflicts, and decide whether richer checks are worth the next run.
+    - title: Single keyword check
+      text: Decide whether one term deserves a page, a comparison angle, or no writing time yet.
+    - title: Content brief pack
+      text: Turn a short list into clusters, page types, questions, proof links, and title angles.
     - title: Client Keyword Audit
-      text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
-    - title: Reviewer handoff with proof
-      text: Hand off findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+      text: Compare one client domain with competitors, paid-search pressure, audience language, and first sprint.
+    - title: Niche discovery sprint
+      text: Test a market theme, find language people use, and narrow the first content bets.
 closing:
-  eyebrow: Focused run
-  title: Start with the smallest useful check.
-  text: No broad subscription stack. No silent expansion. Your agent pays only for the relevant checks needed to decide whether the next step is worth review.
+  eyebrow: SEO brief
+  title: Start with the writing decision.
+  text: No monthly SEO suite. No broad crawl. Your agent pays for the checks needed to decide whether a topic is worth writing, briefing, or auditing.
   items:
-    - Start with the cheapest useful source checks.
-    - Cap providers, fanout, screenshots, and model calls.
-    - Keep source timestamps and uncertainty visible.
-    - Require approval before mutations, sends, or spend.
+    - Use SpyFu signals before wider page proof.
+    - Cap keywords, domains, screenshots, and model calls.
+    - Keep timestamps, sources, and conflicts visible.
+    - Require approval before publishing, outreach, ads, or spend.
 faq:
   eyebrow: FAQ
-  title: Before the first keyword brief.
+  title: Before the first keyword run.
   items:
     - question: What does the keyword brief return?
-      answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+      answer: It can return demand and difficulty signals, related terms, intent, current competing pages, proof links or screenshots, rough cost, confidence, and a next action.
       open: true
     - question: Which tools matter most?
-      answer: SpyFu, BuiltWith, StableSocial, Diffbot, Company Enrichment are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.
-    - question: How much does a focused run cost?
-      answer: The local source bundle gives rough ranges such as $0.11-$0.12, $0.16-$0.18, $0.85-$0.86, $0.030. Dynamic endpoints should be capped before execution, and repeated checks should be approved separately.
+      answer: SpyFu is the primary keyword data source. Exa, Brave, Firecrawl, Diffbot, ScreenshotOne, BuiltWith, Company Enrichment, and StableSocial add proof or context.
+    - question: How much does one run cost?
+      answer: The local model estimates about $0.11-$0.18 for one keyword, $0.85-$0.86 for a ten-keyword brief, and about $1.68-$1.70 for a capped audit.
     - question: What needs human approval?
-      answer: The default workflow returns reviewable candidates and tradeoffs. Purchases, bookings, filings, account actions, outreach, uploads, sends, wallet signatures, payments, and expanded budgets require explicit approval.
+      answer: The agent should ask before paid execution, budget expansion, publishing, ad buying, outreach, account actions, wallet signatures, uploads, or mutations.
     - question: What should I watch for?
-      answer: Keep source freshness, timestamps, provider limits, dynamic prices, retry behavior, source links, approval boundaries, and generated recommendations separate from observed facts.
+      answer: Keyword metrics vary by provider, market, date, and index freshness. Keep provider data, current web evidence, screenshots, and generated recommendations separate.
 footer:
   brand: 402box
   links:

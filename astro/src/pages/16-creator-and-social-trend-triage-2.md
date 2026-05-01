@@ -1,220 +1,215 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Social trend brief on demand | 402box
-description: Use pay-as-you-go social, search, NLP, and transcript tools to return a source-backed trend brief with costs, timestamps, and human approval.
+title: Creator trend evidence on demand | 402box
+description: Use pay-as-you-go social, search, NLP, transcript, and draft media tools to decide whether a creator idea deserves a human brief.
 bodyClass: page-bumi page-usecase page-16-creator-and-social-trend-triage page-alt
 themeColor: "#101113"
-ogTitle: Social Trend Triage briefs, paid per focused check.
-ogDescription: Give your agent a creator, topic, or social account, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
+ogTitle: Creator trend proof, paid per focused run.
+ogDescription: Give your agent a handle, post, hashtag, or campaign hunch. Get public examples, web checks, cost notes, risk flags, and a brief decision.
 schema:
   name: Creator And Social Trend Triage
-  description: A pay-as-you-go social trend triage workflow for agents that return a source-backed social trend brief.
+  description: A pay-as-you-go creator trend workflow for agents that turn public social, search, transcript, and draft media signals into reviewable briefs.
   mainEntityName: Creator And Social Trend Triage
-  mainEntityDescription: Combines creator, topic, or social account, public source checks, priced endpoint calls, and review controls into a focused social trend brief.
+  mainEntityDescription: Combines public social sampling, web corroboration, NLP, transcripts, and optional draft media into a bounded creative decision workflow.
   providerName: 402box
 hero:
   backdrop:
     label: "16"
   brandKicker: 402box
-  brandName: Social Trend Triage
+  brandName: Creator Evidence
   topLinkText: Use cases
   topLinkHref: "#use-cases"
   integration:
-    - Source APIs
-    - Evidence
-    - Trend brief
+    - StableSocial
+    - Deepgram
+    - Brief review
   title:
-    text: Read the trend, with proof
-    highlight: not every feed tab.
-  lead: Give your agent a creator, topic, or social account, source limits, and budget cap. Get a social trend brief with timestamps, costs, caveats, and approval boundaries before action.
+    text: "Buy trend proof, "
+    highlight: not feed noise.
+  lead: Give your agent a topic, handle, post, or campaign hunch. It samples public signals, checks web context, and returns the angle worth briefing.
   actions:
     - label: Budget first
-      text: Plan Focused Run
+      text: Plan Proof Run
       href: "#prompt"
       primary: true
     - label: See output
-      text: Inspect Output
+      text: Inspect Memo
       href: "#example"
   trust:
-    - Source checks
-    - Trend evidence
-    - Budget caps
-    - Human approval
+    - Source samples
+    - Platform labels
+    - Spend caps
+    - Human sign-off
   preview:
-    ariaLabel: Social Trend Triage request to output preview
-    request: Triage this creator topic across social sources. Check current posts, audience language, engagement clues, related web context, proof links, rough cost, and return opportunities without posting or messaging.
-    responseAriaLabel: Example social trend triage social trend brief
+    ariaLabel: Social trend triage request to output preview
+    request: Check whether "quiet luxury desk setup" deserves a creator brief. Compare TikTok, Instagram, Reddit, Facebook, and web proof without merging signals.
+    responseAriaLabel: Example social trend triage brief
     resultLabel: Result
-    resultTitle: Trend brief
+    resultTitle: Proof memo
     code: |-
       {
-        "job": "Social Trend Triage",
-        "input": "creator, topic, or social account",
-        "planned_calls": 12,
-        "call_budget": "$0.370-$0.385 to $0.395+ cap",
-        "status": "review_required",
-        "trend_brief": [
-          "Trend signal: source-backed social read with timestamps.",
-          "Tools: StableSocial, Diffbot NL, Deepgram.",
-          "Next step: approve more calls only if the first trend brief is useful."
+        "topic": "quiet luxury desk setup",
+        "planned_calls": 10,
+        "call_budget": "$0.370-$0.385+",
+        "decision": "brief a narrow angle",
+        "evidence": [
+          "TikTok and Instagram show repeated desk-aesthetic examples.",
+          "Reddit raises cost, ergonomics, and authenticity objections.",
+          "Web and news checks do not prove broad demand."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One social trend brief. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when creator, topic, or social account needs a focused answer now, not a permanent provider stack. The agent returns a social trend brief with proof, costs, and next checks.
-  ariaLabel: Social Trend Triage input and output details
+  title: One hunch. Source-backed reasons to brief or stop.
+  text: Use this when a creator, editor, or brand has a social idea and needs evidence before spending creative time. The agent buys only the checks that clarify the decision.
+  ariaLabel: Social trend triage input and output details
   features:
     - title: Input
-      text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
+      text: A handle, hashtag, post, topic, transcript URL, or campaign theme with platform limits and a call budget.
     - title: Output
-      text: A trend brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: A proof memo, creator brief, or concept board with links, observed signals, objections, caveats, and next steps.
     - title: Best fit
-      text: Trend validation, creator-content review, concept triage, and jobs needing approval.
+      text: Creator planning, comment mining, trend proof, claim checks, and draft concept directions.
 results:
   eyebrow: Real tools, bounded spend
-  title: A trend brief shaped for human decisions.
-  text: Use rough source ranges such as $0.370-$0.385+, $0.395+, $0.375-$0.390 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  title: A brief built from sampled social proof.
+  text: Local cost models keep fixed call math separate from dynamic LLM, NLP, video, and premium media prices before any paid run.
   metrics:
-    - label: Cross-Platform Trend
-      value: $0.370-$0.385
-      text: Cross-Platform Trend Radar starts with cheap source checks and returns a narrow social trend brief before expansion.
+    - label: Trend proof run
+      value: "$0.370-$0.385+"
+      text: Four social samples, Brave, Exa, Diffbot NL, and Perplexity create a first read before fanout.
       large: true
-    - label: Creator Brief Review
-      value: $0.395+ cap
-      text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
-    - label: Campaign Concept Check
-      value: $0.375+
-      text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
-    - label: Expanded review run
-      value: $0.37-$0.39
-      text: Use only when the first social trend brief justifies more providers, deeper evidence, or repeated monitoring.
+    - label: Creator brief draft
+      value: "$0.395+ cap"
+      text: Adds profile, posts, comments, transcript analysis, source checks, NLP, and dynamic drafting.
+    - label: Concept draft sprint
+      value: "$0.38+"
+      text: Adds reference search plus optional image, music, and voice drafts; premium media needs caps.
+    - label: Extra social sample
+      value: "$0.060/call"
+      text: Every added profile, post, comments, hashtag, music, or search call should change the decision.
 steps:
   titleId: workflow-title
   eyebrow: How it works
-  title: Start narrow. Expand only after review.
-  text: Run cheap source checks first, add richer tools only for promising signals, and keep mutations, outreach, payments, and expanded budgets under human approval.
+  title: Start with proof. Expand only after signal.
+  text: Treat the first run as a creative gate. Sample public platforms, test the meaning, and add drafting or media work only when evidence supports it.
   items:
     - number: "01"
-      title: Normalize the input
-      text: Turn the creator, topic, or social account into clean entities, constraints, and source limits before paid calls.
+      title: Define the hunch
+      text: Turn the topic, handle, post, or concept into queries, source limits, confidence risks, and a first budget.
     - number: "02"
-      title: Estimate the budget
-      text: Show selected tools, expected call counts, rough ranges, dynamic endpoints, and stop conditions before the run begins.
+      title: Sample public feeds
+      text: Use StableSocial to pull TikTok, Instagram, Reddit, and Facebook searches, profiles, posts, or comments.
     - number: "03"
-      title: Gather source proof
-      text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
+      title: Separate the signals
+      text: Use Brave, Exa, Perplexity, Diffbot NL, and Deepgram to split platform activity from wider proof.
     - number: "04"
-      title: Return trend brief
-      text: Deliver the social read, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Hand back a memo
+      text: Return the angle, examples, objections, claim checks, cost notes, freshness, and human next action.
 benefits:
   eyebrow: Benefits
-  title: Keep the decision small before the stack grows.
+  title: Spend creative time on angles that survive scrutiny.
   items:
-    - title: Specialized data without permanent seats
-      text: Use social trend triage sources for one important request instead of keeping every provider, dashboard, and credit bundle active.
-    - title: Cheaper checks before deeper evidence
-      text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
-    - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the trend brief.
-    - title: Human approval for real actions
-      text: The trend brief informs decisions, but sends, purchases, account actions, wallet signatures, and expanded spend require approval.
+    - title: Evidence before the campaign brief
+      text: Show repeated examples, audience questions, objections, and off-platform context before assigning creative work.
+    - title: Audience language stays attached
+      text: Keep snippets, links, platform labels, timestamps, and transcript caveats beside the model-written summary.
+    - title: Drafting waits for proof
+      text: Run social, search, transcript, and NLP checks first; add image, music, voice, or video after the angle earns it.
+    - title: Guardrails for brand risk
+      text: Flag paid promotion, reposts, sarcasm, bots, likeness, style imitation, rights, claims, and platform fit.
 facts:
   eyebrow: Tool details
-  title: Use tool facts to control the next call.
-  text: Social Trend Triage works best when the agent separates source facts, generated synthesis, and unresolved questions. Start with focused APIs, add support rails only when they explain the decision, and keep the run review-only by default.
-  ariaLabel: Social Trend Triage tool facts
+  title: Keep source evidence separate from creative advice.
+  text: The workflow is useful because social samples, web corroboration, transcript/NLP extraction, model synthesis, and draft media each have a different job.
+  ariaLabel: Social trend triage tool facts
   items:
     - label: Core tools
-      value: StableSocial, Diffbot NL, Deepgram, StableStudio, fal.ai
+      value: StableSocial, Brave Search, Exa, Perplexity, Diffbot NL, Deepgram
     - label: Support rails
-      value: Deepgram, StableStudio, fal.ai, Stability AI, Suno, OpenAI And Anthropic
+      value: OpenAI, Anthropic, StableStudio, fal.ai, Stability AI, Suno
     - label: Primary input
-      value: creator, topic, or social account, source limits, and budget cap
+      value: Handle, hashtag, topic, post, transcript URL, or campaign theme
     - label: Primary output
-      value: social trend brief, timestamps, costs, caveats, and next checks
+      value: Proof memo, creator brief, hook list, claims log, or concept board
     - label: Dynamic costs
-      value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
+      value: Diffbot text volume, chat synthesis, video, premium image, audio
     - label: Execution status
       value: Scenario plan only, no endpoint calls performed
 prompt:
   eyebrow: Example prompt
-  title: Give your agent a focused review job.
-  text: Keep the creator, topic, or social account, source limits, output format, call budget, and approval boundaries explicit before paid or repeated checks begin.
+  title: Ask for evidence before creative work.
+  text: Give the agent a clear topic, allowed platforms, output shape, budget cap, stop rules, and approval lines before it buys source checks.
   copyTarget: 16-creator-and-social-trend-triage-2-prompt
   buttonLabel: Copy prompt
   code: |-
-    Triage this creator topic across social sources. Check current posts, audience language, engagement clues, related web context, proof links, rough cost, and return opportunities without posting or messaging.
+    Check whether "quiet luxury desk setup" deserves a creator brief.
 
-    Use the local Social Trend Triage workflow to return a social trend brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Use StableSocial to sample TikTok, Instagram, Reddit, and Facebook examples. Use Brave and Exa to check web, news, video, and source-page context. Use Diffbot NL for sentiment, entities, objections, and repeated claims. Use Perplexity after sources are assembled.
 
-    Return a concise trend brief with:
-    - the cleaned input and assumptions
-    - the source names, timestamps, and links used
-    - the key findings separated from generated recommendations
-    - rough cost notes and any dynamic pricing caveats
-    - conflicts, stale sources, missing fields, and open questions
-    - the next checks worth running only after approval
+    Before paid calls, estimate the call budget. Show providers, call counts, price risks, and stop conditions. Start lean and ask before extra profiles, comments, transcripts, LLM drafting, images, music, voice, or video.
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this trend brief.
+    Return a concise proof memo with links, timestamps, engagement signals, repeated questions, objections, claims to verify, confidence risks, and a brief, narrow, or stop decision.
+
+    Do not post, message, upload, imitate a living creator, register accounts, sign wallet messages, pay invoices, submit forms, or mutate systems without human approval.
 comparison:
   eyebrow: Comparison
-  title: When one trend brief beats another workflow.
-  ariaLabel: Traditional tools compared with this social trend triage workflow
+  title: When one proof run beats social listening.
+  ariaLabel: Traditional creator research compared with this social trend triage workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
   rows:
     - category: Signup
-      left: Provider accounts, dashboards, API keys, credits, and billing setup
+      left: Social-listening seats, scraper accounts, API keys, and model credits
       right: One bounded agent run with an approved call budget
     - category: Tools
-      left: Separate data, search, extraction, proof, synthesis, and delivery tools
-      right: Pay-as-you-go endpoint mix selected for the request
+      left: Separate social, web search, transcript, NLP, model, and media tools
+      right: Pay-as-you-go endpoint mix selected for the trend question
     - category: Output
-      left: Manual exports and screenshots to reconcile
-      right: One social trend brief with timestamps, costs, and candidates
+      left: Screenshots, captions, saves, and exports to reconcile
+      right: One trend radar with links, platform labels, cost notes, and confidence risks
     - category: Cadence
-      left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first trend brief earns them
+      left: Always-on dashboards or manual feed refreshes
+      right: Budgeted repeat checks only when the first signal earns them
     - category: Action
-      left: Research and operational action mixed together
-      right: Options stay review-only until a human approves action
+      left: Research, outreach, publishing, and asset work merged
+      right: Briefs and drafts stay review-only until a human approves action
 useCases:
   eyebrow: Use cases
-  title: Use the trend brief when timing matters.
+  title: Use creator evidence before the next step.
   items:
-    - title: Cross-Platform Trend
-      text: Start with one bounded request when a source-backed answer is needed before more budget or action.
-    - title: Creator Brief Review
-      text: Compare source families, show conflicts, and decide whether richer checks are worth the next run.
-    - title: Campaign Concept Check
-      text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
-    - title: Reviewer handoff with proof
-      text: Package findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+    - title: Topic validation memo
+      text: Check whether a meme, hashtag, product idea, or competitor claim repeats across platforms and outside the feed.
+    - title: Creator source brief
+      text: Turn public posts, comments, transcript excerpts, and searches into hooks, objections, and claims to verify.
+    - title: Draft concept gate
+      text: Move a validated angle into prompts, reference links, draft media notes, and brand-safety review risks.
+    - title: Approval packet with proof
+      text: Hand a human owner the examples, caveats, cost notes, source limits, and next checks needed to decide.
 closing:
-  eyebrow: Focused run
-  title: Start with the smallest useful check.
-  text: No broad subscription stack. No silent expansion. Your agent pays only for the relevant checks needed to decide whether the next step is worth review.
+  eyebrow: Trend check
+  title: Start with proof before the brief.
+  text: No social listening seat. No automatic publishing. Your agent pays for the public examples needed to decide whether a creative idea deserves review.
   items:
-    - Start with the cheapest useful source checks.
-    - Cap providers, fanout, screenshots, and model calls.
-    - Keep source timestamps and uncertainty visible.
-    - Require approval before mutations, sends, or spend.
+    - Start with the smallest useful source sample.
+    - Separate platform activity from broader proof.
+    - Cap transcript, model, media, video, and fanout costs.
+    - Require approval before posting, outreach, uploads, or spend.
 faq:
   eyebrow: FAQ
-  title: Before the first trend brief.
+  title: Before the first trend radar.
   items:
-    - question: What does the trend brief return?
-      answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+    - question: What does the proof memo return?
+      answer: It can return public examples, links, timestamps, engagement signals, repeated claims, objections, sentiment, entities, costs, risks, and a brief decision.
       open: true
     - question: Which tools matter most?
-      answer: StableSocial, Diffbot NL, Deepgram, StableStudio, fal.ai are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.
+      answer: StableSocial supplies public TikTok, Instagram, Reddit, and Facebook signals. Brave, Exa, Perplexity, Diffbot NL, and Deepgram add context and extraction.
     - question: How much does a focused run cost?
-      answer: The local source bundle gives rough ranges such as $0.370-$0.385+, $0.395+, $0.375-$0.390, $0.37-$0.39. Dynamic endpoints should be capped before execution, and repeated checks should be approved.
-    - question: What needs human approval?
-      answer: The default workflow returns reviewable candidates and tradeoffs. Purchases, bookings, filings, account actions, outreach, uploads, sends, wallet signatures, payments, and expanded budgets require explicit approval.
+      answer: The local model estimates $0.370-$0.385+ for a trend run, $0.395+ for a creator brief, and $0.375-$0.390 for a modest concept sprint.
+    - question: Does the agent publish content?
+      answer: No. The default workflow returns briefs, hooks, claims to check, and draft directions. Posting, uploads, account actions, payments, and more budget need approval.
     - question: What should I watch for?
-      answer: Keep source freshness, timestamps, provider limits, dynamic prices, retry behavior, source links, approval boundaries, and generated recommendations separate from observed facts.
+      answer: Social outputs are samples, not complete platform coverage. Watch for reposts, copied captions, promotion, bots, sarcasm, stale counts, transcript errors, and dynamic costs.
 footer:
   brand: 402box
   links:

@@ -1,220 +1,221 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Incident brief for support | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed incident brief with costs, timestamps, and human approval.
+title: First-hour incident packet | 402box
+description: Use pay-as-you-go browser, screenshot, code, storage, email, and LLM tools to build a reviewable triage packet before action.
 bodyClass: page-bumi page-usecase page-10-developer-incident-and-support-automation page-alt
 themeColor: "#101113"
-ogTitle: Incident Support briefs, paid per focused check.
-ogDescription: Give your agent an incident, error, or support thread, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
+ogTitle: Incident proof packets, paid per focused run.
+ogDescription: Give an agent a public URL, failing snippet, or support ticket. Get screenshots, source captures, code output, costs, and approval gates.
 schema:
   name: Developer Incident And Support Automation
-  description: A pay-as-you-go incident support workflow for agents that return a source-backed incident brief.
+  description: A pay-as-you-go triage workflow for agents that return a reviewable incident packet.
   mainEntityName: Developer Incident And Support Automation
-  mainEntityDescription: Combines incident, error, or support thread, public source checks, priced endpoint calls, and review controls into a focused incident brief.
+  mainEntityDescription: Combines public page capture, screenshot proof, sandboxed code checks, artifact planning, support drafts, and approval controls.
   providerName: 402box
 hero:
   backdrop:
     label: "10"
   brandKicker: 402box
-  brandName: Incident Support
+  brandName: Incident Triage
   topLinkText: Use cases
   topLinkHref: "#use-cases"
   integration:
-    - Source APIs
-    - Evidence
-    - Incident brief
+    - Browserbase
+    - Screenshots
+    - Repro packet
   title:
-    text: Explain the issue,
-    highlight: not every console.
-  lead: Give your agent an incident, error, or support thread, source limits, and budget cap. Get an incident brief with timestamps, costs, caveats, and approval boundaries before action.
+    text: Triage the bug,
+    highlight: not the tool stack.
+  lead: Turn one public page, failing snippet, or support ticket into screenshots, source captures, code output, and a reviewable handoff before action.
   actions:
     - label: Budget first
-      text: Plan Focused Run
+      text: Plan Repro Run
       href: "#prompt"
       primary: true
-    - label: See output
+    - label: See packet
       text: Inspect Output
       href: "#example"
   trust:
-    - Source checks
-    - Evidence brief
+    - Raw evidence
+    - Screenshot proof
     - Budget caps
-    - Human approval
+    - No auto-sends
   preview:
     ariaLabel: Incident Support request to output preview
-    request: Triage this developer incident. Collect logs or public docs I provide, search known issues, draft the support response, identify next checks, estimate paid calls, and avoid sending messages or changing systems.
+    request: Triage this broken checkout URL and failing webhook snippet. Capture public evidence, run the snippet in a sandbox, draft the update, and stop before uploads or sends.
     responseAriaLabel: Example incident support incident brief
     resultLabel: Result
-    resultTitle: Incident brief
+    resultTitle: Repro packet
     code: |-
       {
-        "job": "Incident Support",
-        "input": "incident, error, or support thread",
-        "planned_calls": 12,
-        "call_budget": "$0.067+ cap to $0.020+ cap",
+        "job": "checkout incident",
+        "planned_calls": 8,
+        "call_budget": "$0.067 + sandbox cap",
         "status": "review_required",
-        "brief": [
-          "incident brief: source-backed summary with timestamps.",
-          "Tools: Browserbase, ScreenshotOne, Judge0.",
-          "Next step: approve more calls only if the first brief is useful."
+        "packet": [
+          "screenshot and page text captured",
+          "Judge0 output saved with stdout/stderr",
+          "draft response ready; no email sent"
         ]
       }
 intro:
   eyebrow: What it does
-  title: One incident brief. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when an incident, error, or support thread needs a focused answer now, not a permanent provider stack. The agent returns an incident brief with proof, costs, and next checks.
+  title: One report becomes proof, output, and a handoff.
+  text: Pay-as-you-go tools fit the first hour of triage. Prove what a public page shows, test the smallest snippet, package the result, then ask before sends, uploads, or repo creation.
   ariaLabel: Incident Support input and output details
   features:
     - title: Input
-      text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
+      text: A public URL, bug report, failing snippet, docs link, support thread, source limits, and call budget.
     - title: Output
-      text: An incident brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: A repro packet with screenshots, raw captures, code output, timestamps, cost notes, and owner-ready wording.
     - title: Best fit
-      text: Repro checks, code-output review, support handoff drafts, and approval-gated next steps.
+      text: Broken pages, checkout bugs, SDK snippets, webhook payloads, docs issues, and support handoffs.
 results:
   eyebrow: Real tools, bounded spend
-  title: An incident brief shaped for human decisions.
-  text: Use rough source ranges such as $0.067, $0.020, $0.12 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  title: A triage packet with proof attached.
+  text: The source model keeps fixed call subtotals separate from dynamic browser, sandbox, storage, and LLM costs so the next spend decision is visible.
   metrics:
-    - label: Repro evidence brief
+    - label: Page repro packet
       value: $0.067+ cap
-      text: A repro brief starts with cheap source checks and returns a narrow incident brief before expansion.
+      text: Browserbase fetch, Firecrawl scrape, and ScreenshotOne capture for one public URL before LLM pricing.
       large: true
-    - label: Code repro check
-      value: $0.020+ cap
-      text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
-    - label: Support handoff brief
-      value: $0.12+
-      text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
-    - label: Expanded review run
+    - label: Snippet repro check
       value: $0.078+ cap
-      text: Use only when the first incident brief justifies more providers, deeper evidence, or repeated monitoring.
+      text: Judge0 plus public docs capture and optional Modal lifecycle checks, before dynamic sandbox and model costs.
+    - label: Support handoff draft
+      value: $0.076+
+      text: Docs/status lookup, screenshot proof, and AgentMail draft creation before storage, LLM, or send approval.
+    - label: Shareable repo bundle
+      value: $1.010+ opt
+      text: Add Code Storage only when a portable reproduction is worth repository creation and clone retrieval.
 steps:
   titleId: workflow-title
   eyebrow: How it works
-  title: Start narrow. Expand only after review.
-  text: Run cheap source checks first, add richer tools only for promising signals, and keep mutations, outreach, payments, and expanded budgets under human approval.
+  title: Prove the issue before anyone acts.
+  text: The workflow starts with the smallest public evidence, adds execution only when useful, and keeps sends, uploads, repos, accounts, and payments approval-gated.
   items:
     - number: "01"
-      title: Normalize the input
-      text: Turn the incident, error, or support thread into clean entities, constraints, and source limits before paid calls.
+      title: Clean the report
+      text: Identify URL, snippet, expected behavior, scope, secrets to exclude, and the first budget before paid calls.
     - number: "02"
-      title: Estimate the budget
-      text: Show selected tools, expected call counts, rough ranges, dynamic endpoints, and stop conditions before the run begins.
+      title: Capture public proof
+      text: Use Browserbase, Firecrawl, and ScreenshotOne to record the page state, raw text, screenshot, and timestamp.
     - number: "03"
-      title: Gather source proof
-      text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
+      title: Run tiny repro
+      text: Use Judge0 or Modal only for bounded snippets, preserving stdout, stderr, runtime, timeout, and sandbox status.
     - number: "04"
-      title: Return the brief
-      text: Deliver the incident brief, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Draft the handoff
+      text: Return the triage note, files, owner guess, unresolved questions, and actions that still need approval.
 benefits:
   eyebrow: Benefits
-  title: Keep the decision small before the stack grows.
+  title: Make the first support hour auditable.
   items:
-    - title: Specialized data without permanent seats
-      text: Use incident support sources for one important request instead of keeping every provider, dashboard, and credit bundle active.
-    - title: Cheaper checks before deeper evidence
-      text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
-    - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening incident-brief scope.
-    - title: Human approval for real actions
-      text: The incident brief can inform a decision, but sends, purchases, account actions, wallet signatures, and expanded spend require approval.
+    - title: Proof before root-cause guesses
+      text: Screenshots, raw page text, and code output sit beside the summary, so symptoms stay separate from explanation.
+    - title: One-off tools without monthly seats
+      text: Use browser, scrape, screenshot, sandbox, storage, email, and model tools for minutes, not subscriptions.
+    - title: Costs shown upfront
+      text: The packet names fixed subtotals, dynamic risks, call counts, and stop rules before the agent widens scope.
+    - title: Review gates for actions
+      text: Drafts, uploads, repository creation, email sends, wallet actions, and extra spend wait for explicit approval.
 facts:
   eyebrow: Tool details
-  title: Use tool facts to control the next call.
-  text: Incident Support works best when the agent separates source facts, generated synthesis, and unresolved questions. Start with focused APIs, add support rails only when they explain the decision, and keep the run review-only by default.
+  title: Tool facts for bounded incident triage runs.
+  text: The packet is useful because it labels observed evidence, sandbox results, generated wording, and unresolved questions instead of turning every signal into a confident fix.
   ariaLabel: Incident Support tool facts
   items:
     - label: Core tools
-      value: Browserbase, ScreenshotOne, Judge0, Modal, Code Storage
+      value: Browserbase, Firecrawl, ScreenshotOne, Judge0, Modal
     - label: Support rails
-      value: Judge0, Modal, Code Storage, Pinata IPFS and Object Storage, OpenAI and Anthropic, Firecrawl
+      value: Code Storage, Object Storage, Pinata, AgentMail, StableEmail, LLMs
     - label: Primary input
-      value: incident, error, or support thread, source limits, and budget cap
+      value: Public URL, bug report, failing snippet, docs link, budget cap
     - label: Primary output
-      value: incident brief, timestamps, costs, caveats, and next checks
+      value: Repro packet, minimal execution report, or support handoff draft
     - label: Dynamic costs
-      value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
+      value: Browser session time, Modal create, storage size, model usage
     - label: Execution status
       value: Scenario plan only, no endpoint calls performed
 prompt:
   eyebrow: Example prompt
-  title: Give your agent an incident support job.
-  text: Keep the incident, error, or support thread, source limits, output format, call budget, and approval boundaries explicit before paid or repeated checks begin.
+  title: Give your agent a triage packet.
+  text: Name the URL, snippet, budget, evidence needed, and approval boundaries before paying for browser, screenshot, sandbox, storage, or email calls.
   copyTarget: 10-developer-incident-and-support-automation-2-prompt
   buttonLabel: Copy prompt
   code: |-
-    Triage this developer incident. Collect logs or public docs I provide, search known issues, draft the support response, identify next checks, estimate paid calls, and avoid sending messages or changing systems.
+    Triage this incident: <public URL> errors, and this webhook snippet may reproduce it.
 
-    Use the local Incident Support workflow to return an incident brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Before work begins, estimate the call budget. Show tools, calls, fixed subtotals, dynamic risks, and stop conditions. I will approve the budget.
 
-    Return a concise incident brief with:
-    - the cleaned input and assumptions
-    - the source names, timestamps, and links used
-    - the key findings separated from generated recommendations
-    - rough cost notes and any dynamic pricing caveats
-    - conflicts, stale sources, missing fields, and open questions
-    - the next checks worth running only after approval
+    Use Browserbase or Firecrawl for page state and text. Use ScreenshotOne for proof. Use Judge0 for the smallest safe snippet; use Modal only for dependencies. Use OpenAI or Anthropic after raw outputs are saved.
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this incident brief.
+    Return an incident packet with:
+    - page state, screenshot, and timestamps
+    - raw page text or docs links
+    - snippet input, runtime, stdout, stderr, and status
+    - likely failure class, confidence, and owner guess
+    - cost notes, dynamic caveats, and next checks
+    - draft support update for review
+
+    Do not upload, create repos, send email, buy inboxes, register accounts, sign wallet messages, pay invoices, or mutate systems without approval.
 comparison:
   eyebrow: Comparison
-  title: When an incident brief beats another workflow.
+  title: When a packet beats the support stack.
   ariaLabel: Traditional tools compared with this incident support workflow
   leftHeader: Traditional stack
-  rightHeader: This workflow
+  rightHeader: This packet
   rows:
     - category: Signup
-      left: Provider accounts, dashboards, API keys, credits, and billing setup
-      right: One bounded agent run with an approved call budget
+      left: Browser, screenshot, code, storage, email, and LLM accounts
+      right: One budgeted run with the exact tools needed for the incident
     - category: Tools
-      left: Separate data, search, extraction, proof, synthesis, and delivery tools
-      right: Pay-as-you-go endpoint mix selected for the request
+      left: Separate exports, console logs, screenshots, docs, and draft messages to merge
+      right: One packet linking proof, code output, costs, and caveats
     - category: Output
-      left: Manual exports and screenshots to reconcile
-      right: One incident brief with timestamps, costs, and next checks
+      left: A summary that may lose raw evidence and context
+      right: A source-backed packet with files, timestamps, and open questions
     - category: Cadence
-      left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first brief earns them
+      left: Ad hoc checks repeated by hand later
+      right: Follow-up checks only when the first packet earns more budget
     - category: Action
-      left: Research and operational action mixed together
-      right: Options stay review-only until a human approves action
+      left: Drafting, sending, uploads, and fixes blur together
+      right: Drafts and artifacts stay review-only until approval
 useCases:
   eyebrow: Use cases
-  title: Use the brief when timing matters.
+  title: Use proof to decide the next owner.
   items:
-    - title: Repro evidence brief
-      text: Start with one bounded request when a source-backed answer is needed before more budget or action.
-    - title: Code repro check
-      text: Compare source families, show conflicts, and decide whether richer checks are worth the next run.
-    - title: Support handoff brief
-      text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
-    - title: Reviewer handoff with proof
-      text: Bundle findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+    - title: Broken page repro
+      text: Capture the public page state, screenshot, raw text, and failure notes before assigning an engineer.
+    - title: Snippet repro check
+      text: Run the smallest safe code example, preserve stdout and stderr, and show the next test worth approval.
+    - title: Support update draft
+      text: Turn evidence into reviewable customer or internal wording while keeping drafted and sent states separate.
+    - title: Artifact bundle review
+      text: Choose whether screenshots, raw captures, code output, or repos are worth storing after triage.
 closing:
-  eyebrow: Focused run
-  title: Start with the smallest useful check.
-  text: No broad subscription stack. No silent expansion. Your agent pays only for the relevant checks needed to decide whether the next step is worth review.
+  eyebrow: Repro packet
+  title: Start with proof, then choose action.
+  text: No blanket automation. No silent sends. Your agent pays for the evidence needed to decide whether the issue deserves a fix, bundle, or update.
   items:
-    - Start with the cheapest useful source checks.
-    - Cap providers, fanout, screenshots, and model calls.
-    - Keep source timestamps and uncertainty visible.
-    - Require approval before mutations, sends, or spend.
+    - Capture public evidence before diagnosis.
+    - Cap browser time, screenshots, sandboxes, and model calls.
+    - Keep raw artifacts separate from generated wording.
+    - Require approval before uploads, repos, email, or spend.
 faq:
   eyebrow: FAQ
-  title: Before the first incident brief.
+  title: Before the first repro packet.
   items:
-    - question: What does the incident brief return?
-      answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+    - question: What does the incident packet return?
+      answer: It can return page state, screenshots, raw captures, snippet output, timestamps, cost notes, confidence labels, likely owner, next checks, and a draft update.
       open: true
     - question: Which tools matter most?
-      answer: Browserbase, ScreenshotOne, Judge0, Modal, Code Storage are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.
+      answer: Browserbase, Firecrawl, ScreenshotOne, Judge0, and Modal handle most proof and repro work. Storage, AgentMail, StableEmail, OpenAI, and Anthropic are added only when needed.
     - question: How much does a focused run cost?
-      answer: The local source bundle gives rough ranges such as $0.067, $0.020, $0.12, $0.078. Dynamic endpoints should be capped before execution, and repeated checks should be approved separately.
+      answer: The source model estimates about $0.067 for a page repro packet, $0.078 for a code check, and $0.076 for a draft handoff before dynamic costs.
     - question: What needs human approval?
-      answer: The default workflow returns reviewable candidates and tradeoffs. Purchases, bookings, filings, account actions, outreach, uploads, sends, wallet signatures, payments, and expanded budgets require explicit approval.
+      answer: Uploads, repo creation, inbox purchases, email sends, account actions, wallet signatures, payments, mutations, expanded scope, and higher budgets need explicit approval.
     - question: What should I watch for?
-      answer: Keep source freshness, timestamps, provider limits, dynamic prices, retry behavior, source links, approval boundaries, and generated recommendations separate from observed facts.
+      answer: Watch source freshness, blocked pages, cookie walls, regional variants, stdout/stderr loss, sandbox status, dynamic pricing, and LLM claims that overstate root cause.
 footer:
   brand: 402box
   links:

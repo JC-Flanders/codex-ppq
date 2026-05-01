@@ -1,227 +1,226 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Vendor review check on demand | 402box
-description: Use pay-as-you-go tools to check one vendor and return a source-backed vendor review with costs, timestamps, conflicts, and human approval.
+title: "Vendor qualification checks on demand | 402box"
+description: "Use pay-as-you-go vendor intelligence tools to build one procurement-ready qualification brief with source proof, cost caps, and human review."
 bodyClass: page-bumi page-usecase page-18-vendor-and-procurement-qualification page-alt
 themeColor: "#101113"
-ogTitle: Vendor reviews, paid per focused check.
-ogDescription: Give your agent a vendor name, domain, or RFP question, budget cap, and stop conditions. Get source evidence, rough costs, conflicts, and next checks for human review.
+ogTitle: "Vendor qualification, paid per focused check."
+ogDescription: "Give your agent a company, domain, contact, or RFP question. Get identity proof, contact-risk signals, SEC or regulatory context, costs, and review paths."
 schema:
-  name: Vendor And Procurement Qualification
-  description: A pay-as-you-go vendor qualification workflow for agents that return a source-backed vendor review.
-  mainEntityName: Vendor And Procurement Qualification
-  mainEntityDescription: Combines vendor name, domain, or RFP question, public source checks, priced endpoint calls, and review controls into a focused vendor review.
-  providerName: 402box
+  name: "Vendor And Procurement Qualification"
+  description: "A pay-as-you-go vendor qualification workflow for agents that return a source-backed procurement brief."
+  mainEntityName: "Vendor And Procurement Qualification"
+  mainEntityDescription: "Combines company identity, website proof, contact-risk checks, SEC or regulatory context, priced endpoint calls, and human approval controls."
+  providerName: "402box"
 hero:
   backdrop:
     label: "18"
-  brandKicker: 402box
-  brandName: Vendor Qualification
-  topLinkText: Use cases
+  brandKicker: "402box"
+  brandName: "Vendor Checks"
+  topLinkText: "Use cases"
   topLinkHref: "#use-cases"
   integration:
-    - Source APIs
-    - Evidence
-    - Vendor review
+    - "Company intel"
+    - "Risk check"
+    - "Reg review"
   title:
-    text: Check the vendor,
-    highlight: not every portal.
-  lead: Give your agent a vendor name, domain, or RFP question, source limits, and budget cap. Get a vendor review with evidence, risk checks, costs, caveats, and approval boundaries before action.
+    text: "Vet one vendor, "
+    highlight: "not a data stack."
+  lead: "Give your agent a company, domain, vendor contact, or RFP question. Get identity proof, web evidence, risk signals, costs, conflicts, and review paths."
   actions:
-    - label: Budget first
-      text: Plan Focused Run
+    - label: "Budget first"
+      text: "Plan Vendor Check"
       href: "#prompt"
       primary: true
-    - label: See output
-      text: Inspect Output
+    - label: "See brief"
+      text: "Inspect Output"
       href: "#example"
   trust:
-    - Source checks
-    - Source evidence
-    - Budget caps
-    - Human approval
+    - "Domain proof"
+    - "Contact checks"
+    - "Cost caps"
+    - "Human review"
   preview:
-    ariaLabel: Vendor Qualification request to output preview
-    request: Qualify this vendor before procurement reviews it. Check company identity, web evidence, pricing or terms, risk signals, support paths, source links, call budget, and open issues without contacting the vendor.
-    responseAriaLabel: Example vendor qualification vendor review
-    resultLabel: Result
-    resultTitle: Vendor review
+    ariaLabel: "Vendor qualification request to output preview"
+    request: "Check this vendor before procurement continues. Confirm identity, domain proof, tech footprint, contact risk, SEC or regulatory context, source links, budget cap, and open issues."
+    responseAriaLabel: "Example vendor qualification brief"
+    resultLabel: "Result"
+    resultTitle: "Vendor brief"
     code: |-
       {
-        "job": "Vendor review",
-        "input": "vendor name, domain, or RFP question",
-        "planned_calls": 12,
-        "call_budget": "$0.100-$0.251+ capped dynamic calls",
-        "status": "review_required",
-        "vendor_review": [
-          "Intake snapshot with identity, website proof, contact surfaces, and conflicts.",
-          "Contact-risk preflight for email, phone, IP, and claimed representative checks.",
-          "Next step: route to buyer, security, legal, or finance before action."
+        "vendor": "domain or company name",
+        "planned_calls": 10,
+        "call_budget": "$0.100-$0.251+",
+        "brief": [
+          "Identity, domain proof, screenshot, tech footprint, and conflicts.",
+          "Contact checks for email, phone, IP, and claimed owner.",
+          "Route to buyer, security, legal, or finance before action."
         ]
       }
 intro:
-  eyebrow: What it does
-  title: One vendor review. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when a vendor name, domain, or RFP question needs a focused answer now, not a permanent provider stack. The agent returns a vendor review with proof, costs, conflicts, and next checks.
-  ariaLabel: Vendor Qualification input and output details
+  eyebrow: "What it does"
+  title: "One vendor. Identity, contact risk, and review paths."
+  text: "Pay-as-you-go access fits the moment when a buyer has one supplier to check, not enough reason to buy every data subscription, and a real need for proof before approval."
+  ariaLabel: "Vendor qualification input and output details"
   features:
-    - title: Input
-      text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
-    - title: Output
-      text: A vendor review with source links, timestamps, cost notes, confidence labels, and next checks for human review.
-    - title: Best fit
-      text: Intake snapshots, contact-risk preflights, regulated reviews, and approval-ready vendor decisions.
+    - title: "Input"
+      text: "A company name, domain, vendor contact, invoice clue, RFP question, source limits, and call budget."
+    - title: "Output"
+      text: "A qualification brief with source links, timestamps, cost notes, conflicts, risk labels, and next-owner routing."
+    - title: "Best fit"
+      text: "Supplier intake, access requests, invoice threads, regulated vendors, and renewals."
 results:
-  eyebrow: Real tools, bounded spend
-  title: A vendor review shaped for human decisions.
-  text: Use rough source ranges such as $0.100-$0.140, $0.061-$0.186, and $0.251 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  eyebrow: "Real tools, bounded spend"
+  title: "A qualification brief built from priced checks."
+  text: "Use the local cost model as planning math, not a billing promise. Dynamic Apollo and Hunter calls should be labeled and capped before the run."
   metrics:
-    - label: Vendor Intake Snapshot
-      value: $0.100-$0.140
-      text: One company or domain check returns an intake snapshot with identity, website proof, contact surfaces, and conflicts.
+    - label: "Vendor intake card"
+      value: "$0.100-$0.140"
+      text: "Company enrichment, BuiltWith, ScreenshotOne, Apollo, and Hunter create an identity card with conflicts."
       large: true
-    - label: Contact And Access
-      value: $0.061-$0.186
-      text: A contact-risk preflight checks email, phone, IP, and people signals before access or invoice work continues.
-    - label: Regulated Vendor Check
-      value: $0.251
-      text: A procurement qualification memo adds EDGAR, GovLaws, website proof, organization context, and review paths.
-    - label: Expanded review run
-      value: $0.008-$0.055+
-      text: Add extra EDGAR, GovLaws, BuiltWith, screenshot, or contact checks only when the first review justifies them.
+    - label: "Contact-risk preflight"
+      value: "$0.061-$0.186"
+      text: "Email, phone, IP, IPinfo, Hunter, and Apollo checks test whether a claimed contact looks plausible."
+    - label: "Regulated vendor memo"
+      value: "$0.251"
+      text: "Company, BuiltWith trust, EDGAR, GovLaws, screenshot, Apollo, and Hunter calls add public-source context."
+    - label: "Approved expansion run"
+      value: "$0.008-$0.055+"
+      text: "Extra EDGAR, GovLaws, BuiltWith, screenshot, or contact checks wait until the first brief earns them."
 steps:
   titleId: workflow-title
-  eyebrow: How it works
-  title: Start narrow. Expand only after review.
-  text: Run cheap source checks first, add richer tools only for promising signals, and keep mutations, outreach, payments, and expanded budgets under human approval.
+  eyebrow: "How it works"
+  title: "Start with the vendor. Pay for proof."
+  text: "Confirm the entity, run the cheapest useful checks first, then expand only when procurement, security, legal, or finance needs more evidence."
   items:
     - number: "01"
-      title: Normalize the input
-      text: Turn the vendor name, domain, or RFP question into clean entities, constraints, and source limits before paid calls.
+      title: "Normalize the vendor"
+      text: "Turn a company name, domain, contact, or RFP question into one clean target with known assumptions."
     - number: "02"
-      title: Estimate the budget
-      text: Show selected tools, expected call counts, rough ranges, dynamic endpoints, and stop conditions before the run begins.
+      title: "Estimate the proof plan"
+      text: "Show selected services, call counts, dynamic ranges, proof captures, and stop conditions before spending."
     - number: "03"
-      title: Gather source proof
-      text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
+      title: "Separate the signals"
+      text: "Keep enrichment claims, website proof, contact-risk checks, EDGAR facts, and GovLaws context apart."
     - number: "04"
-      title: Return the review
-      text: Deliver the vendor review, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: "Return review path"
+      text: "Hand back findings, conflicts, rough costs, missing fields, and the owner who must approve next action."
 benefits:
-  eyebrow: Benefits
-  title: Keep the decision small before the stack grows.
+  eyebrow: "Benefits"
+  title: "Qualify the vendor before buying the stack."
   items:
-    - title: Specialized data without permanent seats
-      text: Use vendor qualification sources for one important request instead of keeping every provider, dashboard, and credit bundle active.
-    - title: Cheaper checks before deeper evidence
-      text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
-    - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the vendor review.
-    - title: Human approval for real actions
-      text: The vendor review can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and spend require approval.
+    - title: "Vendor memory without subscriptions"
+      text: "Capture the target, proof plan, budget, source links, and unresolved questions without opening every provider account."
+    - title: "Cheap checks before deep diligence"
+      text: "Start with identity, web, and contact signals, then add SEC, regulatory, screenshot, or discovery checks when useful."
+    - title: "Budget-first qualification"
+      text: "The agent names the tools, call counts, dynamic ranges, and expansion triggers before a paid endpoint run begins."
+    - title: "Procurement stays human-approved"
+      text: "The brief can recommend a route, but onboarding, outreach, payments, access, contracts, and extra spend need approval."
 facts:
-  eyebrow: Tool details
-  title: Use tool facts to control the next call.
-  text: Vendor Qualification works best when the agent separates source facts, generated synthesis, and unresolved questions. Start with focused APIs, add support rails only when they explain the decision, and keep the run review-only.
-  ariaLabel: Vendor Qualification tool facts
+  eyebrow: "Tool details"
+  title: "Use source facts to decide the next check."
+  text: "Vendor qualification works when the agent treats each source as evidence, not verdict. Preserve provider disagreements, source timestamps, same-name matches, and dynamic-price limits."
+  ariaLabel: "Vendor Qualification tool facts"
   items:
-    - label: Core tools
-      value: Company Enrichment, BuiltWith, Apollo, Hunter, Email Reputation
-    - label: Support rails
-      value: Apollo, Hunter, Email Reputation, Phone Intelligence, IP Intelligence and IPinfo, EDGAR
-    - label: Primary input
-      value: vendor name, domain, or RFP question, source limits, and budget cap
-    - label: Primary output
-      value: vendor review, timestamps, costs, caveats, conflicts, and next checks
-    - label: Dynamic costs
-      value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
-    - label: Execution status
-      value: Scenario plan only, no endpoint calls performed
+    - label: "Core tools"
+      value: "Company Enrichment, BuiltWith, ScreenshotOne, Apollo, Hunter"
+    - label: "Support rails"
+      value: "Email Reputation, Phone Intelligence, IP Intel/IPinfo, EDGAR, GovLaws"
+    - label: "Primary input"
+      value: "Company, domain, vendor contact, invoice clue, RFP question, and budget cap"
+    - label: "Primary output"
+      value: "Qualification brief, proof table, conflicts, costs, caveats, review path"
+    - label: "Dynamic costs"
+      value: "Apollo people enrichment, Hunter domain search, repeats, screenshots"
+    - label: "Execution status"
+      value: "Scenario plan only, no endpoint calls performed"
 prompt:
-  eyebrow: Example prompt
-  title: Give your agent a focused review job.
-  text: Keep the vendor name, domain, or RFP question, source limits, output format, call budget, and approval boundaries explicit before paid or repeated checks begin.
+  eyebrow: "Example prompt"
+  title: "Give your agent a vendor proof brief."
+  text: "Keep the vendor input, source families, output shape, call budget, and approval boundary explicit before any paid or repeated checks."
   copyTarget: 18-vendor-and-procurement-qualification-2-prompt
-  buttonLabel: Copy prompt
+  buttonLabel: "Copy prompt"
   code: |-
-    Qualify this vendor before procurement reviews it. Check company identity, web evidence, pricing or terms, risk signals, support paths, source links, call budget, and open issues without contacting the vendor.
+    Check vendor [company/domain] before procurement continues. Add optional contact/invoice clue and decision type: intake, access, regulated review, or renewal.
 
-    Use the local Vendor Qualification workflow to return a vendor review. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Use Company Enrichment, BuiltWith, ScreenshotOne, Apollo, and Hunter for identity, web proof, and org/contact context. Add email, phone, IP, EDGAR, or GovLaws checks only when risk requires them.
 
-    Return a concise vendor review with:
-    - the cleaned input and assumptions
-    - the source names, timestamps, and links used
-    - the key findings separated from generated recommendations
-    - rough cost notes and any dynamic pricing caveats
-    - conflicts, stale sources, missing fields, and open questions
-    - the next checks worth running only after approval
+    Before paid calls, show tools, counts, dynamic risks, proof captures, cost, and stop conditions. I approve call budget first.
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this vendor review.
+    Return a qualification brief with:
+    - cleaned input and assumptions
+    - sources, timestamps, links, screenshots
+    - identity, website, contact-risk, SEC, regulatory findings
+    - conflicts, stale sources, missing fields, and cost notes
+    - a continue, pause, or route-to-owner recommendation
+
+    Do not contact the vendor, create accounts, approve access, upload files, sign wallet messages, or pay invoices without approval.
 comparison:
-  eyebrow: Comparison
-  title: When a vendor review beats another workflow.
-  ariaLabel: Traditional tools compared with this vendor qualification workflow
-  leftHeader: Traditional stack
-  rightHeader: This workflow
+  eyebrow: "Comparison"
+  title: "When one vendor brief beats a tool stack."
+  ariaLabel: "Traditional tools compared with this vendor qualification workflow"
+  leftHeader: "Traditional stack"
+  rightHeader: "This workflow"
   rows:
-    - category: Signup
-      left: Provider accounts, dashboards, API keys, credits, and billing setup
-      right: One bounded agent run with an approved call budget
-    - category: Tools
-      left: Separate data, search, extraction, proof, synthesis, and delivery tools
-      right: Pay-as-you-go endpoint mix selected for the request
-    - category: Output
-      left: Manual exports and screenshots to reconcile
-      right: One vendor review with timestamps, costs, conflicts, and candidates
-    - category: Cadence
-      left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first review earns them
-    - category: Action
-      left: Research and operational action mixed together
-      right: Options stay review-only until a human approves action
+    - category: "Signup"
+      left: "Data-provider accounts, API keys, dashboards, seats, and credit packs"
+      right: "One bounded qualification run with an approved call budget"
+    - category: "Tools"
+      left: "Separate company, web, contact, network, SEC, and regulatory tools"
+      right: "Pay-as-you-go endpoint mix chosen for this vendor and risk"
+    - category: "Output"
+      left: "Exports, screenshots, and risk notes to reconcile by hand"
+      right: "One vendor brief with source proof, conflicts, costs, and owners"
+    - category: "Cadence"
+      left: "Manual reminders or scattered alerts"
+      right: "Repeat checks only after the first brief justifies the spend"
+    - category: "Action"
+      left: "Research, onboarding, access, and payment steps can blur"
+      right: "Evidence stays review-only until a human approves the action"
 useCases:
-  eyebrow: Use cases
-  title: Use the review when timing matters.
+  eyebrow: "Use cases"
+  title: "Use vendor proof to decide who reviews next."
   items:
-    - title: Vendor Intake Snapshot
-      text: Start with one bounded request when a source-backed answer is needed before more budget or action.
-    - title: Contact And Access Risk
-      text: Compare source families, show conflicts, and decide whether richer checks are worth the next run.
-    - title: Regulated Vendor Check
-      text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
-    - title: Reviewer handoff with proof
-      text: Package findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+    - title: "Vendor intake review"
+      text: "Check a new supplier, SaaS tool, agency, seller, or integration partner before procurement invests more time."
+    - title: "Contact-access preflight"
+      text: "Test an email, phone, IP, invoice sender, or onboarding contact before security or finance continues."
+    - title: "Public-vendor review"
+      text: "Add EDGAR and GovLaws context when public-company status, regulation, or compliance exposure may matter."
+    - title: "Reviewer handoff packet"
+      text: "Package evidence, caveats, rough costs, and open questions for buyer, legal, security, or finance review."
 closing:
-  eyebrow: Focused run
-  title: Start with the smallest useful check.
-  text: No broad subscription stack. No silent expansion. Your agent pays only for the relevant checks needed to decide whether the next step is worth review.
+  eyebrow: "Vendor proof"
+  title: "Start with one vendor and one proof plan."
+  text: "No broad vendor-data subscription. No automatic approval. Your agent pays for checks that help the next reviewer continue, pause, or ask for more."
   items:
-    - Start with the cheapest useful source checks.
-    - Cap providers, fanout, screenshots, and model calls.
-    - Keep source timestamps and uncertainty visible.
-    - Require approval before mutations, sends, or spend.
+    - "Confirm the domain before trusting enrichment."
+    - "Cap dynamic Apollo and Hunter discovery before expanding."
+    - "Keep screenshots, timestamps, and conflicts visible."
+    - "Require approval before outreach, access, or payments."
 faq:
-  eyebrow: FAQ
-  title: Before the first vendor review.
+  eyebrow: "FAQ"
+  title: "Before the first vendor brief."
   items:
-    - question: What does the vendor review return?
-      answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+    - question: "What does a vendor brief return?"
+      answer: "It can return a vendor identity card, web proof, technology footprint, contact-risk checklist, SEC or regulatory context, source links, costs, conflicts, and review routing."
       open: true
-    - question: Which tools matter most?
-      answer: Company Enrichment, BuiltWith, Apollo, Hunter, Email Reputation are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.
-    - question: How much does a focused run cost?
-      answer: The local source bundle gives rough ranges such as $0.140, $0.100, $0.061-$0.186, $0.251. Dynamic endpoints should be capped before execution, and repeated checks should be approved separately.
-    - question: What needs human approval?
-      answer: The default workflow returns reviewable candidates and tradeoffs. Purchases, bookings, filings, account actions, outreach, uploads, sends, wallet signatures, payments, and expanded budgets require explicit approval.
-    - question: What should I watch for?
-      answer: Keep source freshness, timestamps, provider limits, dynamic prices, retry behavior, source links, approval boundaries, and generated recommendations separate from observed facts.
+    - question: "Which tools matter most?"
+      answer: "Company Enrichment, BuiltWith, ScreenshotOne, Apollo, and Hunter support the intake card. Email, phone, IP, EDGAR, and GovLaws checks are added when the risk calls for them."
+    - question: "How much does a focused run cost?"
+      answer: "The local model estimates about $0.100-$0.140 for intake, $0.061-$0.186 for contact-risk preflight, and $0.251 for a regulated or public-vendor memo."
+    - question: "Does the agent approve vendors?"
+      answer: "No. The default workflow returns evidence and recommendations for review. Outreach, access, onboarding, procurement approval, payments, contracts, and extra spend need human approval."
+    - question: "What should I watch for?"
+      answer: "Company-name collisions, stale contacts, same-name EDGAR matches, changing provider prices, dynamic Apollo or Hunter calls, and regulatory context that is not legal advice."
 footer:
-  brand: 402box
+  brand: "402box"
   links:
-    - label: Tool Details
+    - label: "Tool Details"
       href: "#endpoint"
-    - label: How It Works
+    - label: "How It Works"
       href: "#workflow-title"
-    - label: All Services
+    - label: "All Services"
       href: index.html
 ---

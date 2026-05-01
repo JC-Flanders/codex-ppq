@@ -1,16 +1,16 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Campaign Launch brief on demand | 402box
-description: Use pay-as-you-go tools to stage one launch idea and return a source-backed launch brief with costs, proof links, QA notes, and human approval.
+title: Reviewable campaign launch packet | 402box
+description: Stage a disposable landing page, branded domain launch, or asset outreach bundle with pay-as-you-go tools, proof screenshots, rough costs, and approval gates.
 bodyClass: page-bumi page-usecase page-20-micro-app-or-campaign-launch page-alt
 themeColor: "#101113"
-ogTitle: Campaign Launch briefs, paid per focused check.
-ogDescription: Give your agent a campaign idea, page, or app brief, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
+ogTitle: Launch packets, paid per bounded run.
+ogDescription: Give your agent a campaign idea, approved assets, budget cap, and stop conditions. Get a review packet with preview status, storage refs, proof, costs, and draft outreach.
 schema:
   name: Micro App Or Campaign Launch
-  description: A pay-as-you-go campaign launch workflow for agents that return a source-backed launch brief.
+  description: A pay-as-you-go campaign launch workflow for agents that assemble reviewable launch packets.
   mainEntityName: Micro App Or Campaign Launch
-  mainEntityDescription: Combines campaign idea, page, or app brief, public source checks, priced endpoint calls, and review controls into a focused launch brief.
+  mainEntityDescription: Combines repo, hosting, storage, browser QA, screenshot, domain/deployment, and email draft endpoints into a reviewable launch packet.
   providerName: 402box
 hero:
   backdrop:
@@ -20,202 +20,202 @@ hero:
   topLinkText: Use cases
   topLinkHref: "#use-cases"
   integration:
-    - Source APIs
-    - Evidence
-    - Launch brief
+    - StableUpload
+    - Proof QA
+    - Launch packet
   title:
-    text: Launch the asset,
-    highlight: not every toolchain.
-  lead: Give your agent a campaign idea, page, or app brief, source limits, and budget cap. Get a launch brief with proof links, cost notes, QA items, and approval boundaries before action.
+    text: Stage the packet,
+    highlight: not the stack.
+  lead: Give your agent a campaign idea, assets, route, and budget cap. Get preview status, storage refs, proof, costs, QA notes, and draft outreach before launch.
   actions:
     - label: Budget first
-      text: Plan Focused Run
+      text: Plan Launch Packet
       href: "#prompt"
       primary: true
     - label: See output
       text: Inspect Output
       href: "#example"
   trust:
-    - Source checks
-    - Proof launch brief
+    - Preview status
+    - Screenshot proof
     - Budget caps
-    - Human approval
+    - Draft before send
   preview:
     ariaLabel: Campaign Launch request to output preview
-    request: Prepare a small campaign launch brief. Check domain, copy, design, hosting, email, screenshot, and proof needs, estimate spend, and return reviewable launch assets without publishing or sending.
-    responseAriaLabel: Example campaign launch brief
+    request: Stage a landing page preview for a waitlist. Use approved copy/assets, estimate repo, hosting, storage, proof, and email costs, and return a review packet before launch or send.
+    responseAriaLabel: Example campaign launch packet
     resultLabel: Result
-    resultTitle: Launch brief
+    resultTitle: Launch packet
     code: |-
       {
-        "job": "Campaign Launch",
-        "input": "campaign idea, page, or app brief",
-        "planned_calls": 12,
-        "call_budget": "$1.10-$1.12 to $0.075+ cap",
-        "status": "review_required",
-        "launch_brief": [
-          "source-backed summary with timestamps and proof links.",
-          "Tools: Doma, Build With Locus, Code Storage.",
-          "Next step: approve more calls only if the first launch brief is useful."
+        "launch": "waitlist preview",
+        "route": "disposable landing page",
+        "planned_calls": 7,
+        "call_budget": "$1.10-$1.12 rough",
+        "packet": [
+          "Demo URL and repo stay pending until approved.",
+          "Screenshot must match approved copy and assets.",
+          "Next step: approve hosting/storage or narrow the brief."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One launch brief. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when a campaign idea, page, or app brief needs a focused answer now, not a permanent provider stack. The agent returns a launch brief with proof links, costs, QA notes, and next checks.
+  title: One campaign idea. Preview link, proof, and approval gates.
+  text: "Pay-as-you-go access fits narrow launch work: prove a page, package assets, stage a branded demo, or draft outreach without separate hosting, storage, screenshot, domain, and email accounts."
   ariaLabel: Campaign Launch input and output details
   features:
     - title: Input
-      text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
+      text: Campaign idea, approved copy/assets, launch route, retention needs, audience boundary, budget cap, and approvals.
     - title: Output
-      text: A launch brief with source links, timestamps, cost notes, proof screenshots, QA items, and next checks for review.
+      text: Preview status, demo/asset URL, repo ref, storage key or CID, screenshot proof, cost notes, QA, and draft email.
     - title: Best fit
-      text: Disposable page previews, branded campaign domains, asset drops, and approval-gated launch work.
+      text: Disposable previews, branded demo domains, public asset drops, and review before publish or send.
 results:
   eyebrow: Real tools, bounded spend
-  title: A launch brief shaped for human decisions.
-  text: Use rough source ranges such as $1.10-$1.12, $0.075, $0.095 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  title: Costs stay tied to the launch route.
+  text: Use source ranges as planning inputs, not live bills. Domain price, hosting tier, storage size, workspace credit, browser time, and email sends need caps.
   metrics:
-    - label: Disposable Landing
+    - label: Disposable preview
       value: $1.10-$1.12
-      text: Disposable Landing Page stages a demo URL, repo reference, asset links, screenshot proof, and draft handoff before expansion.
+      text: Repo, clone URL, small site slot, one storage target, fetch, screenshot, and email draft for a demo packet.
       large: true
-    - label: Branded Campaign
-      value: $0.075+ cap
-      text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
-    - label: Asset Drop And Launch
-      value: $0.095+
-      text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
-    - label: Expanded review run
-      value: $1-$100+ cap
-      text: Use only when the first launch brief justifies domain spend, deployment top-up, deeper proof, or repeated QA.
+    - label: Branded domain QA
+      value: $0.075-$0.095+
+      text: Fixed QA and draft/send calls before Doma, Locus, DNS, TLS, service billing, or sends move forward.
+    - label: Asset outreach bundle
+      value: $0.10+
+      text: Hosted asset slot, optional object or IPFS write, link check, screenshot, draft, and approved relay send.
+    - label: Deployment credit cap
+      value: $1-$100 cap
+      text: Use only when a branded route justifies Locus funding, resource billing, deployment checks, and rollback.
 steps:
   titleId: workflow-title
   eyebrow: How it works
-  title: Start narrow. Expand only after review.
-  text: Run cheap source checks first, add richer tools only for promising signals, and keep mutations, outreach, payments, and expanded budgets under human approval.
+  title: Start with the packet. Approve action later.
+  text: Choose the launch route, price the moving parts, run only approved proof steps, and keep registrations, deployments, uploads, site activation, and sends under human control.
   items:
     - number: "01"
-      title: Normalize the input
-      text: Turn the campaign idea, page, or app brief into clean entities, constraints, and source limits before paid calls.
+      title: Lock the launch route
+      text: Choose page, domain, or asset outreach. Capture copy, assets, audience, retention, and public/private limits.
     - number: "02"
-      title: Estimate the budget
-      text: Show selected tools, expected call counts, rough ranges, dynamic endpoints, and stop conditions before the run begins.
+      title: Price the moving parts
+      text: Show selected providers, call count, storage choice, screenshot count, dynamic prices, and caps before work begins.
     - number: "03"
-      title: Gather source proof
-      text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
+      title: Capture proof
+      text: After approval, run only allowed repo, hosting, storage, fetch, screenshot, and draft calls; record links/times.
     - number: "04"
-      title: Return launch brief
-      text: Deliver the launch brief, proof links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Return the packet
+      text: Deliver preview status, proof, costs, QA notes, launch draft, and actions still waiting for human approval.
 benefits:
   eyebrow: Benefits
-  title: Keep the decision small before the stack grows.
+  title: Launch proof without permanent infrastructure.
   items:
-    - title: Specialized data without permanent seats
-      text: Use campaign launch sources for one important request instead of keeping every provider, dashboard, and credit bundle active.
-    - title: Cheaper checks before deeper evidence
-      text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
-    - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the launch brief.
-    - title: Human approval for real actions
-      text: The launch brief can inform a decision, but sends, purchases, uploads, registrations, wallet signatures, and expanded spend need approval.
+    - title: One-off campaign stack assembly
+      text: Use repo, hosting, storage, browser, screenshot, domain, deployment, and email endpoints for one narrow campaign.
+    - title: Proof before the announcement
+      text: Keep page checks, screenshots, metadata, and QA notes beside the copy so reviewers see what would go public.
+    - title: Costs stay separated
+      text: Fixed proof and draft calls stay apart from dynamic domains, tiers, storage size, top-ups, and resource billing.
+    - title: Outreach remains draft-only
+      text: Prepare launch email copy while recipient lists, sends, inboxes, subdomains, and broader spend stay approval-gated.
 facts:
   eyebrow: Tool details
-  title: Use tool facts to control the next call.
-  text: Campaign Launch works best when the agent separates source facts, generated synthesis, and unresolved questions. Start with focused APIs, add support rails only when they explain the decision, and keep the run review-only by default.
+  title: The endpoint mix depends on the launch route.
+  text: Launch work crosses mutating services, so the packet should separate draft and QA from purchases, uploads, registrations, deployments, site activation, and sends.
   ariaLabel: Campaign Launch tool facts
   items:
     - label: Core tools
-      value: Doma, Build With Locus, Code Storage, StableUpload, Pinata IPFS
+      value: Doma, Locus, Code Storage, StableUpload, Object Storage, Pinata IPFS
     - label: Support rails
-      value: Code Storage, StableUpload, Pinata IPFS, Object Storage, ScreenshotOne, AgentMail and StableEmail
+      value: Browserbase, ScreenshotOne, AgentMail, StableEmail
     - label: Primary input
-      value: campaign idea, page, or app brief, source limits, and budget cap
+      value: Campaign idea, approved copy/assets, launch route, audience, budget cap
     - label: Primary output
-      value: launch brief, proof links, costs, QA notes, and next checks
+      value: Launch packet with preview status, refs, proof, costs, QA, and draft
     - label: Dynamic costs
-      value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
+      value: Doma price, Locus top-up, upload tier, storage size, browser sessions
     - label: Execution status
       value: Scenario plan only, no endpoint calls performed
 prompt:
   eyebrow: Example prompt
-  title: Give your agent a campaign launch job.
-  text: Keep the campaign idea, page, or app brief, source limits, output format, call budget, and approval boundaries explicit before paid or repeated checks begin.
+  title: Give your agent a launch-packet job.
+  text: Keep the launch route, assets, tools, output format, budget cap, and approval boundaries explicit before any paid setup, upload, activation, or send.
   copyTarget: 20-micro-app-or-campaign-launch-2-prompt
   buttonLabel: Copy prompt
   code: |-
-    Prepare a small campaign launch brief. Check domain, copy, design, hosting, email, screenshot, and proof needs, estimate spend, and return ready-to-review launch assets without publishing or sending.
+    Stage a review packet for a waitlist page.
 
-    Use the local Campaign Launch workflow to return a launch brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    I will provide the idea, approved copy, logo, and assets. Use Code Storage for source handoff, StableUpload for a small site, Object Storage/Pinata for assets, Browserbase for fetch QA, ScreenshotOne for proof, and AgentMail for a draft. Use Doma or Locus only after branded-route approval.
 
-    Return a concise launch brief with:
-    - the cleaned input and assumptions
-    - the source names, timestamps, and links used
-    - the demo URL, deployment status, storage keys, CIDs, or screenshot proof when relevant
-    - the key findings separated from generated recommendations
-    - rough cost notes and any dynamic pricing caveats
-    - conflicts, stale sources, missing fields, and open questions
-    - the next checks worth running only after approval
+    Estimate tools, calls, screenshots, storage choice, dynamic risks, total cost, and stops before work. I approve the budget first.
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this launch brief.
+    Return:
+    - route and assumptions
+    - demo URL or pending status
+    - repo ref, storage keys/CIDs, and file-size notes
+    - screenshot, fetch status, page title, and timestamp
+    - cost caveats, QA items, draft marked not sent
+    - missing approvals and next safe action
+
+    Do not register domains, top up, attach DNS, activate sites, upload private assets, send email, buy inboxes/subdomains, sign wallets, or exceed budget without approval.
 comparison:
   eyebrow: Comparison
-  title: When a launch brief beats another workflow.
+  title: When a launch packet beats a stack of accounts.
   ariaLabel: Traditional tools compared with this campaign launch workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
   rows:
     - category: Signup
-      left: Provider accounts, dashboards, API keys, credits, and billing setup
-      right: One bounded agent run with an approved call budget
+      left: Hosting, storage, screenshot, domain, deploy, and email accounts first
+      right: One bounded agent run with an approved launch route and call budget
     - category: Tools
-      left: Separate data, search, extraction, proof, synthesis, and delivery tools
-      right: Pay-as-you-go endpoint mix selected for the request
+      left: Separate repo, site, asset, browser, screenshot, domain, deploy, and mail workflows
+      right: Pay-as-you-go endpoint mix selected for the preview, domain, or asset route
     - category: Output
-      left: Manual exports and screenshots to reconcile
-      right: One launch brief with proof links, cost notes, QA items, and candidates
+      left: Loose URLs, screenshots, storage notes, and email drafts
+      right: One launch packet with preview status, proof, costs, QA notes, and drafts
     - category: Cadence
-      left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first launch brief earns them
+      left: Subscriptions kept alive for occasional launch
+      right: Pay for the narrow launch proof, then stop or renew only after review
     - category: Action
-      left: Research and operational action mixed together
-      right: Options stay review-only until a human approves action
+      left: Publishing and sending can blur into setup work
+      right: Real-world actions stay separate until a human approves them
 useCases:
   eyebrow: Use cases
-  title: Use the launch brief when timing matters.
+  title: Use proof to decide when to launch.
   items:
-    - title: Disposable Landing Page
-      text: Start with one bounded request when a source-backed answer is needed before more budget or action.
+    - title: Disposable page preview
+      text: Stage a temporary demo with repo reference, hosted preview status, asset refs, screenshot proof, and handoff draft.
     - title: Branded Campaign Domain
-      text: Compare source families, show conflicts, and decide whether richer checks are worth the next run.
+      text: Prepare domain, deployment, DNS, TLS, resource, screenshot, and announcement fields with Doma and Locus caps separated.
     - title: Asset Drop And Launch
-      text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
+      text: Package public file links, storage keys, Pinata CIDs, screenshots, recipient-safe copy, and send status as drafted or sent.
     - title: Reviewer handoff with proof
-      text: Package findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+      text: Give the owner one review surface for costs, links, screenshots, unresolved QA, and actions needing approval.
 closing:
-  eyebrow: Focused run
-  title: Start with the smallest useful check.
-  text: No broad subscription stack. No silent expansion. Your agent pays only for the relevant checks needed to decide whether the next step is worth review.
+  eyebrow: Launch packet
+  title: Start with the preview that proves launch.
+  text: No broad infrastructure setup. No silent launch. Your agent pays for repo, hosting, storage, proof, and draft steps to decide whether this campaign should go live.
   items:
-    - Start with the cheapest useful source checks.
-    - Cap providers, fanout, screenshots, and model calls.
-    - Keep source timestamps and uncertainty visible.
-    - Require approval before mutations, sends, or spend.
+    - Choose page, branded domain, or asset bundle first.
+    - Cap domain, top-up, storage, screenshots, and email spend.
+    - Keep URLs, CIDs, timestamps, sizes, and proof with the packet.
+    - Require approval before register, activate, upload, deploy, or send.
 faq:
   eyebrow: FAQ
-  title: Before the first launch brief.
+  title: Before the first launch packet.
   items:
-    - question: What does the launch brief return?
-      answer: It can return the cleaned input, demo or asset URL, domain or deployment status, source-backed findings, proof screenshots, timestamps, rough costs, unresolved QA items, and next checks a human should review.
+    - question: What does the launch packet return?
+      answer: It can return the launch route, preview URL or pending status, repo reference, storage keys or CIDs, screenshot proof, rough costs, QA notes, draft email copy, and open approvals.
       open: true
     - question: Which tools matter most?
-      answer: Doma, Build With Locus, Code Storage, StableUpload, Pinata IPFS are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.
+      answer: Code Storage, StableUpload, Object Storage, Pinata, Browserbase, ScreenshotOne, AgentMail, and StableEmail cover preview/asset routes. Doma and Locus handle branded domains or deployments.
     - question: How much does a focused run cost?
-      answer: The local source bundle gives rough ranges such as $1.10-$1.12, $0.075, $0.095, $1-$100. Dynamic endpoints should be capped before execution, and repeated checks should be approved separately.
+      answer: The local model estimates $1.10-$1.12 for a disposable preview, $0.075-$0.095 before dynamic domain/deployment spend, and $0.095-$0.136 for a small asset-and-outreach bundle.
     - question: What needs human approval?
-      answer: The default workflow returns reviewable candidates and tradeoffs. Purchases, bookings, filings, account actions, outreach, uploads, sends, wallet signatures, payments, and expanded budgets require explicit approval.
+      answer: "Need approval: domain registration, Locus top-up, deployment, repo creation, upload, site activation, sends, inbox/subdomain purchase, wallet signatures, payments, and expanded budgets."
     - question: What should I watch for?
-      answer: Keep source freshness, timestamps, provider limits, dynamic prices, retry behavior, source links, approval boundaries, and generated recommendations separate from observed facts.
+      answer: Watch domain spelling, TLD price, retention, public/private asset boundaries, file size, CID permanence, DNS/TLS, screenshot time, draft-versus-sent status, and dynamic pricing.
 footer:
   brand: 402box
   links:
