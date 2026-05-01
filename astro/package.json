@@ -7,7 +7,8 @@
     "dev": "astro dev --host 0.0.0.0 --port ${PORT:-4324}",
     "preview": "astro preview --host 0.0.0.0 --port ${PREVIEW_PORT:-4325}",
     "build": "astro build",
-    "check": "astro check"
+    "check": "astro check",
+    "check:fields": "node scripts/check_fields.js"
   },
   "dependencies": {
     "astro": "^6.2.0"
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "astro-html-beautifier": "^1.0.5",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "yaml": "^2.8.3"
   }
 }

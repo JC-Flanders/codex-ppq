@@ -7,6 +7,24 @@ const ROOT = process.cwd();
 const DEFAULT_TEMPLATE = "src/pages/_template.md";
 const DEFAULT_REFERENCE = "src/pages/flight-price-monitoring.md";
 
+const FIELD_CAPS = new Map([
+  ["$.hero.title.text", { max: 24 }],
+  ["$.hero.title.highlight", { max: 20 }],
+  ["$.hero.title.combined", { max: 38 }],
+  ["$.hero.lead", { max: 155 }],
+  ["$.hero.preview.request", { max: 185 }],
+  ["$.hero.preview.code", { max: 350 }],
+  ["$.intro.text", { max: 190 }],
+  ["$.results.text", { max: 160 }],
+  ["$.results.metrics[].text", { max: 110 }],
+  ["$.steps.items[].text", { max: 115 }],
+  ["$.benefits.items[].text", { max: 120 }],
+  ["$.facts.text", { max: 190 }],
+  ["$.facts.items[].value", { max: 75 }],
+  ["$.prompt.code", { max: 900 }],
+  ["$.faq.items[].answer", { max: 190 }]
+]);
+
 const OPTIONAL_EXTRA_PATHS = new Set([
   "$.hero.backdrop.right",
   "$.hero.backdrop.color",
@@ -37,10 +55,13 @@ function usage() {
     "Usage:",
     "  npm run check:fields -- mode1 --target src/pages/<file>.md",
     "  npm run check:fields -- mode2 --target src/pages/<file>.md",
+    "  npm run check:fields -- mode1 --target src/pages/<file>.md --debug",
+    "  npm run check:fields -- mode2 --target src/pages/<file>.md --debug",
     "",
     "Options:",
     `  --template <path>   Default: ${DEFAULT_TEMPLATE}`,
-    `  --reference <path>  Default: ${DEFAULT_REFERENCE}`
+    `  --reference <path>  Default: ${DEFAULT_REFERENCE}`,
+    "  --debug            Print per-field validation details before the final result"
   ].join("\n");
 }
 
@@ -50,12 +71,18 @@ function parseArgs(argv) {
     mode,
     target: undefined,
     template: DEFAULT_TEMPLATE,
-    reference: DEFAULT_REFERENCE
+    reference: DEFAULT_REFERENCE,
+    debug: false
   };
 
   for (let index = 0; index < rest.length; index += 1) {
     const key = rest[index];
     const value = rest[index + 1];
+
+    if (key === "--debug") {
+      args.debug = true;
+      continue;
+    }
 
     if (key === "--target" || key === "--template" || key === "--reference") {
       if (!value || value.startsWith("--")) {
@@ -128,6 +155,55 @@ function childPath(path, key) {
 
 function indexedPath(path, index) {
   return `${path}[${index}]`;
+}
+
+function normalizeFieldPath(path) {
+  return path.replace(/\[\d+\]/g, "[]");
+}
+
+function collectTemplateFieldPresence(template, target, path = "$", targetExists = true, entries = []) {
+  if (Array.isArray(template)) {
+    template.forEach((templateItem, index) => {
+      const hasTargetItem = targetExists && Array.isArray(target) && index in target;
+      collectTemplateFieldPresence(
+        templateItem,
+        hasTargetItem ? target[index] : undefined,
+        indexedPath(path, index),
+        hasTargetItem,
+        entries
+      );
+    });
+    return entries;
+  }
+
+  if (isPlainObject(template)) {
+    Object.entries(template).forEach(([key, templateValue]) => {
+      const hasTargetValue = targetExists && isPlainObject(target) && key in target;
+      collectTemplateFieldPresence(
+        templateValue,
+        hasTargetValue ? target[key] : undefined,
+        childPath(path, key),
+        hasTargetValue,
+        entries
+      );
+    });
+    return entries;
+  }
+
+  entries.push({
+    path,
+    exists: targetExists
+  });
+  return entries;
+}
+
+function printMode1Debug({ template, target, targetPath }) {
+  console.log(`mode1 debug: ${targetPath}`);
+  console.log("target file: exists");
+
+  for (const entry of collectTemplateFieldPresence(template, target)) {
+    console.log(`${entry.exists ? "PASS" : "FAIL"} ${entry.path}: ${entry.exists ? "exists" : "missing"}`);
+  }
 }
 
 function compareShape(template, target, path, errors) {
@@ -233,31 +309,106 @@ function collectCopyStrings(value, path = "$", entries = []) {
   return entries;
 }
 
+function collectDerivedCopyStrings(value) {
+  if (!isPlainObject(value)) return [];
+
+  const hero = isPlainObject(value.hero) ? value.hero : {};
+  const title = isPlainObject(hero.title) ? hero.title : {};
+
+  if (typeof title.text !== "string" || typeof title.highlight !== "string") {
+    return [];
+  }
+
+  return [
+    {
+      path: "$.hero.title.combined",
+      value: `${title.text}${title.highlight}`
+    }
+  ];
+}
+
+function collectMode2CopyStrings(value) {
+  return [...collectCopyStrings(value), ...collectDerivedCopyStrings(value)];
+}
+
 function pathMap(entries) {
   return new Map(entries.map((entry) => [entry.path, entry.value]));
 }
 
+function fieldLimits({ path, referenceLength }) {
+  const cap = FIELD_CAPS.get(normalizeFieldPath(path));
+
+  if (cap) {
+    return {
+      min: cap.min ?? 0,
+      max: cap.max,
+      source: "field_caps",
+      referenceLength
+    };
+  }
+
+  if (referenceLength === undefined) {
+    throw new Error(`${path}: missing reference copy field and no field_caps override`);
+  }
+
+  return {
+    min: Math.floor(referenceLength * 0.8),
+    max: Math.ceil(referenceLength * 1.2),
+    source: "reference +/-20%",
+    referenceLength
+  };
+}
+
+function mode2Rows({ target, reference }) {
+  const targetCopy = pathMap(collectMode2CopyStrings(target));
+  const referenceCopy = pathMap(collectMode2CopyStrings(reference));
+  const paths = new Set(referenceCopy.keys());
+
+  return [...paths].map((path) => {
+    const referenceValue = referenceCopy.get(path);
+    const referenceLength = referenceValue?.length;
+    const limits = fieldLimits({ path, referenceLength });
+    const targetValue = targetCopy.get(path);
+    const targetLength = targetValue?.length;
+    const passed = targetLength !== undefined && targetLength >= limits.min && targetLength <= limits.max;
+
+    return {
+      path,
+      ...limits,
+      targetLength,
+      passed
+    };
+  });
+}
+
+function printMode2Debug({ target, reference, targetPath }) {
+  console.log(`mode2 debug: ${targetPath}`);
+
+  for (const row of mode2Rows({ target, reference })) {
+    const actual = row.targetLength === undefined ? "missing" : `${row.targetLength} chars`;
+    console.log(
+      `${row.passed ? "PASS" : "FAIL"} ${row.path}: range ${row.min}-${row.max} chars (${row.source}), actual ${actual}`
+    );
+  }
+}
+
 function validateMode2({ target, reference, targetPath }) {
   const errors = [];
-  const targetCopy = pathMap(collectCopyStrings(target));
-  const referenceCopy = pathMap(collectCopyStrings(reference));
 
-  for (const [path, referenceValue] of referenceCopy) {
-    if (!targetCopy.has(path)) {
-      errors.push(`${path}: missing human-facing copy field`);
+  for (const row of mode2Rows({ target, reference })) {
+    if (row.targetLength === undefined) {
+      errors.push(`${row.path}: missing human-facing copy field`);
       continue;
     }
 
-    const targetValue = targetCopy.get(path);
-    const referenceLength = referenceValue.length;
-    const min = Math.floor(referenceLength * 0.8);
-    const max = Math.ceil(referenceLength * 1.2);
-    const targetLength = targetValue.length;
-
-    if (targetLength < min || targetLength > max) {
-      errors.push(
-        `${path}: ${targetLength} chars, expected ${min}-${max} chars based on ${DEFAULT_REFERENCE} (${referenceLength} chars)`
-      );
+    if (!row.passed) {
+      if (row.source === "field_caps") {
+        errors.push(`${row.path}: ${row.targetLength} chars, expected ${row.min}-${row.max} chars from field_caps`);
+      } else {
+        errors.push(
+          `${row.path}: ${row.targetLength} chars, expected ${row.min}-${row.max} chars from reference +/-20% based on ${DEFAULT_REFERENCE} (${row.referenceLength} chars)`
+        );
+      }
     }
   }
 
@@ -267,7 +418,7 @@ function validateMode2({ target, reference, targetPath }) {
         `mode2 failed for ${targetPath}`,
         ...errors.map((error) => `- ${error}`),
         "",
-        "Hint: match flight-price-monitoring.md's field-by-field copy density within +/-20%; leave layout, hrefs, IDs, booleans, step numbers, and class/control fields untouched."
+        "Hint: match field_caps where configured; otherwise match flight-price-monitoring.md's field-by-field copy density within +/-20%. Leave layout, hrefs, IDs, booleans, step numbers, and class/control fields untouched."
       ].join("\n")
     );
   }
@@ -278,11 +429,19 @@ function main() {
     const args = parseArgs(process.argv.slice(2));
     const template = frontmatterFromFile(args.template);
     const target = frontmatterFromFile(args.target);
+    const reference = args.mode === "mode2" ? frontmatterFromFile(args.reference) : undefined;
+
+    if (args.debug && args.mode === "mode1") {
+      printMode1Debug({ template, target, targetPath: args.target });
+    }
+
+    if (args.debug && reference) {
+      printMode2Debug({ target, reference, targetPath: args.target });
+    }
 
     validateMode1({ template, target, targetPath: args.target });
 
-    if (args.mode === "mode2") {
-      const reference = frontmatterFromFile(args.reference);
+    if (reference) {
       validateMode1({ template, target: reference, targetPath: args.reference });
       validateMode2({ target, reference, targetPath: args.target });
     }

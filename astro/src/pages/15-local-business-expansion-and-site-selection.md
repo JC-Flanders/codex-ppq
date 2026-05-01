@@ -1,10 +1,10 @@
 ---
 layout: ../layouts/UseCasePage.astro
 title: Site Selection on demand | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed review packet with costs, timestamps, and human approval.
+description: Use pay-as-you-go tools to check one bounded request and return a source-backed location brief with costs, timestamps, and human approval.
 bodyClass: page-bumi page-usecase page-15-local-business-expansion-and-site-selection
 themeColor: "#101113"
-ogTitle: Site Selection briefs, paid per focused check.
+ogTitle: Site Selection location briefs, paid per focused check.
 ogDescription: Give your agent a city, business type, or expansion brief, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
 schema:
   name: Local Business Expansion And Site Selection
@@ -22,7 +22,7 @@ hero:
   integration:
     - Source APIs
     - Evidence
-    - Packet run
+    - Brief run
   title:
     text: Compare locations,
     highlight: not every map tab.
@@ -37,7 +37,7 @@ hero:
       href: "#example"
   trust:
     - Source checks
-    - Evidence packet
+    - Location brief
     - Budget caps
     - Human approval
   preview:
@@ -45,7 +45,7 @@ hero:
     request: Find expansion areas for this local business. Check maps, nearby competitors, demographics, reviews, search evidence, travel constraints, source timestamps, and return a shortlist without contacting landlords.
     responseAriaLabel: Example site selection location shortlist
     resultLabel: Result
-    resultTitle: Brief pack
+    resultTitle: Location brief
     code: |-
       {
         "job": "Site Selection",
@@ -53,10 +53,10 @@ hero:
         "planned_calls": 8,
         "call_budget": "$0.68+ cap to $0.002+ cap",
         "status": "review_required",
-        "packet": [
-          "location shortlist: source-backed summary with timestamps.",
+        "location_brief": [
+          "location shortlist: source-backed ranking with timestamps.",
           "Tools: RentCast, Google Maps, Mapbox.",
-          "Next step: approve more calls only if the first packet is useful."
+          "Next step: approve deeper checks only if the location brief is useful."
         ]
       }
 intro:
@@ -68,12 +68,12 @@ intro:
     - title: Input
       text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
     - title: Output
-      text: A review packet with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: A location brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
     - title: Best fit
-      text: Workflow options, review packet, source proof, and narrow jobs that need approval before action.
+      text: Workflow options, location brief, source proof, and narrow jobs that need approval before action.
 results:
   eyebrow: Real tools, bounded spend
-  title: A priced source packet for human review.
+  title: A priced location brief for human review.
   text: Use rough source ranges such as $0.68, $0.002, $0.69 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
   metrics:
     - label: City Or Neighborhood
@@ -105,8 +105,8 @@ steps:
       title: Gather source proof
       text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
     - number: "04"
-      title: Return the packet
-      text: Deliver the location shortlist, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Return the brief
+      text: Deliver the location brief, source links, cost notes, open questions, and actions that still need explicit human approval.
 benefits:
   eyebrow: Benefits
   title: Use focused checks before buying the stack.
@@ -118,7 +118,7 @@ benefits:
     - title: Budget-first instructions
       text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the focused run.
     - title: Human approval for real actions
-      text: The packet can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
+      text: The location brief can inform a decision, but sends, purchases, account actions, wallet signatures, and expanded spend require approval.
 facts:
   eyebrow: Tool details
   title: Keep source facts visible before each run.
@@ -148,7 +148,7 @@ prompt:
 
     Use the local Site Selection workflow to return a location shortlist. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
 
-    Return a concise packet with:
+    Return a concise location brief with:
     - the cleaned input and assumptions
     - the source names, timestamps, and links used
     - the key findings separated from generated recommendations
@@ -175,7 +175,7 @@ comparison:
       right: One location shortlist with timestamps, costs, and candidates
     - category: Cadence
       left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first packet earns them
+      right: Budgeted repeated checks only when the first location brief earns them
     - category: Action
       left: Research and operational action mixed together
       right: Options stay review-only until a human approves action
@@ -204,7 +204,7 @@ faq:
   eyebrow: FAQ
   title: Before the first focused run.
   items:
-    - question: What does the review packet return?
+    - question: What does the location brief return?
       answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
       open: true
     - question: Which tools matter most?

@@ -1,16 +1,16 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Tutoring Answers review packet | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed review packet with costs, timestamps, and human approval.
+title: Tutoring answer brief on demand | 402box
+description: Use pay-as-you-go tools to check one bounded request and return a source-backed answer brief with costs, timestamps, and human approval.
 bodyClass: page-bumi page-usecase page-21-tutoring-research-and-technical-answer-packets page-alt
 themeColor: "#101113"
-ogTitle: Tutoring Answers briefs, paid per focused check.
+ogTitle: Tutoring answer briefs, paid per focused check.
 ogDescription: Give your agent a student question or technical topic, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
 schema:
-  name: Tutoring, Research, And Technical Answer Packets
-  description: A pay-as-you-go tutoring answers workflow for agents that return a source-backed answer packet.
-  mainEntityName: Tutoring, Research, And Technical Answer Packets
-  mainEntityDescription: Combines student question or technical topic, public source checks, priced endpoint calls, and review controls into a focused answer packet.
+  name: Tutoring, Research, And Technical Answer Briefs
+  description: A pay-as-you-go tutoring answers workflow for agents that return a source-backed answer brief.
+  mainEntityName: Tutoring, Research, And Technical Answer Briefs
+  mainEntityDescription: Combines student question or technical topic, public source checks, priced endpoint calls, and review controls into a focused answer brief.
   providerName: 402box
 hero:
   backdrop:
@@ -22,11 +22,11 @@ hero:
   integration:
     - Source APIs
     - Evidence
-    - Packet run
+    - Answer brief
   title:
     text: Answer the topic,
     highlight: not every tutor app.
-  lead: Give your agent a student question or technical topic, source limits, and budget cap. Get an answer packet with timestamps, costs, caveats, and approval boundaries before action.
+  lead: Give your agent a student question or technical topic, source limits, and budget cap. Get an answer brief with timestamps, costs, caveats, and approval boundaries before action.
   actions:
     - label: Budget first
       text: Plan Focused Run
@@ -37,15 +37,15 @@ hero:
       href: "#example"
   trust:
     - Source checks
-    - Evidence packet
+    - Evidence brief
     - Budget caps
     - Human approval
   preview:
     ariaLabel: Tutoring Answers request to output preview
-    request: Create a tutoring answer packet for this technical question. Gather sources, explain the concept, include examples, check calculations or code where needed, show citations, and return a reviewer-ready answer.
-    responseAriaLabel: Example tutoring answers answer packet
+    request: Create a tutoring answer brief for this technical question. Gather sources, explain the concept, include examples, check calculations or code where needed, show citations, and return a reviewer-ready answer.
+    responseAriaLabel: Example tutoring answers answer brief
     resultLabel: Result
-    resultTitle: Review pack
+    resultTitle: Answer brief
     code: |-
       {
         "job": "Tutoring Answers",
@@ -53,42 +53,42 @@ hero:
         "planned_calls": 12,
         "call_budget": "$0.126-$0.141 to $0.145-$0.160",
         "status": "review_required",
-        "packet": [
-          "answer packet: source-backed summary with timestamps.",
+        "answer_brief": [
+          "answer brief: source-backed summary with timestamps.",
           "Tools: Mathpix, Wolfram\\, Perplexity.",
-          "Next step: approve more calls only if the first packet is useful."
+          "Next step: approve more calls only if the first brief is useful."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One answer packet. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when student question or technical topic needs a focused answer now, not a permanent provider stack. The agent returns an answer packet with proof, costs, and next checks.
+  title: One answer brief. Inputs, caveats, and approvals.
+  text: Pay-as-you-go access is useful when student question or technical topic needs a focused answer now, not a permanent provider stack. The agent returns an answer brief with proof, costs, and next checks.
   ariaLabel: Tutoring Answers input and output details
   features:
     - title: Input
       text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
     - title: Output
-      text: A review packet with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: An answer brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
     - title: Best fit
-      text: Workflow options, review packet, source proof, and narrow jobs that need approval before action.
+      text: Answer briefs, source proof, and narrow jobs that need approval before action.
 results:
   eyebrow: Real tools, bounded spend
-  title: A review packet shaped for human decisions.
+  title: An answer brief shaped for human decisions.
   text: Use rough source ranges such as $0.126-$0.141, $0.145-$0.160+, $0.227-$0.242+ as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
   metrics:
     - label: Photo-To-Step-By-Step
       value: $0.126-$0.141
-      text: Photo-To-Step-By-Step Tutoring starts with cheap source checks and returns a narrow answer packet before expansion.
+      text: Photo-To-Step-By-Step Tutoring starts with cheap source checks and returns a narrow answer brief before expansion.
       large: true
     - label: Source-Backed Research
       value: $0.145-$0.160
       text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
-    - label: Technical Answer Packet
+    - label: Technical Answer Brief
       value: $0.227+
       text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
     - label: Expanded review run
       value: $0.055+ cap
-      text: Use only when the first answer packet justifies more providers, deeper evidence, or repeated monitoring.
+      text: Use only when the first answer brief justifies more providers, deeper evidence, or repeated monitoring.
 steps:
   titleId: workflow-title
   eyebrow: How it works
@@ -105,8 +105,8 @@ steps:
       title: Gather source proof
       text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
     - number: "04"
-      title: Return the packet
-      text: Deliver the answer packet, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Deliver answer brief
+      text: Deliver the answer brief, source links, cost notes, open questions, and actions that still need explicit human approval.
 benefits:
   eyebrow: Benefits
   title: Keep the decision small before the stack grows.
@@ -116,9 +116,9 @@ benefits:
     - title: Cheaper checks before deeper evidence
       text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
     - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the review packet.
+      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the answer brief.
     - title: Human approval for real actions
-      text: The packet can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
+      text: The answer brief can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and spend require approval.
 facts:
   eyebrow: Tool details
   title: Use tool facts to control the next call.
@@ -132,7 +132,7 @@ facts:
     - label: Primary input
       value: student question or technical topic, source limits, and budget cap
     - label: Primary output
-      value: answer packet, timestamps, costs, caveats, and next checks
+      value: answer brief, timestamps, costs, caveats, and next checks
     - label: Dynamic costs
       value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
     - label: Execution status
@@ -144,11 +144,11 @@ prompt:
   copyTarget: 21-tutoring-research-and-technical-answer-packets-2-prompt
   buttonLabel: Copy prompt
   code: |-
-    Create a tutoring answer packet for this technical question. Gather sources, explain the concept, include examples, check calculations or code where needed, show citations, and return a reviewer-ready answer.
+    Create a tutoring answer brief for this technical question. Gather sources, explain the concept, include examples, check calculations or code where needed, show citations, and return a reviewer-ready answer.
 
-    Use the local Tutoring Answers workflow to return an answer packet. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Use the local Tutoring Answers workflow to return an answer brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
 
-    Return a concise packet with:
+    Return a concise answer brief with:
     - the cleaned input and assumptions
     - the source names, timestamps, and links used
     - the key findings separated from generated recommendations
@@ -156,10 +156,10 @@ prompt:
     - conflicts, stale sources, missing fields, and open questions
     - the next checks worth running only after approval
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this review packet.
+    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this answer brief.
 comparison:
   eyebrow: Comparison
-  title: When a review packet beats another workflow.
+  title: When an answer brief beats another workflow.
   ariaLabel: Traditional tools compared with this tutoring answers workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
@@ -172,25 +172,25 @@ comparison:
       right: Pay-as-you-go endpoint mix selected for the request
     - category: Output
       left: Manual exports and screenshots to reconcile
-      right: One answer packet with timestamps, costs, and candidates
+      right: One answer brief with timestamps, costs, and candidates
     - category: Cadence
       left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first packet earns them
+      right: Budgeted repeated checks only when the first brief earns them
     - category: Action
       left: Research and operational action mixed together
       right: Options stay review-only until a human approves action
 useCases:
   eyebrow: Use cases
-  title: Use the packet when timing matters.
+  title: Use the answer brief when timing matters.
   items:
     - title: Photo-To-Step-By-Step
       text: Start with one bounded request when a source-backed answer is needed before more budget or action.
     - title: Source-Backed Research
       text: Compare source families, show conflicts, and decide whether richer checks are worth the next run.
-    - title: Technical Answer Packet
+    - title: Technical Answer Brief
       text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
     - title: Reviewer handoff with proof
-      text: Package findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+      text: Bundle findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
 closing:
   eyebrow: Focused run
   title: Start with the smallest useful check.
@@ -202,9 +202,9 @@ closing:
     - Require approval before mutations, sends, or spend.
 faq:
   eyebrow: FAQ
-  title: Before the first review packet.
+  title: Before the first answer brief.
   items:
-    - question: What does the review packet return?
+    - question: What does the answer brief return?
       answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
       open: true
     - question: Which tools matter most?

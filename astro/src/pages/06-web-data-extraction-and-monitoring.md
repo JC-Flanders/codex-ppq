@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/UseCasePage.astro
 title: Web Data Monitor on demand | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed review packet with costs, timestamps, and human approval.
+description: Use pay-as-you-go tools to check one bounded request and return a source-backed extraction brief with costs, timestamps, and human approval.
 bodyClass: page-bumi page-usecase page-06-web-data-extraction-and-monitoring
 themeColor: "#101113"
 ogTitle: Web Data Monitor briefs, paid per focused check.
@@ -22,7 +22,7 @@ hero:
   integration:
     - Source APIs
     - Evidence
-    - Packet run
+    - Extract run
   title:
     text: Extract the page,
     highlight: not every crawler.
@@ -37,7 +37,7 @@ hero:
       href: "#example"
   trust:
     - Source checks
-    - Evidence packet
+    - Source evidence
     - Budget caps
     - Human approval
   preview:
@@ -45,7 +45,7 @@ hero:
     request: Monitor this product page for price and availability changes. Fetch the page, extract the relevant fields, capture proof if useful, compare against the previous observation, show run cost, and ask before expanding crawl scope.
     responseAriaLabel: Example web data monitor web extraction brief
     resultLabel: Result
-    resultTitle: Brief pack
+    resultTitle: Extract brief
     code: |-
       {
         "job": "Web Data Monitor",
@@ -53,10 +53,10 @@ hero:
         "planned_calls": 8,
         "call_budget": "$0.11-$0.13 to $0.055+ cap",
         "status": "review_required",
-        "packet": [
-          "web extraction brief: source-backed summary with timestamps.",
+        "extraction_brief": [
+          "extracted fields, source proof, and timestamps.",
           "Tools: Firecrawl, Browserbase, Oxylabs.",
-          "Next step: approve more calls only if the first packet is useful."
+          "Next step: approve more calls only if the extraction brief supports the decision."
         ]
       }
 intro:
@@ -68,12 +68,12 @@ intro:
     - title: Input
       text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
     - title: Output
-      text: A review packet with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: An extraction brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
     - title: Best fit
-      text: Workflow options, review packet, source proof, and narrow jobs that need approval before action.
+      text: Page extraction, change monitoring, source proof, and approval-gated jobs.
 results:
   eyebrow: Real tools, bounded spend
-  title: A priced source packet for human review.
+  title: A priced extraction brief for human review.
   text: Use rough source ranges such as $0.11-$0.13, $0.055, $0.43 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
   metrics:
     - label: Page-To-Table check
@@ -105,8 +105,8 @@ steps:
       title: Gather source proof
       text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
     - number: "04"
-      title: Return the packet
-      text: Deliver the web extraction brief, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Return the brief
+      text: Deliver the extraction brief, source links, cost notes, open questions, and actions that still need explicit human approval.
 benefits:
   eyebrow: Benefits
   title: Use focused checks before buying the stack.
@@ -118,7 +118,7 @@ benefits:
     - title: Budget-first instructions
       text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the focused run.
     - title: Human approval for real actions
-      text: The packet can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
+      text: The extraction brief can inform decisions, but sends, purchases, filings, account actions, wallet signatures, and extra spend need approval.
 facts:
   eyebrow: Tool details
   title: Keep source facts visible before each run.
@@ -148,7 +148,7 @@ prompt:
 
     Use the local Web Data Monitor workflow to return a web extraction brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
 
-    Return a concise packet with:
+    Return a concise extraction brief with:
     - the cleaned input and assumptions
     - the source names, timestamps, and links used
     - the key findings separated from generated recommendations
@@ -175,7 +175,7 @@ comparison:
       right: One web extraction brief with timestamps, costs, and candidates
     - category: Cadence
       left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first packet earns them
+      right: Budgeted repeated checks only when the first extraction brief earns them
     - category: Action
       left: Research and operational action mixed together
       right: Options stay review-only until a human approves action
@@ -190,7 +190,7 @@ useCases:
     - title: Evidence-Rich Web with proof
       text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
     - title: Reviewer handoff with proof
-      text: Package findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+      text: Hand off findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
 closing:
   eyebrow: Focused run
   title: Start with one narrow request first.
@@ -204,8 +204,8 @@ faq:
   eyebrow: FAQ
   title: Before the first focused run.
   items:
-    - question: What does the review packet return?
-      answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+    - question: What does the extraction brief return?
+      answer: It can return the cleaned input, extracted fields or changes, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
       open: true
     - question: Which tools matter most?
       answer: Firecrawl, Browserbase, Oxylabs, Diffbot, Tavily are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.

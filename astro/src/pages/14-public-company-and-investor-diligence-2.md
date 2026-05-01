@@ -1,16 +1,16 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Investor Diligence review packet | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed review packet with costs, timestamps, and human approval.
+title: Investor Catalyst brief on demand | 402box
+description: Use pay-as-you-go tools to check one public-company question and return a source-backed catalyst brief with costs, timestamps, and human approval.
 bodyClass: page-bumi page-usecase page-14-public-company-and-investor-diligence page-alt
 themeColor: "#101113"
-ogTitle: Investor Diligence briefs, paid per focused check.
+ogTitle: Investor catalyst briefs, paid per focused check.
 ogDescription: Give your agent a public company, ticker, or filing topic, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
 schema:
   name: Public Company And Investor Diligence
-  description: A pay-as-you-go investor diligence workflow for agents that return a source-backed investor research memo.
+  description: A pay-as-you-go investor diligence workflow for agents that return a source-backed catalyst brief.
   mainEntityName: Public Company And Investor Diligence
-  mainEntityDescription: Combines public company, ticker, or filing topic, public source checks, priced endpoint calls, and review controls into a focused investor research memo.
+  mainEntityDescription: Combines public company, ticker, or filing topic, public source checks, priced endpoint calls, and review controls into a focused catalyst brief.
   providerName: 402box
 hero:
   backdrop:
@@ -22,11 +22,11 @@ hero:
   integration:
     - Source APIs
     - Evidence
-    - Packet run
+    - Catalyst brief
   title:
     text: Check the issuer,
     highlight: not every terminal.
-  lead: Give your agent a public company, ticker, or filing topic, source limits, and budget cap. Get an investor research memo with timestamps, costs, caveats, and approval boundaries before action.
+  lead: Give your agent a public company, ticker, or filing topic, source limits, and budget cap. Get a catalyst brief with timestamps, costs, caveats, and approval boundaries before action.
   actions:
     - label: Budget first
       text: Plan Focused Run
@@ -37,15 +37,15 @@ hero:
       href: "#example"
   trust:
     - Source checks
-    - Evidence packet
+    - Source-linked brief
     - Budget caps
     - Human approval
   preview:
     ariaLabel: Investor Diligence request to output preview
     request: Review this public company question. Pull filings, facts, recent public context, source links, risk topics, cost estimates, and open questions for a human investor without making recommendations or trades.
-    responseAriaLabel: Example investor diligence investor research memo
+    responseAriaLabel: Example investor catalyst brief
     resultLabel: Result
-    resultTitle: Review pack
+    resultTitle: Catalyst brief
     code: |-
       {
         "job": "Investor Diligence",
@@ -53,42 +53,42 @@ hero:
         "planned_calls": 12,
         "call_budget": "$0.19-$0.21 to $0.22-$0.33",
         "status": "review_required",
-        "packet": [
-          "investor research memo: source-backed summary with timestamps.",
+        "brief": [
+          "catalyst brief: SEC links, source-backed summary, and timestamps.",
           "Tools: EDGAR and EDGAR Full-Text Search, Alpha Vantage, GovLaws.",
-          "Next step: approve more calls only if the first packet is useful."
+          "Next step: approve more calls only if the first brief is useful."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One investor research memo. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when public company, ticker, or filing topic needs a focused answer now, not a permanent provider stack. The agent returns an investor research memo with proof, costs, and next checks.
+  title: One catalyst brief. Inputs, caveats, and approvals.
+  text: Pay-as-you-go access is useful when a public company, ticker, or filing topic needs a focused answer now, not a permanent provider stack. The agent returns a catalyst brief with proof, costs, and next checks.
   ariaLabel: Investor Diligence input and output details
   features:
     - title: Input
       text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
     - title: Output
-      text: A review packet with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: A catalyst brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
     - title: Best fit
-      text: Workflow options, review packet, source proof, and narrow jobs that need approval before action.
+      text: Filing-change briefs, risk memos, relationship checks, and jobs needing approval before action.
 results:
   eyebrow: Real tools, bounded spend
-  title: A review packet shaped for human decisions.
-  text: Use rough source ranges such as $0.19-$0.21, $0.22-$0.33, $0.35-$0.37 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  title: A catalyst brief shaped for human decisions.
+  text: Use rough source ranges such as $0.19-$0.21, $0.22-$0.33, $0.35-$0.37, and $0.29-$3.53 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
   metrics:
     - label: Earnings And Filing
       value: $0.19-$0.21
-      text: Earnings And Filing Change starts with cheap source checks and returns a narrow investor research memo before expansion.
+      text: Starts with SEC, market, and filing-language checks to return a filing-change brief with metric deltas and open questions.
       large: true
-    - label: Regulatory And Risk
+    - label: Optional KG context
       value: $0.22-$0.33
-      text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
-    - label: Investor Relationship
+      text: Adds Diffbot KG when entity relationships or counterparty context would change the diligence decision.
+    - label: Regulatory Risk Screen
       value: $0.35+
-      text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
-    - label: Expanded review run
+      text: Returns a risk-signal memo with filing hits, CFR citations, recent changes, public mentions, and review prompts.
+    - label: Relationship review
       value: $0.29-$3.53
-      text: Use only when the first investor research memo justifies more providers, deeper evidence, or repeated monitoring.
+      text: Builds a relationship brief with identity, people candidates, graph notes, contact-confidence labels, and next checks.
 steps:
   titleId: workflow-title
   eyebrow: How it works
@@ -105,8 +105,8 @@ steps:
       title: Gather source proof
       text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
     - number: "04"
-      title: Return the packet
-      text: Deliver the investor research memo, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Return the brief
+      text: Deliver the catalyst brief, source links, cost notes, open questions, and actions that still need explicit human approval.
 benefits:
   eyebrow: Benefits
   title: Keep the decision small before the stack grows.
@@ -116,9 +116,9 @@ benefits:
     - title: Cheaper checks before deeper evidence
       text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
     - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the review packet.
+      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or expanding the catalyst brief.
     - title: Human approval for real actions
-      text: The packet can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
+      text: The brief can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
 facts:
   eyebrow: Tool details
   title: Use tool facts to control the next call.
@@ -132,34 +132,34 @@ facts:
     - label: Primary input
       value: public company, ticker, or filing topic, source limits, and budget cap
     - label: Primary output
-      value: investor research memo, timestamps, costs, caveats, and next checks
+      value: catalyst brief with timestamps, costs, caveats, and next checks
     - label: Dynamic costs
       value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
     - label: Execution status
       value: Scenario plan only, no endpoint calls performed
 prompt:
   eyebrow: Example prompt
-  title: Give your agent an investor diligence job.
+  title: Give your agent a catalyst brief job.
   text: Keep the public company, ticker, or filing topic, source limits, output format, call budget, and approval boundaries explicit before paid or repeated checks.
   copyTarget: 14-public-company-and-investor-diligence-2-prompt
   buttonLabel: Copy prompt
   code: |-
     Review this public company question. Pull filings, facts, recent public context, source links, risk topics, cost estimates, and open questions for a human investor without making recommendations or trades.
 
-    Use the local Investor Diligence workflow to return an investor research memo. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Use the local Investor Diligence workflow to return a catalyst brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
 
-    Return a concise packet with:
+    Return a concise catalyst brief with:
     - the cleaned input and assumptions
     - the source names, timestamps, and links used
-    - the key findings separated from generated recommendations
+    - the key findings separated from generated synthesis
     - rough cost notes and any dynamic pricing caveats
     - conflicts, stale sources, missing fields, and open questions
     - the next checks worth running only after approval
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this review packet.
+    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this catalyst brief.
 comparison:
   eyebrow: Comparison
-  title: When a review packet beats another workflow.
+  title: When a catalyst brief beats another workflow.
   ariaLabel: Traditional tools compared with this investor diligence workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
@@ -172,16 +172,16 @@ comparison:
       right: Pay-as-you-go endpoint mix selected for the request
     - category: Output
       left: Manual exports and screenshots to reconcile
-      right: One investor research memo with timestamps, costs, and candidates
+      right: One catalyst brief with timestamps, costs, and next-check candidates
     - category: Cadence
       left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first packet earns them
+      right: Budgeted repeated checks only when the first brief earns them
     - category: Action
       left: Research and operational action mixed together
       right: Options stay review-only until a human approves action
 useCases:
   eyebrow: Use cases
-  title: Use the packet when timing matters.
+  title: Use the brief when timing matters.
   items:
     - title: Earnings And Filing
       text: Start with one bounded request when a source-backed answer is needed before more budget or action.
@@ -202,9 +202,9 @@ closing:
     - Require approval before mutations, sends, or spend.
 faq:
   eyebrow: FAQ
-  title: Before the first review packet.
+  title: Before the first catalyst brief.
   items:
-    - question: What does the review packet return?
+    - question: What does the catalyst brief return?
       answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
       open: true
     - question: Which tools matter most?

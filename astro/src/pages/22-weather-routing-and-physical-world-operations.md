@@ -1,16 +1,16 @@
 ---
 layout: ../layouts/UseCasePage.astro
 title: Weather Routing on demand | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed review packet with costs, timestamps, and human approval.
+description: Use pay-as-you-go tools to check one bounded request and return a source-backed routing brief with costs, timestamps, and human approval.
 bodyClass: page-bumi page-usecase page-22-weather-routing-and-physical-world-operations
 themeColor: "#101113"
 ogTitle: Weather Routing briefs, paid per focused check.
 ogDescription: Give your agent a route, location, schedule, or operation, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
 schema:
   name: Weather, Routing, And Physical-World Operations
-  description: A pay-as-you-go weather routing workflow for agents that return a source-backed routing operations brief.
+  description: A pay-as-you-go weather routing workflow for agents that return a source-backed routing brief.
   mainEntityName: Weather, Routing, And Physical-World Operations
-  mainEntityDescription: Combines route, location, schedule, or operation, public source checks, priced endpoint calls, and review controls into a focused routing operations brief.
+  mainEntityDescription: Combines route, location, schedule, or operation, public source checks, priced endpoint calls, and review controls into a focused routing brief.
   providerName: 402box
 hero:
   backdrop:
@@ -22,11 +22,11 @@ hero:
   integration:
     - Source APIs
     - Evidence
-    - Packet run
+    - Brief run
   title:
     text: Route the operation,
     highlight: not every dashboard.
-  lead: Give your agent a route, location, schedule, or operation, source limits, and budget cap. Get a routing operations brief with timestamps, costs, caveats, and approval boundaries before action.
+  lead: Give your agent a route, location, schedule, or operation, source limits, and budget cap. Get a routing brief with timestamps, costs, caveats, and approval boundaries before action.
   actions:
     - label: Budget first
       text: Plan Focused Run
@@ -37,15 +37,15 @@ hero:
       href: "#example"
   trust:
     - Source checks
-    - Evidence packet
+    - Route evidence
     - Budget caps
     - Human approval
   preview:
     ariaLabel: Weather Routing request to output preview
     request: Check this physical-world operation against weather, map, time, route, and risk signals. Return timing, route tradeoffs, source timestamps, and escalation notes without dispatching anyone.
-    responseAriaLabel: Example weather routing routing operations brief
+    responseAriaLabel: Example weather routing brief
     resultLabel: Result
-    resultTitle: Brief pack
+    resultTitle: Routing brief
     code: |-
       {
         "job": "Weather Routing",
@@ -53,42 +53,42 @@ hero:
         "planned_calls": 8,
         "call_budget": "$0.07-$0.08 to $0.10-$0.12",
         "status": "review_required",
-        "packet": [
-          "routing operations brief: source-backed summary with timestamps.",
+        "routing_brief": [
+          "routing brief: ETA band, weather risk, and route decision.",
           "Tools: OpenWeather, Google Maps, Mapbox.",
-          "Next step: approve more calls only if the first packet is useful."
+          "Next step: approve more calls only if the first brief is useful."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One routing operations brief. Evidence, costs, and next checks.
-  text: Pay-as-you-go access is useful when route, location, schedule, or operation needs a focused answer now, not a permanent provider stack. The agent returns a routing operations brief with proof, costs, and next checks.
+  title: One routing brief. Evidence, costs, and next checks.
+  text: Pay-as-you-go access is useful when route, location, schedule, or operation needs a focused answer now, not a permanent provider stack. The agent returns a routing brief with proof, costs, and next checks.
   ariaLabel: Weather Routing input and output details
   features:
     - title: Input
       text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
     - title: Output
-      text: A review packet with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: A routing brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
     - title: Best fit
-      text: Workflow options, review packet, source proof, and narrow jobs that need approval before action.
+      text: Route choices, schedule windows, source proof, and narrow jobs that need approval before action.
 results:
   eyebrow: Real tools, bounded spend
-  title: A priced source packet for human review.
+  title: A priced routing brief for human review.
   text: Use rough source ranges such as $0.07-$0.08, $0.10-$0.12, $0.10-$0.11 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
   metrics:
     - label: Delivery Delay Route
       value: $0.07-$0.08
-      text: Delivery Delay Or Route starts with cheap source checks and returns a narrow routing operations brief before expansion.
+      text: Delivery Delay Or Route returns ETA bands, weather risk, and proceed, delay, or reroute guidance before expansion.
       large: true
     - label: Field Crew Scheduling
       value: $0.10-$0.12
-      text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
+      text: Ranks viable work windows with route, daylight, local-time, and weather evidence for review.
     - label: Aviation-To-Ground check
       value: $0.10+
-      text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
+      text: Checks flight status, airport weather, ground ETA, and hold, release, or reschedule risk under caps.
     - label: Expanded review run
       value: $0.06890-$0.0
-      text: Use only when the first routing operations brief justifies more providers, deeper evidence, or repeated monitoring.
+      text: Use only when the first routing brief justifies more providers, deeper evidence, or repeated monitoring.
 steps:
   titleId: workflow-title
   eyebrow: How it works
@@ -105,8 +105,8 @@ steps:
       title: Gather source proof
       text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
     - number: "04"
-      title: Return the packet
-      text: Deliver the routing operations brief, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Return route brief
+      text: Deliver the recommendation, source links, cost notes, open questions, and actions that still need explicit human approval.
 benefits:
   eyebrow: Benefits
   title: Use focused checks before buying the stack.
@@ -118,7 +118,7 @@ benefits:
     - title: Budget-first instructions
       text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the focused run.
     - title: Human approval for real actions
-      text: The packet can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
+      text: The routing brief informs decisions, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
 facts:
   eyebrow: Tool details
   title: Keep source facts visible before each run.
@@ -132,7 +132,7 @@ facts:
     - label: Primary input
       value: route, location, schedule, or operation, source limits, and budget cap
     - label: Primary output
-      value: routing operations brief, timestamps, costs, caveats, and next checks
+      value: routing brief, timestamps, costs, caveats, and next checks
     - label: Dynamic costs
       value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
     - label: Execution status
@@ -146,12 +146,12 @@ prompt:
   code: |-
     Check this physical-world operation against weather, map, time, route, and risk signals. Return timing, route tradeoffs, source timestamps, and escalation notes without dispatching anyone.
 
-    Use the local Weather Routing workflow to return a routing operations brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Use the local Weather Routing workflow to return a routing brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
 
-    Return a concise packet with:
-    - the cleaned input and assumptions
+    Return a concise routing brief with:
+    - the canonical address, ETA band, and local-time deadline
     - the source names, timestamps, and links used
-    - the key findings separated from generated recommendations
+    - the proceed, delay, reroute, reschedule, hold, or release recommendation
     - rough cost notes and any dynamic pricing caveats
     - conflicts, stale sources, missing fields, and open questions
     - the next checks worth running only after approval
@@ -172,10 +172,10 @@ comparison:
       right: Pay-as-you-go endpoint mix selected for the request
     - category: Output
       left: Manual exports and screenshots to reconcile
-      right: One routing operations brief with timestamps, costs, and candidates
+      right: One routing brief with timestamps, costs, and candidates
     - category: Cadence
       left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first packet earns them
+      right: Budgeted repeated checks only when the first brief earns them
     - category: Action
       left: Research and operational action mixed together
       right: Options stay review-only until a human approves action
@@ -184,13 +184,13 @@ useCases:
   title: Use focused checks to decide when to act.
   items:
     - title: Delivery Delay Or Route
-      text: Start with one bounded request when a source-backed answer is needed before more budget or action.
+      text: Choose proceed, delay, or reroute with address, ETA, weather, air-quality, and alternate-route proof.
     - title: Field Crew Scheduling
-      text: Compare source families, show conflicts, and decide whether richer checks are worth the next run.
+      text: Rank viable windows and backups using drive-time bands, daylight limits, and weather exposure.
     - title: Aviation-To-Ground
-      text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
+      text: Compare flight consensus, airport weather, ground ETA, and hold, release, or reschedule timing.
     - title: Reviewer handoff with proof
-      text: Package findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+      text: Package timestamps, conflicts, cost notes, and update drafts so a human can approve the next action.
 closing:
   eyebrow: Focused run
   title: Start with one narrow request first.
@@ -204,8 +204,8 @@ faq:
   eyebrow: FAQ
   title: Before the first focused run.
   items:
-    - question: What does the review packet return?
-      answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+    - question: What does the routing brief return?
+      answer: It can return canonical addresses, ETA bands, route options, weather and air-quality risk, source timestamps, rough costs, unresolved conflicts, and the next checks a human should review.
       open: true
     - question: Which tools matter most?
       answer: OpenWeather, Google Maps, Mapbox, AviationStack, FlightAPI are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.

@@ -1,16 +1,16 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Competitor SEO Intel review packet | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed review packet with costs, timestamps, and human approval.
+title: Competitor SEO Intel competitor brief | 402box
+description: Use pay-as-you-go tools to check one bounded request and return a source-backed competitor brief with costs, timestamps, and human approval.
 bodyClass: page-bumi page-usecase page-07-competitor-seo-and-market-intelligence page-alt
 themeColor: "#101113"
 ogTitle: Competitor SEO Intel briefs, paid per focused check.
 ogDescription: Give your agent a competitor domain or market, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
 schema:
   name: Competitor SEO And Market Intelligence
-  description: A pay-as-you-go competitor seo intel workflow for agents that return a source-backed competitor intelligence brief.
+  description: A pay-as-you-go competitor seo intel workflow for agents that return a source-backed competitor brief.
   mainEntityName: Competitor SEO And Market Intelligence
-  mainEntityDescription: Combines competitor domain or market, public source checks, priced endpoint calls, and review controls into a focused competitor intelligence brief.
+  mainEntityDescription: Combines competitor domain or market, public source checks, priced endpoint calls, and review controls into a focused competitor brief.
   providerName: 402box
 hero:
   backdrop:
@@ -22,11 +22,11 @@ hero:
   integration:
     - Source APIs
     - Evidence
-    - Packet run
+    - Brief run
   title:
     text: Read the market,
     highlight: not every platform.
-  lead: Give your agent a competitor domain or market, source limits, and budget cap. Get a competitor intelligence brief with timestamps, costs, caveats, and approval boundaries before action.
+  lead: Give your agent a competitor domain or market, source limits, and budget cap. Get a competitor brief with timestamps, costs, caveats, and approval boundaries before action.
   actions:
     - label: Budget first
       text: Plan Focused Run
@@ -37,15 +37,15 @@ hero:
       href: "#example"
   trust:
     - Source checks
-    - Evidence packet
+    - Screenshot proof
     - Budget caps
     - Human approval
   preview:
     ariaLabel: Competitor SEO Intel request to output preview
     request: Compare these competitor domains before we plan content. Pull SEO, technology, market, page, and screenshot evidence, separate observed signals from recommendations, cap expansion, and return the strongest opportunities.
-    responseAriaLabel: Example competitor seo intel competitor intelligence brief
+    responseAriaLabel: Example competitor seo intel competitor brief
     resultLabel: Result
-    resultTitle: Review pack
+    resultTitle: Intel brief
     code: |-
       {
         "job": "Competitor SEO Intel",
@@ -53,32 +53,32 @@ hero:
         "planned_calls": 12,
         "call_budget": "$0.52-$0.54 to $0.12-$0.20",
         "status": "review_required",
-        "packet": [
-          "competitor intelligence brief: source-backed summary with timestamps.",
+        "competitor_brief": [
+          "keyword gaps, page proof, and next pages to build.",
           "Tools: SpyFu, BuiltWith, Apollo.",
-          "Next step: approve more calls only if the first packet is useful."
+          "Next step: approve more calls only if the first brief is useful."
         ]
       }
 intro:
   eyebrow: What it does
   title: One competitor brief. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when competitor domain or market needs a focused answer now, not a permanent provider stack. The agent returns a competitor intelligence brief with proof, costs, and next checks.
+  text: Pay-as-you-go access is useful when competitor domain or market needs a focused answer now, not a permanent provider stack. The agent returns a competitor brief with proof, costs, and next checks.
   ariaLabel: Competitor SEO Intel input and output details
   features:
     - title: Input
       text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
     - title: Output
-      text: A review packet with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: A competitor brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
     - title: Best fit
-      text: Workflow options, review packet, source proof, and narrow jobs that need approval before action.
+      text: Keyword gaps, paid-search audits, launch monitoring, and proof-backed jobs needing approval.
 results:
   eyebrow: Real tools, bounded spend
-  title: A review packet shaped for human decisions.
+  title: A competitor brief shaped for human decisions.
   text: Use rough source ranges such as $0.52-$0.54, $0.12-$0.20, $0.57-$0.58 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
   metrics:
     - label: SEO Keyword Gap check
       value: $0.52-$0.54
-      text: SEO Keyword Gap Snapshot starts with cheap source checks and returns a narrow competitor intelligence brief before expansion.
+      text: SEO Keyword Gap Snapshot starts with cheap source checks and returns a narrow competitor brief before expansion.
       large: true
     - label: Paid Search And check
       value: $0.12-$0.20
@@ -88,7 +88,7 @@ results:
       text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
     - label: Expanded review run
       value: $0.055+ cap
-      text: Use only when the first competitor intelligence brief justifies more providers, deeper evidence, or repeated monitoring.
+      text: Use only when the first competitor brief justifies more providers, deeper evidence, or repeated monitoring.
 steps:
   titleId: workflow-title
   eyebrow: How it works
@@ -105,7 +105,7 @@ steps:
       title: Gather source proof
       text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
     - number: "04"
-      title: Return the packet
+      title: Return the brief
       text: Deliver the competitor brief, source links, cost notes, open questions, and actions needing explicit human approval.
 benefits:
   eyebrow: Benefits
@@ -116,9 +116,9 @@ benefits:
     - title: Cheaper checks before deeper evidence
       text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
     - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the review packet.
+      text: The agent states tools, call counts, ranges, and stop conditions before spending or widening the competitor brief.
     - title: Human approval for real actions
-      text: The packet can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
+      text: The competitor brief informs the decision, but outreach, account actions, wallet signatures, and expanded spend require approval.
 facts:
   eyebrow: Tool details
   title: Use tool facts to control the next call.
@@ -132,7 +132,7 @@ facts:
     - label: Primary input
       value: competitor domain or market, source limits, and budget cap
     - label: Primary output
-      value: competitor intelligence brief, timestamps, costs, caveats, and next
+      value: competitor brief, timestamps, costs, caveats, and next checks
     - label: Dynamic costs
       value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
     - label: Execution status
@@ -146,9 +146,9 @@ prompt:
   code: |-
     Compare these competitor domains before we plan content. Pull SEO, technology, market, page, and screenshot evidence, separate observed signals from recommendations, cap expansion, and return the strongest opportunities.
 
-    Use the local Competitor SEO Intel workflow to return a competitor intelligence brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Use the local Competitor SEO Intel workflow to return a competitor brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
 
-    Return a concise packet with:
+    Return a concise competitor brief with:
     - the cleaned input and assumptions
     - the source names, timestamps, and links used
     - the key findings separated from generated recommendations
@@ -156,10 +156,10 @@ prompt:
     - conflicts, stale sources, missing fields, and open questions
     - the next checks worth running only after approval
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this review packet.
+    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this competitor brief's scope.
 comparison:
   eyebrow: Comparison
-  title: When a review packet beats another workflow.
+  title: When a competitor brief beats another workflow.
   ariaLabel: Traditional tools compared with this competitor seo intel workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
@@ -172,16 +172,16 @@ comparison:
       right: Pay-as-you-go endpoint mix selected for the request
     - category: Output
       left: Manual exports and screenshots to reconcile
-      right: One competitor intelligence brief with timestamps, costs, and candidates
+      right: One competitor brief with timestamps, costs, and candidates
     - category: Cadence
       left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first packet earns them
+      right: Budgeted repeated checks only when the first brief earns them
     - category: Action
       left: Research and operational action mixed together
       right: Options stay review-only until a human approves action
 useCases:
   eyebrow: Use cases
-  title: Use the packet when timing matters.
+  title: Use the brief when timing matters.
   items:
     - title: SEO Keyword Gap Snapshot
       text: Start with one bounded request when a source-backed answer is needed before more budget or action.
@@ -190,7 +190,7 @@ useCases:
     - title: Launch Monitoring And
       text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
     - title: Reviewer handoff with proof
-      text: Package findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+      text: Hand off findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
 closing:
   eyebrow: Focused run
   title: Start with the smallest useful check.
@@ -202,9 +202,9 @@ closing:
     - Require approval before mutations, sends, or spend.
 faq:
   eyebrow: FAQ
-  title: Before the first review packet.
+  title: Before the first competitor brief.
   items:
-    - question: What does the review packet return?
+    - question: What does the competitor brief return?
       answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
       open: true
     - question: Which tools matter most?

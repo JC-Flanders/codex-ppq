@@ -1,16 +1,16 @@
 ---
 layout: ../layouts/UseCasePage.astro
 title: Concierge Checkout on demand | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed review packet with costs, timestamps, and human approval.
+description: Use pay-as-you-go tools to check one bounded request and return a source-backed buyer brief with costs, timestamps, and human approval.
 bodyClass: page-bumi page-usecase page-13-autonomous-buyer-or-concierge-checkout
 themeColor: "#101113"
 ogTitle: Concierge Checkout briefs, paid per focused check.
 ogDescription: Give your agent a purchase request and constraints, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
 schema:
   name: Autonomous Buyer Or Concierge Checkout
-  description: A pay-as-you-go concierge checkout workflow for agents that return a source-backed buyer options packet.
+  description: A pay-as-you-go concierge checkout workflow for agents that return a source-backed buyer brief.
   mainEntityName: Autonomous Buyer Or Concierge Checkout
-  mainEntityDescription: Combines purchase request and constraints, public source checks, priced endpoint calls, and review controls into a focused buyer options packet.
+  mainEntityDescription: Combines purchase request and constraints, public source checks, priced endpoint calls, and review controls into a focused buyer brief.
   providerName: 402box
 hero:
   backdrop:
@@ -22,11 +22,11 @@ hero:
   integration:
     - Source APIs
     - Evidence
-    - Packet run
+    - Brief run
   title:
     text: Plan the purchase,
     highlight: not auto-checkout.
-  lead: Give your agent a purchase request and constraints, source limits, and budget cap. Get a buyer options packet with timestamps, costs, caveats, and approval boundaries before action.
+  lead: Give your agent a purchase request and constraints, source limits, and budget cap. Get a buyer brief with options, timestamps, costs, caveats, and approval boundaries before action.
   actions:
     - label: Budget first
       text: Plan Focused Run
@@ -37,15 +37,15 @@ hero:
       href: "#example"
   trust:
     - Source checks
-    - Evidence packet
+    - Source proof trail
     - Budget caps
     - Human approval
   preview:
     ariaLabel: Concierge Checkout request to output preview
     request: Find purchase options for this item under my constraints. Compare merchants, availability, price, shipping, policy caveats, proof links, and return a shortlist. Do not buy, submit forms, or use payment details.
-    responseAriaLabel: Example concierge checkout buyer options packet
+    responseAriaLabel: Example concierge checkout buyer brief
     resultLabel: Result
-    resultTitle: Brief pack
+    resultTitle: Buyer brief
     code: |-
       {
         "job": "Concierge Checkout",
@@ -53,32 +53,32 @@ hero:
         "planned_calls": 8,
         "call_budget": "$12-$16+ cap to $0.058-$0.068",
         "status": "review_required",
-        "packet": [
-          "buyer options packet: source-backed summary with timestamps.",
+        "brief": [
+          "buyer brief: source-backed shortlist with timestamps.",
           "Tools: Prospect Butcher, Martin Estate Winery, PostalForm.",
-          "Next step: approve more calls only if the first packet is useful."
+          "Next step: approve purchase or deeper checks only after review."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One buyer options packet. Evidence, costs, and next checks.
-  text: Pay-as-you-go access is useful when a purchase request and constraints need a focused answer now, not a permanent provider stack. The agent returns a buyer options packet with proof, costs, and next checks.
+  title: One buyer brief. Evidence, costs, and next checks.
+  text: Pay-as-you-go access is useful when a purchase request and constraints need a focused answer now, not a permanent provider stack. The agent returns a buyer brief with proof, costs, and next checks.
   ariaLabel: Concierge Checkout input and output details
   features:
     - title: Input
       text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
     - title: Output
-      text: A review packet with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: A buyer brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
     - title: Best fit
-      text: Workflow options, review packet, source proof, and narrow jobs that need approval before action.
+      text: Workflow options, buyer brief, source proof, and narrow jobs that need approval before action.
 results:
   eyebrow: Real tools, bounded spend
-  title: A priced source packet for human review.
+  title: A buyer brief priced for human review.
   text: Use rough source ranges such as $12-$16, $0.058-$0.068, $48-$185 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
   metrics:
     - label: Lunch Pickup Concierge
       value: $12-$16+ cap
-      text: Lunch Pickup Concierge starts with cheap source checks and returns a narrow buyer options packet before expansion.
+      text: Lunch Pickup Concierge starts with cheap source checks and returns a narrow buyer brief before expansion.
       large: true
     - label: Wine Gift With Mailed
       value: $0.058-$0.068
@@ -88,7 +88,7 @@ results:
       text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
     - label: Expanded review run
       value: $3.40-$200.00
-      text: Use only when the first buyer options packet justifies more providers, deeper evidence, or repeated monitoring.
+      text: Use only when the first buyer brief justifies more providers, deeper evidence, or repeated monitoring.
 steps:
   titleId: workflow-title
   eyebrow: How it works
@@ -105,8 +105,8 @@ steps:
       title: Gather source proof
       text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
     - number: "04"
-      title: Return the packet
-      text: Deliver the buyer options packet, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Return the brief
+      text: Deliver the buyer brief, source links, cost notes, open questions, and actions that still need explicit human approval.
 benefits:
   eyebrow: Benefits
   title: Use focused checks before buying the stack.
@@ -118,7 +118,7 @@ benefits:
     - title: Budget-first instructions
       text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the focused run.
     - title: Human approval for real actions
-      text: The packet can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
+      text: The buyer brief can inform a decision, but sends, purchases, filings, account actions, signatures, and extra spend require approval.
 facts:
   eyebrow: Tool details
   title: Keep source facts visible before each run.
@@ -132,7 +132,7 @@ facts:
     - label: Primary input
       value: purchase request and constraints, source limits, and budget cap
     - label: Primary output
-      value: buyer options packet, timestamps, costs, caveats, and next checks
+      value: buyer brief, shortlisted options, costs, caveats, and next checks
     - label: Dynamic costs
       value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
     - label: Execution status
@@ -146,17 +146,18 @@ prompt:
   code: |-
     Find purchase options for this item under my constraints. Compare merchants, availability, price, shipping, policy caveats, proof links, and return a shortlist. Do not buy, submit forms, or use payment details.
 
-    Use the local Concierge Checkout workflow to return a buyer options packet. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Use the local Concierge Checkout workflow to return a buyer brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
 
-    Return a concise packet with:
+    Return a concise buyer brief with:
     - the cleaned input and assumptions
     - the source names, timestamps, and links used
     - the key findings separated from generated recommendations
     - rough cost notes and any dynamic pricing caveats
     - conflicts, stale sources, missing fields, and open questions
+    - the recommended option and approval boundary for each action
     - the next checks worth running only after approval
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this focused run.
+    Do not buy, book, send, submit forms, sign, pay, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this buyer brief.
 comparison:
   eyebrow: Comparison
   title: When one focused run beats a full stack.
@@ -172,10 +173,10 @@ comparison:
       right: Pay-as-you-go endpoint mix selected for the request
     - category: Output
       left: Manual exports and screenshots to reconcile
-      right: One buyer options packet with timestamps, costs, and candidates
+      right: One buyer brief with timestamps, costs, and candidates
     - category: Cadence
       left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first packet earns them
+      right: Budgeted repeated checks only when the first brief earns them
     - category: Action
       left: Research and operational action mixed together
       right: Options stay review-only until a human approves action
@@ -204,7 +205,7 @@ faq:
   eyebrow: FAQ
   title: Before the first focused run.
   items:
-    - question: What does the review packet return?
+    - question: What does the buyer brief return?
       answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
       open: true
     - question: Which tools matter most?

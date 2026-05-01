@@ -1,16 +1,16 @@
 ---
 layout: ../layouts/UseCasePage.astro
 title: Content Localization on demand | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed review packet with costs, timestamps, and human approval.
+description: Use pay-as-you-go localization tools to turn one source asset into a locale brief with costs, anchors, and approval gates.
 bodyClass: page-bumi page-usecase page-17-content-localization-and-repurposing
 themeColor: "#101113"
 ogTitle: Content Localization briefs, paid per focused check.
 ogDescription: Give your agent a source content, locale, and channel, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
 schema:
   name: Content Localization And Repurposing
-  description: A pay-as-you-go content localization workflow for agents that return a source-backed localized content packet.
+  description: A pay-as-you-go content localization workflow for agents that return a source-backed locale brief.
   mainEntityName: Content Localization And Repurposing
-  mainEntityDescription: Combines source content, locale, and channel, public source checks, priced endpoint calls, and review controls into a focused localized content packet.
+  mainEntityDescription: Combines source content, locale, channel goals, priced endpoint calls, and review controls into a focused locale brief.
   providerName: 402box
 hero:
   backdrop:
@@ -20,13 +20,13 @@ hero:
   topLinkText: Use cases
   topLinkHref: "#use-cases"
   integration:
-    - Source APIs
-    - Evidence
-    - Packet run
+    - DeepL API
+    - Deepgram
+    - Locale brief
   title:
     text: Adapt the content,
     highlight: not every agency.
-  lead: Give your agent a source content, locale, and channel, source limits, and budget cap. Get a localized content packet with timestamps, costs, caveats, and approval boundaries before action.
+  lead: Give your agent one source asset, target locale, channel, glossary limits, and budget cap. Get a locale brief with translated drafts, anchors, costs, caveats, and approval gates.
   actions:
     - label: Budget first
       text: Plan Focused Run
@@ -36,16 +36,16 @@ hero:
       text: Inspect Output
       href: "#example"
   trust:
-    - Source checks
-    - Evidence packet
+    - Source anchors
+    - Draft variants
     - Budget caps
     - Human approval
   preview:
     ariaLabel: Content Localization request to output preview
     request: Localize this content for a new market and channel. Extract the source, translate or adapt tone, check cultural and SEO context, show assumptions, and return drafts without publishing.
-    responseAriaLabel: Example content localization localized content packet
+    responseAriaLabel: Example content locale brief
     resultLabel: Result
-    resultTitle: Brief pack
+    resultTitle: Locale brief
     code: |-
       {
         "job": "Content Localization",
@@ -53,42 +53,42 @@ hero:
         "planned_calls": 8,
         "call_budget": "$0.074+ cap to $0.083-$0.091",
         "status": "review_required",
-        "packet": [
-          "localized content packet: source-backed summary with timestamps.",
-          "Tools: DeepL, Deepgram, Mathpix.",
-          "Next step: approve more calls only if the first packet is useful."
+        "locale_brief": [
+          "Source-aligned transcript, OCR, or campaign sections with timestamps or page anchors.",
+          "Tools: DeepL, Deepgram, Mathpix, and one editorial review model.",
+          "Next step: reviewer approves the draft locale, glossary exceptions, or more calls."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One localized content packet. Evidence, costs, and next checks.
-  text: Pay-as-you-go access is useful when source content, locale, and channel needs a focused answer now, not a permanent provider stack. The agent returns a localized content packet with proof, costs, and next checks.
+  title: One locale brief. Drafts, anchors, and next checks.
+  text: Pay-as-you-go access helps localize one source asset without a permanent translation stack. The agent returns a locale brief with translated drafts, anchors, cost notes, glossary flags, caveats, and next checks.
   ariaLabel: Content Localization input and output details
   features:
     - title: Input
-      text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
+      text: A recording, document, slide, campaign note, target locale, channel, glossary constraints, and budget cap.
     - title: Output
-      text: A review packet with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: A locale brief with translated drafts, timestamps or page anchors, cost notes, glossary flags, and next steps.
     - title: Best fit
-      text: Workflow options, review packet, source proof, and narrow jobs that need approval before action.
+      text: Audio-to-copy, technical documents, launch variants, and jobs that need review before publishing.
 results:
   eyebrow: Real tools, bounded spend
-  title: A priced source packet for human review.
-  text: Use rough source ranges such as $0.074, $0.083-$0.091+, $0.078-$0.192+ as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  title: A priced locale brief for human review.
+  text: Use rough source ranges such as $0.074, $0.083-$0.091+, $0.078-$0.192+ as planning inputs, not live verified prices. Keep dynamic translation, model, and media costs visible.
   metrics:
     - label: Media Localization
       value: $0.074+ cap
-      text: Audio Or Video Into Localized starts with cheap source checks and returns a narrow localized content packet before expansion.
+      text: Audio or video localization starts with transcription, analysis, translation, and a narrow locale brief before expansion.
       large: true
     - label: Document Translation
       value: $0.083-$0.091
-      text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
+      text: Adds Mathpix OCR, translation, terminology matching, and review notes for technical pages, slides, or screenshots.
     - label: Localized Launch Asset
       value: $0.078+
-      text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
+      text: Builds locale-specific email, landing-page, social, alt-text, and narration drafts after text scope is capped.
     - label: Expanded review run
       value: $0.084-$0.094
-      text: Use only when the first localized content packet justifies more providers, deeper evidence, or repeated monitoring.
+      text: Use only when the first locale brief justifies delivery, media generation, more providers, or deeper QA.
 steps:
   titleId: workflow-title
   eyebrow: How it works
@@ -105,8 +105,8 @@ steps:
       title: Gather source proof
       text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
     - number: "04"
-      title: Return the packet
-      text: Deliver the localized content packet, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Return the brief
+      text: Deliver the locale brief, source anchors, cost notes, open questions, and actions that still need explicit human approval.
 benefits:
   eyebrow: Benefits
   title: Use focused checks before buying the stack.
@@ -118,7 +118,7 @@ benefits:
     - title: Budget-first instructions
       text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the focused run.
     - title: Human approval for real actions
-      text: The packet can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
+      text: The brief can inform a localization decision, but sends, uploads, media generation, wallet signatures, and expanded spend require approval.
 facts:
   eyebrow: Tool details
   title: Keep source facts visible before each run.
@@ -130,9 +130,9 @@ facts:
     - label: Support rails
       value: Mathpix, OpenAI, Anthropic, Mistral AI, fal.ai, Stability AI with review notes
     - label: Primary input
-      value: source content, locale, and channel, source limits, and budget cap
+      value: Source asset, target locale, channel, glossary limits, and budget cap
     - label: Primary output
-      value: localized content packet, timestamps, costs, caveats, and next checks
+      value: Locale brief with drafts, anchors, costs, caveats, and next checks
     - label: Dynamic costs
       value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
     - label: Execution status
@@ -146,12 +146,13 @@ prompt:
   code: |-
     Localize this content for a new market and channel. Extract the source, translate or adapt tone, check cultural and SEO context, show assumptions, and return drafts without publishing.
 
-    Use the local Content Localization workflow to return a localized content packet. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Use the local Content Localization workflow to return a locale brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
 
-    Return a concise packet with:
+    Return a concise locale brief with:
     - the cleaned input and assumptions
-    - the source names, timestamps, and links used
-    - the key findings separated from generated recommendations
+    - source names, timestamps or page anchors, and links used
+    - localized transcript sections, document copy, or channel drafts
+    - glossary exceptions, terminology risks, and reviewer flags
     - rough cost notes and any dynamic pricing caveats
     - conflicts, stale sources, missing fields, and open questions
     - the next checks worth running only after approval
@@ -172,10 +173,10 @@ comparison:
       right: Pay-as-you-go endpoint mix selected for the request
     - category: Output
       left: Manual exports and screenshots to reconcile
-      right: One localized content packet with timestamps, costs, and candidates
+      right: One locale brief with drafts, anchors, costs, and reviewer flags
     - category: Cadence
       left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first packet earns them
+      right: Budgeted repeated checks only when the first brief earns them
     - category: Action
       left: Research and operational action mixed together
       right: Options stay review-only until a human approves action
@@ -204,8 +205,8 @@ faq:
   eyebrow: FAQ
   title: Before the first focused run.
   items:
-    - question: What does the review packet return?
-      answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+    - question: What does the locale brief return?
+      answer: It can return cleaned source input, localized drafts, provider names, timestamps or page anchors, glossary flags, rough costs, unresolved conflicts, and next checks a human should review.
       open: true
     - question: Which tools matter most?
       answer: DeepL, Deepgram, Mathpix, OpenAI, Anthropic are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.

@@ -1,16 +1,16 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Travel Rebooking on demand | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed review packet with costs, timestamps, and human approval.
+title: Travel rebooking brief on demand | 402box
+description: Use pay-as-you-go travel tools to check a disruption, compare replacement options, and return a source-backed rebooking brief for human approval.
 bodyClass: page-bumi page-usecase page-04-travel-disruption-and-rebooking-assistant
 themeColor: "#101113"
-ogTitle: Travel Rebooking briefs, paid per focused check.
-ogDescription: Give your agent a trip disruption and constraints, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
+ogTitle: Travel rebooking briefs, paid per focused check.
+ogDescription: Give your agent a disrupted flight, constraints, budget cap, and stop conditions. Get flight evidence, replacement options, costs, and next checks for human review.
 schema:
   name: Travel Disruption And Rebooking Assistant
-  description: A pay-as-you-go travel rebooking workflow for agents that return a source-backed rebooking options brief.
+  description: A pay-as-you-go travel rebooking workflow for agents that return a source-backed rebooking brief.
   mainEntityName: Travel Disruption And Rebooking Assistant
-  mainEntityDescription: Combines trip disruption and constraints, public source checks, priced endpoint calls, and review controls into a focused rebooking options brief.
+  mainEntityDescription: Combines flight status, airport context, replacement fares, hotels, transfers, weather, maps, currency, and review controls into a focused rebooking brief.
   providerName: 402box
 hero:
   backdrop:
@@ -22,11 +22,11 @@ hero:
   integration:
     - Source APIs
     - Evidence
-    - Packet run
+    - Rebook brief
   title:
     text: Recover the trip,
     highlight: not every portal.
-  lead: Give your agent a trip disruption and constraints, source limits, and budget cap. Get a rebooking options brief with timestamps, costs, caveats, and approval boundaries before action.
+  lead: Give your agent a disrupted flight, constraints, airport context, and budget cap. Get a rebooking brief with flight state, alternatives, local-time deadlines, costs, and approval boundaries.
   actions:
     - label: Budget first
       text: Plan Focused Run
@@ -37,15 +37,15 @@ hero:
       href: "#example"
   trust:
     - Source checks
-    - Evidence packet
+    - Evidence trail
     - Budget caps
     - Human approval
   preview:
     ariaLabel: Travel Rebooking request to output preview
     request: My flight was disrupted. Check replacement flights, hotel and ground options, weather or airport context, price ranges, source timestamps, refund or policy caveats, and return options for review without booking anything.
-    responseAriaLabel: Example travel rebooking rebooking options brief
+    responseAriaLabel: Example travel rebooking brief
     resultLabel: Result
-    resultTitle: Brief pack
+    resultTitle: Rebook brief
     code: |-
       {
         "job": "Travel Rebooking",
@@ -53,42 +53,42 @@ hero:
         "planned_calls": 8,
         "call_budget": "$0.09-$0.11 to $0.16-$0.18",
         "status": "review_required",
-        "packet": [
-          "rebooking options brief: source-backed summary with timestamps.",
-          "Tools: StableTravel, SerpApi Google Flights, FlightAPI.",
-          "Next step: approve more calls only if the first packet is useful."
+        "brief": [
+          "disruption triage: flight state, airport delay context, and local-time deadlines.",
+          "replacement options: sourced fares, transfer timing, and hotel candidates when needed.",
+          "next step: approve bookings, messages, or more calls only after review."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One rebooking options brief. Evidence, costs, and next checks.
-  text: Pay-as-you-go access is useful when a trip disruption and constraints need a focused answer now, not a permanent provider stack. The agent returns a rebooking options brief with proof, costs, and next checks.
+  title: One rebooking brief. Evidence, costs, and next checks.
+  text: Pay-as-you-go access is useful when a flight disruption needs a focused answer now, not a permanent travel data stack. The agent returns a rebooking brief with proof, costs, and next checks.
   ariaLabel: Travel Rebooking input and output details
   features:
     - title: Input
-      text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
+      text: Booked flight, airport, traveler location, destination constraints, preferred currency, and budget cap.
     - title: Output
-      text: A review packet with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: A rebooking brief with a triage card, replacement-flight shortlist, overnight plan, timestamps, and cost notes.
     - title: Best fit
-      text: Workflow options, review packet, source proof, and narrow jobs that need approval before action.
+      text: Flight disruption triage, replacement fare checks, overnight plans, and handoffs before action.
 results:
   eyebrow: Real tools, bounded spend
-  title: A priced source packet for human review.
-  text: Use rough source ranges such as $0.09-$0.11, $0.16-$0.18, $0.22-$0.23 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  title: A priced rebooking brief for human review.
+  text: Use rough source ranges such as $0.09-$0.11, $0.16-$0.18, $0.22-$0.23 as planning inputs, not live verified prices. Keep dynamic costs, provider freshness, and booking gaps visible.
   metrics:
-    - label: Flight Disruption
+    - label: Disruption triage
       value: $0.09-$0.11
-      text: Flight Disruption Triage starts with cheap source checks and returns a narrow rebooking options brief before expansion.
+      text: Checks the booked flight, airport delays, weather, route timing, and local deadlines before deciding whether to wait or rebook.
       large: true
-    - label: Replacement Flight And
+    - label: Replacement shortlist
       value: $0.16-$0.18
-      text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
-    - label: Overnight Stranding Plan
+      text: Compares replacement fares, schedules, airport-transfer timing, quote currencies, and gaps before a travel desk call.
+    - label: Overnight recovery plan
       value: $0.22+
-      text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
-    - label: Expanded review run
+      text: Builds hotel, transfer, next-flight, weather, map, and local-currency options if the traveler may be stranded.
+    - label: Expanded rebooking check
       value: $0.002+ cap
-      text: Use only when the first rebooking options brief justifies more providers, deeper evidence, or repeated monitoring.
+      text: Add alternate-airport matrix elements, repeated polling, extra hotel details, or notification paths only after approval.
 steps:
   titleId: workflow-title
   eyebrow: How it works
@@ -96,17 +96,17 @@ steps:
   text: Run cheap source checks first, add richer tools only for promising signals, and keep mutations, outreach, payments, and expanded budgets under human approval.
   items:
     - number: "01"
-      title: Normalize the input
-      text: Turn the trip disruption and constraints into clean entities, constraints, and source limits before paid calls.
+      title: Normalize the trip
+      text: Turn flight number, date, airports, location, destination constraints, and currency into clean paid-call inputs.
     - number: "02"
       title: Estimate the budget
-      text: Show selected tools, expected call counts, rough ranges, dynamic endpoints, and stop conditions before the run begins.
+      text: Show selected travel tools, expected call counts, rough ranges, dynamic fanout, and stop conditions before the run begins.
     - number: "03"
-      title: Gather source proof
-      text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
+      title: Gather travel proof
+      text: Check flight status, airport disruption, weather, route timing, replacement fares, hotel or transfer options, and source timestamps.
     - number: "04"
-      title: Return the packet
-      text: Deliver the rebooking options brief, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Return the brief
+      text: Deliver the triage recommendation, ranked options, cost notes, open questions, and actions that still need explicit human approval.
 benefits:
   eyebrow: Benefits
   title: Use focused checks before buying the stack.
@@ -118,7 +118,7 @@ benefits:
     - title: Budget-first instructions
       text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the focused run.
     - title: Human approval for real actions
-      text: The packet can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
+      text: The brief can inform decisions, but bookings, cancellations, passenger data, message sends, wallet signatures, and spend need approval.
 facts:
   eyebrow: Tool details
   title: Keep source facts visible before each run.
@@ -130,33 +130,35 @@ facts:
     - label: Support rails
       value: FlightAPI, GoFlightLabs, AviationStack, OpenWeather, Exchange Rates, SerpApi
     - label: Primary input
-      value: trip disruption and constraints, source limits, and budget cap
+      value: booked flight, airports, traveler constraints, currency, and budget cap
     - label: Primary output
-      value: rebooking options brief, timestamps, costs, caveats, and next checks
+      value: rebooking brief with triage card, shortlist, overnight plan, costs
     - label: Dynamic costs
       value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
     - label: Execution status
       value: Scenario plan only, no endpoint calls performed
 prompt:
   eyebrow: Example prompt
-  title: Give your agent a travel rebooking job.
-  text: Keep the trip disruption and constraints, source limits, output format, call budget, and approval boundaries explicit before paid or repeated checks begin.
+  title: Give your agent a rebooking brief request.
+  text: Keep the disrupted flight, constraints, output format, call budget, and approval boundaries explicit before paid or repeated checks begin.
   copyTarget: 04-travel-disruption-and-rebooking-assistant-prompt
   buttonLabel: Copy prompt
   code: |-
     My flight was disrupted. Check replacement flights, hotel and ground options, weather or airport context, price ranges, source timestamps, refund or policy caveats, and return options for review without booking anything.
 
-    Use the local Travel Rebooking workflow to return a rebooking options brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Use StableTravel for flight status, flight search, price confirmation, hotels, transfers, and airport context when needed. Use FlightAPI, GoFlightLabs, AviationStack, SerpApi Google Flights, OpenWeather, maps, Timezone, and Exchange Rates only where they improve the rebooking decision.
 
-    Return a concise packet with:
-    - the cleaned input and assumptions
-    - the source names, timestamps, and links used
-    - the key findings separated from generated recommendations
-    - rough cost notes and any dynamic pricing caveats
-    - conflicts, stale sources, missing fields, and open questions
+    Before doing the work, estimate the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning. I will approve the call budget before the run starts.
+
+    Return a concise rebooking brief with:
+    - the cleaned flight, airport, traveler, hotel-area, currency, and timing assumptions
+    - current flight state, airport disruption context, weather risk, and local-time deadlines
+    - ranked replacement flights with fare, timing, transfer notes, quote currency, and source timestamp
+    - hotel, transfer, and morning recovery candidates if an overnight stay is likely
+    - conflicts, stale sources, missing fare or hotel fields, cost notes, and open questions
     - the next checks worth running only after approval
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this focused run.
+    Do not book flights, cancel travel, reserve hotels or transfers, submit passenger details, send notifications, sign wallet messages, pay invoices, buy inboxes, or expand spend without explicit approval.
 comparison:
   eyebrow: Comparison
   title: When one focused run beats a full stack.
@@ -172,29 +174,29 @@ comparison:
       right: Pay-as-you-go endpoint mix selected for the request
     - category: Output
       left: Manual exports and screenshots to reconcile
-      right: One rebooking options brief with timestamps, costs, and candidates
+      right: One rebooking brief with timestamps, costs, and candidates
     - category: Cadence
       left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first packet earns them
+      right: Budgeted repeated checks only when the first rebooking brief supports them
     - category: Action
       left: Research and operational action mixed together
       right: Options stay review-only until a human approves action
 useCases:
   eyebrow: Use cases
-  title: Use focused checks to decide when to act.
+  title: Use rebooking briefs to decide when to act.
   items:
     - title: Flight Disruption Triage
-      text: Start with one bounded request when a source-backed answer is needed before more budget or action.
-    - title: Replacement Flight And
-      text: Compare source families, show conflicts, and decide whether richer checks are worth the next run.
+      text: Decide whether the traveler should go now, wait, call the airline, or start a replacement search.
+    - title: Replacement shortlist
+      text: Compare replacement flights, fares, local-time windows, and airport-transfer implications before a travel desk call.
     - title: Overnight Stranding Plan
-      text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
+      text: Build hotel, transfer, weather, next-flight, and local-currency options when an overnight stay may be needed.
     - title: Reviewer handoff with proof
-      text: Package findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+      text: Package evidence, caveats, costs, and next actions so a traveler, assistant, or coordinator can approve the next move.
 closing:
   eyebrow: Focused run
-  title: Start with one narrow request first.
-  text: No broad subscription stack. No silent expansion. Your agent pays only for the relevant checks needed to decide whether the next step is worth review.
+  title: Start with one rebooking brief first.
+  text: No broad subscription stack. No silent expansion. Your agent pays only for the relevant checks needed to decide whether the next travel move is worth review.
   items:
     - Start with the cheapest useful source checks.
     - Cap providers, fanout, screenshots, and model calls.
@@ -202,17 +204,17 @@ closing:
     - Require approval before mutations, sends, or spend.
 faq:
   eyebrow: FAQ
-  title: Before the first focused run.
+  title: Before the first rebooking brief.
   items:
-    - question: What does the review packet return?
-      answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+    - question: What does the rebooking brief return?
+      answer: It can return trip inputs, flight state, airport delays, weather risk, replacement options, hotel or transfer candidates, timestamps, confidence labels, rough costs, conflicts, and next checks for review.
       open: true
     - question: Which tools matter most?
-      answer: StableTravel, SerpApi Google Flights, FlightAPI, GoFlightLabs, AviationStack are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.
+      answer: StableTravel, SerpApi Google Flights, FlightAPI, GoFlightLabs, AviationStack, OpenWeather, maps, Timezone, Exchange Rates, AgentMail, and StableEmail are the main tools surfaced by the source bundle. Add each one only when it improves the rebooking decision.
     - question: How much does a focused run cost?
       answer: The local source bundle gives rough ranges such as $0.09-$0.11, $0.16-$0.18, $0.22-$0.23, $0.002. Dynamic endpoints should be capped before execution, and repeated checks should be approved separately.
     - question: What needs human approval?
-      answer: The default workflow returns reviewable candidates and tradeoffs. Purchases, bookings, filings, account actions, outreach, uploads, sends, wallet signatures, payments, and expanded budgets require explicit approval.
+      answer: The default workflow returns candidates and tradeoffs. Flight or hotel bookings, cancellations, transfer reservations, passenger-data submission, notifications, wallet signatures, invoice payments, and expanded budgets require approval.
     - question: What should I watch for?
       answer: Keep source freshness, timestamps, provider limits, dynamic prices, retry behavior, source links, approval boundaries, and generated recommendations separate from observed facts.
 footer:

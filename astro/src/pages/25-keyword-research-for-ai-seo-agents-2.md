@@ -1,16 +1,16 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Keyword Research review packet | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed review packet with costs, timestamps, and human approval.
+title: Keyword research brief run | 402box
+description: Use pay-as-you-go tools to check a keyword, market, or client domain and return a source-backed keyword brief with costs, timestamps, and next-page recommendations.
 bodyClass: page-bumi page-usecase page-25-keyword-research-for-ai-seo-agents page-alt
 themeColor: "#101113"
-ogTitle: Keyword Research briefs, paid per focused check.
-ogDescription: Give your agent a keyword, market, or client domain, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
+ogTitle: Keyword briefs, paid per focused check.
+ogDescription: Give your agent a keyword, market, or client domain, budget cap, and stop conditions. Get keyword metrics, ranking-page evidence, rough costs, and next checks for human review.
 schema:
   name: Keyword Research For AI SEO Agents
-  description: A pay-as-you-go keyword research workflow for agents that return a source-backed keyword opportunity packet.
+  description: A pay-as-you-go keyword research workflow for agents that return a source-backed keyword brief.
   mainEntityName: Keyword Research For AI SEO Agents
-  mainEntityDescription: Combines keyword, market, or client domain, public source checks, priced endpoint calls, and review controls into a focused keyword opportunity packet.
+  mainEntityDescription: Combines keyword metrics, current ranking-page evidence, priced endpoint calls, and review controls into a focused keyword brief.
   providerName: 402box
 hero:
   backdrop:
@@ -22,11 +22,11 @@ hero:
   integration:
     - Source APIs
     - Evidence
-    - Packet run
+    - Keyword brief
   title:
     text: Check the keyword,
     highlight: not every SEO suite.
-  lead: Give your agent a keyword, market, or client domain, source limits, and budget cap. Get a keyword opportunity packet with timestamps, costs, caveats, and approval boundaries before action.
+  lead: Give your agent a keyword, market, or client domain, source limits, and budget cap. Get a keyword brief with metrics, ranking-page proof, costs, caveats, and approvals before action.
   actions:
     - label: Budget first
       text: Plan Focused Run
@@ -37,15 +37,15 @@ hero:
       href: "#example"
   trust:
     - Source checks
-    - Evidence packet
+    - Ranking-page proof
     - Budget caps
     - Human approval
   preview:
     ariaLabel: Keyword Research request to output preview
     request: Check this keyword opportunity before we write. Pull keyword, competitor, ranking-page, social-language, proof, and cost signals, then return a recommendation with no publishing or ad spend.
-    responseAriaLabel: Example keyword research keyword opportunity packet
+    responseAriaLabel: Example keyword research keyword brief
     resultLabel: Result
-    resultTitle: Review pack
+    resultTitle: Keyword brief
     code: |-
       {
         "job": "Keyword Research",
@@ -53,42 +53,42 @@ hero:
         "planned_calls": 12,
         "call_budget": "$0.11-$0.12 to $0.16-$0.18",
         "status": "review_required",
-        "packet": [
-          "keyword opportunity packet: source-backed summary with timestamps.",
-          "Tools: SpyFu, BuiltWith, StableSocial.",
-          "Next step: approve more calls only if the first packet is useful."
+        "keyword_brief": [
+          "Verdict: write a comparison page if authority and intent fit.",
+          "Proof: SpyFu signals plus current ranking-page examples.",
+          "Next step: approve screenshots only for shortlisted pages."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One keyword opportunity packet. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when keyword, market, or client domain needs a focused answer now, not a permanent provider stack. The agent returns a keyword opportunity packet with proof, costs, and next checks.
+  title: One keyword brief. Inputs, caveats, and approvals.
+  text: Pay-as-you-go access is useful when a keyword, market, or client domain needs a focused answer now, not a permanent SEO platform. The agent returns a keyword brief with metrics, page proof, costs, and next checks.
   ariaLabel: Keyword Research input and output details
   features:
     - title: Input
       text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
     - title: Output
-      text: A review packet with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: A keyword brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
     - title: Best fit
-      text: Workflow options, review packet, source proof, and narrow jobs that need approval before action.
+      text: Keyword checks, content briefs, client audits, and SEO decisions that need approval.
 results:
   eyebrow: Real tools, bounded spend
-  title: A review packet shaped for human decisions.
-  text: Use rough source ranges such as $0.11-$0.12, $0.16-$0.18, $0.85-$0.86 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  title: A keyword brief shaped for human decisions.
+  text: Use rough source ranges such as $0.11-$0.18, $0.85-$0.86, and $1.68-$1.70 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
   metrics:
-    - label: Single Keyword Check
-      value: $0.11-$0.12
-      text: Single Keyword Opportunity starts with cheap source checks and returns a narrow keyword opportunity packet before expansion.
+    - label: Single keyword card
+      value: $0.11-$0.18
+      text: Checks one seed term, related ideas, ranking-page examples, and a write-now or avoid recommendation before expansion.
       large: true
-    - label: Content Brief And SERP
-      value: $0.16-$0.18
-      text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
-    - label: Client Keyword Audit
-      value: $0.85+
-      text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
-    - label: Expanded review run
+    - label: Content brief sprint
+      value: $0.85-$0.86
+      text: Turns a short keyword list into clusters, page types, proof links, screenshots, and title angles for a content sprint.
+    - label: Client keyword audit
+      value: $1.70
+      text: Adds competitor domains, history, paid-search pressure, audience language, and a first-sprint recommendation.
+    - label: Added keyword check
       value: $0.030+ cap
-      text: Use only when the first keyword opportunity packet justifies more providers, deeper evidence, or repeated monitoring.
+      text: Expand only when the first keyword brief justifies more candidates, deeper proof, or repeated checks.
 steps:
   titleId: workflow-title
   eyebrow: How it works
@@ -105,8 +105,8 @@ steps:
       title: Gather source proof
       text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
     - number: "04"
-      title: Return the packet
-      text: Deliver the keyword opportunity packet, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Return the brief
+      text: Deliver the keyword brief, source links, cost notes, open questions, and actions that still need explicit human approval.
 benefits:
   eyebrow: Benefits
   title: Keep the decision small before the stack grows.
@@ -116,9 +116,9 @@ benefits:
     - title: Cheaper checks before deeper evidence
       text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
     - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the review packet.
+      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the keyword brief.
     - title: Human approval for real actions
-      text: The packet can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
+      text: The keyword brief can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and more spend require approval.
 facts:
   eyebrow: Tool details
   title: Use tool facts to control the next call.
@@ -132,7 +132,7 @@ facts:
     - label: Primary input
       value: keyword, market, or client domain, source limits, and budget cap
     - label: Primary output
-      value: keyword opportunity packet, timestamps, costs, caveats, and next checks
+      value: keyword brief, timestamps, costs, caveats, and next checks
     - label: Dynamic costs
       value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
     - label: Execution status
@@ -146,9 +146,9 @@ prompt:
   code: |-
     Check this keyword opportunity before we write. Pull keyword, competitor, ranking-page, social-language, proof, and cost signals, then return a recommendation with no publishing or ad spend.
 
-    Use the local Keyword Research workflow to return a keyword opportunity packet. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Use the local Keyword Research workflow to return a keyword brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and clear stop conditions before beginning.
 
-    Return a concise packet with:
+    Return a concise keyword brief with:
     - the cleaned input and assumptions
     - the source names, timestamps, and links used
     - the key findings separated from generated recommendations
@@ -156,10 +156,10 @@ prompt:
     - conflicts, stale sources, missing fields, and open questions
     - the next checks worth running only after approval
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this review packet.
+    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this focused run.
 comparison:
   eyebrow: Comparison
-  title: When a review packet beats another workflow.
+  title: When one keyword brief beats another workflow.
   ariaLabel: Traditional tools compared with this keyword research workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
@@ -172,16 +172,16 @@ comparison:
       right: Pay-as-you-go endpoint mix selected for the request
     - category: Output
       left: Manual exports and screenshots to reconcile
-      right: One keyword opportunity packet with timestamps, costs, and candidates
+      right: One keyword brief with timestamps, costs, and page candidates
     - category: Cadence
       left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first packet earns them
+      right: Budgeted repeated checks only when the first brief earns them
     - category: Action
       left: Research and operational action mixed together
       right: Options stay review-only until a human approves action
 useCases:
   eyebrow: Use cases
-  title: Use the packet when timing matters.
+  title: Use the brief when timing matters.
   items:
     - title: Single Keyword Check
       text: Start with one bounded request when a source-backed answer is needed before more budget or action.
@@ -190,7 +190,7 @@ useCases:
     - title: Client Keyword Audit
       text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
     - title: Reviewer handoff with proof
-      text: Package findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+      text: Hand off findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
 closing:
   eyebrow: Focused run
   title: Start with the smallest useful check.
@@ -202,9 +202,9 @@ closing:
     - Require approval before mutations, sends, or spend.
 faq:
   eyebrow: FAQ
-  title: Before the first review packet.
+  title: Before the first keyword brief.
   items:
-    - question: What does the review packet return?
+    - question: What does the keyword brief return?
       answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
       open: true
     - question: Which tools matter most?

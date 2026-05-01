@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Regulatory Check review packet | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed review packet with costs, timestamps, and human approval.
+title: Regulatory Check citation brief | 402box
+description: Use pay-as-you-go tools to check one bounded request and return a source-backed citation brief with costs, timestamps, and human approval.
 bodyClass: page-bumi page-usecase page-03-legal-and-regulatory-answer-check page-alt
 themeColor: "#101113"
 ogTitle: Regulatory Check briefs, paid per focused check.
@@ -22,7 +22,7 @@ hero:
   integration:
     - Source APIs
     - Evidence
-    - Packet run
+    - Citation brief
   title:
     text: Check the rule, with proof
     highlight: not legal advice.
@@ -37,7 +37,7 @@ hero:
       href: "#example"
   trust:
     - Source checks
-    - Evidence packet
+    - Citation brief
     - Budget caps
     - Human approval
   preview:
@@ -45,7 +45,7 @@ hero:
     request: Answer this narrow compliance question with current rule text, source citations, recent change signals, calculation notes if needed, SEC filing evidence when relevant, and a reviewer-ready handoff with human judgment clearly required.
     responseAriaLabel: Example regulatory check citation-first answer
     resultLabel: Result
-    resultTitle: Review pack
+    resultTitle: Citation brief
     code: |-
       {
         "job": "Regulatory Check",
@@ -53,10 +53,10 @@ hero:
         "planned_calls": 12,
         "call_budget": "$0.179-$0.194 to $0.229-$0.244",
         "status": "review_required",
-        "packet": [
+        "citation_brief": [
           "citation-first answer: source-backed summary with timestamps.",
           "Tools: GovLaws, EDGAR, EDGAR Full-Text Search.",
-          "Next step: approve more calls only if the first packet is useful."
+          "Next step: approve more calls only if the first brief is useful."
         ]
       }
 intro:
@@ -68,17 +68,17 @@ intro:
     - title: Input
       text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
     - title: Output
-      text: A review packet with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: A citation brief with source links, timestamps, cost notes, confidence labels, and next checks for human review.
     - title: Best fit
-      text: Workflow options, review packet, source proof, and narrow jobs that need approval before action.
+      text: Workflow options, citation brief, source proof, and narrow jobs that need approval before action.
 results:
   eyebrow: Real tools, bounded spend
-  title: A review packet shaped for human decisions.
+  title: A citation brief shaped for human decisions.
   text: Use rough source ranges such as $0.179-$0.194+, $0.229-$0.244+, $0.258-$0.273+ as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
   metrics:
     - label: Current Rule Answer
       value: $0.179-$0.194
-      text: Current Rule Answer Packet starts with cheap source checks and returns a narrow citation-first answer before expansion.
+      text: Current-rule citation brief starts with cheap source checks and returns a narrow citation-first answer before expansion.
       large: true
     - label: Public-Company check
       value: $0.229-$0.244
@@ -105,7 +105,7 @@ steps:
       title: Gather source proof
       text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
     - number: "04"
-      title: Return the packet
+      title: Return the brief
       text: Deliver the citation-first answer, source links, cost notes, open questions, and actions that still need explicit human approval.
 benefits:
   eyebrow: Benefits
@@ -116,9 +116,9 @@ benefits:
     - title: Cheaper checks before deeper evidence
       text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
     - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the review packet.
+      text: The agent states tools, call counts, ranges, and stop conditions before spending or widening the citation brief.
     - title: Human approval for real actions
-      text: The packet can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
+      text: The citation brief informs decisions, but sends, filings, account actions, wallet signatures, and added spend require approval.
 facts:
   eyebrow: Tool details
   title: Use tool facts to control the next call.
@@ -148,7 +148,7 @@ prompt:
 
     Use the local Regulatory Check workflow to return a citation-first answer. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
 
-    Return a concise packet with:
+    Return a concise citation brief with:
     - the cleaned input and assumptions
     - the source names, timestamps, and links used
     - the key findings separated from generated recommendations
@@ -156,10 +156,10 @@ prompt:
     - conflicts, stale sources, missing fields, and open questions
     - the next checks worth running only after approval
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this review packet.
+    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this citation brief.
 comparison:
   eyebrow: Comparison
-  title: When a review packet beats another workflow.
+  title: When a citation brief beats another workflow.
   ariaLabel: Traditional tools compared with this regulatory check workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
@@ -175,13 +175,13 @@ comparison:
       right: One citation-first answer with timestamps, costs, and candidates
     - category: Cadence
       left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first packet earns them
+      right: Budgeted repeated checks only when the first brief earns them
     - category: Action
       left: Research and operational action mixed together
       right: Options stay review-only until a human approves action
 useCases:
   eyebrow: Use cases
-  title: Use the packet when timing matters.
+  title: Use a citation brief when timing matters.
   items:
     - title: Current Rule Answer
       text: Start with one bounded request when a source-backed answer is needed before more budget or action.
@@ -202,9 +202,9 @@ closing:
     - Require approval before mutations, sends, or spend.
 faq:
   eyebrow: FAQ
-  title: Before the first review packet.
+  title: Before the first citation brief.
   items:
-    - question: What does the review packet return?
+    - question: What does the citation brief return?
       answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
       open: true
     - question: Which tools matter most?

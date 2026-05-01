@@ -1,16 +1,16 @@
 ---
 layout: ../layouts/UseCasePage.astro
 title: Wallet Investigation on demand | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed review packet with costs, timestamps, and human approval.
+description: Use pay-as-you-go tools to check one bounded request and return a source-backed investigation brief with costs, timestamps, and human approval.
 bodyClass: page-bumi page-usecase page-19-crypto-wallet-token-and-protocol-investigation
 themeColor: "#101113"
 ogTitle: Wallet Investigation briefs, paid per focused check.
 ogDescription: Give your agent a wallet, token, protocol, or contract, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
 schema:
   name: Crypto Wallet, Token, And Protocol Investigation
-  description: A pay-as-you-go wallet investigation workflow for agents that return a source-backed crypto investigation packet.
+  description: A pay-as-you-go wallet investigation workflow for agents that return a source-backed investigation brief.
   mainEntityName: Crypto Wallet, Token, And Protocol Investigation
-  mainEntityDescription: Combines wallet, token, protocol, or contract, public source checks, priced endpoint calls, and review controls into a focused crypto investigation packet.
+  mainEntityDescription: Combines wallet, token, protocol, or contract, public source checks, priced endpoint calls, and review controls into a focused investigation brief.
   providerName: 402box
 hero:
   backdrop:
@@ -22,11 +22,11 @@ hero:
   integration:
     - Source APIs
     - Evidence
-    - Packet run
+    - Brief run
   title:
     text: Trace the signal,
     highlight: not every explorer.
-  lead: Give your agent a wallet, token, protocol, or contract, source limits, and budget cap. Get a crypto investigation packet with timestamps, costs, caveats, and approval boundaries before action.
+  lead: Give your agent a wallet, token, protocol, or contract, source limits, and budget cap. Get an investigation brief with timestamps, costs, caveats, and approval boundaries before action.
   actions:
     - label: Budget first
       text: Plan Focused Run
@@ -37,15 +37,15 @@ hero:
       href: "#example"
   trust:
     - Source checks
-    - Evidence packet
+    - Evidence brief
     - Budget caps
     - Human approval
   preview:
     ariaLabel: Wallet Investigation request to output preview
     request: Investigate this wallet and token question. Check public chain, contract, token, protocol, market, and web evidence, keep uncertainty visible, estimate costs, and do not sign, swap, bridge, or move funds.
-    responseAriaLabel: Example wallet investigation crypto investigation packet
+    responseAriaLabel: Example wallet investigation brief
     resultLabel: Result
-    resultTitle: Brief pack
+    resultTitle: Case brief
     code: |-
       {
         "job": "Wallet Investigation",
@@ -53,32 +53,32 @@ hero:
         "planned_calls": 8,
         "call_budget": "$0.266-$0.281 to $0.405-$0.420",
         "status": "review_required",
-        "packet": [
-          "crypto investigation packet: source-backed summary with timestamps.",
+        "brief": [
+          "investigation brief: source-backed summary with timestamps.",
           "Tools: Allium, Nansen, Dune.",
-          "Next step: approve more calls only if the first packet is useful."
+          "Next step: approve more calls only if the first brief is useful."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One crypto investigation packet. Evidence, costs, next checks.
-  text: Pay-as-you-go access is useful when wallet, token, protocol, or contract needs a focused answer now, not a permanent provider stack. The agent returns a crypto investigation packet with proof, costs, and next checks.
+  title: One investigation brief. Evidence, costs, next checks.
+  text: Pay-as-you-go access is useful when wallet, token, protocol, or contract needs a focused answer now, not a permanent provider stack. The agent returns an investigation brief with proof, costs, and next checks.
   ariaLabel: Wallet Investigation input and output details
   features:
     - title: Input
       text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
     - title: Output
-      text: A review packet with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: An investigation brief with source links, timestamps, cost notes, confidence labels, and next checks for review.
     - title: Best fit
-      text: Workflow options, review packet, source proof, and narrow jobs that need approval before action.
+      text: Workflow options, source proof, and narrow jobs that still need approval.
 results:
   eyebrow: Real tools, bounded spend
-  title: A priced source packet for human review.
+  title: A priced investigation brief for human review.
   text: Use rough source ranges such as $0.266-$0.281, $0.405-$0.420, $0.505-$14.420 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
   metrics:
     - label: Wallet Exposure Check
       value: $0.266-$0.281
-      text: Wallet Exposure Snapshot starts with cheap source checks and returns a narrow crypto investigation packet before expansion.
+      text: Wallet Exposure Snapshot starts with cheap source checks and returns a narrow investigation brief before expansion.
       large: true
     - label: Token Spike And Flow
       value: $0.405-$0.420
@@ -88,7 +88,7 @@ results:
       text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
     - label: Expanded review run
       value: $0.435-$2.440
-      text: Use only when the first crypto investigation packet justifies more providers, deeper evidence, or repeated monitoring.
+      text: Use only when the first investigation brief justifies more providers, deeper evidence, or repeated monitoring.
 steps:
   titleId: workflow-title
   eyebrow: How it works
@@ -105,8 +105,8 @@ steps:
       title: Gather source proof
       text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
     - number: "04"
-      title: Return the packet
-      text: Deliver the crypto investigation packet, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Return the brief
+      text: Deliver the investigation brief, source links, cost notes, open questions, and actions that still need explicit human approval.
 benefits:
   eyebrow: Benefits
   title: Use focused checks before buying the stack.
@@ -118,7 +118,7 @@ benefits:
     - title: Budget-first instructions
       text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the focused run.
     - title: Human approval for real actions
-      text: The packet can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
+      text: The brief can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
 facts:
   eyebrow: Tool details
   title: Keep source facts visible before each run.
@@ -132,7 +132,7 @@ facts:
     - label: Primary input
       value: wallet, token, protocol, or contract, source limits, and budget cap
     - label: Primary output
-      value: crypto investigation packet, timestamps, costs, caveats, and next checks
+      value: investigation brief, timestamps, costs, caveats, and next checks
     - label: Dynamic costs
       value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
     - label: Execution status
@@ -146,9 +146,9 @@ prompt:
   code: |-
     Investigate this wallet and token question. Check public chain, contract, token, protocol, market, and web evidence, keep uncertainty visible, estimate costs, and do not sign, swap, bridge, or move funds.
 
-    Use the local Wallet Investigation workflow to return a crypto investigation packet. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Use the local Wallet Investigation workflow to return an investigation brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
 
-    Return a concise packet with:
+    Return a concise investigation brief with:
     - the cleaned input and assumptions
     - the source names, timestamps, and links used
     - the key findings separated from generated recommendations
@@ -172,10 +172,10 @@ comparison:
       right: Pay-as-you-go endpoint mix selected for the request
     - category: Output
       left: Manual exports and screenshots to reconcile
-      right: One crypto investigation packet with timestamps, costs, and candidates
+      right: One investigation brief with timestamps, costs, and candidates
     - category: Cadence
       left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first packet earns them
+      right: Budgeted repeated checks only when the first brief earns them
     - category: Action
       left: Research and operational action mixed together
       right: Options stay review-only until a human approves action
@@ -204,7 +204,7 @@ faq:
   eyebrow: FAQ
   title: Before the first focused run.
   items:
-    - question: What does the review packet return?
+    - question: What does the investigation brief return?
       answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
       open: true
     - question: Which tools matter most?

@@ -1,16 +1,16 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Vendor Qualification review packet | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed review packet with costs, timestamps, and human approval.
+title: Vendor review check on demand | 402box
+description: Use pay-as-you-go tools to check one vendor and return a source-backed vendor review with costs, timestamps, conflicts, and human approval.
 bodyClass: page-bumi page-usecase page-18-vendor-and-procurement-qualification page-alt
 themeColor: "#101113"
-ogTitle: Vendor Qualification briefs, paid per focused check.
-ogDescription: Give your agent a vendor name, domain, or RFP question, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
+ogTitle: Vendor reviews, paid per focused check.
+ogDescription: Give your agent a vendor name, domain, or RFP question, budget cap, and stop conditions. Get source evidence, rough costs, conflicts, and next checks for human review.
 schema:
   name: Vendor And Procurement Qualification
-  description: A pay-as-you-go vendor qualification workflow for agents that return a source-backed vendor qualification memo.
+  description: A pay-as-you-go vendor qualification workflow for agents that return a source-backed vendor review.
   mainEntityName: Vendor And Procurement Qualification
-  mainEntityDescription: Combines vendor name, domain, or RFP question, public source checks, priced endpoint calls, and review controls into a focused vendor qualification memo.
+  mainEntityDescription: Combines vendor name, domain, or RFP question, public source checks, priced endpoint calls, and review controls into a focused vendor review.
   providerName: 402box
 hero:
   backdrop:
@@ -22,11 +22,11 @@ hero:
   integration:
     - Source APIs
     - Evidence
-    - Packet run
+    - Vendor review
   title:
     text: Check the vendor,
     highlight: not every portal.
-  lead: Give your agent a vendor name, domain, or RFP question, source limits, and budget cap. Get a vendor qualification memo with timestamps, costs, caveats, and approval boundaries before action.
+  lead: Give your agent a vendor name, domain, or RFP question, source limits, and budget cap. Get a vendor review with evidence, risk checks, costs, caveats, and approval boundaries before action.
   actions:
     - label: Budget first
       text: Plan Focused Run
@@ -37,58 +37,58 @@ hero:
       href: "#example"
   trust:
     - Source checks
-    - Evidence packet
+    - Source evidence
     - Budget caps
     - Human approval
   preview:
     ariaLabel: Vendor Qualification request to output preview
     request: Qualify this vendor before procurement reviews it. Check company identity, web evidence, pricing or terms, risk signals, support paths, source links, call budget, and open issues without contacting the vendor.
-    responseAriaLabel: Example vendor qualification vendor qualification memo
+    responseAriaLabel: Example vendor qualification vendor review
     resultLabel: Result
-    resultTitle: Review pack
+    resultTitle: Vendor review
     code: |-
       {
-        "job": "Vendor Qualification",
+        "job": "Vendor review",
         "input": "vendor name, domain, or RFP question",
         "planned_calls": 12,
-        "call_budget": "$0.140+ cap to $0.100+ cap",
+        "call_budget": "$0.100-$0.251+ capped dynamic calls",
         "status": "review_required",
-        "packet": [
-          "vendor qualification memo: source-backed summary with timestamps.",
-          "Tools: Company Enrichment, BuiltWith, Apollo.",
-          "Next step: approve more calls only if the first packet is useful."
+        "vendor_review": [
+          "Intake snapshot with identity, website proof, contact surfaces, and conflicts.",
+          "Contact-risk preflight for email, phone, IP, and claimed representative checks.",
+          "Next step: route to buyer, security, legal, or finance before action."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One vendor qualification memo. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when vendor name, domain, or RFP question needs a focused answer now, not a permanent provider stack. The agent returns a vendor qualification memo with proof, costs, and next checks.
+  title: One vendor review. Inputs, caveats, and approvals.
+  text: Pay-as-you-go access is useful when a vendor name, domain, or RFP question needs a focused answer now, not a permanent provider stack. The agent returns a vendor review with proof, costs, conflicts, and next checks.
   ariaLabel: Vendor Qualification input and output details
   features:
     - title: Input
       text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
     - title: Output
-      text: A review packet with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: A vendor review with source links, timestamps, cost notes, confidence labels, and next checks for human review.
     - title: Best fit
-      text: Workflow options, review packet, source proof, and narrow jobs that need approval before action.
+      text: Intake snapshots, contact-risk preflights, regulated reviews, and approval-ready vendor decisions.
 results:
   eyebrow: Real tools, bounded spend
-  title: A review packet shaped for human decisions.
-  text: Use rough source ranges such as $0.140, $0.100, $0.061-$0.186 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
+  title: A vendor review shaped for human decisions.
+  text: Use rough source ranges such as $0.100-$0.140, $0.061-$0.186, and $0.251 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
   metrics:
     - label: Vendor Intake Snapshot
-      value: $0.140+ cap
-      text: Vendor Intake Snapshot starts with cheap source checks and returns a narrow vendor qualification memo before expansion.
+      value: $0.100-$0.140
+      text: One company or domain check returns an intake snapshot with identity, website proof, contact surfaces, and conflicts.
       large: true
     - label: Contact And Access
-      value: $0.100+ cap
-      text: Adds corroborating source checks, proof capture, and synthesis after the first signal still looks useful for review.
+      value: $0.061-$0.186
+      text: A contact-risk preflight checks email, phone, IP, and people signals before access or invoice work continues.
     - label: Regulated Vendor Check
-      value: $0.061+
-      text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
+      value: $0.251
+      text: A procurement qualification memo adds EDGAR, GovLaws, website proof, organization context, and review paths.
     - label: Expanded review run
-      value: $0.251+ cap
-      text: Use only when the first vendor qualification memo justifies more providers, deeper evidence, or repeated monitoring.
+      value: $0.008-$0.055+
+      text: Add extra EDGAR, GovLaws, BuiltWith, screenshot, or contact checks only when the first review justifies them.
 steps:
   titleId: workflow-title
   eyebrow: How it works
@@ -105,8 +105,8 @@ steps:
       title: Gather source proof
       text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
     - number: "04"
-      title: Return the packet
-      text: Deliver the vendor qualification memo, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Return the review
+      text: Deliver the vendor review, source links, cost notes, open questions, and actions that still need explicit human approval.
 benefits:
   eyebrow: Benefits
   title: Keep the decision small before the stack grows.
@@ -116,9 +116,9 @@ benefits:
     - title: Cheaper checks before deeper evidence
       text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
     - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the review packet.
+      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the vendor review.
     - title: Human approval for real actions
-      text: The packet can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
+      text: The vendor review can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and spend require approval.
 facts:
   eyebrow: Tool details
   title: Use tool facts to control the next call.
@@ -132,7 +132,7 @@ facts:
     - label: Primary input
       value: vendor name, domain, or RFP question, source limits, and budget cap
     - label: Primary output
-      value: vendor qualification memo, timestamps, costs, caveats, and next checks
+      value: vendor review, timestamps, costs, caveats, conflicts, and next checks
     - label: Dynamic costs
       value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
     - label: Execution status
@@ -146,9 +146,9 @@ prompt:
   code: |-
     Qualify this vendor before procurement reviews it. Check company identity, web evidence, pricing or terms, risk signals, support paths, source links, call budget, and open issues without contacting the vendor.
 
-    Use the local Vendor Qualification workflow to return a vendor qualification memo. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Use the local Vendor Qualification workflow to return a vendor review. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
 
-    Return a concise packet with:
+    Return a concise vendor review with:
     - the cleaned input and assumptions
     - the source names, timestamps, and links used
     - the key findings separated from generated recommendations
@@ -156,10 +156,10 @@ prompt:
     - conflicts, stale sources, missing fields, and open questions
     - the next checks worth running only after approval
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this review packet.
+    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this vendor review.
 comparison:
   eyebrow: Comparison
-  title: When a review packet beats another workflow.
+  title: When a vendor review beats another workflow.
   ariaLabel: Traditional tools compared with this vendor qualification workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
@@ -172,16 +172,16 @@ comparison:
       right: Pay-as-you-go endpoint mix selected for the request
     - category: Output
       left: Manual exports and screenshots to reconcile
-      right: One vendor qualification memo with timestamps, costs, and candidates
+      right: One vendor review with timestamps, costs, conflicts, and candidates
     - category: Cadence
       left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first packet earns them
+      right: Budgeted repeated checks only when the first review earns them
     - category: Action
       left: Research and operational action mixed together
       right: Options stay review-only until a human approves action
 useCases:
   eyebrow: Use cases
-  title: Use the packet when timing matters.
+  title: Use the review when timing matters.
   items:
     - title: Vendor Intake Snapshot
       text: Start with one bounded request when a source-backed answer is needed before more budget or action.
@@ -202,9 +202,9 @@ closing:
     - Require approval before mutations, sends, or spend.
 faq:
   eyebrow: FAQ
-  title: Before the first review packet.
+  title: Before the first vendor review.
   items:
-    - question: What does the review packet return?
+    - question: What does the vendor review return?
       answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
       open: true
     - question: Which tools matter most?

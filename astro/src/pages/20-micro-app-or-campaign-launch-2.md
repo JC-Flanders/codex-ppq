@@ -1,16 +1,16 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Campaign Launch review packet | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed review packet with costs, timestamps, and human approval.
+title: Campaign Launch brief on demand | 402box
+description: Use pay-as-you-go tools to stage one launch idea and return a source-backed launch brief with costs, proof links, QA notes, and human approval.
 bodyClass: page-bumi page-usecase page-20-micro-app-or-campaign-launch page-alt
 themeColor: "#101113"
 ogTitle: Campaign Launch briefs, paid per focused check.
 ogDescription: Give your agent a campaign idea, page, or app brief, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
 schema:
   name: Micro App Or Campaign Launch
-  description: A pay-as-you-go campaign launch workflow for agents that return a source-backed launch packet.
+  description: A pay-as-you-go campaign launch workflow for agents that return a source-backed launch brief.
   mainEntityName: Micro App Or Campaign Launch
-  mainEntityDescription: Combines campaign idea, page, or app brief, public source checks, priced endpoint calls, and review controls into a focused launch packet.
+  mainEntityDescription: Combines campaign idea, page, or app brief, public source checks, priced endpoint calls, and review controls into a focused launch brief.
   providerName: 402box
 hero:
   backdrop:
@@ -22,11 +22,11 @@ hero:
   integration:
     - Source APIs
     - Evidence
-    - Packet run
+    - Launch brief
   title:
     text: Launch the asset,
     highlight: not every toolchain.
-  lead: Give your agent a campaign idea, page, or app brief, source limits, and budget cap. Get a launch packet with timestamps, costs, caveats, and approval boundaries before action.
+  lead: Give your agent a campaign idea, page, or app brief, source limits, and budget cap. Get a launch brief with proof links, cost notes, QA items, and approval boundaries before action.
   actions:
     - label: Budget first
       text: Plan Focused Run
@@ -37,15 +37,15 @@ hero:
       href: "#example"
   trust:
     - Source checks
-    - Evidence packet
+    - Proof launch brief
     - Budget caps
     - Human approval
   preview:
     ariaLabel: Campaign Launch request to output preview
-    request: Prepare a small campaign launch packet. Check domain, copy, design, hosting, analytics, email, screenshot, and proof needs, estimate spend, and return ready-to-review assets without publishing or sending.
-    responseAriaLabel: Example campaign launch launch packet
+    request: Prepare a small campaign launch brief. Check domain, copy, design, hosting, email, screenshot, and proof needs, estimate spend, and return reviewable launch assets without publishing or sending.
+    responseAriaLabel: Example campaign launch brief
     resultLabel: Result
-    resultTitle: Review pack
+    resultTitle: Launch brief
     code: |-
       {
         "job": "Campaign Launch",
@@ -53,32 +53,32 @@ hero:
         "planned_calls": 12,
         "call_budget": "$1.10-$1.12 to $0.075+ cap",
         "status": "review_required",
-        "packet": [
-          "launch packet: source-backed summary with timestamps.",
+        "launch_brief": [
+          "source-backed summary with timestamps and proof links.",
           "Tools: Doma, Build With Locus, Code Storage.",
-          "Next step: approve more calls only if the first packet is useful."
+          "Next step: approve more calls only if the first launch brief is useful."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One launch packet. Inputs, caveats, and approvals.
-  text: Pay-as-you-go access is useful when campaign idea, page, or app brief needs a focused answer now, not a permanent provider stack. The agent returns a launch packet with proof, costs, and next checks.
+  title: One launch brief. Inputs, caveats, and approvals.
+  text: Pay-as-you-go access is useful when a campaign idea, page, or app brief needs a focused answer now, not a permanent provider stack. The agent returns a launch brief with proof links, costs, QA notes, and next checks.
   ariaLabel: Campaign Launch input and output details
   features:
     - title: Input
       text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
     - title: Output
-      text: A review packet with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: A launch brief with source links, timestamps, cost notes, proof screenshots, QA items, and next checks for review.
     - title: Best fit
-      text: Workflow options, review packet, source proof, and narrow jobs that need approval before action.
+      text: Disposable page previews, branded campaign domains, asset drops, and approval-gated launch work.
 results:
   eyebrow: Real tools, bounded spend
-  title: A review packet shaped for human decisions.
+  title: A launch brief shaped for human decisions.
   text: Use rough source ranges such as $1.10-$1.12, $0.075, $0.095 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
   metrics:
     - label: Disposable Landing
       value: $1.10-$1.12
-      text: Disposable Landing Page starts with cheap source checks and returns a narrow launch packet before expansion.
+      text: Disposable Landing Page stages a demo URL, repo reference, asset links, screenshot proof, and draft handoff before expansion.
       large: true
     - label: Branded Campaign
       value: $0.075+ cap
@@ -88,7 +88,7 @@ results:
       text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
     - label: Expanded review run
       value: $1-$100+ cap
-      text: Use only when the first launch packet justifies more providers, deeper evidence, or repeated monitoring.
+      text: Use only when the first launch brief justifies domain spend, deployment top-up, deeper proof, or repeated QA.
 steps:
   titleId: workflow-title
   eyebrow: How it works
@@ -105,8 +105,8 @@ steps:
       title: Gather source proof
       text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
     - number: "04"
-      title: Return the packet
-      text: Deliver the launch packet, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Return launch brief
+      text: Deliver the launch brief, proof links, cost notes, open questions, and actions that still need explicit human approval.
 benefits:
   eyebrow: Benefits
   title: Keep the decision small before the stack grows.
@@ -116,9 +116,9 @@ benefits:
     - title: Cheaper checks before deeper evidence
       text: The workflow starts with the smallest useful source set, then adds richer extraction, search, proof, or synthesis when the signal warrants it.
     - title: Budget-first instructions
-      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the review packet.
+      text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the launch brief.
     - title: Human approval for real actions
-      text: The packet can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
+      text: The launch brief can inform a decision, but sends, purchases, uploads, registrations, wallet signatures, and expanded spend need approval.
 facts:
   eyebrow: Tool details
   title: Use tool facts to control the next call.
@@ -132,7 +132,7 @@ facts:
     - label: Primary input
       value: campaign idea, page, or app brief, source limits, and budget cap
     - label: Primary output
-      value: launch packet, timestamps, costs, caveats, and next checks
+      value: launch brief, proof links, costs, QA notes, and next checks
     - label: Dynamic costs
       value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
     - label: Execution status
@@ -144,22 +144,23 @@ prompt:
   copyTarget: 20-micro-app-or-campaign-launch-2-prompt
   buttonLabel: Copy prompt
   code: |-
-    Prepare a small campaign launch packet. Check domain, copy, design, hosting, analytics, email, screenshot, and proof needs, estimate spend, and return ready-to-review assets without publishing or sending.
+    Prepare a small campaign launch brief. Check domain, copy, design, hosting, email, screenshot, and proof needs, estimate spend, and return ready-to-review launch assets without publishing or sending.
 
-    Use the local Campaign Launch workflow to return a launch packet. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Use the local Campaign Launch workflow to return a launch brief. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
 
-    Return a concise packet with:
+    Return a concise launch brief with:
     - the cleaned input and assumptions
     - the source names, timestamps, and links used
+    - the demo URL, deployment status, storage keys, CIDs, or screenshot proof when relevant
     - the key findings separated from generated recommendations
     - rough cost notes and any dynamic pricing caveats
     - conflicts, stale sources, missing fields, and open questions
     - the next checks worth running only after approval
 
-    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this review packet.
+    Do not buy, book, send, publish, file, register, sign wallet messages, pay invoices, submit forms, move funds, contact people, or mutate external systems without explicit approval. Ask before spending more than the approved budget or expanding beyond this launch brief.
 comparison:
   eyebrow: Comparison
-  title: When a review packet beats another workflow.
+  title: When a launch brief beats another workflow.
   ariaLabel: Traditional tools compared with this campaign launch workflow
   leftHeader: Traditional stack
   rightHeader: This workflow
@@ -172,16 +173,16 @@ comparison:
       right: Pay-as-you-go endpoint mix selected for the request
     - category: Output
       left: Manual exports and screenshots to reconcile
-      right: One launch packet with timestamps, costs, and candidates
+      right: One launch brief with proof links, cost notes, QA items, and candidates
     - category: Cadence
       left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first packet earns them
+      right: Budgeted repeated checks only when the first launch brief earns them
     - category: Action
       left: Research and operational action mixed together
       right: Options stay review-only until a human approves action
 useCases:
   eyebrow: Use cases
-  title: Use the packet when timing matters.
+  title: Use the launch brief when timing matters.
   items:
     - title: Disposable Landing Page
       text: Start with one bounded request when a source-backed answer is needed before more budget or action.
@@ -202,10 +203,10 @@ closing:
     - Require approval before mutations, sends, or spend.
 faq:
   eyebrow: FAQ
-  title: Before the first review packet.
+  title: Before the first launch brief.
   items:
-    - question: What does the review packet return?
-      answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+    - question: What does the launch brief return?
+      answer: It can return the cleaned input, demo or asset URL, domain or deployment status, source-backed findings, proof screenshots, timestamps, rough costs, unresolved QA items, and next checks a human should review.
       open: true
     - question: Which tools matter most?
       answer: Doma, Build With Locus, Code Storage, StableUpload, Pinata IPFS are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.

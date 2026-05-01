@@ -1,16 +1,16 @@
 ---
 layout: ../layouts/UseCasePage.astro
-title: Browser Access on demand | 402box
-description: Use pay-as-you-go tools to check one bounded request and return a source-backed review packet with costs, timestamps, and human approval.
+title: Browser access checks on demand | 402box
+description: Use pay-as-you-go tools to test one public retrieval path and return an access check with proof, costs, timestamps, and human approval.
 bodyClass: page-bumi page-usecase page-23-browser-and-access-unblocking-for-agents
 themeColor: "#101113"
-ogTitle: Browser Access briefs, paid per focused check.
+ogTitle: Access checks for difficult pages, paid per focused run.
 ogDescription: Give your agent a site, blocked task, or browsing workflow, budget cap, and stop conditions. Get source evidence, rough costs, open questions, and next checks for human review.
 schema:
   name: Browser And Access Unblocking For Agents
-  description: A pay-as-you-go browser access workflow for agents that return a source-backed browser access report.
+  description: A pay-as-you-go browser access workflow for agents that return a source-backed access check.
   mainEntityName: Browser And Access Unblocking For Agents
-  mainEntityDescription: Combines site, blocked task, or browsing workflow, public source checks, priced endpoint calls, and review controls into a focused browser access report.
+  mainEntityDescription: Combines site, blocked task, or browsing workflow, public source checks, priced endpoint calls, and review controls into a focused access check.
   providerName: 402box
 hero:
   backdrop:
@@ -22,11 +22,11 @@ hero:
   integration:
     - Source APIs
     - Evidence
-    - Packet run
+    - Access check
   title:
     text: Open the page, with proof
     highlight: not every browser.
-  lead: Give your agent a site, blocked task, or browsing workflow, source limits, and budget cap. Get a browser access report with timestamps, costs, caveats, and approval boundaries before action.
+  lead: Give your agent a site, blocked task, or browsing workflow, source limits, and budget cap. Get an access check with content, proof, costs, caveats, and approval boundaries before action.
   actions:
     - label: Budget first
       text: Plan Focused Run
@@ -37,15 +37,15 @@ hero:
       href: "#example"
   trust:
     - Source checks
-    - Evidence packet
+    - Retrieval proof
     - Budget caps
     - Human approval
   preview:
     ariaLabel: Browser Access request to output preview
     request: Try this browser task safely. Check whether normal access, scraping, rendering, proxy, or browser automation is needed, capture proof, estimate cost, and stop before login, payment, or mutation.
-    responseAriaLabel: Example browser access browser access report
+    responseAriaLabel: Example browser access check
     resultLabel: Result
-    resultTitle: Brief pack
+    resultTitle: Access check
     code: |-
       {
         "job": "Browser Access",
@@ -53,32 +53,32 @@ hero:
         "planned_calls": 8,
         "call_budget": "$0.09-$0.10 to $0.12+ cap",
         "status": "review_required",
-        "packet": [
-          "browser access report: source-backed summary with timestamps.",
+        "access_check": [
+          "Best path: Browserbase fetch recovered the page.",
           "Tools: Browserbase, Firecrawl, Diffbot.",
-          "Next step: approve more calls only if the first packet is useful."
+          "Next step: approve more calls only if this access check is useful."
         ]
       }
 intro:
   eyebrow: What it does
-  title: One browser access report. Evidence, costs, and next checks.
-  text: Pay-as-you-go access is useful when site, blocked task, or browsing workflow needs a focused answer now, not a permanent provider stack. The agent returns a browser access report with proof, costs, and next checks.
+  title: One access check. Page content, proof, and next checks.
+  text: Pay-as-you-go access is useful when site, blocked task, or browsing workflow needs a focused answer now, not a permanent provider stack. The agent returns an access check with proof, costs, and next checks.
   ariaLabel: Browser Access input and output details
   features:
     - title: Input
       text: A clean input, source limits, cadence if needed, and budget cap for the first focused run.
     - title: Output
-      text: A review packet with source links, timestamps, cost notes, confidence labels, and next checks for human review.
+      text: An access check with source links, timestamps, cost notes, confidence labels, and next checks for human review.
     - title: Best fit
-      text: Workflow options, review packet, source proof, and narrow jobs that need approval before action.
+      text: Retrieval diagnostics, proof traces, and narrow jobs needing approval before action.
 results:
   eyebrow: Real tools, bounded spend
-  title: A priced source packet for human review.
+  title: A priced access check for human review.
   text: Use rough source ranges such as $0.09-$0.10, $0.12, $0.09 as planning inputs, not live verified prices. Keep dynamic costs and freshness visible.
   metrics:
     - label: Rendered Page Recovery
       value: $0.09-$0.10
-      text: Rendered Page Recovery starts with cheap source checks and returns a narrow browser access report before expansion.
+      text: Rendered Page Recovery starts with cheap source checks and returns a narrow access check before expansion.
       large: true
     - label: Public Scrape Fallback
       value: $0.12+ cap
@@ -88,7 +88,7 @@ results:
       text: Use for broader reviews where dynamic endpoints, fanout, screenshots, and model calls need explicit caps.
     - label: Expanded review run
       value: $0.055+ cap
-      text: Use only when the first browser access report justifies more providers, deeper evidence, or repeated monitoring.
+      text: Use only when the first access check justifies more providers, deeper evidence, or repeated monitoring.
 steps:
   titleId: workflow-title
   eyebrow: How it works
@@ -105,8 +105,8 @@ steps:
       title: Gather source proof
       text: Use core tools plus proof checks to collect timestamped evidence, source links, and visible uncertainty for review.
     - number: "04"
-      title: Return the packet
-      text: Deliver the browser access report, source links, cost notes, open questions, and actions that still need explicit human approval.
+      title: Return access check
+      text: Deliver recovered content, access method, source links, cost notes, open questions, and actions that still need human approval.
 benefits:
   eyebrow: Benefits
   title: Use focused checks before buying the stack.
@@ -118,7 +118,7 @@ benefits:
     - title: Budget-first instructions
       text: The agent states planned tools, call counts, ranges, and stop conditions before spending or widening the scope of the focused run.
     - title: Human approval for real actions
-      text: The packet can inform a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
+      text: The access check informs a decision, but sends, purchases, filings, account actions, wallet signatures, and expanded spend require approval.
 facts:
   eyebrow: Tool details
   title: Keep source facts visible before each run.
@@ -132,7 +132,7 @@ facts:
     - label: Primary input
       value: site, blocked task, or browsing workflow, source limits, and budget cap
     - label: Primary output
-      value: browser access report, timestamps, costs, caveats, and next checks
+      value: access check, timestamps, costs, caveats, and next checks
     - label: Dynamic costs
       value: Model synthesis, repeated checks, screenshots, fanout, and provider-specific dynamic prices
     - label: Execution status
@@ -146,9 +146,9 @@ prompt:
   code: |-
     Try this browser task safely. Check whether normal access, scraping, rendering, proxy, or browser automation is needed, capture proof, estimate cost, and stop before login, payment, or mutation.
 
-    Use the local Browser Access workflow to return a browser access report. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
+    Use the local Browser Access workflow to return an access check. Start by estimating the call budget from the tools you plan to use. Show the providers, planned calls, dynamic-price risks, expected total cost, and stop conditions before beginning.
 
-    Return a concise packet with:
+    Return a concise access check with:
     - the cleaned input and assumptions
     - the source names, timestamps, and links used
     - the key findings separated from generated recommendations
@@ -172,10 +172,10 @@ comparison:
       right: Pay-as-you-go endpoint mix selected for the request
     - category: Output
       left: Manual exports and screenshots to reconcile
-      right: One browser access report with timestamps, costs, and candidates
+      right: One access check with timestamps, costs, and candidates
     - category: Cadence
       left: Manual reminders or subscription alerts
-      right: Budgeted repeated checks only when the first packet earns them
+      right: Budgeted repeated checks only when the first access check earns them
     - category: Action
       left: Research and operational action mixed together
       right: Options stay review-only until a human approves action
@@ -190,7 +190,7 @@ useCases:
     - title: Authorized CAPTCHA-Gated
       text: Use higher-value reviews when screenshots, extraction, history, or synthesis can change the decision.
     - title: Reviewer handoff with proof
-      text: Package findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
+      text: Summarize findings, caveats, costs, and next actions so a human owner can approve, reject, or narrow the next run.
 closing:
   eyebrow: Focused run
   title: Start with one narrow request first.
@@ -204,8 +204,8 @@ faq:
   eyebrow: FAQ
   title: Before the first focused run.
   items:
-    - question: What does the review packet return?
-      answer: It can return the cleaned input, source-backed findings, provider names, timestamps, confidence labels, rough costs, unresolved conflicts, and next checks a human should review.
+    - question: What does the access check return?
+      answer: It can return the cleaned input, recovered content, provider names, timestamps, confidence labels, rough costs, unresolved blockers, and next checks a human should review.
       open: true
     - question: Which tools matter most?
       answer: Browserbase, Firecrawl, Diffbot, ScreenshotOne, Web Scraping are the main tools surfaced by the source bundle. Supporting search, extraction, proof, and synthesis tools should be added only when they improve the decision.
